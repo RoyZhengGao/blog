@@ -1199,10 +1199,8 @@ Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
   <entry>
     <title>大开的脑洞brain storming</title>
     <url>/blog/2019/12/25/%E5%A4%A7%E5%BC%80%E7%9A%84%E8%84%91%E6%B4%9Ebrain-storming/</url>
-    <content><![CDATA[<p>本文记录偶尔异想天开的想法、半夜梦到的情景、灵光乍现的瞬间、胡思乱想的一切、以及可能很冷的冷笑话。所以，请叫这篇blog，高氏论语，或者正言正语😃😃😃</p>
-<a id="more"></a>
-<h2 id="自己的感悟">自己的感悟</h2>
-<ul>
+    <content><![CDATA[<p>本文记录偶尔异想天开的想法、半夜梦到的情景、灵光乍现的瞬间、胡思乱想的一切、以及可能很冷的冷笑话。所以，请叫这篇blog，高氏论语，或者正言正语:smiley::smiley::smiley:<br><a id="more"></a></p>
+<h2 id="自己的感悟"><a href="#自己的感悟" class="headerlink" title="自己的感悟"></a>自己的感悟</h2><ul>
 <li>博二代的思考：为什么讲究子承父业，都在同一个圈子中（同样适用于其他行业）。</li>
 <li>通过一个人的名字，能大概猜测他的年纪。比如”张美丽“大概率不是最近出生的孩子。能不能做一个NLP+CV的系统，输入一些人的基本文字信息，得到其画像？</li>
 <li>和欧美法律一样，对于人生的思考，需要有几条明确的基本准则。剩下的太过复杂的东西，很难总结的尽善尽美。我们可以case by case的看。记住发生过什么事情，结果怎么样，然后作为自己以后为人处世的行为准则。</li>
@@ -1219,7 +1217,7 @@ Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
 <li>要以always Day 1 的心态，连续工作102年！</li>
 <li>像牛一样赚钱，像狗一样活着。</li>
 <li>要发明一种AI椅子，连着APP。只要在APP的家庭布局上面画一个圈，现实中椅子就会只待在那个圈里面不会转出去。这样省的椅子到处乱转了。有点像孙悟空给唐僧画的那个圈一样。</li>
-<li>面对诸如种族/性别歧视时，最好的回复是：我尊重并理解你歧视我的原因，权利与自由，也希望你能尊重并理解我打你的原因，权利与自由。（当然前提是最好你能打得过它😃）</li>
+<li>面对诸如种族/性别歧视时，最好的回复是：我尊重并理解你歧视我的原因，权利与自由，也希望你能尊重并理解我打你的原因，权利与自由。（当然前提是最好你能打得过它:smiley:）</li>
 <li>人的劣根性之一在于：被压迫的人，最后的终极理想，不是反抗，而是成为压迫者中的一员。</li>
 <li>A:你想做我的什么？B:我想做你的手机啊！A:你是想让我每天把你捧在手里嘛？B: 不，这样我就能知道你所有的秘密啊！</li>
 <li>以后要发明自动美发机。套在头上，自动给你洗剪吹染，你可以从面前的显示屏上看到你自己头发一点点的变化。</li>
@@ -1227,12 +1225,12 @@ Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
 <li>娱乐新闻搜索 是个有意思的research topic。比如我想搜snh48宿舍 模型可以关联到一些其他相关名词（snh48的宿舍叫生活中心）然后再根据新闻来源的可信度，发表时间啥的排序，生成一个重大事件编年表。遍年表上对应每个事件的summary，是根据相关新闻报道总结而成。然后每个事件下面对应相关新闻的ranking</li>
 <li>以后的人类，要么就是能够进行记忆传承，比如把上一代的知识刻到DNA里面传给下一代，要么就和黑客帝国一样，插张光盘就能文能武了。这样造成的后果就是，厉害的人一代一代的会越来越厉害，贫穷的人会一代一代的被淘汰。直到最后，全世界就剩下了那个最优秀的人，他实在无聊了，就自己亲手造了一批人看他们玩。这个人，后人称之为女娲。</li>
 <li>看青春有你2有感：选秀就是一个Gaussian Mixture Model. 所有的经纪公司都对选手的排名有不同的影响，相当于一个gaussian distribution（肯定都是照顾自己的公司选手），然后选手的总排名是所有distribution加权得到的结果。粉丝的投票相当于外部的反馈，可以用EM的方法来estimate每个公司在爱奇艺这里最终的影响程度。</li>
-<li>如何提高做一件事情的效率？–发现有另外一件你更不想做的事情压着，得做。</li>
-<li>知道为啥中国古代神话中神仙很少谈恋爱的吗？-- 因为idol之前不能恋爱。 知道为什么神仙和凡人不能谈恋爱的吗？ – 因为idol更不能和粉丝谈恋爱。</li>
+<li>如何提高做一件事情的效率？—发现有另外一件你更不想做的事情压着，得做。</li>
+<li>知道为啥中国古代神话中神仙很少谈恋爱的吗？— 因为idol之前不能恋爱。 知道为什么神仙和凡人不能谈恋爱的吗？ — 因为idol更不能和粉丝谈恋爱。</li>
 <li>未来，一定会发明出一种连体泳衣，可以让人在水里，如履平地。</li>
+<li>NLP多轮对话的一个application是创造虚拟女主播，还能根据收看观众的回复，自动筛选和回复评论。</li>
 </ul>
-<h2 id="别人的段子">别人的段子</h2>
-<ul>
+<h2 id="别人的段子"><a href="#别人的段子" class="headerlink" title="别人的段子"></a>别人的段子</h2><ul>
 <li>不思考，少烦恼。</li>
 </ul>
 ]]></content>
@@ -1248,22 +1246,19 @@ Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
     <url>/blog/2019/12/25/%E6%91%84%E5%BD%B1%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<p>如何用手机拍出好看的照片？本文整理参考了一些网上的博客和视频，来总结一些小的tips。同时也介绍了几款比较好的APP在手机上直接进行后期处理。一些通用的图像处理和视频剪辑软件也会在这里简单介绍。希望能够对自己以后审美有所帮助。</p>
 <a id="more"></a>
-<h2 id="手机摄影技巧">手机摄影技巧</h2>
-<p>自己个人觉得，拍摄的时候需要考虑的因素是：构图，线条，光线，色彩搭配，景深。</p>
-<h3 id="摄影技巧">摄影技巧</h3>
-<ul>
+<h2 id="手机摄影技巧"><a href="#手机摄影技巧" class="headerlink" title="手机摄影技巧"></a>手机摄影技巧</h2><p>自己个人觉得，拍摄的时候需要考虑的因素是：构图，线条，光线，色彩搭配，景深。</p>
+<h3 id="摄影技巧"><a href="#摄影技巧" class="headerlink" title="摄影技巧"></a>摄影技巧</h3><ul>
 <li>引导线，找到对应的角度，前中后，景就会有故事。</li>
 <li>靠近拍，很多事物靠近拍可以发现其细节的美。</li>
 <li>低潮，从低角度拍上去。有时候可能要蹲着或者躺着拍，或者用pano模式竖过来拍。</li>
 <li>对称，对直。构图上对称的话就会好看。</li>
 <li>九宫格的构图，可以把物品放在右下角，左下角之类的位置。</li>
 <li>keep in simple，越简单越好。这样整体的图片会比较干净。</li>
-<li>影子。阳光射下来找出的影子，会对图片有意境上面的加成。</li>
+<li>影子。阳光射下来找出的影子，会对图片有意境上面的加成。 </li>
 <li>剪影。自己或者主物体是暗的或者黑的，是为了体现出背景的颜色。</li>
 <li>反射，比如照镜子，或者根据倒影来拍摄。</li>
 </ul>
-<h3 id="构图">构图</h3>
-<ul>
+<h3 id="构图"><a href="#构图" class="headerlink" title="构图"></a>构图</h3><ul>
 <li>黄金分割法。0.618的神秘分割法。可以简化成三分法，九宫格。比如拍摄人像不知道把人物放到什么位置的时候，黄金分割法是最稳妥的布局。</li>
 <li>点构图。人物在画面里的比例很小，强调环境与人物的和谐统一。适用于场景视野开阔，画面干净没有过多杂物的环境。</li>
 <li>对角线构图。特别适用于静态风光照片。大面积的草坪，有道路的自然风景等。</li>
@@ -1274,8 +1269,7 @@ Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
 <li>开放式构图/封闭式构图。封闭式构图讲究画面完整，主题在画面之中，构图较完整。开放式构图主体不一定在画中心，注意主体与画外的联系，在画面周围留下被切割的不完整形象，引发想象力。比如人物拍摄半张脸。</li>
 <li>前景虚化构图。利用花草树木等物品作为前景，用大光圈拍摄虚化前景，制造梦幻，神秘的画面。</li>
 </ul>
-<h3 id="如何拍摄虚化背景">如何拍摄虚化背景</h3>
-<ul>
+<h3 id="如何拍摄虚化背景"><a href="#如何拍摄虚化背景" class="headerlink" title="如何拍摄虚化背景"></a>如何拍摄虚化背景</h3><ul>
 <li>靠近点拍。</li>
 <li>让被摄物体离背景远一些。</li>
 <li>长焦距可以得到更好的虚化效果（一般手机得外接镜头）。</li>
@@ -1283,32 +1277,39 @@ Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
 <li>双镜头手机可以得到更好的景深效果。</li>
 <li>我们可以通过手机app进行后期处理。</li>
 </ul>
-<h3 id="手机处理APP">手机处理APP</h3>
-<ul>
+<h3 id="手机处理APP"><a href="#手机处理APP" class="headerlink" title="手机处理APP"></a>手机处理APP</h3><ul>
 <li>Snapseed（修图）</li>
 <li>VUE（视频剪辑）</li>
 <li>ProCam（拍照APP，付费软件，可以在淘宝上买到很便宜的下载方法）</li>
 <li>DJI Mimo（大疆的软件，主要服务于自己产品，也有一些视频剪辑和图片处理功能）</li>
 </ul>
-<h2 id="后期处理软件">后期处理软件</h2>
-<p>后期处理的软件有很多，最推荐还是Adobe系列，因为拥有一系列的软件可供参考。</p>
-<h3 id="Photoshop-PS">Photoshop(PS)</h3>
-<p>图片处理软件，专业修图用。简单款的可以用Photoshop Elements这个软件。</p>
-<h3 id="Adobe-illustrator-Ai">Adobe illustrator(Ai)</h3>
-<p>专业矢量图绘制软件。可以用于专业印刷。</p>
-<h3 id="Premiere-Pr">Premiere(Pr)</h3>
-<p>视频剪辑软件，做up主必备。简单款可以用Premiere Elements这个软件。</p>
-<h3 id="Adobe-effects-Ae">Adobe effects(Ae)</h3>
-<p>动画设计软件。师Premiere的进阶。Premiere提供方便上手的视频剪辑功能，而Ae可以做动画特效。</p>
-<h2 id="新手相机介绍">新手相机介绍</h2>
+<h2 id="摄影运镜和转场技巧"><a href="#摄影运镜和转场技巧" class="headerlink" title="摄影运镜和转场技巧"></a>摄影运镜和转场技巧</h2><p>在拍摄视频的时候，如何巧妙的设计角度能够极大地提升视频的趣味性。</p>
 <ul>
+<li>利用好前景过渡，比如路边的树木，墙面作为遮罩物</li>
+<li>利用特别的拍摄角度，比如将视角降低，贴地面拍摄</li>
+<li>多维度方向运动，比如后退+抬升角度拍摄，贴地+环绕拍摄，贴地向前锁定特写，环绕POV拍摄，360度转动拍摄</li>
+<li>创意玩法，比如滑动变焦（拍摄一段向前移动的画面，后期再进行逐渐缩小的操作，适合于画面有明显纵深关系的场景）</li>
+<li>一镜到底</li>
+<li>相机转场，向左/右/上/下边晃动，</li>
+<li>延时摄影</li>
+<li>画面和音乐的节奏配合</li>
+<li>斜向跟踪并锁定人物</li>
+</ul>
+<h2 id="后期处理软件"><a href="#后期处理软件" class="headerlink" title="后期处理软件"></a>后期处理软件</h2><p>后期处理的软件有很多，最推荐还是Adobe系列，因为拥有一系列的软件可供参考。</p>
+<h3 id="Photoshop-PS"><a href="#Photoshop-PS" class="headerlink" title="Photoshop(PS)"></a>Photoshop(PS)</h3><p>图片处理软件，专业修图用。简单款的可以用Photoshop Elements这个软件。</p>
+<h3 id="Adobe-illustrator-Ai"><a href="#Adobe-illustrator-Ai" class="headerlink" title="Adobe illustrator(Ai)"></a>Adobe illustrator(Ai)</h3><p>专业矢量图绘制软件。可以用于专业印刷。</p>
+<h3 id="Premiere-Pr"><a href="#Premiere-Pr" class="headerlink" title="Premiere(Pr)"></a>Premiere(Pr)</h3><p>视频剪辑软件，做up主必备。简单款可以用Premiere Elements这个软件。</p>
+<h3 id="Adobe-effects-Ae"><a href="#Adobe-effects-Ae" class="headerlink" title="Adobe effects(Ae)"></a>Adobe effects(Ae)</h3><p>动画设计软件。师Premiere的进阶。Premiere提供方便上手的视频剪辑功能，而Ae可以做动画特效。</p>
+<h3 id="特效"><a href="#特效" class="headerlink" title="特效"></a>特效</h3><ul>
+<li>时空倒退</li>
+</ul>
+<h2 id="新手相机介绍"><a href="#新手相机介绍" class="headerlink" title="新手相机介绍"></a>新手相机介绍</h2><ul>
 <li>作为新手vlogger,最推荐的一开始还是用自己的手机。毕竟现在手机拍照和摄影功能都很强大。其中首推华为和iphone。</li>
 <li>普通卡片机也可以作为入门机型。</li>
 <li>微单和单反相机，成像效果好。</li>
 <li>运动相机，比如GoPro和DJI。</li>
 </ul>
-<h2 id="经典教程">经典教程</h2>
-<ul>
+<h2 id="经典教程"><a href="#经典教程" class="headerlink" title="经典教程"></a>经典教程</h2><ul>
 <li>美国纽约学院摄影教材</li>
 <li>纽约摄影学院教程</li>
 <li>完美摄影161法则</li>
@@ -1977,43 +1978,18 @@ echo “继续执行剩下的逻辑…”<br>
     <url>/blog/2019/12/16/tmux-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>tmux 是一款非常好用的终端管理软件。尤其是在服务器上面运行代码的时候尤为推荐。tmux支持多个窗口，每个窗口又可以分屏操作。这样不需要每开一个窗口都要重新登录下服务器了。同时，即使退出窗口（不是关闭），tmux上跑的代码仍然可以后台运行，这样不需要再用nohup这种命令来离线跑代码了。tmux本身支持很多快捷键操作，本文只介绍一些作者自己常用的命令，其余的可以参考reference里面的链接。</p>
 <a id="more"></a>
-<h2 id="tmux结构">tmux结构</h2>
-<p>tmux采用C/S模型构建，主要包括三层结构：会话、窗口、面板。一个tmux session（会话）可以包含多个window（窗口），一个window又可以包含多个pane（面板），窗口下的面板，都处于同一界面下，这些面板适合运行相关性高的任务，以便同时观察到它们的运行情况。<br>
-<img src="screen.png" alt="screen"/></p>
-<h2 id="安装tmux">安装tmux</h2>
-<p>在Mac中安装：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 先安装Homebrew，有则跳过</span><br><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br><span class="line"># 安装tmux</span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure>
-<p>在Linux中安装：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
-<h2 id="会话">会话</h2>
-<p>1.新建会话：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux # 新建一个无名称的会话</span><br><span class="line">tmux new -s demo # 新建一个名称为demo的会话</span><br></pre></td></tr></table></figure>
-<p>2.断开当前对话：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux detach # 断开当前会话，会话在后台运行</span><br></pre></td></tr></table></figure>
-<p>3.进入之前会话：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux a # 默认进入第一个会话</span><br><span class="line">tmux a -t demo # 进入到名称为demo的会话</span><br><span class="line">tmux attach-session -t session-name</span><br></pre></td></tr></table></figure>
-<p>4.关闭会话:<br>
-我们可以使用tmux的kill命令，kill命令有kill-pane、kill-server、kill-session 和 kill-window共四种，其中kill-session的语法为tmux kill-session -t session-name。如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux kill-session -t demo # 关闭demo会话</span><br><span class="line">tmux kill-server # 关闭服务器，所有的会话都将关闭</span><br></pre></td></tr></table></figure>
-<p>5.查看会话：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux list-session # 查看所有会话</span><br><span class="line">tmux ls # 查看所有会话，提倡使用简写形式</span><br></pre></td></tr></table></figure>
-<p>如果已经在会话之中，可以用快捷键<code>ctrl+b+s</code>列出所有会话，移动上下键进行选择。</p>
-<h2 id="开启鼠标">开启鼠标</h2>
-<p>在 <code>tmux.conf</code> 中加入下列设置（tmux 2.1 之前的版本）：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set -g mode-mouse on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></table></figure>
-<p>在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure>
-<p>这样在 macOS 中随意滚动进入选择模式后，按住 option 键就用直接用鼠标选择文字，然后再按鼠标中键就能直接复制内容到系统剪切板中了。<br>
-这几行配置加到 <code>~/.tmux.conf</code> 中，然后在tmux里面按 <code>C-b :</code> 执行 <code>source ~/.tmux.conf</code> 即可生效.</p>
-<h2 id="常用命令">常用命令</h2>
-<p>自己平时会用到的一些tmux命令。更多的命令可见参考文献。</p>
+<h2 id="tmux结构"><a href="#tmux结构" class="headerlink" title="tmux结构"></a>tmux结构</h2><p>tmux采用C/S模型构建，主要包括三层结构：会话、窗口、面板。一个tmux session（会话）可以包含多个window（窗口），一个window又可以包含多个pane（面板），窗口下的面板，都处于同一界面下，这些面板适合运行相关性高的任务，以便同时观察到它们的运行情况。<br><img src="screen.png" alt="screen"/> </p>
+<h2 id="安装tmux"><a href="#安装tmux" class="headerlink" title="安装tmux"></a>安装tmux</h2><p>在Mac中安装：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 先安装Homebrew，有则跳过</span><br><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br><span class="line"># 安装tmux</span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure><br>在Linux中安装：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure></p>
+<h2 id="会话"><a href="#会话" class="headerlink" title="会话"></a>会话</h2><p>1.新建会话：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux # 新建一个无名称的会话</span><br><span class="line">tmux new -s demo # 新建一个名称为demo的会话</span><br></pre></td></tr></table></figure><br>2.断开当前对话：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux detach # 断开当前会话，会话在后台运行</span><br></pre></td></tr></table></figure><br>3.进入之前会话：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux a # 默认进入第一个会话</span><br><span class="line">tmux a -t demo # 进入到名称为demo的会话</span><br><span class="line">tmux attach-session -t session-name</span><br></pre></td></tr></table></figure><br>4.关闭会话:<br>我们可以使用tmux的kill命令，kill命令有kill-pane、kill-server、kill-session 和 kill-window共四种，其中kill-session的语法为tmux kill-session -t session-name。如下：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux kill-session -t demo # 关闭demo会话</span><br><span class="line">tmux kill-server # 关闭服务器，所有的会话都将关闭</span><br></pre></td></tr></table></figure><br>5.查看会话：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tmux list-session # 查看所有会话</span><br><span class="line">tmux ls # 查看所有会话，提倡使用简写形式</span><br></pre></td></tr></table></figure><br>如果已经在会话之中，可以用快捷键<code>ctrl+b+s</code>列出所有会话，移动上下键进行选择。</p>
+<h2 id="开启鼠标"><a href="#开启鼠标" class="headerlink" title="开启鼠标"></a>开启鼠标</h2><p>在 <code>~/.tmux.conf</code> 中加入下列设置（tmux 2.1 之前的版本）：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set -g mode-mouse on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></table></figure><br>在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure><br>这样在 macOS 中随意滚动进入选择模式后，按住 option 键就用直接用鼠标选择文字，然后再按鼠标中键就能直接复制内容到系统剪切板中了。<br>这几行配置加到 <code>~/.tmux.conf</code> 中，然后在tmux里面按 <code>C-b :</code> 执行 <code>source ~/.tmux.conf</code> 即可生效. </p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>自己平时会用到的一些tmux命令。更多的命令可见参考文献。</p>
 <table>
     <tr>
         <td colspan="2">Ctrl+b</td>
         <td >快捷键</td>
     </tr>
     <tr>
-    	<td rowspan="7">系统操作</td>
+        <td rowspan="7">系统操作</td>
         <td >?</td>
         <td >列出所有快捷键；按q返回</td>
     </tr>
@@ -2140,6 +2116,7 @@ echo “继续执行剩下的逻辑…”<br>
         <td >以1个单元格为单位调整当前面板边缘（Mac下被系统快捷键覆盖）</td>
     </tr>
 </table>
+
 <p>参考文献:</p>
 <ul>
 <li><a href="https://blog.csdn.net/hcx25909/article/details/7602935" target="_blank" rel="noopener">tmux快捷键</a></li>
