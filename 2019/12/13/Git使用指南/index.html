@@ -62,7 +62,7 @@
 <meta property="og:image" content="http://yoursite.com/blog/2019/12/13/Git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/summary.png">
 <meta property="og:image" content="http://yoursite.com/blog/2019/12/13/Git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/git_add.png">
 <meta property="article:published_time" content="2019-12-13T23:51:08.000Z">
-<meta property="article:modified_time" content="2021-03-30T18:36:53.356Z">
+<meta property="article:modified_time" content="2021-08-14T23:35:42.439Z">
 <meta property="article:author" content="Zheng Gao (高正)">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -247,7 +247,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-30 11:36:53" itemprop="dateModified" datetime="2021-03-30T11:36:53-07:00">2021-03-30</time>
+                <time title="修改时间：2021-08-14 16:35:42" itemprop="dateModified" datetime="2021-08-14T16:35:42-07:00">2021-08-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -288,7 +288,7 @@
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>18 分钟</span>
+              <span>19 分钟</span>
             </span>
 
         </div>
@@ -546,6 +546,12 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
 <li><code>git pull --rebase</code>：去除多余的merge commit记录。使得整体log commit记录变得更加顺畅。<code>git pull</code> = <code>git fetch</code> + <code>git merge</code><br>
 <code>git pull --rebase</code> = <code>git fetch</code> + <code>git rebase</code>。</li>
 <li><code>git blame [filename]</code>：溯一个指定文件的历史修改记录。[filename]就是我们想要了解的某一个具体文件的完整修改记录。</li>
+<li>如果需要two factor authorization，需要personal access token的话，需要做以下两步：
+<ul>
+<li><code>git config --global credential.helper cache</code>避免一直输入user name和password (personal access token), 用<code>git config --global --unset credential.help</code>可以取消。</li>
+<li><code>git remote set-url origin https://&lt;token&gt;@github.com/RoyZhengGao/RoyZhengGao.github.io.git</code> 把personal access token加上去</li>
+</ul>
+</li>
 </ul>
 <p>Reference:</p>
 <ul>
@@ -642,7 +648,7 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -655,7 +661,7 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -714,12 +720,12 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">111k</span>
+    <span title="站点总字数">112k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:04</span>
+    <span title="站点阅读时长">3:07</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>

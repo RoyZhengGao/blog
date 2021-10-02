@@ -53,8 +53,8 @@
 <meta property="og:description" content="tmux 是一款非常好用的终端管理软件。尤其是在服务器上面运行代码的时候尤为推荐。tmux支持多个窗口，每个窗口又可以分屏操作。这样不需要每开一个窗口都要重新登录下服务器了。同时，即使退出窗口（不是关闭），tmux上跑的代码仍然可以后台运行，这样不需要再用nohup这种命令来离线跑代码了。tmux本身支持很多快捷键操作，本文只介绍一些作者自己常用的命令，其余的可以参考reference里面的链接。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/blog/2019/12/16/tmux-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/screen.png">
-<meta property="article:published_time" content="2019-12-16T21:01:33.000Z">
-<meta property="article:modified_time" content="2020-07-22T05:36:30.465Z">
+<meta property="article:published_time" content="2019-12-17T00:01:33.000Z">
+<meta property="article:modified_time" content="2021-06-18T23:00:52.377Z">
 <meta property="article:author" content="Zheng Gao (高正)">
 <meta property="article:tag" content="tech tool">
 <meta property="article:tag" content="tmux">
@@ -233,14 +233,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-12-16 13:01:33" itemprop="dateCreated datePublished" datetime="2019-12-16T13:01:33-08:00">2019-12-16</time>
+              <time title="创建时间：2019-12-16 16:01:33" itemprop="dateCreated datePublished" datetime="2019-12-16T16:01:33-08:00">2019-12-16</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-21 22:36:30" itemprop="dateModified" datetime="2020-07-21T22:36:30-07:00">2020-07-21</time>
+                <time title="修改时间：2021-06-18 16:00:52" itemprop="dateModified" datetime="2021-06-18T16:00:52-07:00">2021-06-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -295,18 +295,43 @@
       
         <p>tmux 是一款非常好用的终端管理软件。尤其是在服务器上面运行代码的时候尤为推荐。tmux支持多个窗口，每个窗口又可以分屏操作。这样不需要每开一个窗口都要重新登录下服务器了。同时，即使退出窗口（不是关闭），tmux上跑的代码仍然可以后台运行，这样不需要再用nohup这种命令来离线跑代码了。tmux本身支持很多快捷键操作，本文只介绍一些作者自己常用的命令，其余的可以参考reference里面的链接。</p>
 <a id="more"></a>
-<h2 id="tmux结构"><a href="#tmux结构" class="headerlink" title="tmux结构"></a>tmux结构</h2><p>tmux采用C/S模型构建，主要包括三层结构：会话、窗口、面板。一个tmux session（会话）可以包含多个window（窗口），一个window又可以包含多个pane（面板），窗口下的面板，都处于同一界面下，这些面板适合运行相关性高的任务，以便同时观察到它们的运行情况。<br><img src="screen.png" alt="screen"/> </p>
-<h2 id="安装tmux"><a href="#安装tmux" class="headerlink" title="安装tmux"></a>安装tmux</h2><p>在Mac中安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 先安装Homebrew，有则跳过</span><br><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br><span class="line"># 安装tmux</span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure><br>在Linux中安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure></p>
-<h2 id="会话"><a href="#会话" class="headerlink" title="会话"></a>会话</h2><p>1.新建会话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux # 新建一个无名称的会话</span><br><span class="line">tmux new -s demo # 新建一个名称为demo的会话</span><br></pre></td></tr></table></figure><br>2.断开当前对话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux detach # 断开当前会话，会话在后台运行</span><br></pre></td></tr></table></figure><br>3.进入之前会话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmux a # 默认进入第一个会话</span><br><span class="line">tmux a -t demo # 进入到名称为demo的会话</span><br><span class="line">tmux attach-session -t session-name</span><br></pre></td></tr></table></figure><br>4.关闭会话:<br>我们可以使用tmux的kill命令，kill命令有kill-pane、kill-server、kill-session 和 kill-window共四种，其中kill-session的语法为tmux kill-session -t session-name。如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux kill-session -t demo # 关闭demo会话</span><br><span class="line">tmux kill-server # 关闭服务器，所有的会话都将关闭</span><br></pre></td></tr></table></figure><br>5.查看会话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux list-session # 查看所有会话</span><br><span class="line">tmux ls # 查看所有会话，提倡使用简写形式</span><br></pre></td></tr></table></figure><br>如果已经在会话之中，可以用快捷键<code>ctrl+b+s</code>列出所有会话，移动上下键进行选择。</p>
-<h2 id="开启鼠标"><a href="#开启鼠标" class="headerlink" title="开启鼠标"></a>开启鼠标</h2><p>在 <code>~/.tmux.conf</code> 中加入下列设置（tmux 2.1 之前的版本）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set -g mode-mouse on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></table></figure><br>在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure><br>这样在 macOS 中随意滚动进入选择模式后，按住 option 键就用直接用鼠标选择文字，然后再按鼠标中键就能直接复制内容到系统剪切板中了。<br>这几行配置加到 <code>~/.tmux.conf</code> 中，然后在tmux里面按 <code>C-b :</code> 执行 <code>source ~/.tmux.conf</code> 即可生效. </p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>自己平时会用到的一些tmux命令。更多的命令可见参考文献。</p>
+<h2 id="tmux结构">tmux结构</h2>
+<p>tmux采用C/S模型构建，主要包括三层结构：会话、窗口、面板。一个tmux session（会话）可以包含多个window（窗口），一个window又可以包含多个pane（面板），窗口下的面板，都处于同一界面下，这些面板适合运行相关性高的任务，以便同时观察到它们的运行情况。<br>
+<img src="screen.png" alt="screen"/></p>
+<h2 id="安装tmux">安装tmux</h2>
+<p>在Mac中安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 先安装Homebrew，有则跳过</span><br><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br><span class="line"># 安装tmux</span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure>
+<p>在Linux中安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
+<h2 id="会话">会话</h2>
+<p>1.新建会话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux # 新建一个无名称的会话</span><br><span class="line">tmux new -s demo # 新建一个名称为demo的会话</span><br></pre></td></tr></table></figure>
+<p>2.断开当前对话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux detach # 断开当前会话，会话在后台运行</span><br></pre></td></tr></table></figure>
+<p>3.进入之前会话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tmux a # 默认进入第一个会话</span><br><span class="line">tmux a -t demo # 进入到名称为demo的会话</span><br><span class="line">tmux attach-session -t session-name</span><br></pre></td></tr></table></figure>
+<p>4.关闭会话:<br>
+我们可以使用tmux的kill命令，kill命令有kill-pane、kill-server、kill-session 和 kill-window共四种，其中kill-session的语法为tmux kill-session -t session-name。如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux kill-session -t demo # 关闭demo会话</span><br><span class="line">tmux kill-server # 关闭服务器，所有的会话都将关闭</span><br></pre></td></tr></table></figure>
+<p>5.查看会话：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tmux list-session # 查看所有会话</span><br><span class="line">tmux ls # 查看所有会话，提倡使用简写形式</span><br></pre></td></tr></table></figure>
+<p>如果已经在会话之中，可以用快捷键<code>ctrl+b+s</code>列出所有会话，移动上下键进行选择。</p>
+<h2 id="开启鼠标">开启鼠标</h2>
+<p>在 <code>~/.tmux.conf</code> 中加入下列设置（tmux 2.1 之前的版本）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set -g mode-mouse on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></table></figure>
+<p>在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure>
+<p>这样在 macOS 中随意滚动进入选择模式后，按住 option 键就用直接用鼠标选择文字，然后再按鼠标中键就能直接复制内容到系统剪切板中了。<br>
+这几行配置加到 <code>~/.tmux.conf</code> 中，然后在tmux里面按 <code>C-b :</code> 执行 <code>source ~/.tmux.conf</code> 即可生效.</p>
+<h2 id="常用命令">常用命令</h2>
+<p>自己平时会用到的一些tmux命令。更多的命令可见参考文献。</p>
 <table>
     <tr>
         <td colspan="2">Ctrl+b</td>
         <td >快捷键</td>
     </tr>
     <tr>
-        <td rowspan="7">系统操作</td>
+    	<td rowspan="7">系统操作</td>
         <td >?</td>
         <td >列出所有快捷键；按q返回</td>
     </tr>
@@ -433,7 +458,10 @@
         <td >以1个单元格为单位调整当前面板边缘（Mac下被系统快捷键覆盖）</td>
     </tr>
 </table>
-
+<h2 id="Tricks">Tricks</h2>
+<ul>
+<li>为了让服务器一直跑进程，可以新建一个tmux页面，然后run <code>yes</code>.</li>
+</ul>
 <p>参考文献:</p>
 <ul>
 <li><a href="https://blog.csdn.net/hcx25909/article/details/7602935" target="_blank" rel="noopener">tmux快捷键</a></li>
@@ -461,12 +489,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2019/12/15/%E9%9F%A9%E8%AF%AD%E6%AD%8C%E6%9B%B2Kpop/" rel="prev" title="韩语歌曲Kpop">
-      <i class="fa fa-chevron-left"></i> 韩语歌曲Kpop
+    <a href="/blog/2019/12/16/Language-Model-Summary/" rel="prev" title="Language Model Summary">
+      <i class="fa fa-chevron-left"></i> Language Model Summary
     </a></div>
       <div class="post-nav-item">
-    <a href="/blog/2019/12/16/Language-Model-Summary/" rel="next" title="Language Model Summary">
-      Language Model Summary <i class="fa fa-chevron-right"></i>
+    <a href="/blog/2019/12/16/Shell-Script-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" rel="next" title="Shell Script 学习总结 ">
+      Shell Script 学习总结  <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -506,7 +534,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tmux结构"><span class="nav-number">1.</span> <span class="nav-text">tmux结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装tmux"><span class="nav-number">2.</span> <span class="nav-text">安装tmux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话"><span class="nav-number">3.</span> <span class="nav-text">会话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启鼠标"><span class="nav-number">4.</span> <span class="nav-text">开启鼠标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">5.</span> <span class="nav-text">常用命令</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tmux结构"><span class="nav-number">1.</span> <span class="nav-text">tmux结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装tmux"><span class="nav-number">2.</span> <span class="nav-text">安装tmux</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#会话"><span class="nav-number">3.</span> <span class="nav-text">会话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开启鼠标"><span class="nav-number">4.</span> <span class="nav-text">开启鼠标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">5.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tricks"><span class="nav-number">6.</span> <span class="nav-text">Tricks</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -522,7 +550,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -535,7 +563,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">32</span>
+        <span class="site-state-item-count">34</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -594,12 +622,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">111k</span>
+    <span title="站点总字数">112k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:04</span>
+    <span title="站点阅读时长">3:07</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
   </div>
