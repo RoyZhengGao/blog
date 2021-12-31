@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Medibang Paint Pro 笔记</title>
+    <url>/blog/2021/12/30/Medibang-Paint-Pro-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>本文记录自己学习Medibang Paint Pro画图时的一些笔记。</p>
+<a id="more"></a>
+<h2 id="Tips">Tips</h2>
+<ul>
+<li>用text tool在图上写文字时，会单独放在一层中，我们需要在那个层中复制，然后再粘贴，就会把文字工具转化成一个单独的颜色图层。这样就可以和其他的图层merge了。</li>
+<li>选定部分图形，拉拽并使其<a href="https://medibangpaint.com/zh_CN/tutorial/pc/use-transform/" target="_blank" rel="noopener">变形</a>的方法</li>
+<li>如何出现标尺：页面上方有各种标尺可以用来对应。</li>
+<li>如何使画的线变得圆润或画直线：
+<ul>
+<li><a href="https://medibangpaint.com/zh_CN/use/2020/11/how-to-draw-smooth-lines/" target="_blank" rel="noopener">如何画出简洁的线条和线稿</a></li>
+<li><a href="https://medibangpaint.com/zh_CN/use/2019/08/use-correction-to-draw-beautiful-lines/" target="_blank" rel="noopener">运用校正</a></li>
+</ul>
+</li>
+<li>改变线条颜色：画好线稿之后，开启图层的“保护透明度”功能然后再用大画笔任意涂抹即可。protect alpha 使得你只能在当前图层画好的区域进行更改。所以只能改变已有的线条颜色。</li>
+<li>clipping 使得上方clipped图层的作用效果只能存在在其下方普通图层有颜色的位置上。</li>
+<li>图层混合的种类：<a href="https://medibangpaint.com/zh_CN/use/2016/07/layer-blend/" target="_blank" rel="noopener">链接</a></li>
+<li><a href="https://medibangpaint.com/zh_CN/use/2021/08/how-to-paint-skin-three-step/" target="_blank" rel="noopener">如何画皮肤</a></li>
+<li><a href="https://medibangpaint.com/zh_CN/use/2021/10/how-to-draw-charming-mini-characters/" target="_blank" rel="noopener">Q版人物的画法</a></li>
+<li><a href="https://medibangpaint.com/zh_CN/use/2021/12/lecture-to-complete-one-picture/" target="_blank" rel="noopener">完成一幅插画</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>paint</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>细数自己作为男朋友的一百条罪状</title>
     <url>/blog/2021/10/01/%E7%BB%86%E6%95%B0%E8%87%AA%E5%B7%B1%E4%BD%9C%E4%B8%BA%E7%94%B7%E6%9C%8B%E5%8F%8B%E7%9A%84%E4%B8%80%E7%99%BE%E6%9D%A1%E7%BD%AA%E7%8A%B6/</url>
     <content><![CDATA[<p>作为直男代表，本人在此反省自己作为男朋友时的一系列罪状，最终导致女朋友生气哭泣。总结与此，下不为例，以儆效尤。</p>
