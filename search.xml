@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>录音修音</title>
+    <url>/blog/2022/01/03/%E5%BD%95%E9%9F%B3%E4%BF%AE%E9%9F%B3/</url>
+    <content><![CDATA[<p>本文记录自己学习Adobe Audition来录音修音时的一些笔记。</p>
+<a id="more"></a>
+<p>录音的工具：麦克风，声卡。<br>
+录音软件：Adobe Audition (录音)， Melodyne (修音)。其中Melodyne提供插件可以直接在AU里面使用。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>录音</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Medibang Paint Pro 笔记</title>
     <url>/blog/2021/12/30/Medibang-Paint-Pro-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>本文记录自己学习Medibang Paint Pro画图时的一些笔记。</p>
