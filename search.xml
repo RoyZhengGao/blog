@@ -1,6 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Jekyll 搭建个人网站 - al-folio模板</title>
+    <url>/blog/2022/08/27/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99-al-folio%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>Github Pages al-folio 其<a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">源代码</a>和生成的<a href="https://maruan.alshedivat.com/" target="_blank" rel="noopener">网页效果</a>比较适用于偏学术风格的个人网站。 </p>
+<a id="more"></a>
+<h2 id="安装Ruby-和-Bundler"><a href="#安装Ruby-和-Bundler" class="headerlink" title="安装Ruby 和 Bundler"></a>安装Ruby 和 Bundler</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install ruby &#x2F;&#x2F; ruby其实应该默认已经安装在Mac系统上了，以防万一可以再用brew 安装下</span><br><span class="line">gem install bundler &#x2F;&#x2F; gem 是ruby的打包系统</span><br><span class="line">brew install rbenv ruby-build &#x2F;&#x2F;更好的管理ruby gems</span><br></pre></td></tr></table></figure>
+<p>第一次安装Ruby之后，需要把以下加入路径中：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;&quot;&#x2F;usr&#x2F;local&#x2F;opt&#x2F;ruby&#x2F;bin:$PATH&quot;&#39; &gt;&gt; ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<h2 id="页面内容更改"><a href="#页面内容更改" class="headerlink" title="页面内容更改"></a>页面内容更改</h2><h3 id="banner-顺序"><a href="#banner-顺序" class="headerlink" title="banner 顺序"></a>banner 顺序</h3><p>在每个pages folder里面的md 文档，可以通过nav_order 来更改顺序, blog页面除外。</p>
+<h3 id="about-md"><a href="#about-md" class="headerlink" title="about.md"></a>about.md</h3><ul>
+<li>Modify the major content in this page.</li>
+<li>The news is in under news folder.</li>
+<li>You can modify Social integration section in config.yml, which allows to provide you a list of social media icons.</li>
+<li>contact_note “Free feel to reach out to me via email.” in the bottom can be modified in config.yml as well. </li>
+<li>profile image should be stored at <code>assets/img</code> folder. <h3 id="blog-md"><a href="#blog-md" class="headerlink" title="blog.md"></a>blog.md</h3>blog的页面默认是在第二栏的，可以在config.yml里面进行修改或者删除。因为本人的blog页面是托管在另外一个网站，并且想把blog页面放在最后，所以笔者新建了一个blog.md文件，然后把nav_order的值放在最后。</li>
+</ul>
+<h3 id="publication-md"><a href="#publication-md" class="headerlink" title="publication.md"></a>publication.md</h3><ul>
+<li>config.yml 文件中定义好对应的papers.bib。这样可以自动读取bib文档生成文章信息。具体一些参数（比如filtered_bibtex_keywords）也可以在这里改。</li>
+<li>在pages/publications.md中写好对应的内容。比如years这种变量。</li>
+<li>/bibliography/papers.bib里面填写paper的bib信息.</li>
+<li>如果想改publications里面的button的话，可以首先在config.yml里filtered_bibtex_keywords中填上对应名称，i.e. <code>video</code>，然后再layouts/bib.html里面参考其他button添加对应代码，比如：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;%- if entry.video %&#125;</span><br><span class="line">&lt;a href&#x3D;&quot;&#123;&#123; entry.video &#125;&#125;&quot; class&#x3D;&quot;btn btn-sm z-depth-0&quot; role&#x3D;&quot;button&quot;&gt;Video&lt;&#x2F;a&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+button在此文件中的顺序将会影响其在publication页面中的顺序。</li>
+</ul>
+<h3 id="cv-md"><a href="#cv-md" class="headerlink" title="cv.md"></a>cv.md</h3><p>cv的内容主要存放在data/cv.yml文件中。可以直接在里面进行修改。</p>
+<h2 id="Git-commit"><a href="#Git-commit" class="headerlink" title="Git commit"></a>Git commit</h2><p>如果用<code>git clone https://github.com/RoyZhengGao/RoyZhengGao.github.io.git</code> 的方式来下载项目的话，最后git push的时候需要用户名和密码。用户名为<code>RoyZhengGao</code>,而密码是之前设置的一个personal access token。<a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories" target="_blank" rel="noopener">参考链接</a></p>
+<h2 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h2><p>自动deployment（目前不清楚怎么弄）: </p>
+<ol>
+<li>Click on <code>Actions</code> tab and <code>Enable GitHub Actions</code>; do not worry about creating any workflows as everything has already been set for you.</li>
+<li>Make any other changes to your webpage, commit, and push. This will automatically trigger the Deploy action.</li>
+<li>Wait for a few minutes and let the action complete. You can see the progress in the Actions tab. If completed successfully, in addition to the master branch, your repository should now have a newly built gh-pages branch.</li>
+<li>Finally, in the <code>Settings</code> of your repository, in the Pages section, set the branch to <code>gh-pages</code> (NOT to <code>master</code>). For more details, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source" target="_blank" rel="noopener">Configuring a publishing source for your GitHub Pages site</a>.</li>
+</ol>
+<p>手动deployment，在master branch运行：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;bin&#x2F;deploy</span><br></pre></td></tr></table></figure></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio Github Repository</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>jekyll</tag>
+        <tag>front end</tag>
+        <tag>tech tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云安装WordPress的Tips</title>
+    <url>/blog/2022/08/15/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%89%E8%A3%85WordPress%E7%9A%84Tips/</url>
+    <content><![CDATA[<p>本文介绍一些在腾讯云轻量服务器上手动安装WordPress时需要注意的一些方面。笔者是在Windows 12系统上进行操作的。</p>
+<a id="more"></a>
+<h2 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h2><ol>
+<li>具体安装步骤可以参考<a href="https://cloud.tencent.com/document/product/213/39540" target="_blank" rel="noopener">https://cloud.tencent.com/document/product/213/39540</a></li>
+<li>安装过程中楼主发现根据上述步骤安装后，只能在localhost里面打开WordPress，而不能在公网IP里面打开。这样导致没有办法对网站进行外部访问。解决办法为在数据库端把localhost改为公网IP。 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql&gt; use wordpress;  #打开数据库后对该表wp_options 操作</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from wp_options where option_name&#x3D;‘siteurl’</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">update wp_options set option_value&#x3D;&#39;http:&#x2F;&#x2F;124.223.188.213’ where option_name&#x3D;&#39;siteurl&#39;;   #公网IP</span><br><span class="line"></span><br><span class="line">update wp_options set option_value&#x3D;&#39;http:&#x2F;&#x2F;http:&#x2F;&#x2F;124.223.188.213&#39; where option_name&#x3D;&#39;home‘; #公网IP</span><br></pre></td></tr></table></figure></li>
+<li>改好之后登录发现，虽然能进入主页，但是或许会显示无法登陆，显示账号密码错误。此时可以直接在mysql端进行操作，更新账户密码： <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mysql&gt; use wordpress; #登录具体的数据库</span><br><span class="line">mysql&gt; show tables; #查看数据库中的表格，要找到以users为结尾的表格，里面包括了WordPress的账号和密码</span><br><span class="line">mysql&gt; select * from wp_users # 查看具体内容</span><br><span class="line">mysql&gt; UPDATE wp_users SET user_pass&#x3D;MD5(‘(new-password)’) WHERE ID &#x3D; (id#-of-account-you-are-reseting-password-for);</span><br></pre></td></tr></table></figure></li>
+<li>最后改好之后，就可以对公网IP进行访问。访问链接 <a href="http://124.223.188.213/wp-admin" target="_blank" rel="noopener">http://124.223.188.213/wp-admin</a> 可以登录WordPress对网站进行修改。访问<a href="http://124.223.188.213" target="_blank" rel="noopener">http://124.223.188.213</a> 即直接查看网站具体内容。</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="https://blog.csdn.net/weixin_35888497/article/details/119665467?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0-119665467-blog-75408629.pc_relevant_multi_platform_whitelistv4eslandingrelevant2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3" target="_blank" rel="noopener">wp网站更换服务器后打不开,WordPress站点更换公网IP后不能正常访问的解决过程</a></li>
+<li><a href="https://blog.csdn.net/soar92/article/details/75408629" target="_blank" rel="noopener">云服务器中安装wordpress，却不能使用公网IP进行访问</a></li>
+<li><a href="https://wordpress.org/support/article/resetting-your-password/" target="_blank" rel="noopener">Resetting Your Password</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>tech</tag>
+        <tag>cloud service</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>搭建VPN</title>
     <url>/blog/2022/08/06/%E6%90%AD%E5%BB%BAVPN/</url>
     <content><![CDATA[<p>本文记录如何在云服务器中（Linux和Window系统）搭建VPN服务端来进行科学上网。</p>
