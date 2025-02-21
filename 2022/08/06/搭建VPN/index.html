@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -283,7 +283,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.1k</span>
+              <span>4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -303,7 +303,7 @@
 
       
         <p>本文记录如何在云服务器中（Linux和Window系统）搭建VPN服务端来进行科学上网。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="CentOS系统">CentOS系统</h2>
 <h3 id="Shadowsocks配置服务端">Shadowsocks配置服务端</h3>
 <ol>
@@ -312,15 +312,15 @@
 </li>
 <li>
 <p>系统默认应该已经装好wget命令，如果没有，运行以下命令安装</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget #CentOS</span><br><span class="line">sudo apt-get install wget #Debian&#x2F;Ubuntu</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget #CentOS</span><br><span class="line">sudo apt-get install wget #Debian/Ubuntu</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>运行以下一键脚本：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;teddysun&#x2F;shadowsocks_install&#x2F;master&#x2F;shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">.&#x2F;shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
 <p>安装途中如果报错不能下载github中的shadowsocks源代码，可以自行尝试下载</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;github.com&#x2F;shadowsocks&#x2F;shadowsocks&#x2F;archive&#x2F;master.zip</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/shadowsocks/shadowsocks/archive/master.zip </span><br></pre></td></tr></table></figure>
 <p>如果后续报错无法解压<code>shadowsocks-master.zip</code>,可以改变源代码zip文件名</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv master.zip shadowsocks-master.zip</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv master.zip shadowsocks-master.zip</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>将以上命令粘贴到 Xshell 窗口，回车执行代码，然后会提示有以下4种安装选项，分别是“1) Shadowsocks-Python”、“2) ShadowsocksR”、“3) Shadowsocks-Go”、“4) Shadowsocks-libev”。如果我们选择第2个就是搭建SSR服务器了，我们这里选第1个，搭建Shadowsocks/SS服务器。如下图所示：<br>
@@ -352,23 +352,23 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
 <li>
 <p>卸载方法<br>
 若已安装多个版本，则卸载时也需多次运行（每次卸载1种），请使用root用户登录，执行以下命令：</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;shadowsocks-all.sh uninstall</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>脚本控制命令<br>
 脚本后面的参数含义：启动，停止，重启，查看状态。</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">&#x2F;etc&#x2F;init.d&#x2F;shadowsocks-python start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">&#x2F;etc&#x2F;init.d&#x2F;shadowsocks-r start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">&#x2F;etc&#x2F;init.d&#x2F;shadowsocks-go start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">&#x2F;etc&#x2F;init.d&#x2F;shadowsocks-libev start | stop | restart | status</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>默认配置文件</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">&#x2F;etc&#x2F;shadowsocks-python&#x2F;config.json</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">&#x2F;etc&#x2F;shadowsocks-r&#x2F;config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">&#x2F;etc&#x2F;shadowsocks-go&#x2F;config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">&#x2F;etc&#x2F;shadowsocks-libev&#x2F;config.json</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/shadowsocks-python/config.json</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/shadowsocks-r/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/shadowsocks-go/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/shadowsocks-libev/config.json</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 </ol>
 <h3 id="一键安装并开启BBR加速">一键安装并开启BBR加速</h3>
 <p>一键安装BBR加速脚本，执行如下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;usr&#x2F;src &amp;&amp; wget -N --no-check-certificate &quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;chiakge&#x2F;Linux-NetSpeed&#x2F;master&#x2F;tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; .&#x2F;tcp.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/src &amp;&amp; wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>执行以上安装命令后，如下图所示：<br>
 <img src="5.png" alt="5.png"/><br>
 我这里选择“2”，“安装 BBRplus版内核”加速。在安装过程中，可能会出现如下提示，用右方向键选“<No>”，然后回车(实际安装过程中本人并未遇到这个提示)。如下图所示：<br>
@@ -382,7 +382,7 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
 <p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装Windows12系统的实例。</p>
 </li>
 <li>
-<p>下载安装nodejs。下载地址：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a> ,下载LTS长期支持版本，然后安装NodeJS，直接下一步。</p>
+<p>下载安装nodejs。下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a> ,下载LTS长期支持版本，然后安装NodeJS，直接下一步。</p>
 </li>
 <li>
 <p>安装shadowsocks。<br>
@@ -395,7 +395,7 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
 </li>
 <li>
 <p>进入node.js安装目录<code>C:\Users\Administrator\AppData\Roaming\npm\node_modules\shadowsocks</code>，找到config.json后更改为如下形式保存。如果找不到安装目录的话，可以直接在Node.js command prompt命令段输入<code>ssserver</code>，第一栏就会出现对应的路径。</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,#服务器IP</span><br><span class="line">    &quot;server_port&quot;:13416, #要使用的服务器端口号，事先确认下端口号是否使用过</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;, #本地监听地址 默认不改</span><br><span class="line">    &quot;local_port&quot;:1080, #代理端口号，一般都默认1080</span><br><span class="line">    &quot;password&quot;:&quot;barfoo!&quot;, #更改为你的密码</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot; #建议aes-256-cfb就好</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,#服务器IP</span><br><span class="line">    &quot;server_port&quot;:13416, #要使用的服务器端口号，事先确认下端口号是否使用过</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;, #本地监听地址 默认不改</span><br><span class="line">    &quot;local_port&quot;:1080, #代理端口号，一般都默认1080</span><br><span class="line">    &quot;password&quot;:&quot;barfoo!&quot;, #更改为你的密码</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot; #建议aes-256-cfb就好</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果将server设成公网IP地址的话会报错，改为<code>0.0.0.0</code>即可解决问题。</p>
 </li>
 <li>
@@ -417,14 +417,14 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
 </ol>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li><a href="https://xyzardq.github.io/2017/04/14/Windows%E4%B8%8B%E6%90%AD%E5%BB%BAShadowoscks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/" target="_blank" rel="noopener">Windows下搭建Shadowsocks服务器端</a></li>
-<li><a href="https://xfj0.cn/archives/94.html" target="_blank" rel="noopener">在Windows server上安装Shadowsocks服务端</a></li>
-<li><a href="https://iyideng.net/black-technology/cgfw/best-onekey-build-v2ray-server-script.html#2%E3%80%81multi-v2ray_%E5%A4%9A%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC" target="_blank" rel="noopener">multi-v2ray 多用户管理脚本</a></li>
-<li><a href="https://iyideng.net/black-technology/cgfw/shadowsocks-ss-server-building-and-using-tutorial.html" target="_blank" rel="noopener">使用Shadowsocks配置服务端</a></li>
-<li><a href="https://www.skyfinder.cc/2018/11/13/windowsinstallnodejsshadowsocks/" target="_blank" rel="noopener">在Windows上安装nodejs版shadowsocks服务端</a></li>
-<li><a href="https://blog.heyfe.org/blog/2014-12-06-shadowsocks.html" target="_blank" rel="noopener">Shadowsocks 搭建</a></li>
-<li><a href="https://blog.whsir.com/post-559.html" target="_blank" rel="noopener">ss windows server配置</a></li>
-<li><a href="https://xfj0.cn/archives/94.html" target="_blank" rel="noopener">在windows server上安装Shadowsocks服务端</a></li>
+<li><a target="_blank" rel="noopener" href="https://xyzardq.github.io/2017/04/14/Windows%E4%B8%8B%E6%90%AD%E5%BB%BAShadowoscks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/">Windows下搭建Shadowsocks服务器端</a></li>
+<li><a target="_blank" rel="noopener" href="https://xfj0.cn/archives/94.html">在Windows server上安装Shadowsocks服务端</a></li>
+<li><a target="_blank" rel="noopener" href="https://iyideng.net/black-technology/cgfw/best-onekey-build-v2ray-server-script.html#2%E3%80%81multi-v2ray_%E5%A4%9A%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC">multi-v2ray 多用户管理脚本</a></li>
+<li><a target="_blank" rel="noopener" href="https://iyideng.net/black-technology/cgfw/shadowsocks-ss-server-building-and-using-tutorial.html">使用Shadowsocks配置服务端</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.skyfinder.cc/2018/11/13/windowsinstallnodejsshadowsocks/">在Windows上安装nodejs版shadowsocks服务端</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.heyfe.org/blog/2014-12-06-shadowsocks.html">Shadowsocks 搭建</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.whsir.com/post-559.html">ss windows server配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://xfj0.cn/archives/94.html">在windows server上安装Shadowsocks服务端</a></li>
 </ul>
 
     </div>
@@ -445,8 +445,8 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="prev" title="口袋48监听机器人">
-      <i class="fa fa-chevron-left"></i> 口袋48监听机器人
+    <a href="/blog/2022/07/30/%E8%85%BE%E8%AE%AF%E4%BA%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="prev" title="腾讯云使用教程">
+      <i class="fa fa-chevron-left"></i> 腾讯云使用教程
     </a></div>
       <div class="post-nav-item">
     <a href="/blog/2022/08/15/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%89%E8%A3%85WordPress%E7%9A%84Tips/" rel="next" title="腾讯云安装WordPress的Tips">
@@ -490,7 +490,7 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS系统"><span class="nav-number">1.</span> <span class="nav-text">CentOS系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks配置服务端"><span class="nav-number">1.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一键安装并开启BBR加速"><span class="nav-number">1.2.</span> <span class="nav-text">一键安装并开启BBR加速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows系统"><span class="nav-number">2.</span> <span class="nav-text">Windows系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks配置服务端-v2"><span class="nav-number">2.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios手机客户端配置"><span class="nav-number">3.</span> <span class="nav-text">ios手机客户端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">CentOS系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BC%80%E5%90%AFBBR%E5%8A%A0%E9%80%9F"><span class="nav-number">1.2.</span> <span class="nav-text">一键安装并开启BBR加速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">Windows系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF-v2"><span class="nav-number">2.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">ios手机客户端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -506,20 +506,20 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -578,14 +578,14 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">122k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:31</span>
+    <span title="站点阅读时长">3:23</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v7.3.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0

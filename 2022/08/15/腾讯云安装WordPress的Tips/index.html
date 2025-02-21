@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -292,21 +292,21 @@
 
       
         <p>本文介绍一些在腾讯云轻量服务器上手动安装WordPress时需要注意的一些方面。笔者是在Windows 12系统上进行操作的。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="安装步骤">安装步骤</h2>
 <ol>
-<li>具体安装步骤可以参考https://cloud.tencent.com/document/product/213/39540</li>
-<li>安装过程中楼主发现根据上述步骤安装后，只能在localhost里面打开WordPress，而不能在公网IP里面打开。这样导致没有办法对网站进行外部访问。解决办法为在数据库端把localhost改为公网IP。 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use wordpress;  #打开数据库后对该表wp_options 操作</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from wp_options where option_name&#x3D;‘siteurl’</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">update wp_options set option_value&#x3D;&#39;http:&#x2F;&#x2F;124.223.188.213’ where option_name&#x3D;&#39;siteurl&#39;;   #公网IP</span><br><span class="line"></span><br><span class="line">update wp_options set option_value&#x3D;&#39;http:&#x2F;&#x2F;http:&#x2F;&#x2F;124.223.188.213&#39; where option_name&#x3D;&#39;home‘; #公网IP</span><br></pre></td></tr></table></figure>
+<li>具体安装步骤可以参考<a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/213/39540">https://cloud.tencent.com/document/product/213/39540</a></li>
+<li>安装过程中楼主发现根据上述步骤安装后，只能在localhost里面打开WordPress，而不能在公网IP里面打开。这样导致没有办法对网站进行外部访问。解决办法为在数据库端把localhost改为公网IP。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use wordpress;  #打开数据库后对该表wp_options 操作</span><br><span class="line"></span><br><span class="line">mysql&gt; select * from wp_options where option_name=‘siteurl’</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">update wp_options set option_value=&#x27;http://124.223.188.213’ where option_name=&#x27;siteurl&#x27;;   #公网IP</span><br><span class="line"></span><br><span class="line">update wp_options set option_value=&#x27;http://http://124.223.188.213&#x27; where option_name=&#x27;home‘; #公网IP</span><br></pre></td></tr></table></figure>
 </li>
-<li>改好之后登录发现，虽然能进入主页，但是或许会显示无法登陆，显示账号密码错误。此时可以直接在mysql端进行操作，更新账户密码： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use wordpress; #登录具体的数据库</span><br><span class="line">mysql&gt; show tables; #查看数据库中的表格，要找到以users为结尾的表格，里面包括了WordPress的账号和密码</span><br><span class="line">mysql&gt; select * from wp_users # 查看具体内容</span><br><span class="line">mysql&gt; UPDATE wp_users SET user_pass&#x3D;MD5(‘(new-password)’) WHERE ID &#x3D; (id#-of-account-you-are-reseting-password-for);</span><br></pre></td></tr></table></figure>
+<li>改好之后登录发现，虽然能进入主页，但是或许会显示无法登陆，显示账号密码错误。此时可以直接在mysql端进行操作，更新账户密码： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use wordpress; #登录具体的数据库</span><br><span class="line">mysql&gt; show tables; #查看数据库中的表格，要找到以users为结尾的表格，里面包括了WordPress的账号和密码</span><br><span class="line">mysql&gt; select * from wp_users # 查看具体内容</span><br><span class="line">mysql&gt; UPDATE wp_users SET user_pass=MD5(‘(new-password)’) WHERE ID = (id#-of-account-you-are-reseting-password-for);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
-<li>最后改好之后，就可以对公网IP进行访问。访问链接 <a href="http://124.223.188.213/wp-admin" target="_blank" rel="noopener">http://124.223.188.213/wp-admin</a> 可以登录WordPress对网站进行修改。访问http://124.223.188.213 即直接查看网站具体内容。</li>
+<li>最后改好之后，就可以对公网IP进行访问。访问链接 <a target="_blank" rel="noopener" href="http://124.223.188.213/wp-admin">http://124.223.188.213/wp-admin</a> 可以登录WordPress对网站进行修改。访问<a target="_blank" rel="noopener" href="http://124.223.188.213">http://124.223.188.213</a> 即直接查看网站具体内容。</li>
 </ol>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li><a href="https://blog.csdn.net/weixin_35888497/article/details/119665467?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0-119665467-blog-75408629.pc_relevant_multi_platform_whitelistv4eslandingrelevant2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3" target="_blank" rel="noopener">wp网站更换服务器后打不开,WordPress站点更换公网IP后不能正常访问的解决过程</a></li>
-<li><a href="https://blog.csdn.net/soar92/article/details/75408629" target="_blank" rel="noopener">云服务器中安装wordpress，却不能使用公网IP进行访问</a></li>
-<li><a href="https://wordpress.org/support/article/resetting-your-password/" target="_blank" rel="noopener">Resetting Your Password</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_35888497/article/details/119665467?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0-119665467-blog-75408629.pc_relevant_multi_platform_whitelistv4eslandingrelevant2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">wp网站更换服务器后打不开,WordPress站点更换公网IP后不能正常访问的解决过程</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/soar92/article/details/75408629">云服务器中安装wordpress，却不能使用公网IP进行访问</a></li>
+<li><a target="_blank" rel="noopener" href="https://wordpress.org/support/article/resetting-your-password/">Resetting Your Password</a></li>
 </ul>
 
     </div>
@@ -372,7 +372,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">2.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">2.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -388,20 +388,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -460,14 +460,14 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">122k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:31</span>
+    <span title="站点阅读时长">3:23</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v7.3.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0

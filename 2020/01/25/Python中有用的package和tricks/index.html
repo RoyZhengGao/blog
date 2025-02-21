@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -272,14 +272,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.7k</span>
+              <span>7.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>11 分钟</span>
+              <span>12 分钟</span>
             </span>
 
         </div>
@@ -291,18 +291,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文介绍一下Python 3 中的一些自己平时用到觉得不错的package。以及一些可能会有用的function以及tricks。更多内容可见本人<a href="https://github.com/RoyZhengGao/code-repo" target="_blank" rel="noopener">github code repository</a>。</p>
-<a id="more"></a>
+        <p>本文介绍一下Python 3 中的一些自己平时用到觉得不错的package。以及一些可能会有用的function以及tricks。更多内容可见本人<a target="_blank" rel="noopener" href="https://github.com/RoyZhengGao/code-repo">github code repository</a>。</p>
+<span id="more"></span>
 <h2 id="Python的管理工具和打包发布">Python的管理工具和打包发布</h2>
 <h3 id="Python-包管理工具">Python 包管理工具</h3>
 <ol>
-<li>distutils：distutils 是 python 标准库的一部分，2000年发布。使用它能够进行 python 模块的 安装 和 发布。<a href="http://setup.py" target="_blank" rel="noopener">setup.py</a> 就是利用 distutils 的功能写成。</li>
-<li>setuptools 和 distribute：setuptools 是一个为了增强 distutils 而开发的集合，2004年发布。它包含了 easy_install 这个工具。ez_setup.py 是 setuptools 的安装工具。ez 就是 easy 的缩写。简单的说，setuptools 是一个项目的名称，是基础组件。而 easy_install 是这个项目中提供的工具，它依赖基础组件工作。使用 setuptools 可以自动 下载、构建、安装和管理 python 模块。比如 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">easy_install SQLObject</span><br></pre></td></tr></table></figure>
+<li>distutils：distutils 是 python 标准库的一部分，2000年发布。使用它能够进行 python 模块的 安装 和 发布。<a target="_blank" rel="noopener" href="http://setup.py">setup.py</a> 就是利用 distutils 的功能写成。</li>
+<li>setuptools 和 distribute：setuptools 是一个为了增强 distutils 而开发的集合，2004年发布。它包含了 easy_install 这个工具。ez_setup.py 是 setuptools 的安装工具。ez 就是 easy 的缩写。简单的说，setuptools 是一个项目的名称，是基础组件。而 easy_install 是这个项目中提供的工具，它依赖基础组件工作。使用 setuptools 可以自动 下载、构建、安装和管理 python 模块。比如 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">easy_install SQLObject</span><br></pre></td></tr></table></figure>
 distribute 是 setuptools 的一个分支版本。分支的原因可能是有一部分开发者认为 setuptools 开发太慢了。但现在，distribute 又合并回了 setuptools 中。因此，我们可以认为它们是同一个东西。事实上，如果你查看一下 easy_install 的版本，会发现它本质上就是 distribute 。</li>
 <li>distutils2 被设计为 distutils的替代品。从2009年开发到2012年。它包含更多的功能，并希望以 packaging 作为名称进入 python 3.3 成为标准库的一部分。但这个计划 后来停滞了 。distlib 是 distutils2 的部分，它为 distutils2/packaging 提供的低级功能增加高级 API，使其便于使用。</li>
 <li>pip 是目前 python 包管理的事实标准，2008年发布。它被用作 easy_install 的替代品，但是它仍有大量的功能建立在 setuptools 组件之上。<br>
-pip 希望不再使用 Eggs 格式（虽然它支持 Eggs），而更希望采用“源码发行版”（使用 python <a href="http://setup.py" target="_blank" rel="noopener">setup.py</a> sdist 创建）。这可以充分利用 Requirements File Format 提供的方便功能。<br>
-pip 可以利用 requirments.txt 来实现在依赖的安装。在 <a href="http://setup.py" target="_blank" rel="noopener">setup.py</a> 中，也存在一个 install_requires 表来指定依赖的安装。与easy_install相比, pip 明显优势更大。</li>
+pip 希望不再使用 Eggs 格式（虽然它支持 Eggs），而更希望采用“源码发行版”（使用 python <a target="_blank" rel="noopener" href="http://setup.py">setup.py</a> sdist 创建）。这可以充分利用 Requirements File Format 提供的方便功能。<br>
+pip 可以利用 requirments.txt 来实现在依赖的安装。在 <a target="_blank" rel="noopener" href="http://setup.py">setup.py</a> 中，也存在一个 install_requires 表来指定依赖的安装。与easy_install相比, pip 明显优势更大。</li>
 </ol>
 <h3 id="egg-和-whl-的关系">egg 和 whl 的关系</h3>
 <ul>
@@ -313,10 +313,10 @@ pip 可以利用 requirments.txt 来实现在依赖的安装。在 <a href="http
 <p>conda是一个包，依赖和环境管理工具，适用于多种语言，conda默认随miniconda或anaconda发行，因此要安装conda，只需要安装miniconda或anconda即可。而brew是Homebrew的管理工具。两者都是用来自动下载并安装包的，并不仅限于安装Python 依赖包。这是两者与pip的区别。</p>
 <h3 id="安装package">安装package</h3>
 <p>全自动： pip install xxx<br>
-半自动：一些python package <a href="http://xn--setup-3t2k.py" target="_blank" rel="noopener">有setup.py</a> xx install . 可以follow 这些instruction<br>
-如果没有write access 到site-package 这种系统路径，需要把package 安装到自己设定的路径下面去，具体参考网页https://docs.python.org/2.7/install/index.html#alternate-installation<br>
+半自动：一些python package <a target="_blank" rel="noopener" href="http://xn--setup-3t2k.py">有setup.py</a> xx install . 可以follow 这些instruction<br>
+如果没有write access 到site-package 这种系统路径，需要把package 安装到自己设定的路径下面去，具体参考网页<a target="_blank" rel="noopener" href="https://docs.python.org/2.7/install/index.html#alternate-installation">https://docs.python.org/2.7/install/index.html#alternate-installation</a><br>
 举例来说，<br>
-python <a href="http://setup.py" target="_blank" rel="noopener">setup.py</a> install --home=/home/ec2-user/workspaces/hoverboard-workspaces/lib</p>
+python <a target="_blank" rel="noopener" href="http://setup.py">setup.py</a> install --home=/home/ec2-user/workspaces/hoverboard-workspaces/lib</p>
 <p>此时，需要把当前目录装在PYTHONPATH里面去，<br>
 vim ~/.bashrc<br>
 PYTHONPATH=~/one/location:$PYTHONPATH<br>
@@ -325,34 +325,34 @@ export PYTHONPATH<br>
 source ~/.bashrc<br>
 如果有其他依赖的话，还需要安装其他依赖package.<br>
 如果在断网的情况下pip install package, 为了避免平台问题（比如amazon hoverboard）,需要先把package 所有依赖的源代码下载下来，然后再安装。具体见：<br>
-<a href="https://www.cnblogs.com/jay54520/p/8330994.html" target="_blank" rel="noopener">https://www.cnblogs.com/jay54520/p/8330994.html</a><br>
-<a href="https://www.jianshu.com/p/f8a3f3a07aff" target="_blank" rel="noopener">https://www.jianshu.com/p/f8a3f3a07aff</a><br>
-<a href="https://blog.csdn.net/pierre_/article/details/54234151" target="_blank" rel="noopener">https://blog.csdn.net/pierre_/article/details/54234151</a><br>
-<a href="http://imshuai.com/python-pip-install-package-offline-tensorflow/" target="_blank" rel="noopener">http://imshuai.com/python-pip-install-package-offline-tensorflow/</a><br>
-<a href="https://woshigaozheng.blogspot.com/2019/06/python-package.html" target="_blank" rel="noopener">https://woshigaozheng.blogspot.com/2019/06/python-package.html</a></p>
+<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jay54520/p/8330994.html">https://www.cnblogs.com/jay54520/p/8330994.html</a><br>
+<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f8a3f3a07aff">https://www.jianshu.com/p/f8a3f3a07aff</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/pierre_/article/details/54234151">https://blog.csdn.net/pierre_/article/details/54234151</a><br>
+<a target="_blank" rel="noopener" href="http://imshuai.com/python-pip-install-package-offline-tensorflow/">http://imshuai.com/python-pip-install-package-offline-tensorflow/</a><br>
+<a target="_blank" rel="noopener" href="https://woshigaozheng.blogspot.com/2019/06/python-package.html">https://woshigaozheng.blogspot.com/2019/06/python-package.html</a></p>
 <p>如果感觉没有问题，比如wheel 文件适合当前平台的话，可以download 对应的whl文件，然后通过<br>
 pip install --user -v --no-index “${WHEELS_LOC}certifi-2018.11.29-py2.py3-none-any.whl”<br>
 进行安装</p>
 <h2 id="Package篇">Package篇</h2>
 <h3 id="transformers">transformers</h3>
-<p>非常强大的预训练模型：<a href="https://huggingface.co/models?search=chinese" target="_blank" rel="noopener">https://huggingface.co/models?search=chinese</a><br>
-如果出现如下error <a href="https://github.com/huggingface/transformers/issues/2831" target="_blank" rel="noopener">https://github.com/huggingface/transformers/issues/2831</a> ，安装tokenizers:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tokenizers</span><br></pre></td></tr></table></figure>
+<p>非常强大的预训练模型：<a target="_blank" rel="noopener" href="https://huggingface.co/models?search=chinese">https://huggingface.co/models?search=chinese</a><br>
+如果出现如下error <a target="_blank" rel="noopener" href="https://github.com/huggingface/transformers/issues/2831">https://github.com/huggingface/transformers/issues/2831</a> ，安装tokenizers:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install tokenizers </span><br></pre></td></tr></table></figure>
 <p>否则直接install transformers</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install transformers</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install transformers</span><br></pre></td></tr></table></figure>
 <h3 id="flair">flair</h3>
 <h3 id="gephi">gephi</h3>
 <h3 id="tqdm">tqdm</h3>
 <h3 id="GluonNLP">GluonNLP</h3>
-<p>Based on MXNet: <a href="https://gluon-nlp.mxnet.io/" target="_blank" rel="noopener">https://gluon-nlp.mxnet.io/</a><br>
+<p>Based on MXNet: <a target="_blank" rel="noopener" href="https://gluon-nlp.mxnet.io/">https://gluon-nlp.mxnet.io/</a><br>
 示例代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from tqdm import tqdm</span><br><span class="line">from time import sleep</span><br><span class="line">for i in tqdm(range(1, 500)):</span><br><span class="line">    sleep(0.01)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from tqdm import tqdm</span><br><span class="line">from time import sleep</span><br><span class="line">for i in tqdm(range(1, 500)):</span><br><span class="line">    sleep(0.01)</span><br></pre></td></tr></table></figure>
 <h3 id="logging">logging</h3>
 <h3 id="pdb">pdb</h3>
 <h3 id="argparse">argparse</h3>
 <h2 id="Tricks篇">Tricks篇</h2>
 <h3 id="打印输出">打印输出</h3>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;current line count %d&quot;%(line_count))</span><br><span class="line">print(f&quot;current line count &#123;line_count&#125;&quot;)</span><br><span class="line">print(&quot;current line count &#123;&#125;&quot;.format(line_count))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;current line count %d&quot;%(line_count))</span><br><span class="line">print(f&quot;current line count &#123;line_count&#125;&quot;)</span><br><span class="line">print(&quot;current line count &#123;&#125;&quot;.format(line_count))</span><br></pre></td></tr></table></figure>
 <h3 id="exception-raise-assert-和warning">exception, raise, assert, 和warning</h3>
 <h3 id="init-py的作用"><strong>init</strong>.py的作用</h3>
 <h3 id="init-new-call-函数解析"><strong>init</strong>, <strong>new</strong>, <strong>call</strong> 函数解析</h3>
@@ -362,7 +362,7 @@ pip install --user -v --no-index “${WHEELS_LOC}certifi-2018.11.29-py2.py3-none
 <h3 id="代码换行">代码换行</h3>
 <h3 id="args-kwargs装饰器">*args **kwargs装饰器</h3>
 <h3 id="列表、元组或字典前面的星号">列表、元组或字典前面的星号</h3>
-<p>列表、元组前面加星号作用是将列表解开成两个独立的参数，传入函数，字典前面加两个星号，是将字典解开成独立的元素作为形参。详情可见 <a href="https://www.pythonf.cn/read/90543" target="_blank" rel="noopener">https://www.pythonf.cn/read/90543</a> 讲解。</p>
+<p>列表、元组前面加星号作用是将列表解开成两个独立的参数，传入函数，字典前面加两个星号，是将字典解开成独立的元素作为形参。详情可见 <a target="_blank" rel="noopener" href="https://www.pythonf.cn/read/90543">https://www.pythonf.cn/read/90543</a> 讲解。</p>
 <h3 id="装饰器-用法-property">装饰器@用法: property</h3>
 <h3 id="lambda函数">lambda函数</h3>
 <h3 id="all-any函数">all, any函数</h3>
@@ -373,12 +373,12 @@ pip install --user -v --no-index “${WHEELS_LOC}certifi-2018.11.29-py2.py3-none
 <h3 id="最大值最小值的表达">最大值最小值的表达</h3>
 <p>float(“inf”) + 1还是float(“inf”)， 但是sys.maxsize + 1就不是sys.maxsize了， 某些需要判断+1以后是不是还是max的时候要注意</p>
 <h3 id="python-write-to-file-buffer">python write to file buffer</h3>
-<p><a href="https://stackoverflow.com/questions/18984092/python-2-7-write-to-file-instantly" target="_blank" rel="noopener">https://stackoverflow.com/questions/18984092/python-2-7-write-to-file-instantly</a><br>
-<a href="https://stackoverflow.com/questions/3167494/how-often-does-python-flush-to-a-file" target="_blank" rel="noopener">https://stackoverflow.com/questions/3167494/how-often-does-python-flush-to-a-file</a><br>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/18984092/python-2-7-write-to-file-instantly">https://stackoverflow.com/questions/18984092/python-2-7-write-to-file-instantly</a><br>
+<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/3167494/how-often-does-python-flush-to-a-file">https://stackoverflow.com/questions/3167494/how-often-does-python-flush-to-a-file</a><br>
 Use flush() or</p>
 <p>For file operations, Python uses the operating system’s default buffering unless you configure it do otherwise. You can specify a buffer size, unbuffered, or line buffered.<br>
 For example, the open function takes a buffer size argument.<br>
-<a href="http://docs.python.org/library/functions.html#open" target="_blank" rel="noopener">http://docs.python.org/library/functions.html#open</a><br>
+<a target="_blank" rel="noopener" href="http://docs.python.org/library/functions.html#open">http://docs.python.org/library/functions.html#open</a><br>
 “The optional buffering argument specifies the file’s desired buffer size: 0 means unbuffered, 1 means line buffered, any other positive value means use a buffer of (approximately) that size. A negative buffering means to use the system default, which is usually line buffered for tty devices and fully buffered for other files. If omitted, the system default is used.”<br>
 bufsize = 0<br>
 f = open(‘file.txt’, ‘w’, bufsize)</p>
@@ -400,7 +400,7 @@ f = open(‘file.txt’, ‘w’, bufsize)</p>
 <li>functools</li>
 </ul>
 <h2 id="待整理部分">待整理部分</h2>
-<p>If you can’t see the <a href="http://virtualenvwrapper.sh" target="_blank" rel="noopener">virtualenvwrapper.sh</a>. First uninstall virtualenvwrapper. It will show messages about the location of the <a href="http://virtualenvwrapper.sh" target="_blank" rel="noopener">virtualenvwrapper.sh</a> file.</p>
+<p>If you can’t see the <a target="_blank" rel="noopener" href="http://virtualenvwrapper.sh">virtualenvwrapper.sh</a>. First uninstall virtualenvwrapper. It will show messages about the location of the <a target="_blank" rel="noopener" href="http://virtualenvwrapper.sh">virtualenvwrapper.sh</a> file.</p>
 <p>Check all python’ location</p>
 <p>type -a python</p>
 <p>首选要确定哪个版本的python 要使用（不同的python版本可能存在在不同的地方）<br>
@@ -437,45 +437,45 @@ New python executable in ENV3.4/bin/python3.4<br>
 Also creating executable in ENV3.4/bin/python<br>
 Installing setuptools, pip…done.</p>
 <p>作者：Andrew_liu<br>
-链接：<a href="http://www.jianshu.com/p/08c657bd34f1" target="_blank" rel="noopener">http://www.jianshu.com/p/08c657bd34f1</a><br>
+链接：<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/08c657bd34f1">http://www.jianshu.com/p/08c657bd34f1</a><br>
 來源：简书<br>
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 <p>使用VIRTUALENVWRAPPER （更简单的方法）</p>
-<p><a href="http://codingpy.com/article/virtualenv-must-have-tool-for-python-development/" target="_blank" rel="noopener">http://codingpy.com/article/virtualenv-must-have-tool-for-python-development/</a><br>
-<a href="http://qicheng0211.blog.51cto.com/3958621/1561685" target="_blank" rel="noopener">http://qicheng0211.blog.51cto.com/3958621/1561685</a><br>
-<a href="http://www.jianshu.com/p/44ab75fbaef2" target="_blank" rel="noopener">http://www.jianshu.com/p/44ab75fbaef2</a><br>
-<a href="http://liuzhijun.iteye.com/blog/1872241" target="_blank" rel="noopener">http://liuzhijun.iteye.com/blog/1872241</a></p>
+<p><a target="_blank" rel="noopener" href="http://codingpy.com/article/virtualenv-must-have-tool-for-python-development/">http://codingpy.com/article/virtualenv-must-have-tool-for-python-development/</a><br>
+<a target="_blank" rel="noopener" href="http://qicheng0211.blog.51cto.com/3958621/1561685">http://qicheng0211.blog.51cto.com/3958621/1561685</a><br>
+<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/44ab75fbaef2">http://www.jianshu.com/p/44ab75fbaef2</a><br>
+<a target="_blank" rel="noopener" href="http://liuzhijun.iteye.com/blog/1872241">http://liuzhijun.iteye.com/blog/1872241</a></p>
 <p>man 在Linux中可以有文档查看的功能 i.e.<br>
 man ls<br>
 man python<br>
 参考文献</p>
 <ul>
-<li><a href="https://blog.zengrong.net/post/python_packaging/" target="_blank" rel="noopener">Python 包管理工具解惑</a></li>
-<li><a href="http://kuanghy.github.io/2018/04/29/setup-dot-py" target="_blank" rel="noopener">setup.py 编写简易指南</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/linux/l-cppeak3.html" target="_blank" rel="noopener">使用 setuptools 孵化 Python egg</a></li>
-<li><a href="https://packaging.python.org/discussions/wheel-vs-egg/" target="_blank" rel="noopener">Wheel vs Egg</a></li>
-<li><a href="http://wsfdl.com/python/2015/09/06/Python%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83%E4%B8%8A.html" target="_blank" rel="noopener">Python application 的打包和发布</a></li>
-<li><a href="https://blog.csdn.net/hong201/article/details/4219035" target="_blank" rel="noopener">egg文件制作与安装</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/25020501" target="_blank" rel="noopener">Python eggs - 简介</a></li>
-<li><a href="https://www.cnblogs.com/kungfupanda/p/3343113.html" target="_blank" rel="noopener">python的egg包的安装和制作</a></li>
-<li><a href="http://nooverfit.com/wp/%E5%85%B3%E4%BA%8Econda%E5%92%8Canaconda%E4%B8%8D%E5%8F%AF%E4%B8%8D%E7%9F%A5%E7%9A%84%E4%BA%8B%E5%AE%9E%E5%92%8C%E8%AF%AF%E8%A7%A3-conda%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/" target="_blank" rel="noopener">pip和conda的关系</a></li>
-<li><a href="https://cuiqingcai.com/6080.html" target="_blank" rel="noopener">Python中logging模块的基本用法</a></li>
-<li><a href="https://juejin.im/post/5bc2bd3a5188255c94465d31" target="_blank" rel="noopener">logging总结</a></li>
-<li><a href="https://www.cnblogs.com/yyds/p/6901864.html" target="_blank" rel="noopener">logging模块处理</a></li>
-<li><a href="https://blog.csdn.net/IllegalName/article/details/77446428" target="_blank" rel="noopener">Python异常信息的捕获和处理</a></li>
-<li><a href="https://blog.csdn.net/u013982161/article/details/53453979" target="_blank" rel="noopener">Python标准异常和异常处理详解</a></li>
-<li><a href="https://blog.csdn.net/lihao21/article/details/79762681" target="_blank" rel="noopener">Python 实例方法、类方法和静态方法</a></li>
-<li><a href="https://www.zhihu.com/question/20021164" target="_blank" rel="noopener">classmethod 和 staticmethod具体用途</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/35643573" target="_blank" rel="noopener">@classmethod 的使用场合</a></li>
-<li><a href="https://foofish.net/different_bettween_classmethod_and_staticmethod.html" target="_blank" rel="noopener">正确理解@classmethod与@staticmethod</a></li>
-<li><a href="http://kuanghy.github.io/2015/12/19/python-variable" target="_blank" rel="noopener">类变量与实例变量</a></li>
-<li><a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c10/p01_make_hierarchical_package_of_modules.html" target="_blank" rel="noopener"><strong>init</strong>.py讨论</a></li>
-<li><a href="https://www.cnblogs.com/Lands-ljk/p/5880483.html" target="_blank" rel="noopener"><strong>init</strong>.py 作用详解</a></li>
-<li><a href="https://blog.csdn.net/tianbwin2995/article/details/50863940" target="_blank" rel="noopener">装饰器，*args **kwargs讲解</a></li>
-<li><a href="https://blog.csdn.net/junxieshiguan/article/details/82502437" target="_blank" rel="noopener">关于__init__,以及__new__,__call__的基本认识</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/index.html" target="_blank" rel="noopener">yield 使用浅析</a></li>
-<li><a href="https://www.cnblogs.com/neightchen/p/6669659.html" target="_blank" rel="noopener">yield和return区别</a></li>
-<li><a href="https://github.com/brennerm/PyTricks" target="_blank" rel="noopener">Python tricks</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.zengrong.net/post/python_packaging/">Python 包管理工具解惑</a></li>
+<li><a target="_blank" rel="noopener" href="http://kuanghy.github.io/2018/04/29/setup-dot-py">setup.py 编写简易指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/linux/l-cppeak3.html">使用 setuptools 孵化 Python egg</a></li>
+<li><a target="_blank" rel="noopener" href="https://packaging.python.org/discussions/wheel-vs-egg/">Wheel vs Egg</a></li>
+<li><a target="_blank" rel="noopener" href="http://wsfdl.com/python/2015/09/06/Python%E5%BA%94%E7%94%A8%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E5%8F%91%E5%B8%83%E4%B8%8A.html">Python application 的打包和发布</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/hong201/article/details/4219035">egg文件制作与安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25020501">Python eggs - 简介</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kungfupanda/p/3343113.html">python的egg包的安装和制作</a></li>
+<li><a target="_blank" rel="noopener" href="http://nooverfit.com/wp/%E5%85%B3%E4%BA%8Econda%E5%92%8Canaconda%E4%B8%8D%E5%8F%AF%E4%B8%8D%E7%9F%A5%E7%9A%84%E4%BA%8B%E5%AE%9E%E5%92%8C%E8%AF%AF%E8%A7%A3-conda%E5%BF%85%E7%9F%A5%E5%BF%85%E4%BC%9A/">pip和conda的关系</a></li>
+<li><a target="_blank" rel="noopener" href="https://cuiqingcai.com/6080.html">Python中logging模块的基本用法</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.im/post/5bc2bd3a5188255c94465d31">logging总结</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yyds/p/6901864.html">logging模块处理</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/IllegalName/article/details/77446428">Python异常信息的捕获和处理</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/u013982161/article/details/53453979">Python标准异常和异常处理详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/lihao21/article/details/79762681">Python 实例方法、类方法和静态方法</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/20021164">classmethod 和 staticmethod具体用途</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35643573">@classmethod 的使用场合</a></li>
+<li><a target="_blank" rel="noopener" href="https://foofish.net/different_bettween_classmethod_and_staticmethod.html">正确理解@classmethod与@staticmethod</a></li>
+<li><a target="_blank" rel="noopener" href="http://kuanghy.github.io/2015/12/19/python-variable">类变量与实例变量</a></li>
+<li><a target="_blank" rel="noopener" href="https://python3-cookbook.readthedocs.io/zh_CN/latest/c10/p01_make_hierarchical_package_of_modules.html"><strong>init</strong>.py讨论</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Lands-ljk/p/5880483.html"><strong>init</strong>.py 作用详解</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/tianbwin2995/article/details/50863940">装饰器，*args **kwargs讲解</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/junxieshiguan/article/details/82502437">关于__init__,以及__new__,__call__的基本认识</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ibm.com/developerworks/cn/opensource/os-cn-python-yield/index.html">yield 使用浅析</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/neightchen/p/6669659.html">yield和return区别</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/brennerm/PyTricks">Python tricks</a></li>
 </ul>
 
     </div>
@@ -541,7 +541,7 @@ man python<br>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python的管理工具和打包发布"><span class="nav-number">1.</span> <span class="nav-text">Python的管理工具和打包发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-包管理工具"><span class="nav-number">1.1.</span> <span class="nav-text">Python 包管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#egg-和-whl-的关系"><span class="nav-number">1.2.</span> <span class="nav-text">egg 和 whl 的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brew-和conda"><span class="nav-number">1.3.</span> <span class="nav-text">brew 和conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装package"><span class="nav-number">1.4.</span> <span class="nav-text">安装package</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Package篇"><span class="nav-number">2.</span> <span class="nav-text">Package篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transformers"><span class="nav-number">2.1.</span> <span class="nav-text">transformers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flair"><span class="nav-number">2.2.</span> <span class="nav-text">flair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gephi"><span class="nav-number">2.3.</span> <span class="nav-text">gephi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tqdm"><span class="nav-number">2.4.</span> <span class="nav-text">tqdm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GluonNLP"><span class="nav-number">2.5.</span> <span class="nav-text">GluonNLP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logging"><span class="nav-number">2.6.</span> <span class="nav-text">logging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pdb"><span class="nav-number">2.7.</span> <span class="nav-text">pdb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#argparse"><span class="nav-number">2.8.</span> <span class="nav-text">argparse</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tricks篇"><span class="nav-number">3.</span> <span class="nav-text">Tricks篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打印输出"><span class="nav-number">3.1.</span> <span class="nav-text">打印输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception-raise-assert-和warning"><span class="nav-number">3.2.</span> <span class="nav-text">exception, raise, assert, 和warning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#init-py的作用"><span class="nav-number">3.3.</span> <span class="nav-text">init.py的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#init-new-call-函数解析"><span class="nav-number">3.4.</span> <span class="nav-text">init, new, call 函数解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all-变量用法"><span class="nav-number">3.5.</span> <span class="nav-text">all 变量用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类方法和静态方法区别"><span class="nav-number">3.6.</span> <span class="nav-text">类方法和静态方法区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类变量与实例变量"><span class="nav-number">3.7.</span> <span class="nav-text">类变量与实例变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码换行"><span class="nav-number">3.8.</span> <span class="nav-text">代码换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#args-kwargs装饰器"><span class="nav-number">3.9.</span> <span class="nav-text">*args **kwargs装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表、元组或字典前面的星号"><span class="nav-number">3.10.</span> <span class="nav-text">列表、元组或字典前面的星号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰器-用法-property"><span class="nav-number">3.11.</span> <span class="nav-text">装饰器@用法: property</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda函数"><span class="nav-number">3.12.</span> <span class="nav-text">lambda函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all-any函数"><span class="nav-number">3.13.</span> <span class="nav-text">all, any函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map函数"><span class="nav-number">3.14.</span> <span class="nav-text">map函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yield函数"><span class="nav-number">3.15.</span> <span class="nav-text">yield函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#condition的表达"><span class="nav-number">3.16.</span> <span class="nav-text">condition的表达</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大值最小值的表达"><span class="nav-number">3.17.</span> <span class="nav-text">最大值最小值的表达</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-write-to-file-buffer"><span class="nav-number">3.18.</span> <span class="nav-text">python write to file buffer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他函数"><span class="nav-number">3.19.</span> <span class="nav-text">其他函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#待整理部分"><span class="nav-number">4.</span> <span class="nav-text">待整理部分</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E7%9A%84%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E5%92%8C%E6%89%93%E5%8C%85%E5%8F%91%E5%B8%83"><span class="nav-number">1.</span> <span class="nav-text">Python的管理工具和打包发布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">1.1.</span> <span class="nav-text">Python 包管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#egg-%E5%92%8C-whl-%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">1.2.</span> <span class="nav-text">egg 和 whl 的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#brew-%E5%92%8Cconda"><span class="nav-number">1.3.</span> <span class="nav-text">brew 和conda</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85package"><span class="nav-number">1.4.</span> <span class="nav-text">安装package</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Package%E7%AF%87"><span class="nav-number">2.</span> <span class="nav-text">Package篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transformers"><span class="nav-number">2.1.</span> <span class="nav-text">transformers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flair"><span class="nav-number">2.2.</span> <span class="nav-text">flair</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gephi"><span class="nav-number">2.3.</span> <span class="nav-text">gephi</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tqdm"><span class="nav-number">2.4.</span> <span class="nav-text">tqdm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GluonNLP"><span class="nav-number">2.5.</span> <span class="nav-text">GluonNLP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#logging"><span class="nav-number">2.6.</span> <span class="nav-text">logging</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pdb"><span class="nav-number">2.7.</span> <span class="nav-text">pdb</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#argparse"><span class="nav-number">2.8.</span> <span class="nav-text">argparse</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tricks%E7%AF%87"><span class="nav-number">3.</span> <span class="nav-text">Tricks篇</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%8D%B0%E8%BE%93%E5%87%BA"><span class="nav-number">3.1.</span> <span class="nav-text">打印输出</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exception-raise-assert-%E5%92%8Cwarning"><span class="nav-number">3.2.</span> <span class="nav-text">exception, raise, assert, 和warning</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#init-py%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">3.3.</span> <span class="nav-text">init.py的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#init-new-call-%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90"><span class="nav-number">3.4.</span> <span class="nav-text">init, new, call 函数解析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all-%E5%8F%98%E9%87%8F%E7%94%A8%E6%B3%95"><span class="nav-number">3.5.</span> <span class="nav-text">all 变量用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95%E5%8C%BA%E5%88%AB"><span class="nav-number">3.6.</span> <span class="nav-text">类方法和静态方法区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%8F%98%E9%87%8F%E4%B8%8E%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F"><span class="nav-number">3.7.</span> <span class="nav-text">类变量与实例变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%8D%A2%E8%A1%8C"><span class="nav-number">3.8.</span> <span class="nav-text">代码换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#args-kwargs%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="nav-number">3.9.</span> <span class="nav-text">*args **kwargs装饰器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E3%80%81%E5%85%83%E7%BB%84%E6%88%96%E5%AD%97%E5%85%B8%E5%89%8D%E9%9D%A2%E7%9A%84%E6%98%9F%E5%8F%B7"><span class="nav-number">3.10.</span> <span class="nav-text">列表、元组或字典前面的星号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8-%E7%94%A8%E6%B3%95-property"><span class="nav-number">3.11.</span> <span class="nav-text">装饰器@用法: property</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lambda%E5%87%BD%E6%95%B0"><span class="nav-number">3.12.</span> <span class="nav-text">lambda函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#all-any%E5%87%BD%E6%95%B0"><span class="nav-number">3.13.</span> <span class="nav-text">all, any函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map%E5%87%BD%E6%95%B0"><span class="nav-number">3.14.</span> <span class="nav-text">map函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#yield%E5%87%BD%E6%95%B0"><span class="nav-number">3.15.</span> <span class="nav-text">yield函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#condition%E7%9A%84%E8%A1%A8%E8%BE%BE"><span class="nav-number">3.16.</span> <span class="nav-text">condition的表达</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E5%A4%A7%E5%80%BC%E6%9C%80%E5%B0%8F%E5%80%BC%E7%9A%84%E8%A1%A8%E8%BE%BE"><span class="nav-number">3.17.</span> <span class="nav-text">最大值最小值的表达</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#python-write-to-file-buffer"><span class="nav-number">3.18.</span> <span class="nav-text">python write to file buffer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B0"><span class="nav-number">3.19.</span> <span class="nav-text">其他函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%85%E6%95%B4%E7%90%86%E9%83%A8%E5%88%86"><span class="nav-number">4.</span> <span class="nav-text">待整理部分</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -557,20 +557,20 @@ man python<br>
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -629,14 +629,14 @@ man python<br>
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">122k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:31</span>
+    <span title="站点阅读时长">3:23</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v7.3.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0

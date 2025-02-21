@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.1">
+<meta name="generator" content="Hexo 7.3.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
@@ -273,7 +273,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
+              <span>2.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -292,16 +292,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Github Pages al-folio 其<a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">源代码</a>和生成的<a href="https://maruan.alshedivat.com/" target="_blank" rel="noopener">网页效果</a>比较适用于偏学术风格的个人网站。</p>
-<a id="more"></a>
+        <p>Github Pages al-folio 其<a target="_blank" rel="noopener" href="https://github.com/alshedivat/al-folio">源代码</a>和生成的<a target="_blank" rel="noopener" href="https://maruan.alshedivat.com/">网页效果</a>比较适用于偏学术风格的个人网站。</p>
+<span id="more"></span>
 <h2 id="安装Ruby-和-Bundler">安装Ruby 和 Bundler</h2>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install ruby &#x2F;&#x2F; ruby其实应该默认已经安装在Mac系统上了，以防万一可以再用brew 安装下</span><br><span class="line">gem install bundler &#x2F;&#x2F; gem 是ruby的打包系统</span><br><span class="line">brew install rbenv ruby-build &#x2F;&#x2F;更好的管理ruby gems</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install ruby // ruby其实应该默认已经安装在Mac系统上了，以防万一可以再用brew 安装下</span><br><span class="line">gem install bundler // gem 是ruby的打包系统</span><br><span class="line">brew install rbenv ruby-build //更好的管理ruby gems</span><br></pre></td></tr></table></figure>
 <p>第一次安装Ruby之后，需要把以下加入路径中：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;&quot;&#x2F;usr&#x2F;local&#x2F;opt&#x2F;ruby&#x2F;bin:$PATH&quot;&#39; &gt;&gt; ~&#x2F;.zshrc</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/usr/local/opt/ruby/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
 <h2 id="页面内容更改">页面内容更改</h2>
 <h3 id="banner-顺序">banner 顺序</h3>
 <p>在每个pages folder里面的md 文档，可以通过nav_order 来更改顺序, blog页面除外。</p>
-<h3 id="about-md"><a href="http://about.md" target="_blank" rel="noopener">about.md</a></h3>
+<h3 id="about-md"><a target="_blank" rel="noopener" href="http://about.md">about.md</a></h3>
 <ul>
 <li>Modify the major content in this page.</li>
 <li>The news is in under news folder.</li>
@@ -309,34 +309,34 @@
 <li>contact_note “Free feel to reach out to me via email.” in the bottom can be modified in config.yml as well.</li>
 <li>profile image should be stored at <code>assets/img</code> folder.</li>
 </ul>
-<h3 id="blog-md"><a href="http://blog.md" target="_blank" rel="noopener">blog.md</a></h3>
+<h3 id="blog-md"><a target="_blank" rel="noopener" href="http://blog.md">blog.md</a></h3>
 <p>blog的页面默认是在第二栏的，可以在config.yml里面进行修改或者删除。因为本人的blog页面是托管在另外一个网站，并且想把blog页面放在最后，所以笔者新建了一个blog.md文件，然后把nav_order的值放在最后。</p>
-<h3 id="publication-md"><a href="http://publication.md" target="_blank" rel="noopener">publication.md</a></h3>
+<h3 id="publication-md"><a target="_blank" rel="noopener" href="http://publication.md">publication.md</a></h3>
 <ul>
 <li>config.yml 文件中定义好对应的papers.bib。这样可以自动读取bib文档生成文章信息。具体一些参数（比如filtered_bibtex_keywords）也可以在这里改。</li>
 <li>在pages/publications.md中写好对应的内容。比如years这种变量。</li>
 <li>/bibliography/papers.bib里面填写paper的bib信息.</li>
 <li>如果想改publications里面的button的话，可以首先在config.yml里filtered_bibtex_keywords中填上对应名称，i.e. <code>video</code>，然后再layouts/bib.html里面参考其他button添加对应代码，比如：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;%- if entry.video %&#125;</span><br><span class="line">&lt;a href&#x3D;&quot;&#123;&#123; entry.video &#125;&#125;&quot; class&#x3D;&quot;btn btn-sm z-depth-0&quot; role&#x3D;&quot;button&quot;&gt;Video&lt;&#x2F;a&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;%- if entry.video %&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123; entry.video &#125;&#125;&quot; class=&quot;btn btn-sm z-depth-0&quot; role=&quot;button&quot;&gt;Video&lt;/a&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>button在此文件中的顺序将会影响其在publication页面中的顺序。</p>
-<h3 id="cv-md"><a href="http://cv.md" target="_blank" rel="noopener">cv.md</a></h3>
+<h3 id="cv-md"><a target="_blank" rel="noopener" href="http://cv.md">cv.md</a></h3>
 <p>cv的内容主要存放在data/cv.yml文件中。可以直接在里面进行修改。</p>
 <h2 id="Git-commit">Git commit</h2>
-<p>如果用<code>git clone https://github.com/RoyZhengGao/RoyZhengGao.github.io.git</code> 的方式来下载项目的话，最后git push的时候需要用户名和密码。用户名为<code>RoyZhengGao</code>,而密码是之前设置的一个personal access token。<a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories" target="_blank" rel="noopener">参考链接</a></p>
+<p>如果用<code>git clone https://github.com/RoyZhengGao/RoyZhengGao.github.io.git</code> 的方式来下载项目的话，最后git push的时候需要用户名和密码。用户名为<code>RoyZhengGao</code>,而密码是之前设置的一个personal access token。<a target="_blank" rel="noopener" href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">参考链接</a></p>
 <h2 id="Deployment">Deployment</h2>
 <p>自动deployment（目前不清楚怎么弄）:</p>
 <ol>
 <li>Click on <code>Actions</code> tab and <code>Enable GitHub Actions</code>; do not worry about creating any workflows as everything has already been set for you.</li>
 <li>Make any other changes to your webpage, commit, and push. This will automatically trigger the Deploy action.</li>
 <li>Wait for a few minutes and let the action complete. You can see the progress in the Actions tab. If completed successfully, in addition to the master branch, your repository should now have a newly built gh-pages branch.</li>
-<li>Finally, in the <code>Settings</code> of your repository, in the Pages section, set the branch to <code>gh-pages</code> (NOT to <code>master</code>). For more details, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source" target="_blank" rel="noopener">Configuring a publishing source for your GitHub Pages site</a>.</li>
+<li>Finally, in the <code>Settings</code> of your repository, in the Pages section, set the branch to <code>gh-pages</code> (NOT to <code>master</code>). For more details, see <a target="_blank" rel="noopener" href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source">Configuring a publishing source for your GitHub Pages site</a>.</li>
 </ol>
 <p>手动deployment，在master branch运行：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .&#x2F;bin&#x2F;deploy</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./bin/deploy</span><br></pre></td></tr></table></figure>
 <h2 id="参考文献">参考文献</h2>
 <ul>
-<li><a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio Github Repository</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/alshedivat/al-folio">al-folio Github Repository</a></li>
 </ul>
 
     </div>
@@ -400,7 +400,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Ruby-和-Bundler"><span class="nav-number">1.</span> <span class="nav-text">安装Ruby 和 Bundler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面内容更改"><span class="nav-number">2.</span> <span class="nav-text">页面内容更改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#banner-顺序"><span class="nav-number">2.1.</span> <span class="nav-text">banner 顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#about-md"><span class="nav-number">2.2.</span> <span class="nav-text">about.md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#blog-md"><span class="nav-number">2.3.</span> <span class="nav-text">blog.md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#publication-md"><span class="nav-number">2.4.</span> <span class="nav-text">publication.md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cv-md"><span class="nav-number">2.5.</span> <span class="nav-text">cv.md</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-commit"><span class="nav-number">3.</span> <span class="nav-text">Git commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deployment"><span class="nav-number">4.</span> <span class="nav-text">Deployment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Ruby-%E5%92%8C-Bundler"><span class="nav-number">1.</span> <span class="nav-text">安装Ruby 和 Bundler</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E5%86%85%E5%AE%B9%E6%9B%B4%E6%94%B9"><span class="nav-number">2.</span> <span class="nav-text">页面内容更改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#banner-%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.1.</span> <span class="nav-text">banner 顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#about-md"><span class="nav-number">2.2.</span> <span class="nav-text">about.md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#blog-md"><span class="nav-number">2.3.</span> <span class="nav-text">blog.md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#publication-md"><span class="nav-number">2.4.</span> <span class="nav-text">publication.md</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cv-md"><span class="nav-number">2.5.</span> <span class="nav-text">cv.md</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-commit"><span class="nav-number">3.</span> <span class="nav-text">Git commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Deployment"><span class="nav-number">4.</span> <span class="nav-text">Deployment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">5.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -416,20 +416,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/blog/archives/">
         
-          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/blog/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/blog/tags/">
           
-        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-count">31</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -488,14 +488,14 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">127k</span>
+    <span title="站点总字数">122k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:31</span>
+    <span title="站点阅读时长">3:23</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v7.3.0
   </div>
   <span class="post-meta-divider">|</span>
   <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
