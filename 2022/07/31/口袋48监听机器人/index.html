@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com/blog').hostname,
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="本文是作者记录和参考如何构建口袋48监听机器人，来实时检测小偶像口袋房间动态。基本备份自他人的文档。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="口袋48监听机器人">
+<meta property="og:url" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/index.html">
+<meta property="og:site_name" content="高正太的自留地">
+<meta property="og:description" content="本文是作者记录和参考如何构建口袋48监听机器人，来实时检测小偶像口袋房间动态。基本备份自他人的文档。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/1.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/2.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/3.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/4.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/5.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/27.png">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/28.png">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/29.png">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/30.png">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/31.png">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/32.png">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/6.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/7.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/8.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/9.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/10.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/11.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/12.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/13.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/14.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/15.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/16.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/17.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/18.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/19.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/20.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/21.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/22.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/23.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/24.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/25.jpeg">
+<meta property="og:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/26.jpeg">
+<meta property="article:published_time" content="2022-08-01T05:31:41.000Z">
+<meta property="article:modified_time" content="2025-02-21T20:07:29.139Z">
+<meta property="article:author" content="Zheng Gao (高正)">
+<meta property="article:tag" content="tech">
+<meta property="article:tag" content="qq tools">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/1.jpeg">
+
+<link rel="canonical" href="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>口袋48监听机器人 | 高正太的自留地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">高正太的自留地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">most in Chinese, rest in English</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.png">
+      <meta itemprop="name" content="Zheng Gao (高正)">
+      <meta itemprop="description" content="以always Day 1 的心态，工作102年">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高正太的自留地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          口袋48监听机器人
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-07-31 22:31:41" itemprop="dateCreated datePublished" datetime="2022-07-31T22:31:41-07:00">2022-07-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-21 12:07:29" itemprop="dateModified" datetime="2025-02-21T12:07:29-08:00">2025-02-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/tech/" itemprop="url" rel="index">
+                    <span itemprop="name">tech</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/2022/07/31/%E5%8F%A3%E8%A2%8B48%E7%9B%91%E5%90%AC%E6%9C%BA%E5%99%A8%E4%BA%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文是作者记录和参考如何构建口袋48监听机器人，来实时检测小偶像口袋房间动态。基本备份自他人的文档。</p>
+<a id="more"></a>
+<h2 id="基本准备">基本准备</h2>
+<ol>
+<li>云服务器
+<ol>
+<li>平台选择：更推荐腾讯云，简言优点就是便宜、简洁、友好。</li>
+<li>类型与配置选择：云服务器/轻量应用服务器均可，不缺钱可稍升配置到2核4G。一般来说轻量服务器足够用了。</li>
+</ol>
+</li>
+</ol>
+<h2 id="搭建指南-创建服务器篇">搭建指南-创建服务器篇</h2>
+<ol>
+<li>在平台购买服务器时，地域选择离自己最近的城市，对镜像如无了解或其他需求，选Windows Server 2012 R2 数据中心64位中文版即可。</li>
+<li>创建实例后先重置密码，再使用远程登录的方式访问服务器。</li>
+<li>服务器开启后一般不需要关机，想关闭其窗口时，点击左下角Windows图标，再点右上角关机图标，选择“断开”即可。关机=服务器停止运行；断开=服务器仍在运行，只是用户看不见界面了。</li>
+</ol>
+<h2 id="搭建指南-具体操作篇">搭建指南-具体操作篇</h2>
+<p>以4.8.0版本的qqtools为例，使用新版时自行调整部分设置。</p>
+<ol>
+<li>
+<p>根据使用手册，下载必要文件到本地，其路径避免使用中文及特殊字符。Java11的下载在第4步有详细说明；<br>
+qqtools的下载需要在打开源代码地址后找到Releases界面(<a href="https://github.com/duan602728596/qqtools/releases" target="_blank" rel="noopener">https://github.com/duan602728596/qqtools/releases</a>) ,此处qqtools-mirai-4.8.0-win64是解压后的文件夹。<br>
+<img src="1.jpeg" width="30%" alt="1.jpeg"/></p>
+</li>
+<li>
+<p>mirai下载：</p>
+<ol>
+<li>使用mirai，需要下载mirai-core-all-{version}-all.jar、mirai-console-{version}-all.jar、mirai-console-terminal-{version}-all.jar文件。下载地址：<a href="https://search.maven.org/search?q=net.mamoe%20mirai" target="_blank" rel="noopener">在maven下载</a>。笔者选用了version 2.12.1 版本。</li>
+<li>mirai-api-http下载：<br>
+qqtools使用mirai-api-http插件，通过websocket接收消息。笔者选用了mirai-api-http-v2.5.2.mirai2版本。<br>
+下载地址：<a href="https://github.com/project-mirai/mirai-api-http/releases" target="_blank" rel="noopener">mirai-api-http下载</a>。</li>
+<li>mcl-installer下载:<br>
+有关mirai的启动器，请访问<a href="https://github.com/mamoe/mirai/blob/dev/docs/UserManual.md" target="_blank" rel="noopener">链接</a>查看详细说明。你也可以选择使用命令行启动mirai。下载地址：<a href="https://github.com/iTXTech/mcl-installer/releases" target="_blank" rel="noopener">mcl-installer下载</a>。笔者选用了mcl-installer-1.0.7-windows-amd64版本。</li>
+<li>mirai文件夹里的结构和文件：<br>
+<img src="2.jpeg"  width="50%" alt="2.jpeg"/></li>
+</ol>
+</li>
+<li>
+<p>将必要文件上传到服务器。步骤见<a href="https://cloud.tencent.com/document/product/1207/53218" target="_blank" rel="noopener">链接</a></p>
+</li>
+<li>
+<p>在服务器中安装Sublime Text。该文本编辑器用于后续修改配置（用记事本修改容易出错）。</p>
+</li>
+<li>
+<p>安装Java11，配置Java环境变量</p>
+<ol>
+<li>在<a href="https://jdk.java.net/archive/" target="_blank" rel="noopener">open jdk</a> 或者 <a href="https://www.oracle.com/java/technologies/javase-jdk11-downloads.html" target="_blank" rel="noopener">oracle jdk</a>(后者需账号注册)下载程序；<br>
+<img src="3.jpeg" alt="3.jpeg"/><br>
+<img src="4.jpeg" alt="4.jpeg"/></li>
+<li>双击jdk-11.0.16_windows-x64_bin.exe，按指引完成安装即可；<br>
+<img src="5.jpeg" alt="5.jpeg"/></li>
+<li>给Path新增Java的安装路径对应的\bin路径，并且添加JAVA_HOME变量，其路径为Java的安装路径，步骤见<a href="https://www.runoob.com/w3cnote/windows10-java-setup.html" target="_blank" rel="noopener">链接</a>。<br>
+<img src="27.png" width="30%" alt="27.png"/><br>
+<img src="28.png" width="70%" alt="28.png"/><br>
+<img src="29.png" width="30%" alt="29.png"/><br>
+<img src="30.png" width="30%" alt="30.png"/><br>
+<img src="31.png" width="30%" alt="31.png"/></li>
+<li>打开cmd，输入<code>java</code>，出现一连串的指令提示，说明配置成功了:<br>
+<img src="32.png" width="50%" alt="32.png"/></li>
+</ol>
+</li>
+<li>
+<p>进入mirai文件夹，双击运行mcl-installer-1.0.3-windows-amd64.exe. 1.0.3仅为示例版本，实际请以该项目地址提供的最新版为准，不要下载旧版，否则无法安装！<br>
+”Would you like to install Java?”：输入N，按回车；<br>
+”Would you like to download it?”：输入Y，按回车，等待下载完毕。</p>
+</li>
+<li>
+<p>在mirai文件夹双击运行mcl.cmd，待运行完毕后关闭窗口。第一次运行会下载对应文件。</p>
+</li>
+<li>
+<p>开启mirai-api-http的websocket。<br>
+qqtools是通过websocket接收消息的，所以需要mirai-api-http插件开启websocket。mirai启动后，会生成一个和plugins和content同级的config文件夹，进入config/net.mamoe.mirai-api-http文件夹，打开setting.yml文件，将enableWebsocket的值从false修改为true，然后重新启动mirai。根据下图修改代码，按Ctrl+S保存后关闭。setting.yml可以直接从<a href="https://www.yuque.com/bbkkbkk/qqtools/rlphu0" target="_blank" rel="noopener">参考链接</a>处复制。使用空格进行缩进，同一层级需要严格对齐；记下verifyKey的值，后面会用到。<br>
+<img src="6.jpeg" alt="6.jpeg"/><br>
+笔者自己的QQ机器人的设置：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">adapters: </span><br><span class="line">  - http</span><br><span class="line">  - ws</span><br><span class="line">debug: false</span><br><span class="line">enableVerify: true</span><br><span class="line">verifyKey: INITKEYOLRaYOuE</span><br><span class="line">singleMode: false</span><br><span class="line">cacheSize: 4096</span><br><span class="line">enableWebsocket: true</span><br><span class="line">adapterSettings:</span><br><span class="line">  http:</span><br><span class="line">    host: localhost</span><br><span class="line">    port: 18876</span><br><span class="line">    cors: [*]</span><br><span class="line">  ws:</span><br><span class="line">    host: localhost</span><br><span class="line">    port: 18876</span><br><span class="line">    reservedSyncId: -1</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>启动控制台登录账号，有以下方式（效果相同，推荐用2或者3）：</p>
+<ol>
+<li>手动登录：双击mcl.cmd，待初始化完成后输入login 账号 密码，按回车登录并保持运行。<br>
+<img src="7.jpeg" alt="7.jpeg"/></li>
+<li>自动登录：先进入\mirai\config\Console文件夹，右键单击AutoLogin.yml，选择通过Notepad++打开，填入用于播报监听信息的QQ账号和密码并保存；再双击mcl.cmd启动并保持运行。（以后就都能双击自动登录）<br>
+<img src="8.jpeg" alt="8.jpeg"/><br>
+<img src="9.jpeg" alt="9.jpeg"/></li>
+<li>qqtools登录：进入qqtools-mirai-4.8.0-win64文件夹，双击qqtool.exe，按下图提示完成配置。<br>
+<img src="10.jpeg" alt="10.jpeg"/><br>
+<img src="11.jpeg" alt="10.jpeg"/><br>
+<img src="12.jpeg" alt="10.jpeg"/><br>
+登陆协议建议选手机或平板，手表不稳定<br>
+<img src="13.jpeg" alt="10.jpeg"/><br>
+使用qqtools内置Console查看日志信息，和上下文所说的控制台信息效果是一样的，后面不赘述啦</li>
+</ol>
+</li>
+<li>
+<p>无论哪种方式，首次登录都会出现滑动验证码和设备锁验证，最好在本地电脑的浏览器上进行，解决方法见《qqtools使用手册》(<a href="https://www.yuque.com/bbkkbkk/qqtools/aa20pr" target="_blank" rel="noopener">https://www.yuque.com/bbkkbkk/qqtools/aa20pr</a>)。验证一次之后再装就不会出现验证问题了。</p>
+</li>
+<li>
+<p>进入qqtools-mirai-4.8.0-win64文件夹双击qqtools.exe，点击“登陆配置”、“导入房间信息”，选择roomId.json文件。<br>
+<img src="14.jpeg" alt="14.jpeg"/><br>
+<img src="15.jpeg" alt="15.jpeg"/></p>
+</li>
+<li>
+<p>导入房间信息成功后，点击“添加配置”，按需设置。<br>
+<img src="16.jpeg" alt="16.jpeg"/><br>
+<img src="17.jpeg" alt="17.jpeg"/></p>
+</li>
+<li>
+<p>推荐在每个配置单底部添加一条格式相同的自定义命令，用于登陆配置后测试响应与数据返回情况，如此便无需等到成员发出房间消息，就能立刻得知机器人是否在正常运行。<br>
+<img src="18.jpeg" alt="18.jpeg"/><br>
+<img src="19.jpeg" alt="19.jpeg"/></p>
+</li>
+<li>
+<p>以上设置完毕后点击“保存”；回到qqtools.exe的主界面，进入“账号登陆”，登陆对应的配置。<br>
+<img src="20.jpeg" alt="20.jpeg"/><br>
+<img src="21.jpeg" alt="21.jpeg"/></p>
+</li>
+<li>
+<p>此时可以在群内发送步骤12中设置过的自定义命令来检查运行情况，从图看出控制台和群内消息都有对应数据，说明机器人运行正常。<br>
+<img src="22.jpeg" alt="22.jpeg"/><br>
+<img src="23.jpeg" alt="23.jpeg"/><br>
+至此，运载在云服务器上的口袋机器人已搭建完毕。</p>
+</li>
+<li>
+<p>在与服务器断开连接（强调：不要点关机和重启）之前，请勿将鼠标光标停留于mcl.cmd窗口内（点一下桌面就能避免），否则会卡住消息，影响机器人工作。</p>
+</li>
+</ol>
+<h2 id="日常维护">日常维护</h2>
+<ol>
+<li>配置变更<br>
+修改已有配置后，在“账号登陆”中需要先退出原有配置，再登陆一次配置。</li>
+<li>重启机器人<br>
+消息积累过多导致运行卡顿，或出现异常情况时，关闭两个窗口，再重启这mcl.cmd和qqtools.exe，重新登陆配置。</li>
+</ol>
+<h2 id="异常情况">异常情况</h2>
+<ol>
+<li>
+<p>风险管控<br>
+当控制台有输出监听数据，群内却没有消息播报时，说明机器人账号被腾讯风控了。<br>
+在服务器中同时用PC客户端登录该QQ（不会顶下线），一般挂一周就能正常运行了。平时可以多挂几个号备用。<br>
+附GG大佬关于风控的详细说明：<br>
+<img src="24.jpeg" alt="24.jpeg"/></p>
+</li>
+<li>
+<p>账号冻结/群消息功能暂停</p>
+<ol>
+<li>群内无消息播报，且控制台连监听数据都没有，可能是账号被冻结了，用手机登录该账号，根据提示解冻后重启程序即可。</li>
+<li>控制台报错Send message failed（如图）：<br>
+<img src="25.jpeg" alt="25.jpeg"/><br>
+如果用手机登录该账号，无解冻提示，也不能在机器人群发出消息，就换几个群发消息等弹出解冻提示并滑动解锁（如下图），或者直接换号重新配置（从具体操作篇的步骤8开始）。<br>
+<img src="26.jpeg" alt="26.jpeg"/></li>
+</ol>
+</li>
+</ol>
+<h2 id="参考文献">参考文献</h2>
+<ol>
+<li><a href="https://weibo.com/ttarticle/x/m/show#/id=2309404793068456116915&amp;_wb_client_=1" target="_blank" rel="noopener">微博参考文献</a></li>
+<li><a href="https://www.yuque.com/bbkkbkk/qqtools/ipy3b9" target="_blank" rel="noopener">qqtools使用手册</a></li>
+<li><a href="https://www.bilibili.com/video/BV1ZQ4y1q7Yj" target="_blank" rel="noopener">如何创建口袋48成员房间机器人</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/tech/" rel="tag"># tech</a>
+              <a href="/blog/tags/qq-tools/" rel="tag"># qq tools</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2022/07/30/%E8%85%BE%E8%AE%AF%E4%BA%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" rel="prev" title="腾讯云使用教程">
+      <i class="fa fa-chevron-left"></i> 腾讯云使用教程
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2022/08/06/%E6%90%AD%E5%BB%BAVPN/" rel="next" title="搭建VPN">
+      搭建VPN <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本准备"><span class="nav-number">1.</span> <span class="nav-text">基本准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建指南-创建服务器篇"><span class="nav-number">2.</span> <span class="nav-text">搭建指南-创建服务器篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建指南-具体操作篇"><span class="nav-number">3.</span> <span class="nav-text">搭建指南-具体操作篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日常维护"><span class="nav-number">4.</span> <span class="nav-text">日常维护</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常情况"><span class="nav-number">5.</span> <span class="nav-text">异常情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">6.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zheng Gao (高正)"
+      src="/blog/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zheng Gao (高正)</p>
+  <div class="site-description" itemprop="description">以always Day 1 的心态，工作102年</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/RoyZhengGao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RoyZhengGao" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gao27@indiana.edu" title="Email → mailto:gao27@indiana.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/zheng-gao-351b738a/" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;zheng-gao-351b738a&#x2F;" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=C8M7-1YAAAAJ&hl=en" title="Google → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;C8M7-1YAAAAJ&amp;hl&#x3D;en" rel="noopener" target="_blank"><i class="fa fa-fw fa-google"></i>Google</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://zhenggao.io/" title="https:&#x2F;&#x2F;zhenggao.io" rel="noopener" target="_blank">个人主页</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zheng Gao (高正)</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">127k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:31</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+ </script>
+    
+
+  
+
+
+<script>
+NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '3445JBYAQGXfF0gSJqMyxy5y-gzGzoHsz',
+    appKey: 'xSorailV8YU1obYqYz9Yqhyv',
+    placeholder: "Comment",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com/blog').hostname,
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Github Pages 允许免费托管由Jekyll生成的静态网页博客，我们可以用来制作自己的个人网站。本文我们介绍一个基于Jekyll的比较好看的个人网站模板，叫做academicpages。 其源代码 和生成的网页效果比较适用于偏学术风格的个人网站。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jekyll 搭建个人网站">
+<meta property="og:url" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/index.html">
+<meta property="og:site_name" content="高正太的自留地">
+<meta property="og:description" content="Github Pages 允许免费托管由Jekyll生成的静态网页博客，我们可以用来制作自己的个人网站。本文我们介绍一个基于Jekyll的比较好看的个人网站模板，叫做academicpages。 其源代码 和生成的网页效果比较适用于偏学术风格的个人网站。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/template.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/talk.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/domain1.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/domain2.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/domain3.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/domain4.png">
+<meta property="article:published_time" content="2019-12-11T00:59:48.000Z">
+<meta property="article:modified_time" content="2025-02-21T20:07:29.111Z">
+<meta property="article:author" content="Zheng Gao (高正)">
+<meta property="article:tag" content="jekyll">
+<meta property="article:tag" content="front end">
+<meta property="article:tag" content="tech tool">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/template.png">
+
+<link rel="canonical" href="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Jekyll 搭建个人网站 | 高正太的自留地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">高正太的自留地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">most in Chinese, rest in English</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.png">
+      <meta itemprop="name" content="Zheng Gao (高正)">
+      <meta itemprop="description" content="以always Day 1 的心态，工作102年">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高正太的自留地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Jekyll 搭建个人网站
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-10 16:59:48" itemprop="dateCreated datePublished" datetime="2019-12-10T16:59:48-08:00">2019-12-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-21 12:07:29" itemprop="dateModified" datetime="2025-02-21T12:07:29-08:00">2025-02-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/tech/" itemprop="url" rel="index">
+                    <span itemprop="name">tech</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Github Pages 允许免费托管由Jekyll生成的静态网页博客，我们可以用来制作自己的个人网站。本文我们介绍一个基于Jekyll的比较好看的个人网站模板，叫做academicpages。 其<a href="https://github.com/academicpages/academicpages.github.io" target="_blank" rel="noopener">源代码</a> 和生成的<a href="https://academicpages.github.io/" target="_blank" rel="noopener">网页效果</a>比较适用于偏学术风格的个人网站。</p>
+<a id="more"></a>
+<h2 id="本地测试">本地测试</h2>
+<p>(1) 直接下载<a href="https://github.com/academicpages/academicpages.github.io" target="_blank" rel="noopener">源代码</a>到本地并解压。terminal 中把当前路径设到解压后的根目录下面。<br>
+(2) 本文默认的安装机器是Mac，并且Homebrew 已经提前安装好。此外，我们需要安装ruby, bundler 和 nodejs，安装命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install ruby &#x2F;&#x2F; ruby其实应该默认已经安装在Mac系统上了，以防万一可以再用brew 安装下</span><br><span class="line">gem install bundler &#x2F;&#x2F; gem 是ruby的打包系统</span><br><span class="line">brew install node &#x2F;&#x2F; 安装nodejs</span><br></pre></td></tr></table></figure>
+<p>(3) 当前目录下运行 <code>bundle clean</code> 先整理下载下来的project。<br>
+(4) 当前目录下运行 <code>bundle install</code> 来安装对应的依赖文件。如果出现错误请删除文件夹中的Gemfile.lock 然后重试。<br>
+(5) 当前目录下运行 <code>bundle exec jekyll liveserve</code> 来生成静态html文件并部署到本地服务器上。运行成功的话 localhost:4000 进行访问。退出时按 ctrl + c。所展示页面如图：<br>
+<img src="template.png" alt="template"/></p>
+<h2 id="修改网站内容">修改网站内容</h2>
+<h3 id="Side-bar-板块">Side bar 板块</h3>
+<p>网站主页左边的side bar 内容，可以通过修改根目录下面_config.yml来完成。主要修改“Site Settings” 和 “Site Author” 两个部分。<br>
+(1) 在“Site Settings” 部分，url 对应的是要部署的主机名称hostname。如果是本地测试，要改为http://localhost:4000/ 。否则为对应的github.io的名字https://academicpages.github.io 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># Site Settings</span><br><span class="line">locale                   : &quot;en-US&quot;</span><br><span class="line">title                    : &quot;Your Name &#x2F; Site Title&quot;</span><br><span class="line">title_separator          : &quot;-&quot;</span><br><span class="line">name                     : &amp;name &quot;Your Name&quot;</span><br><span class="line">description              : &amp;description &quot;personal description&quot;</span><br><span class="line">url                      : http:&#x2F;&#x2F;localhost:4000&#x2F; # the base hostname &amp; protocol for your site e.g. &quot;https:&#x2F;&#x2F;mmistakes.github.io&quot;</span><br><span class="line">baseurl                  : &quot;&quot; # the subpath of your site, e.g. &quot;&#x2F;blog&quot;</span><br><span class="line">repository               : &quot;academicpages&#x2F;academicpages.github.io&quot;</span><br></pre></td></tr></table></figure>
+<p>(2) 在“Site Author”部分，头像照片需要存放在images/ 文件夹下面。_config.yml中只需要直接填写照片的文件名profile.png即可:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">author:</span><br><span class="line">  name             : &quot;Your Sidebar Name&quot;</span><br><span class="line">  avatar           : &quot;profile.png&quot;</span><br><span class="line">  bio              : &quot;Your biography for the left-hand sidebar&quot;</span><br><span class="line">  location         : &quot;Location&quot;</span><br><span class="line">  employer         :</span><br><span class="line">  pubmed           : &quot;https:&#x2F;&#x2F;www.ncbi.nlm.nih.gov&#x2F;pubmed&#x2F;?term&#x3D;john+snow&quot;</span><br><span class="line">  googlescholar    : &quot;http:&#x2F;&#x2F;yourfullgooglescholarurl.com&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="Navigation-板块">Navigation 板块</h3>
+<p>网站主页上方的导航栏的内容，可以通过修改 data/navigation.yml里面内容完成。具体内容如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">main:</span><br><span class="line">  - title: &quot;Publications&quot;</span><br><span class="line">    url: &#x2F;publications&#x2F;</span><br><span class="line"></span><br><span class="line">  - title: &quot;Talks&quot;</span><br><span class="line">    url: &#x2F;talks&#x2F;    </span><br><span class="line"></span><br><span class="line">  - title: &quot;Teaching&quot;</span><br><span class="line">    url: &#x2F;teaching&#x2F;    </span><br><span class="line">    </span><br><span class="line">  - title: &quot;Portfolio&quot;</span><br><span class="line">    url: &#x2F;portfolio&#x2F;</span><br><span class="line">        </span><br><span class="line">  - title: &quot;Blog Posts&quot;</span><br><span class="line">    url: &#x2F;year-archive&#x2F;</span><br><span class="line">    </span><br><span class="line">  - title: &quot;CV&quot;</span><br><span class="line">    url: &#x2F;cv&#x2F;</span><br><span class="line">    </span><br><span class="line">  - title: &quot;Guide&quot;</span><br><span class="line">    url: &#x2F;markdown&#x2F;</span><br></pre></td></tr></table></figure>
+<p>如果一些板块不需要的话，可以用“#” 注释掉或者直接移除。</p>
+<h3 id="修改各个板块内容">修改各个板块内容</h3>
+<p>大部分的板块内容存放在其对应的文件夹中。比如对于talks来说，其里面的所有内容都存放在 _talks/ 文件夹中。每个具体的talk内容都存放成单独的Markdown 文件。而控制这些板块的文件放在 _pages/ 文件夹中，以或者Markdown 或者html 的格式存在。比如talks.html 控制着 hostname/talk/ 这个页面来显示对应的所有talks的信息，如图所示：<br>
+<img src="talk.png" alt="talk" width="700"/><br>
+点击每个talk的链接可以进入具体的talk 内容，由_talks/ 文件夹下的Markdown 控制。<br>
+每个Markdown 文件的开头都是一些Yaml 格式的metadata。比如下图中 permalink 代表的是对应内容的链接是 hostname/talks/2012-03-01-talk-1:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &quot;Talk 1 on Relevant Topic in Your Field&quot;</span><br><span class="line">collection: talks</span><br><span class="line">type: &quot;Talk&quot;</span><br><span class="line">permalink: &#x2F;talks&#x2F;2012-03-01-talk-1</span><br><span class="line">venue: &quot;UC San Francisco, Department of Testing&quot;</span><br><span class="line">date: 2012-03-01</span><br><span class="line">location: &quot;San Francisco, California&quot;</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">This is a description of your talk, which is a markdown files that can be all markdown-ified like any other post. Yay markdown!</span><br></pre></td></tr></table></figure>
+<p>所有的文件比如PDF或者zip类型的文件，都可以存放在 files/ 文件夹下面. 如果引用的话，对于example.pdf这个文件来说，其对应的链接在https://[your GitHub username].github.io/files/example.pdf。</p>
+<p>此外，_pages/ <a href="http://xn--about-bi1hy8cq05b7jzxv1b.md" target="_blank" rel="noopener">文件夹下的about.md</a> 中的内容是个人网站的首页内容。<a href="http://404.md" target="_blank" rel="noopener">404.md</a> 页面内容是当网址不存在的时候会跳转到的页面。<a href="http://cv.md" target="_blank" rel="noopener">cv.md</a> 是直接的resume 页面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: archive</span><br><span class="line">title: &quot;CV&quot;</span><br><span class="line">permalink: &#x2F;cv&#x2F;</span><br><span class="line">author_profile: true</span><br><span class="line">redirect_from:</span><br><span class="line">  - &#x2F;resume</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&#123;% include base_path %&#125;</span><br><span class="line"></span><br><span class="line">Education</span><br><span class="line">&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</span><br><span class="line">* B.S. in GitHub, GitHub University, 2012</span><br><span class="line">* M.S. in Jekyll, GitHub University, 2014</span><br><span class="line">* Ph.D in Version Control Theory, GitHub University, 2018 (expected)</span><br></pre></td></tr></table></figure>
+<p>文件的开头同样是一些定义的Yaml格式的metadata。 redirect_from 代表其他指定页面也会跳转到当前页面。在这个例子中，hostname/cv 和 hostname/resume都会指向同一页面。</p>
+<h2 id="DIY所有内容放在同一页面">DIY所有内容放在同一页面</h2>
+<p>有些时候，我们会发现个人网站的内容不够丰富，不足以让每个版块都有足够的信息展示。此时，我们可以考虑把所有内容放到一个页面下，点击navigation section的时候，跳转只会跳转当前页面上对应的的section 中。实现的页面效果在 <a href="https://zhenggao.io/" target="_blank" rel="noopener">https://zhenggao.io/</a> 可以体现。<br>
+(1) 修改data/navigation.yml里面内容如下，对应的url 都是在主页面上面有着对应id 的section：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">main:</span><br><span class="line">  # - title: &quot;Home&quot;</span><br><span class="line">  #   url: &#x2F;cv&#x2F;</span><br><span class="line">  # - title: &quot;Education&quot;</span><br><span class="line">  #   url: &#x2F;#education</span><br><span class="line">  - title: &quot;Research&quot;</span><br><span class="line">    url: &#x2F;#research</span><br><span class="line">  - title: &quot;Experience&quot;</span><br><span class="line">    url: &#x2F;#experience  </span><br><span class="line">  - title: &quot;Publication&quot;</span><br><span class="line">    url: &#x2F;#publication</span><br><span class="line">  - title: &quot;Service&quot;</span><br><span class="line">    url: &#x2F;#service     </span><br><span class="line">  - title: &quot;CV&quot;</span><br><span class="line">    url: &#x2F;files&#x2F;cv.pdf</span><br></pre></td></tr></table></figure>
+<p>(2) <a href="http://xn--about-jq1hktj62m4h2a6p5eoqc.md" target="_blank" rel="noopener">由于主页面是about.md</a>，所以我们所有的内容都放在这个页面里面。在想要跳转的部分，加上对应的id，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2 id&#x3D;&quot;research&quot;&gt; Research&lt;&#x2F;h2&gt;</span><br></pre></td></tr></table></figure>
+<p>这时点击navigation bar 上面的Research部分，我们就会跳转到主页面的这个Rearch 标题部分。</p>
+<h2 id="部署到Github-Pages">部署到Github Pages</h2>
+<p>(1) 在Github上新建一个仓库，<a href="http://xn--RoyZhengGao-g68qe6dhz8ath1b.github.io" target="_blank" rel="noopener">仓库名为RoyZhengGao.github.io</a>（这个仓库的名称必须严格按照 <a href="http://username.github.io" target="_blank" rel="noopener">username.github.io</a> 的格式来命名）。<br>
+(2) 把所有的网站代码上传到对应仓库中去：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git remote add origin git@github.com:RoyZhengGao&#x2F;RoyZhengGao.github.io.git</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<p>(3) 打开http://RoyZhengGao.github.io (对应自己的 <a href="http://username.github.io" target="_blank" rel="noopener">http://username.github.io</a> )来测试网站是否部署成功。通常第一次创建Github Pages站点需要5-10分钟的时间。</p>
+<h2 id="购买并绑定域名">购买并绑定域名</h2>
+<p>(1) 我们这里以在Namecheap 网站购买域名为例。首先注册Namecheap<a href="https://www.namecheap.com/" target="_blank" rel="noopener">个人账号</a>来购买喜欢的域名。<br>
+(2) 在side bar 中选择 “Domain List”。找到需要链接的域名并点击其旁边的“Manage”按钮，如下图所示：<br>
+<img src="domain1.png" alt="domain1"/><br>
+(3) 点击“Advanced DNS”按钮进入。点击“Add New Record”来添加以下信息：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- A record for @ pointing to 185.199.108.153</span><br><span class="line">- A record for @ pointing to 185.199.109.153</span><br><span class="line">- A record for @ pointing to 185.199.110.153</span><br><span class="line">- A record for @ pointing to 185.199.111.153</span><br><span class="line">- CNAME record for www pointing to your username.github.io (是你对应要绑定的Github 账号用户名)</span><br></pre></td></tr></table></figure>
+<p>如果有其他多余的记录，需要删除。最后的页面如下：<br>
+<img src="domain2.png" alt="domain2"/></p>
+<p>(4) 点击“Save All Changes” 按钮进行保存。</p>
+<p>(5) 在Github中建立的username.github.io的repository中找到CNAME文件（如果不存在，请手动建立一个）。在文件中加上对应绑定的域名，如下图所示：<br>
+<img src="domain3.png" alt="domain3" width="500"/><br>
+此时点击repository 中的“Settings” 按钮，查看Github Pages是否被重定向到绑定的域名中。下图表示已经成功绑定：<br>
+<img src="domain4.png" alt="domain4" /><br>
+最后，至少需要三十分钟的部署时间。之后就可以访问绑定的<a href="http://www.zhenggao.io" target="_blank" rel="noopener">域名</a>了！</p>
+<p>参考文献:</p>
+<ul>
+<li><a href="https://github.com/academicpages/academicpages.github.io" target="_blank" rel="noopener">academicpages 模板安装指南</a></li>
+<li><a href="https://academicpages.github.io/" target="_blank" rel="noopener">academicpages 模板页面效果</a></li>
+<li><a href="https://segmentfault.com/a/1190000011203711" target="_blank" rel="noopener">Github Pages 绑定域名</a></li>
+<li><a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9645/2208/how-do-i-link-my-domain-to-github-pages" target="_blank" rel="noopener">Namecheap 网站上连接域名与Github Pages</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/jekyll/" rel="tag"># jekyll</a>
+              <a href="/blog/tags/front-end/" rel="tag"># front end</a>
+              <a href="/blog/tags/tech-tool/" rel="tag"># tech tool</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" rel="prev" title="安装并部署Hexo NexT主题博客">
+      <i class="fa fa-chevron-left"></i> 安装并部署Hexo NexT主题博客
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/blog/2019/12/13/Git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" rel="next" title="Git使用指南">
+      Git使用指南 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地测试"><span class="nav-number">1.</span> <span class="nav-text">本地测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改网站内容"><span class="nav-number">2.</span> <span class="nav-text">修改网站内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Side-bar-板块"><span class="nav-number">2.1.</span> <span class="nav-text">Side bar 板块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Navigation-板块"><span class="nav-number">2.2.</span> <span class="nav-text">Navigation 板块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改各个板块内容"><span class="nav-number">2.3.</span> <span class="nav-text">修改各个板块内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DIY所有内容放在同一页面"><span class="nav-number">3.</span> <span class="nav-text">DIY所有内容放在同一页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github-Pages"><span class="nav-number">4.</span> <span class="nav-text">部署到Github Pages</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#购买并绑定域名"><span class="nav-number">5.</span> <span class="nav-text">购买并绑定域名</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zheng Gao (高正)"
+      src="/blog/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zheng Gao (高正)</p>
+  <div class="site-description" itemprop="description">以always Day 1 的心态，工作102年</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/RoyZhengGao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RoyZhengGao" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gao27@indiana.edu" title="Email → mailto:gao27@indiana.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/zheng-gao-351b738a/" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;zheng-gao-351b738a&#x2F;" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=C8M7-1YAAAAJ&hl=en" title="Google → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;C8M7-1YAAAAJ&amp;hl&#x3D;en" rel="noopener" target="_blank"><i class="fa fa-fw fa-google"></i>Google</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://zhenggao.io/" title="https:&#x2F;&#x2F;zhenggao.io" rel="noopener" target="_blank">个人主页</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zheng Gao (高正)</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">127k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:31</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '3445JBYAQGXfF0gSJqMyxy5y-gzGzoHsz',
+    appKey: 'xSorailV8YU1obYqYz9Yqhyv',
+    placeholder: "Comment",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>

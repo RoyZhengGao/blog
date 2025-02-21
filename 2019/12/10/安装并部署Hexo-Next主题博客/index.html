@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com/blog').hostname,
+    root: '/blog/',
+    scheme: 'Pisces',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Hexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。Hexo 本身是基于Nodejs的，非常便于主题的移植和扩展。Next作为近年来相当受欢迎的Hexo主题之一，被广泛的用作博客模板。本文介绍如何安装Hexo的NexT主题并且部署在Github Pages上面。完成之后，我们能够方便的在本地Markdown里面写博客，并且轻松部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="安装并部署Hexo NexT主题博客">
+<meta property="og:url" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="高正太的自留地">
+<meta property="og:description" content="Hexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。Hexo 本身是基于Nodejs的，非常便于主题的移植和扩展。Next作为近年来相当受欢迎的Hexo主题之一，被广泛的用作博客模板。本文介绍如何安装Hexo的NexT主题并且部署在Github Pages上面。完成之后，我们能够方便的在本地Markdown里面写博客，并且轻松部">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/local_search.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/comment1.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/comment2.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/comment3.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/comment4.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/comment5.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/comment6.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/formula.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/multiline-formula.png">
+<meta property="og:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/indexed-formula.png">
+<meta property="article:published_time" content="2019-12-11T00:49:09.000Z">
+<meta property="article:modified_time" content="2025-02-21T20:07:29.158Z">
+<meta property="article:author" content="Zheng Gao (高正)">
+<meta property="article:tag" content="front end">
+<meta property="article:tag" content="tech tool">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/local_search.png">
+
+<link rel="canonical" href="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>安装并部署Hexo NexT主题博客 | 高正太的自留地</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">高正太的自留地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">most in Chinese, rest in English</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.png">
+      <meta itemprop="name" content="Zheng Gao (高正)">
+      <meta itemprop="description" content="以always Day 1 的心态，工作102年">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="高正太的自留地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          安装并部署Hexo NexT主题博客
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-10 16:49:09" itemprop="dateCreated datePublished" datetime="2019-12-10T16:49:09-08:00">2019-12-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-02-21 12:07:29" itemprop="dateModified" datetime="2025-02-21T12:07:29-08:00">2025-02-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/tech/" itemprop="url" rel="index">
+                    <span itemprop="name">tech</span>
+                  </a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/blog/2019/12/10/%E5%AE%89%E8%A3%85%E5%B9%B6%E9%83%A8%E7%BD%B2Hexo-Next%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>10k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>17 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>Hexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown解析文章，在几秒内，即可利用靓丽的主题生成静态网页。Hexo 本身是基于Nodejs的，非常便于主题的移植和扩展。Next作为近年来相当受欢迎的Hexo主题之一，被广泛的用作博客模板。本文介绍如何安装Hexo的NexT主题并且部署在Github Pages上面。完成之后，我们能够方便的在本地Markdown里面写博客，并且轻松部署到远程Github上面去。</p>
+<a id="more"></a>
+<h2 id="安装Hexo">安装Hexo</h2>
+<h3 id="本地安装Hexo">本地安装Hexo</h3>
+<p>作为Mac用户，当我们已经安装好Nodejs之后，安装Hexo 框架非常简单，只需要执行一下命令即可：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="新建Hexo-project">新建Hexo project</h3>
+<p>安装好Hexo之后，在terminal中run以下命令建立一个blog 文件夹，里面就是Hexo的整个project:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ cd blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>新建完成后，指定文件夹blog 的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+<p>这里面的_config.yml，是存在于Hexo 框架之中的，我们称之为<font color=red><strong>站点配置文件</strong></font>。里面的Site 部分内容，我们可以改一些类似language, title 之类的信息。</p>
+<p>安装好之后，我们测试是否Hexo框架安装成功，可以部署一下当前的project。默认的Hexo 框架的主题叫做landscape。 通过run 以下命令可以生成静态的html 网页, 存储在blog/public目录下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+<p>部署到本地服务器可以run 以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+<p>在浏览器地址栏中输入http://localhost:4000/ （默认端口是4000），如果能够看到看到正常网页，说明初始化的Hexo博客搭建成功了。如果出现端口被占用的错误，需要run：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof -i :4000</span><br></pre></td></tr></table></figure>
+<p>来找到对应的进程ID，然后kill 进程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 pid</span><br></pre></td></tr></table></figure>
+<h3 id="不同电脑间迁移">不同电脑间迁移</h3>
+<p>如果需要在另外的电脑上继续编辑博客的话，需要重新进行一些设置。</p>
+<ol>
+<li>把自己博客的源代码复制到新的电脑中去。此处建议先把自己的博客源代码上传到github中（比如 <a href="https://github.com/RoyZhengGao/blog-source-code" target="_blank" rel="noopener">https://github.com/RoyZhengGao/blog-source-code</a> ），然后在新的电脑上用git 命令把源代码clone下来。这样的话，本身的源代码中设置.gitignore文件，能把一些生成的文件过滤掉，而只保存核心的源文件。</li>
+<li>在新的电脑中需要重新安装nodejs: <code>brew install node</code></li>
+<li>重新安装hexo-cli插件：<code>npm install -g hexo-cli</code></li>
+<li>把之前的安装需要的npm包再重新装一遍：<code>npm install hexo --save</code></li>
+</ol>
+<p>之后，在新的电脑上就可以继续写博客了！</p>
+<h2 id="安装使用NexT主题">安装使用NexT主题</h2>
+<h3 id="DIY-NexT主题">DIY NexT主题</h3>
+<p>我们需要用我们自己选择的NexT主题，因此要把站点配置文件中的themes 改成NexT 主题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<p>同时，需要从Github上面下载主题对应的源代码，通过run以下命令就可以把对应的NexT源代码下载到博客文件夹blog 中/themes/ 里面:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd blog</span><br><span class="line">$ git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<p>进入next 文件夹，我们发现还存在一个同样叫做_config.yml 的配置文件，我们称之为<font color=red><strong>主题配置文件</strong></font>。我的博客是选用的Pisces 主题，因此需要选择对应的主题配置文件中的scheme 如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+<h3 id="Side-bar-添加标签-分类">Side bar 添加标签/分类</h3>
+<p>(1) 在side bar 中开启标签/分类选项。在主题配置文件 _config.yml中配置菜单按钮，找到menu属性，做以下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || home</span><br><span class="line">  # about: &#x2F;about&#x2F; || user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || archive</span><br><span class="line">  # schedule: &#x2F;schedule&#x2F; || calendar</span><br><span class="line">  # sitemap: &#x2F;sitemap.xml || sitemap</span><br><span class="line">  # commonweal: &#x2F;404&#x2F; || heartbeat</span><br></pre></td></tr></table></figure>
+<p>(2) 执行命令<code>hexo s</code>，本地预览我们的博客页面，会发现，点击分类、标签这几个页面的时候，会显示404。我们需要在project的根目录下面新建对应的分类、标签的page文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+<p>执行完后，我们可以在hexo/source目录下看到创建的2个文件夹，分别为tags和categories。<br>
+(3) 两个文件夹中分别生成了一个 <a href="http://index.md" target="_blank" rel="noopener">index.md</a> 初始文件，默认包含了 title 和 date 字段，我们需要给每一 <a href="http://index.md" target="_blank" rel="noopener">index.md</a> 文件添加上 type 字段，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Categories</span><br><span class="line">date: 2019-12-10 16:21:55</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Tags</span><br><span class="line">date: 2019-12-10 16:20:43</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<h3 id="Side-bar-添加本地搜索">Side bar 添加本地搜索</h3>
+<p>(1) 安装hexo-generator-searchdb，在站点的根目录(blog 文件夹)下执行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<p>(2) 编辑站点配置文件(blog/_config.yml)，新增以下内容到任意位置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+<p>(3) 编辑主题配置文件(blog/themes/next/_config.yml)，找到 local_search 属性，开启本地搜索功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<p>如果出现如下画面所示，表明本地搜索已经安装成功：<br>
+<img src="local_search.png" alt="search" width="500"/></p>
+<h3 id="新建post">新建post</h3>
+<p>在Hexo project的文件夹blog 下面，run以下命令新建一个post:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;post&quot;</span><br></pre></td></tr></table></figure>
+<p>在博客blog 目录下的/source/_posts/ 文件夹下，<a href="http://xn--post-uh5fupnvy4s5kem26ajlku4r793bzvfcu6azo5g.md" target="_blank" rel="noopener">可以看到已经生成了标题为post.md</a> 的博客文件。在Markdown文件中直接写博客内容即可。<br>
+<a href="http://xn--post-ft4g.md" target="_blank" rel="noopener">在post.md</a> 文件中设置tags和categories属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: post</span><br><span class="line">date: 2019-12-15 11:11:11</span><br><span class="line">tags:</span><br><span class="line">- music           &#x2F;&#x2F;多个标签可以这样添加</span><br><span class="line">- hexo</span><br><span class="line">categories: life &#x2F;&#x2F;最好只写一个category，不然分类页页面会出现小问题</span><br></pre></td></tr></table></figure>
+<p>为了添加阅读全文小按钮，可以在post中想要隐藏起来的部分开头加上以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--more--&gt;</span><br></pre></td></tr></table></figure>
+<p>通过以下配置来在post中引入图片：<br>
+(1) 在全局配置文件（hexo/_config.yml)中将post_asset_folder设置为true；<br>
+(2) 创建文章（在创建的时候，会在hexo/source/_post目录下，生成一个XXX.md文件和一个XXX的文件夹）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;XXX&quot;</span><br></pre></td></tr></table></figure>
+<p>(3) 把XXX这个博文需要展示的图片放在XXX文件夹目录下；<br>
+(4) 在XXX.md文件中引入图片的方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src&#x3D;&quot;search.png&quot; alt&#x3D;&quot;search&quot; width&#x3D;&quot;1200&quot;&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="安装Valine-评论系统">安装Valine 评论系统</h3>
+<p>通过对比gitment, hypercomments和Disqus，最终确定使用Valine 评论系统。<br>
+(1) 注册 LeanCloud:<br>
+Valine 是基于 LeanCloud 作为数据存储的，所以需要注册一个账号。注册完成后，进入控制台：</p>
+<ul>
+<li>创建一个应用，输入应用名称，选择 开发版，点击创建。</li>
+<li>创建完成后，打开应用，左边的存储，查看 数据下面有没有 Counter 和 Comment 两个 Classes，如果没有，点击创建 Class。创建完成后，如下：<br>
+<img src="comment1.png" alt="comment1" width="300"/></li>
+</ul>
+<p>(2) 如下图所示，点击“设置”，找到“安全中心”，在服务开关，除了“数据存储”，其它的全关掉，在 “Web 安全域名”，填写博客的域名地址：<br>
+<img src="comment2.png" alt="comment2"/><br>
+(3) 点击同一栏中的 “应用Keys”，获取到 “AppID” 和 “AppKey”。<br>
+(4) 搜索 valine ，配置 appid 和 appkey 为 LeanCloud 分配的值，language默认为中文（zh-cn）并且实际上并不能支持英文（en）。<br>
+(5) 修改 valine.min.js 的 cdn 文件地址，到这里 <a href="https://www.jsdelivr.com/package/npm/valine" target="_blank" rel="noopener">https://www.jsdelivr.com/package/npm/valine</a> 这个地址选择最新版本的Valine，然后获取cdn地址，修改到 主题配置文件 _config.yml 即可。如下图所示：<br>
+<img src="comment3.png" alt="comment3" width="600"/><br>
+_conig.yml 文件修改的位置：<br>
+<img src="comment4.png" alt="comment4" width="600"/><br>
+部署完成后，即可无需登录即可发表评论，如图所示：<br>
+<img src="comment5.png" alt="comment5"/><br>
+(6) 删除评论只能在LeanCloud 中进行。点击“存储”，进入“结构化数据”中的“Comment” 表格，就可以看到相对应的评论数据。点击相关数据可以进行删除。具体见下图：<br>
+<img src="comment6.png" alt="comment6"/></p>
+<h3 id="启用emoji">启用emoji</h3>
+<p>将 markdown 变成 html 的转换器叫做markdown渲染器 。 Hexo默认是采用hexo-renderer-marked,这个渲染器不支持插件扩展，当然就不行了，还有一个支持插件扩展的是 hexo-renderer-markdown-it，这个支持插件配置，可以使用markwon-it-emoji 插件来支持emoji。需要将原来的 marked 渲染器换成 markdown-it渲染器。所以我们可以使用这个渲染引擎来支持emoji表情。<br>
+(1) 首先进入博客目录，卸载hexo默认的marked渲染器，安装markdown-it渲染器，运行的命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked --save</span><br><span class="line">$ npm i hexo-renderer-markdown-it --save</span><br></pre></td></tr></table></figure>
+<p>(2) 然后安装 markdown-it-emoji 插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install markdown-it-emoji --save</span><br></pre></td></tr></table></figure>
+<p>(3) 编辑站点配置文件，在末尾添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># Markdown-it config</span><br><span class="line">## Docs: https:&#x2F;&#x2F;github.com&#x2F;celsomiranda&#x2F;hexo-renderer-markdown-it&#x2F;wiki</span><br><span class="line">markdown:</span><br><span class="line">  render:</span><br><span class="line">    html: true</span><br><span class="line">    xhtmlOut: false</span><br><span class="line">    breaks: true</span><br><span class="line">    linkify: true</span><br><span class="line">    typographer: true</span><br><span class="line">    quotes: &#39;“”‘’&#39;</span><br><span class="line">  plugins:</span><br><span class="line">    - markdown-it-abbr</span><br><span class="line">    - markdown-it-footnote</span><br><span class="line">    - markdown-it-ins</span><br><span class="line">    - markdown-it-sub</span><br><span class="line">    - markdown-it-sup</span><br><span class="line">    - markdown-it-emoji  ## add emoji</span><br><span class="line">  anchors:</span><br><span class="line">    level: 2</span><br><span class="line">    collisionSuffix: &#39;v&#39;</span><br><span class="line">    # If &#96;true&#96;, creates an anchor tag with a permalink besides the heading.</span><br><span class="line">    permalink: false  </span><br><span class="line">    permalinkClass: header-anchor</span><br><span class="line">    # The symbol used to make the permalink</span><br><span class="line">    permalinkSymbol: ¶</span><br></pre></td></tr></table></figure>
+<h3 id="添加阅读时长">添加阅读时长</h3>
+<p>新版的NexT模板弃用了以前的<code>post_wordcount</code>统计文章的字数，阅读时长等等，新版本该插件废弃，并且内置了<code>symbols_count_time</code>作为替换。具体可见<a href="https://github.com/theme-next/hexo-symbols-count-time" target="_blank" rel="noopener">安装配置</a>。<br>
+(1)安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time</span><br></pre></td></tr></table></figure>
+<p>(2)主题配置文件中，已经有对应阅读时长，统计字数的参数设定，可以查看下是否已经存在。如果是中文的博客的话，建议<code>awl=2</code>并且<code>wpm=300</code>。英文的话，为<code>awl=4</code>并且<code>wpm=275</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: false</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+<p>(3)在主题配置文件中加上以下设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: true</span><br><span class="line">  exclude_codeblock: false</span><br></pre></td></tr></table></figure>
+<h3 id="编辑数学公式">编辑数学公式</h3>
+<p>(1) 更换markdown渲染引擎，由marked改为更为轻量级的kramed：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<p>你可以在/node_modules里面搜索一下你是否安装了这两个插件（注意：不要安装pandoc插件，如果有，请卸载，此插件兼容性不太好，经常导致报错）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
+<p>(2) 找到/node_modules/kramed/lib/rules/inline.js把第11行的escape变量的值做相应的修改：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;escape: &#x2F;^\\([\\&#96;*&#123;&#125;\[\]()#$+\-.!_&gt;])&#x2F;,</span><br><span class="line">escape: &#x2F;^\\([&#96;*\[\]()#$+\-.!_&gt;])&#x2F;,</span><br></pre></td></tr></table></figure>
+<p>这一步是在原基础上取消了对,{,}的转义(escape)。同时把第20行的em变量也要做相应的修改。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;em: &#x2F;^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)&#x2F;,</span><br><span class="line">em: &#x2F;^\*((?:\*\*|[\s\S])+?)\*(?!\*)&#x2F;</span><br></pre></td></tr></table></figure>
+<p>(3) 打开Mathjax开关，在/theme/next/_config.yml 中把enable改为true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax:</span><br><span class="line">enable: true</span><br><span class="line">per_page: true</span><br></pre></td></tr></table></figure>
+<p>(4) 在文章开头设置mathjax开关，只有需要编辑数学公式的文章页面才加载mathjax渲染，这样不需要渲染数学公式也不会影响加载速度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: xxxx</span><br><span class="line">date: 2018-02-01 16:22:31</span><br><span class="line">tags: xxxxx</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
+<p>假如你不想每篇文章都手动打上mathjax: true，那么你可以在/scaffolds/post.md中修改，添加上mathjax这一项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">mathjax: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>这样你每次写博客时Front-matter都会有这一项(实际上我们修改的就是博客Front-matter的模板)<br>
+(5) 显示数学公式序号。我们经常需要对行间公式编序号，这样会方便我们的语言叙述(可能是习惯于LATEX），要在我们博客上显示序号，只需要在/theme/next/layout/_third-party/mathjax.swig中加上下面这段代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;x-mathjax-config&quot;&gt;</span><br><span class="line">      MathJax.Hub.Config(&#123;</span><br><span class="line">        TeX: &#123; equationNumbers: &#123; autoNumber: &quot;AMS&quot; &#125; &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<p>然后在markdown的tex公式编辑里面只要使用equation环境的公式就会被编号（两个$符号的简单公式不会有编号）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125; # 此标签如果替换成$$的话 不会有编号</span><br><span class="line">a_2&#x3D;\sum^&#123;3k&#125;</span><br><span class="line">\end&#123;equation&#125; # 此标签如果替换成$$的话 不会有编号</span><br></pre></td></tr></table></figure>
+<p>显示结果如图：<br>
+<img src="formula.png" alt="formula" width="500"/><br>
+对于其他的存在于文字内的数学公式来说，需要用两个$$之内即可。比如$a^2$:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$a^2$</span><br></pre></td></tr></table></figure>
+<p>对于多行公式来说，\begin{equation} 不适用，此时需要改回两个$符号（不知道为什么原因）。但是，如果公式如下的话，会导致所有公式内容放在一行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;align&#125;</span><br><span class="line">x &amp;&#x3D; a +b+c+d \\</span><br><span class="line"> &amp;&#x3D; e +f \\</span><br><span class="line"> &amp;&#x3D; g</span><br><span class="line">\end&#123;align&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>显示结果如图：<br>
+<img src="multiline-formula.png" alt="multiline-formula" width="500"/><br>
+可以看到，换行并未起作用，这是因为 Hexo 对 Markdown 文件的处理实际上分为两个步骤：</p>
+<ul>
+<li>Hexo 中的 Markdown 引擎把 Markdown 变为 html 文件</li>
+<li>MathJax 负责解释 html 的数学公式</li>
+</ul>
+<p>第一步中，由于 backslash 在 Markdown 属于特殊字符，用于字符转义，所以两个 backslash 经过 Markdown 引擎处理，只剩下一个，等到 MathJax 引擎处理时，实际上 MathJax 只看到一个 backslash，MathJax 把它当作 LaTeX 中的空格，因此我们见到了上图所示的渲染结果。<br>
+知道了渲染错误的原因，解决办法也很简单，就是用四个 backslash 代替两个 backslash，确保 MathJax 的引擎看到的是两个 backslash。同时align 标签本身提供公式编号，如果不想加编号的话，我们可换成aligned 标签。也就是把上述代码变成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">x &amp;&#x3D; a +b+c+d \\\\</span><br><span class="line"> &amp;&#x3D; e +f \\\\</span><br><span class="line"> &amp;&#x3D; g</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>显示结果如图：<br>
+<img src="indexed-formula.png" alt="indexed-formula" width="200"/></p>
+<h2 id="部署到Github-Pages">部署到Github Pages</h2>
+<p>(1) 新建一个仓库，仓库名为 <a href="http://RoyZhengGao.github.io" target="_blank" rel="noopener">RoyZhengGao.github.io</a>（这个仓库的名称必须严格按照 <a href="http://username.github.io" target="_blank" rel="noopener">username.github.io</a> 的格式来命名）。点击刚创建好的那个仓库(进去仓库里面），点击settings，找到Github Pages 选项，选择Source 选项，默认是master branch。这样Github Pages的默认路径就是http://RoyZhengGao.github.io。<br>
+本文默认本地机器已经装好git 并且已经配置连接好对应的Github账号。<br>
+(2) 修改站点配置文件。在blog文件夹下，找到_config.yml文件，修改里面的deploy属性(目的是将本地blog项目放到Github上)。注：【如果repository中填写的是https协议的，<code>hexo d </code>上传代码到Github时有下面类似错误，推荐将repository改为ssh的链接】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:RoyZhengGao&#x2F;RoyZhengGao.github.io.git</span><br><span class="line">  # example: git@github.com:RoyZhengGao&#x2F;RoyZhengGao.github.io.git</span><br><span class="line">  # example, https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexojs.github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>(3) 安装hexo-deployer-git 插件，目的是将代码快速托管到Github上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>(4) 将blog项目托管到Github上:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F; 清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo generate &#x2F;&#x2F; 部署之前预先生成静态文件，简写为hexo g</span><br><span class="line">hexo deploy &#x2F;&#x2F; 上传生成的静态文件，立即部署网站，简写为hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="Github-创建多个博客">Github 创建多个博客</h3>
+<p>如果仓库名username.github.io已经被别的repository 占用，为了创建新的博客，我们可以在Github上面随便创立一个repository，比如创立一个叫做blog的repository。此时，需要改动上传Github 的路径到：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:RoyZhengGao&#x2F;blog.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>同时，如果博客网站存放在子目录中，例如 <a href="http://yoursite.com/blog%EF%BC%8C%E5%88%99%E8%AF%B7%E5%B0%86%E7%AB%99%E7%82%B9%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84">http://yoursite.com/blog，则请将站点配置文件中的</a> url 设为 <a href="http://yoursite.com/blog">http://yoursite.com/blog</a> 并把root 设为 /blog/。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: http:&#x2F;&#x2F;yoursite.com&#x2F;blog</span><br><span class="line">root: &#x2F;blog&#x2F;</span><br></pre></td></tr></table></figure>
+<p>其余部署步骤和普通方式部署博客的步骤一致。最终，博客网址将会是http://RoyZhengGao.github.io/blog/。</p>
+<h2 id="常见问题">常见问题</h2>
+<ul>
+<li>Q: 如何更改post中的字体大小？<br>
+A: 在NexT.Pisces v7.6.0的版本中，目前没有找到正确的方法来只改变post的字体大小。<a href="https://theme-next.iissnan.com/theme-settings.html#fonts-customization" target="_blank" rel="noopener">相关文档1</a>和<a href="https://theme-next.iissnan.com/faqs.html#custom-font" target="_blank" rel="noopener">相关文档2</a>虽然有进行说明，但是并不能正确改正。目前的感觉是应该改主题配置文件_config.yml中的font部分以及主题对应的style文件 /themes/next/source/css/_variables/base.styl. 仍需要进一步研究。<br>
+查看source code 后发现，其字体比较大的原因是由生成的main.css中以下代码控制的。当把页面缩小到1200px以下之后，font size自动缩回为1em。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@media (min-width: 1200px)</span><br><span class="line">.post-body &#123;</span><br><span class="line">    font-size: 1.125em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+补充：最终发现其原因在于<code>source/css/_common/components/post/post.styl </code>中的如下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+desktop-large() &#123;</span><br><span class="line">  font-size: $font-size-large;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+即当页面大于1200px时，自动把font size 转化为large的size。改动其为<code>font-size: $font-size-base</code>即可。参考issue可见<a href="https://github.com/theme-next/hexo-theme-next/issues/1165" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next/issues/1165</a>。</li>
+</ul>
+<p>参考文献：</p>
+<ul>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官方文档</a></li>
+<li><a href="https://www.jianshu.com/p/84a8384be1ae" target="_blank" rel="noopener">Hexo使用指南</a></li>
+<li><a href="https://winney07.github.io/2018/08/02/%E5%9C%A8Hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0/" target="_blank" rel="noopener">在Hexo博客中发布文章</a></li>
+<li><a href="https://winney07.github.io/2018/08/01/%E5%B0%86Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E6%9B%B4%E6%8D%A2%E4%B8%BANexT%E4%B8%BB%E9%A2%98/" target="_blank" rel="noopener">将Hexo博客主题更换为NexT主题</a></li>
+<li><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT主题使用文档</a></li>
+<li><a href="https://theme-next.iissnan.com/third-party-services.html" target="_blank" rel="noopener">第三方插件安装</a></li>
+<li><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">NexT主题对应源代码</a></li>
+<li><a href="https://www.youtube.com/watch?v=HLJ9jJy7CMg" target="_blank" rel="noopener">Hexo YouTube教学视频</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLmZFYB4M42szT_wcKC2GYe5Iviql-2sBr" target="_blank" rel="noopener">NexT 主题YouTube教学视频</a></li>
+<li><a href="https://yuanmomo.net/2019/06/20/hexo-add-valine/" target="_blank" rel="noopener">添加Valine评论系统</a></li>
+<li><a href="https://chaxiaoniu.oschina.io/2017/07/10/HexoAddEmoji/" target="_blank" rel="noopener">Hexo启用emoji</a></li>
+<li><a href="https://linbaijiong.github.io/2018/02/07/Hexo%E4%B8%8BNext%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96-%E4%B8%80-%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E7%9A%84%E6%B8%B2%E6%9F%93/" target="_blank" rel="noopener">Hexo启用数学公式</a></li>
+<li><a href="https://jdhao.github.io/2017/10/06/hexo-markdown-latex-equation/" target="_blank" rel="noopener">解决Mathjax中的多行公式问题</a></li>
+<li><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">hexo NexT个性化设置</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/blog/tags/front-end/" rel="tag"># front end</a>
+              <a href="/blog/tags/tech-tool/" rel="tag"># tech tool</a>
+              <a href="/blog/tags/hexo/" rel="tag"># hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blog/2019/12/10/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/" rel="next" title="Jekyll 搭建个人网站">
+      Jekyll 搭建个人网站 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地安装Hexo"><span class="nav-number">1.1.</span> <span class="nav-text">本地安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建Hexo-project"><span class="nav-number">1.2.</span> <span class="nav-text">新建Hexo project</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不同电脑间迁移"><span class="nav-number">1.3.</span> <span class="nav-text">不同电脑间迁移</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装使用NexT主题"><span class="nav-number">2.</span> <span class="nav-text">安装使用NexT主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DIY-NexT主题"><span class="nav-number">2.1.</span> <span class="nav-text">DIY NexT主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Side-bar-添加标签-分类"><span class="nav-number">2.2.</span> <span class="nav-text">Side bar 添加标签&#x2F;分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Side-bar-添加本地搜索"><span class="nav-number">2.3.</span> <span class="nav-text">Side bar 添加本地搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新建post"><span class="nav-number">2.4.</span> <span class="nav-text">新建post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Valine-评论系统"><span class="nav-number">2.5.</span> <span class="nav-text">安装Valine 评论系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启用emoji"><span class="nav-number">2.6.</span> <span class="nav-text">启用emoji</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加阅读时长"><span class="nav-number">2.7.</span> <span class="nav-text">添加阅读时长</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑数学公式"><span class="nav-number">2.8.</span> <span class="nav-text">编辑数学公式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到Github-Pages"><span class="nav-number">3.</span> <span class="nav-text">部署到Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-创建多个博客"><span class="nav-number">3.1.</span> <span class="nav-text">Github 创建多个博客</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题"><span class="nav-number">4.</span> <span class="nav-text">常见问题</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zheng Gao (高正)"
+      src="/blog/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zheng Gao (高正)</p>
+  <div class="site-description" itemprop="description">以always Day 1 的心态，工作102年</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">41</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/RoyZhengGao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;RoyZhengGao" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:gao27@indiana.edu" title="Email → mailto:gao27@indiana.edu" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.linkedin.com/in/zheng-gao-351b738a/" title="LinkedIn → https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;zheng-gao-351b738a&#x2F;" rel="noopener" target="_blank"><i class="fa fa-fw fa-linkedin"></i>LinkedIn</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://scholar.google.com/citations?user=C8M7-1YAAAAJ&hl=en" title="Google → https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user&#x3D;C8M7-1YAAAAJ&amp;hl&#x3D;en" rel="noopener" target="_blank"><i class="fa fa-fw fa-google"></i>Google</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://zhenggao.io/" title="https:&#x2F;&#x2F;zhenggao.io" rel="noopener" target="_blank">个人主页</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zheng Gao (高正)</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">127k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:31</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.1
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.min.js"></script>
+  <script src="/blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/pisces.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/blog/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<script type="text/x-mathjax-config">
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') {
+          next = next.nextSibling;
+        }
+        if (next && next.nodeName.toLowerCase() === 'br') {
+          next.parentNode.removeChild(next);
+        }
+      }
+    });
+  });
+
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      element = document.getElementById(all[i].inputID + '-Frame').parentNode;
+      if (element.nodeName.toLowerCase() == 'li') {
+        element = element.parentNode;
+      }
+      element.classList.add('has-jax');
+    }
+  });
+</script>
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML', () => {
+    MathJax.Hub.Typeset();
+  }, window.MathJax);
+</script>
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+ </script>
+    
+
+  
+
+
+<script>
+NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js', () => {
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '3445JBYAQGXfF0gSJqMyxy5y-gzGzoHsz',
+    appKey: 'xSorailV8YU1obYqYz9Yqhyv',
+    placeholder: "Comment",
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn',
+    path: location.pathname,
+    recordIP: false,
+    serverURLs: ''
+  });
+}, window.Valine);
+</script>
+
+</body>
+</html>
