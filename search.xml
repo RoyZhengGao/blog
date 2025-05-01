@@ -246,150 +246,6 @@ HSA存的钱也不用交税，而且一般公司也会contribute一部分钱到H
       </tags>
   </entry>
   <entry>
-    <title>Java开发者必备知识</title>
-    <url>/blog/2020/01/16/Java%E5%BC%80%E5%8F%91%E8%80%85%E5%BF%85%E5%A4%87%E7%9F%A5%E8%AF%86/</url>
-    <content><![CDATA[<p>在此列出一些java software engineer 需要掌握的一些知识点：</p>
-<span id="more"></span>
-<ol>
-<li>Database: Redis, MongoDB, Neo4J</li>
-<li>Big data: Spark, Kafka、RabbitMQ、RocketMQ</li>
-<li>Dependency Management: Ant, Maven, Gradle</li>
-<li>Design Pattern: MVC</li>
-<li>Dependency Injection: Spring, Guice, Dagger</li>
-<li>Container: Docker, Kubernetes</li>
-</ol>
-<h2 id="好用的packge">好用的packge</h2>
-<h3 id="Guava">Guava</h3>
-<h3 id="librec">librec</h3>
-<p>mellet<br>
-weka<br>
-lemur<br>
-gephi</p>
-<p>learning to rank<br>
-The default property files are in the jar package. All property files are under the folder rec.  You can’t change the files but you can change the detailed properties in the Java code</p>
-<h2 id="刷题">刷题</h2>
-<ol>
-<li>singleton syncryize and voletile 的东西 线程部分的</li>
-</ol>
-<h2 id="部署">部署</h2>
-<p>Maven tips</p>
-<p>build a new maven project:<br>
-mvn archetype:generate -DgroupId=com.mycompany.helloworld -DartifactId=helloworld -Dpackage=com.mycompany.helloworld -Dversion=1.0-SNAPSHOT</p>
-<p>cd helloworld<br>
-mvn package</p>
-<p>java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.helloworl</p>
-<p>help to get more information<br>
-mvn help:effective-pom</p>
-<p>clean the target folder<br>
-mvn clean</p>
-<p>mvn compile<br>
-mvn test<br>
-mvn install</p>
-<h2 id="Elipse-change-shortcut">Elipse change shortcut</h2>
-<ol>
-<li>preference -&gt; general -&gt;keys to change the shortcut.</li>
-<li>open declaration (函数定位到源文件) command + 1 牢记！！</li>
-</ol>
-<h2 id="java-tips">java tips</h2>
-<ol>
-<li>enumeration:<br>
-public enum SimilarityEnum {<br>
-BM25, VSM, LMD, LMJ;<br>
-}</li>
-</ol>
-<p>Eclipse中设置JVM内存<br>
-<a href="http://blog.csdn.net/wgw335363240/article/details/6397803">http://blog.csdn.net/wgw335363240/article/details/6397803</a></p>
-<h2 id="pack-an-eclipse-project-to-jar-file">pack an eclipse project to jar file</h2>
-<p><a href="https://woshigaozheng.blogspot.com/2015/11/pack-eclipse-project-to-jar-file.html">https://woshigaozheng.blogspot.com/2015/11/pack-eclipse-project-to-jar-file.html</a><br>
-<a href="https://www.cnblogs.com/youxin/archive/2012/06/03/2532914.html">https://www.cnblogs.com/youxin/archive/2012/06/03/2532914.html</a><br>
-一.工程没有引用外部jar包时(J2SE)<br>
-选中工程----&gt;右键，Export…—&gt;Java—&gt;选择JAR file—&gt;next–&gt;选择jar file的路径及名称–&gt;next–&gt;next— 选择Main class—&gt;finish.</p>
-<p>二.工程有引用外部jar包时(J2SE)<br>
-第一种方案<br>
-当工程引用了其他的外部jar时，由于eclipse不支持同时导出外部jar包的功能，所以比较麻烦一点；具体步骤如下：<br>
-1.生成manifest file:<br>
-选中工程----&gt;右键，Export…—&gt;Java—&gt;选择JAR file—&gt;next–&gt;选择jar file的路径及名称–&gt;next–&gt;next— 选择Main class—&gt;finish。此时来到了要选择Main class的窗口，但这里先不选择Main class，选择最上方的Generate the manifest file（生成清单文件）, 勾上Save the manifest in the workspace（将清单保存在工作空间中）,在Manifest file（清单文件）：中输入file的名称，如/testProject/main,（其中testProject为工程名,main为manifest file的名称）点击finish。<br>
-生成的jar文件一运行就会产生错误：couldn’t find main class<br>
-2.回到工程，打开刚刚生成的main，在这里要输入如下信息：<br>
-Manifest-Version: 1.0<br>
-Main-Class: com.pacong.convert.auto.propertes.ConvertAutoProperties<br>
-Class-Path: jxl.jar<br>
-其中，Manifest-Version: 1.0为刚刚自动生成的manifest版本号；<br>
-Main-Class: com.pacong.convert.auto.propertes.ConvertAutoProperties为Main class所在类；<br>
-Class-Path: jxl.jar为外部jar包名称，这里是告诉导出的jar包，所要用到的外部的jar包的路径及名称。<br>
-上面都做完了就可以导出带外部jar包的jar包了<br>
-3.选中工程—&gt;右键，Export—&gt;Java—&gt;JAR file—&gt;选择jar file的路径及名称—&gt;next—&gt;next—&gt;next，这时又来到了选择main class的窗口，但这里也不选择main class，选择Use existing manifest from workspace，在Manifest file:里选择刚刚生成的main,如：/testProject/main，点击finish，到此就大功告成啦；假设生成的jar包的名称为test.jar，那么Class-Path中引入的jxl.jar要和test.jar位于同一个目录下。</p>
-<p>不要选main.mf和manifest文件，在后面的选择existing manifest文件，变写manifest时：<br>
-Manifest-Version: 1.0<br>
-Main-Class:com.test.GameFrame  ； class：后面一定要有且只有1个空格<br>
-Class-Path: nimrodlf-1.2.jar liquidlnf.jar        ;path 后面一定要有且只有1个空格<br>
-另外，一定要注意Main-Class,Class-Path等后面会有一个直接的空格，不然会提示格式错误<br>
-最后必须有换行，不能有空格. 这个也是要注意的. 否则依然提示没有mainclass<br>
-jar creation failed<br>
-detail：invalid header field<br>
-用export runnable jar file时，不需要 么Class-Path中引入的jxl.jar要和test.jar位于同一个目录下。比较简单。<br>
-4.注意点：<br>
-如果想在命令行中运行刚刚生成的jar，命令如下：<br>
-C:\Documents and Settings\Administrator\桌面&gt;java -jar test.jar<br>
-如果在jar中有一些System.out.prinln语句，运行后想看看打印出的内容，可以用一下命令：<br>
-C:\Documents and Settings\Administrator\桌面&gt;java -jar test.jar &gt;log.txt<br>
-输出信息会被打印到log.txt中，当然log.txt自动生成，并位于和test.jar一个目录中。<br>
-这里也可以新建一个start.bat文件，创建后；右键—编辑，输入:java -jar test.jar &gt;log.txt；以后直接双击start.bat即可运行test.jar啦。<br>
-E盘，则你需要导入得包也要放在这个目录里。<br>
-第二种方案<br>
-将第三方包直接拷贝到jdk得安装目录中的jre/lib/ext/中，这时候我们需要重启一下Eclipse，这样才能将刚才的那个包加载进自动生成的系统库中，这时候按照上面的做法打包出来的jar包</p>
-<p>第三种方案.用Fat jar插件来打包有引用外部jar包的项目（J2SE)<br>
-1 如果你在程序开发的时候用到了第三方提供的API或者其它附属资源，在你导出生成jar文件时你必须将第三方的文件一并导出，不然你的程序运行将达不到你想要的结果.<br>
-你可以利用Fat jar插件生成jar,Fat jar 的下载地址：<a href="http://sourceforge.net/projects/fjep/">http://sourceforge.net/projects/fjep/</a> 下载的文件是net.sf.fjep.fatjar_0.0.31.zip，解压缩后你会看到plugins文件夹中的net.sf.fjep.fatjar_0.0.31.jar文件(简称Fat jar).<br>
-插件安装：把Fat jar文件拷贝到你的eclipse目录下的plugins中…重新启动你的eclipse平台，然后查看Window—preferences, 弹出的窗口中有Fat jar preferences这一项则说明你已经安装成功了,没有这一项则未安装成功,需要多做如下几步操作：到你的eclipse目录下的 configuration—org.eclipse.update，并删除platform.xml文件，然后重新启动eclipse.查看 Window—preferences,你会发现Fat jar preferences这一项.恭喜你安装成功了2.右击你的项目，选项列表中有Build Fat jar这一项,选择它,点击Browser(Main-Class选择你的主类)—next— finish(勾选你需要一起打包的资源,默认为全部勾选).瞧,jar文件就生成在你的工程项目中了.运行它,一切顺利.<br>
-2.用Fat jar打包：右击你的项目，选项列表中有Build Fat jar这一项,选择它,弹出的窗口你会觉得特别亲切,一目了然使用很方便,点击Browser(Main-Class选择你的主类)—next— finish(勾选你需要一起打包的资源,默认为全部勾选).瞧,jar文件就生成在你的工程项目中了.运行它,一切顺利.<br>
-我的eclipse，把插件复制到plugin下，删除了Platform.xml文件，且启动用eclipse.exe -clean 还是不行，插件安装不了，不知道怎么回事。</p>
-<p>通过eclipse的Export 导出项，导出jar包时，有几点需要注意的事项。</p>
-<p>假如我们导出的jar包名称为 demo.jar，右键解压demo.jar，META-INF 目录下面有 MANIFEST.MF文件，打开看到<br>
-[java] view plaincopy在CODE上查看代码片派生到我的代码片<br>
-Manifest-Version: 1.0<br>
-Main-Class: com.zhangqi.you.main.JdbcTest</p>
-<p>1  Main-Class事项：<br>
-main-class，顾名思义，主函数类，即demo.jar 默认运行时，执行的主方法类。<br>
-在eclipse 导出jar的过程中，可以指定main-class属性，也可以不指定main-class，根据实际情况而定。</p>
-<pre><code>如果导出的jar包中就只包含了一个main方法，其他的class类都是为这个类服务的，参与计算的，或引用的，那么就可以在导出时，直接指定main-class。
-如果导出的jar包中包含多个main方法，在运行时，需要根据情况而定执行哪一个主函数类，那么导出的过程中就不要指定main-class属性。在运行的时候，指定需要指定的main方法类即可。
-</code></pre>
-<p>例如 java -jar demo.jar com.test.Demo1  运行 Demo1 类<br>
-java -jar demo.jar com.test.Demo2  运行 Demo2 类</p>
-<p>2  Class-Path事项：<br>
-class-path，顾名思义，classpath，引用类路径。<br>
-如果导出的jar包中引用了外部的jar包，那么直接运行java -jar demo.jar时，会报classnotfound异常的，这时候，需要为导出jar指定classpath<br>
-打开MANIFEST.MF文件，在下面添加上 Class-Path: mysql-connector-java-5.0.8-bin.jar 便为demo.jar添加了mysql-connector-java-5.0.8-bin.jar的引用<br>
-[java] view plaincopy在CODE上查看代码片派生到我的代码片<br>
-Manifest-Version: 1.0<br>
-Main-Class: com.zhangqi.you.main.JdbcTest<br>
-Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
-<pre><code> 同时将mysql-connector-java-5.0.8-bin.jar  驱动jar包放到跟demo.jar同目录下即可引用到。
- 如果有多个jar包引用的话，每个jar包间空格隔开即可。
-</code></pre>
-<p>参考文献：</p>
-<ul>
-<li><a href="https://www.cnblogs.com/peida/p/Guava.html">Guava学习笔记目录</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>programming language</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>programming language</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Jekyll 搭建个人网站 - al-folio模板</title>
     <url>/blog/2022/08/27/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99-al-folio%E6%A8%A1%E6%9D%BF/</url>
     <content><![CDATA[<p>Github Pages al-folio 其<a href="https://github.com/alshedivat/al-folio">源代码</a>和生成的<a href="https://maruan.alshedivat.com/">网页效果</a>比较适用于偏学术风格的个人网站。</p>
@@ -688,6 +544,18 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
 <strong>(5) 验证绑定</strong><br>
 在我们添加完SSH key之后，可以通过在 Git Bash 中输入<code>ssh -T git@github.com</code>进行测试，出现下图所示，表示绑定成功：<br>
 <img src="test-bundle.png" alt="test-bundle" width="500"/></p>
+<h3 id="git配置ssh免密登陆">git配置ssh免密登陆</h3>
+<p>自2021年8月13日起，github不再支持使用密码push的方式。解决方法有两种：</p>
+<ol>
+<li>使用SSH，运行以下命令把内容粘贴到<a href="https://github.com/settings/keys">https://github.com/settings/keys</a></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.email woshigaozheng@gmail.com</span><br><span class="line">git config --global user.name RoyZhengGao</span><br><span class="line">ssh-keygen -t rsa -b 4096 -C woshigaozheng@gmail.com </span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>如果运行失败，可能是你在git clone的时候很多时候都是按照<code>git init repo</code>上的指示，采用了https协议，而非git协议。验证 运行 <code>git config --get remote.origin.url</code>。如果回复http，则需要改成git协议之后用git push就不会要求密码。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote set-url origin git@github.com:RoyZhengGao/RoyZhengGao.github.io.git</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>使用Personal access token，每次都要运行以下命令：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push https://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@github.com/RoyZhengGao/RoyZhengGao.github.io.git</span><br></pre></td></tr></table></figure>
 <h3 id="电脑绑定多个Github账号">电脑绑定多个Github账号</h3>
 <p>有些时候，我们可能有多个Github的账号，为了在同一台电脑上能向不同Github的账号push 代码，我们需要做以下设定：<br>
 (1) 新生成一对密钥。打开terminal 输入</p>
@@ -891,6 +759,8 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
 <li><a href="https://www.jianshu.com/p/a3e6b5b2ab59">gitignore的写法说明</a></li>
 <li><a href="https://www.jianshu.com/p/e5b13480479b">如何gitignore 掉那些已经track的文件</a></li>
 <li><a href="https://www.cnblogs.com/kevingrace/p/5896706.html">git pull --rebase 的解释</a></li>
+<li><a href="https://blog.csdn.net/qq_38163309/article/details/105335097">git配置ssh免密登陆</a></li>
+<li><a href="https://www.zhihu.com/question/55865892">git配置ssh登陆却一直提示要输入密码？</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -1307,27 +1177,16 @@ pip 可以利用 requirments.txt 来实现在依赖的安装。在 <a href="http
 <h3 id="brew-和conda">brew 和conda</h3>
 <p>conda是一个包，依赖和环境管理工具，适用于多种语言，conda默认随miniconda或anaconda发行，因此要安装conda，只需要安装miniconda或anconda即可。而brew是Homebrew的管理工具。两者都是用来自动下载并安装包的，并不仅限于安装Python 依赖包。这是两者与pip的区别。</p>
 <h3 id="安装package">安装package</h3>
-<p>全自动： pip install xxx<br>
-半自动：一些python package <a href="http://xn--setup-3t2k.py">有setup.py</a> xx install . 可以follow 这些instruction<br>
+<p>全自动： <code>pip install xxx</code><br>
+半自动：一些python package <a href="http://xn--8ov%60setup.py">有`setup.py</a> xx install .`` 可以follow 这些instruction<br>
 如果没有write access 到site-package 这种系统路径，需要把package 安装到自己设定的路径下面去，具体参考网页<a href="https://docs.python.org/2.7/install/index.html#alternate-installation">https://docs.python.org/2.7/install/index.html#alternate-installation</a><br>
-举例来说，<br>
-python <a href="http://setup.py">setup.py</a> install --home=/home/ec2-user/workspaces/hoverboard-workspaces/lib</p>
-<p>此时，需要把当前目录装在PYTHONPATH里面去，<br>
-vim ~/.bashrc<br>
-PYTHONPATH=~/one/location:$PYTHONPATH<br>
-PYTHONPATH=~/second/location:$PYTHONPATH<br>
-export PYTHONPATH<br>
-source ~/.bashrc<br>
-如果有其他依赖的话，还需要安装其他依赖package.<br>
-如果在断网的情况下pip install package, 为了避免平台问题（比如amazon hoverboard）,需要先把package 所有依赖的源代码下载下来，然后再安装。具体见：<br>
-<a href="https://www.cnblogs.com/jay54520/p/8330994.html">https://www.cnblogs.com/jay54520/p/8330994.html</a><br>
-<a href="https://www.jianshu.com/p/f8a3f3a07aff">https://www.jianshu.com/p/f8a3f3a07aff</a><br>
-<a href="https://blog.csdn.net/pierre_/article/details/54234151">https://blog.csdn.net/pierre_/article/details/54234151</a><br>
-<a href="http://imshuai.com/python-pip-install-package-offline-tensorflow/">http://imshuai.com/python-pip-install-package-offline-tensorflow/</a><br>
-<a href="https://woshigaozheng.blogspot.com/2019/06/python-package.html">https://woshigaozheng.blogspot.com/2019/06/python-package.html</a></p>
-<p>如果感觉没有问题，比如wheel 文件适合当前平台的话，可以download 对应的whl文件，然后通过<br>
-pip install --user -v --no-index “${WHEELS_LOC}certifi-2018.11.29-py2.py3-none-any.whl”<br>
-进行安装</p>
+举例来说，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">python setup.py install --home=/home/ec2-user/workspaces/hoverboard-workspaces/lib</span><br></pre></td></tr></table></figure>
+<p>此时，需要把当前目录装在PYTHONPATH里面去，</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line">PYTHONPATH=~/one/location:$PYTHONPATH</span><br><span class="line">PYTHONPATH=~/second/location:$PYTHONPATH</span><br><span class="line">export PYTHONPATH</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>如果有其他依赖的话，还需要安装其他依赖package.<br>
+如果在断网的情况下<code>pip install package</code>, 为了避免平台问题（比如amazon hoverboard）,需要先把package 所有依赖的源代码下载下来，然后再安装。比如wheel 文件适合当前平台的话，可以download 对应的whl文件，然后通过以下命令进行安装。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install --user -v --no-index &quot;$&#123;WHEELS_LOC&#125;certifi-2018.11.29-py2.py3-none-any.whl&quot;</span><br></pre></td></tr></table></figure>
 <h2 id="Package篇">Package篇</h2>
 <h3 id="transformers">transformers</h3>
 <p>非常强大的预训练模型：<a href="https://huggingface.co/models?search=chinese">https://huggingface.co/models?search=chinese</a><br>
@@ -1367,16 +1226,6 @@ pip install --user -v --no-index “${WHEELS_LOC}certifi-2018.11.29-py2.py3-none
 <h3 id="condition的表达">condition的表达</h3>
 <h3 id="最大值最小值的表达">最大值最小值的表达</h3>
 <p>float(“inf”) + 1还是float(“inf”)， 但是sys.maxsize + 1就不是sys.maxsize了， 某些需要判断+1以后是不是还是max的时候要注意</p>
-<h3 id="python-write-to-file-buffer">python write to file buffer</h3>
-<p><a href="https://stackoverflow.com/questions/18984092/python-2-7-write-to-file-instantly">https://stackoverflow.com/questions/18984092/python-2-7-write-to-file-instantly</a><br>
-<a href="https://stackoverflow.com/questions/3167494/how-often-does-python-flush-to-a-file">https://stackoverflow.com/questions/3167494/how-often-does-python-flush-to-a-file</a><br>
-Use flush() or</p>
-<p>For file operations, Python uses the operating system’s default buffering unless you configure it do otherwise. You can specify a buffer size, unbuffered, or line buffered.<br>
-For example, the open function takes a buffer size argument.<br>
-<a href="http://docs.python.org/library/functions.html#open">http://docs.python.org/library/functions.html#open</a><br>
-“The optional buffering argument specifies the file’s desired buffer size: 0 means unbuffered, 1 means line buffered, any other positive value means use a buffer of (approximately) that size. A negative buffering means to use the system default, which is usually line buffered for tty devices and fully buffered for other files. If omitted, the system default is used.”<br>
-bufsize = 0<br>
-f = open(‘file.txt’, ‘w’, bufsize)</p>
 <h3 id="其他函数">其他函数</h3>
 <ul>
 <li>list: copy (深度copy 需要copy package)</li>
@@ -1394,56 +1243,7 @@ f = open(‘file.txt’, ‘w’, bufsize)</p>
 <li>itertools: permutations, combinations, groupby</li>
 <li>functools</li>
 </ul>
-<h2 id="待整理部分">待整理部分</h2>
-<p>If you can’t see the <a href="http://virtualenvwrapper.sh">virtualenvwrapper.sh</a>. First uninstall virtualenvwrapper. It will show messages about the location of the <a href="http://virtualenvwrapper.sh">virtualenvwrapper.sh</a> file.</p>
-<p>Check all python’ location</p>
-<p>type -a python</p>
-<p>首选要确定哪个版本的python 要使用（不同的python版本可能存在在不同的地方）<br>
-可以用module load python/2.7 用module查看有几个版本的python</p>
-<p>首先install virtualenv:<br>
-pip install virtualenv</p>
-<p>新建一个sandbox of virtual environment:<br>
-virtualenv --python=/l/python2.7/bin/python env1 (silo 上面 module load的 python 不是系统自带的，也不是anaconda上面的)</p>
-<p>有些python 用的是anaconda的，所以需要指定python路径</p>
-<p>把当前路径设为指定的virtual envir：</p>
-<p>cd env1/<br>
-source bin/activate<br>
-which python<br>
-pip list //看一下安装的包都有什么<br>
-pip freeze// python 所有依赖的包</p>
-<p>退出虚拟环境：<br>
-deactivate</p>
-<p>如果你的虚拟环境想用系统已有的包，when you create it, you need to use<br>
-virtualenv --system-site-packages venv</p>
-<p>Otherwise, if you don’t want to use system package, create it using:</p>
-<p>virtualenv venv –no-site-packages (和以上的基本一样)</p>
-<p>2.3. 指定PYTHON版本<br>
-可以使用-p PYTHON_EXE选项在创建虚拟环境的时候指定python版本<br>
-#创建python2.7虚拟环境<br>
-➜  Test git:(master) ✗ virtualenv -p /usr/bin/python2.7 ENV2.7<br>
-Running virtualenv with interpreter /usr/bin/python2.7<br>
-New python executable in ENV2.7/bin/python<br>
-Installing setuptools, pip…done.<br>
-#创建python3.4虚拟环境<br>
-➜  Test git:(master) ✗ virtualenv -p /usr/local/bin/python3.4 ENV3.4<br>
-Running virtualenv with interpreter /usr/local/bin/python3.4<br>
-Using base prefix ‘/Library/Frameworks/Python.framework/Versions/3.4’<br>
-New python executable in ENV3.4/bin/python3.4<br>
-Also creating executable in ENV3.4/bin/python<br>
-Installing setuptools, pip…done.</p>
-<p>作者：Andrew_liu<br>
-链接：<a href="http://www.jianshu.com/p/08c657bd34f1">http://www.jianshu.com/p/08c657bd34f1</a><br>
-來源：简书<br>
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-<p>使用VIRTUALENVWRAPPER （更简单的方法）</p>
-<p><a href="http://codingpy.com/article/virtualenv-must-have-tool-for-python-development/">http://codingpy.com/article/virtualenv-must-have-tool-for-python-development/</a><br>
-<a href="http://qicheng0211.blog.51cto.com/3958621/1561685">http://qicheng0211.blog.51cto.com/3958621/1561685</a><br>
-<a href="http://www.jianshu.com/p/44ab75fbaef2">http://www.jianshu.com/p/44ab75fbaef2</a><br>
-<a href="http://liuzhijun.iteye.com/blog/1872241">http://liuzhijun.iteye.com/blog/1872241</a></p>
-<p>man 在Linux中可以有文档查看的功能 i.e.<br>
-man ls<br>
-man python<br>
-参考文献</p>
+<p>参考文献</p>
 <ul>
 <li><a href="https://blog.zengrong.net/post/python_packaging/">Python 包管理工具解惑</a></li>
 <li><a href="http://kuanghy.github.io/2018/04/29/setup-dot-py">setup.py 编写简易指南</a></li>
@@ -2182,8 +1982,8 @@ A: 在NexT.Pisces v7.6.0的版本中，目前没有找到正确的方法来只�
       </tags>
   </entry>
   <entry>
-    <title>Shell Script 学习总结 </title>
-    <url>/blog/2019/12/16/Shell-Script-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
+    <title>Shell-Script学习总结 </title>
+    <url>/blog/2025/03/01/Shell-Script-%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
     <content><![CDATA[<p>Shell脚本是计算机运行中必不可少的一种脚本语言。应用shell 能够和计算机内核进行交互，同时也能自动化运行所需要运行的程序，还可以快速的进行一些文件的查询功能。因此熟练掌握shell是作为程序员不可缺少的一部分技能。本文整理了一些普通日常中常用的shell 命令。同时也区分了一些容易混淆的shell相关的概念。</p>
 <span id="more"></span>
 <h2 id="Linux各种系统和Unix">Linux各种系统和Unix</h2>
@@ -2651,125 +2451,6 @@ options 有<code>-F</code>，<code>-v</code>等等一系列。以下介绍几个
 <li><code>history</code>: 查看命令行中的历史命令。 <code>history -100</code>表明显示最近一百条命令行</li>
 <li><code>mpstat</code>: mpstat 是 Multiprocessor Statistics的缩写，是实时监控工具，报告与cpu的一些统计信息这些信息都存在/proc/stat文件中，在多CPU系统里，其不但能查看所有的CPU的平均状况的信息，而且能够有查看特定的cpu信息，mpstat最大的特点是:可以查看多核心的cpu中每个计算核心的统计数据；而且类似工具vmstat只能查看系统的整体cpu情况。</li>
 </ul>
-<h2 id="待加入的部分">待加入的部分</h2>
-<p>log in time for all users:<br>
-lastlog</p>
-<p>log in time for me:<br>
-lastlog | grep gao</p>
-<p>检查CPU使用率 从大到小排序<br>
-ps auxw --sort=%cpu</p>
-<p>list all files:<br>
-ls -l</p>
-<p>看file system 的大小和使用情况<br>
-df -h</p>
-<p><a href="http://www.cnblogs.com/peida/archive/2012/10/30/2746968.html">http://www.cnblogs.com/peida/archive/2012/10/30/2746968.html</a><br>
-<a href="http://mark-ztw.iteye.com/blog/1544367">http://mark-ztw.iteye.com/blog/1544367</a></p>
-<p>查看文件大小，文件夹大小：du -sm *,du -h, du *, du -sm, du -h *,<br>
-查看文件多少行：wc -l 2018092121.tsv</p>
-<p>[root@linux ~]# tar -cvf /tmp/etc.tar /etc  &lt;==仅打包，不压缩！</p>
-<p>[root@linux ~]# tar -czvf /tmp/etc.tar.gz /etc  &lt;==打包后，以 gzip 压缩</p>
-<p>[root@linux ~]# tar -cjvf /tmp/etc.tar.bz2 /etc  &lt;==打包后，以 bzip2 压缩</p>
-<p>把tar包分成多个小文件：split -b 40M home1.tar.bz2 “home.tar.bz2.part”<br>
-把多个小文件合并：cat home.tar.bz2.parta* &gt; home2.tar.bz2</p>
-<p>linux 并行执行。用&amp; 和 wait 综合操作。<br>
-&amp; 表示并行<br>
-wait可以再等前面执行完，串行回来<br>
-<a href="https://blog.csdn.net/gua___gua/article/details/48682665">https://blog.csdn.net/gua___gua/article/details/48682665</a></p>
-<p>如果remove 一个folder ,然后不出现一个一个文件删除的确认的话，需要用<br>
-rm -rf folder/<br>
-一个一个文件删除的话 用：<br>
-rm -r folder/</p>
-<p>Shell cheat sheet:<br>
-<a href="https://devhints.io/bash">https://devhints.io/bash</a></p>
-<p>对于shell 来说，如果想下一个命令要在上一个命令完成之后才开始的话，需要在每行命令后面加上 &amp;&amp; 符号 <a href="https://blog.csdn.net/ysdaniel/article/details/6127860">https://blog.csdn.net/ysdaniel/article/details/6127860</a></p>
-<p><a href="https://blog.csdn.net/tiwoo/article/details/51094913">https://blog.csdn.net/tiwoo/article/details/51094913</a></p>
-<p>有zsh 也有bash. 对应的配置文件为zshrc 和 bashrc. 为了查看到底机器用的是哪个shell, 用<br>
-echo $SHELL 来查看。</p>
-<p>bashrc 和 bash_profile 的区别： <a href="https://justcoding.iteye.com/blog/2120331">https://justcoding.iteye.com/blog/2120331</a></p>
-<h2 id="quickly-log-in-remote-sever">quickly log in remote sever</h2>
-<p>reference:<br>
-<a href="http://blog.csdn.net/leexide/article/details/17252369">http://blog.csdn.net/leexide/article/details/17252369</a><br>
-<a href="https://my.oschina.net/aiguozhe/blog/33994">https://my.oschina.net/aiguozhe/blog/33994</a></p>
-<p>process:<br>
-local server:</p>
-<ol>
-<li>ssh-keygen -t rsa (连续三次回车,即在本地生成了公钥和私钥,不设置密码)</li>
-<li>ssh <a href="mailto:root@172.24.253.2">root@172.24.253.2</a> “mkdir .ssh;chmod 0700 .ssh” (需要输入密码， 注:必须将.ssh的权限设为700) (if remote server doesn’t have ssh file)</li>
-<li>scp ~/.ssh/id_rsa.pub <a href="mailto:root@172.24.253.2">root@172.24.253.2</a>:.ssh/id_rsa.pub (需要输入密码)</li>
-</ol>
-<p>remote server:<br>
-1.<br>
-cat id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys<br>
-2.<br>
-chmod 600 authorized_keys<br>
-3.<br>
-chmod 700 -R ~/.ssh<br>
-注意都要在对应.ssh 文件目录下进行</p>
-<h2 id="Use-anaconda-in-the-server">Use anaconda in the server</h2>
-<p>every time to use anaconda pip, you need to execute the command first to find the path:</p>
-<p>##虚拟环境<br>
-play with IU server<br>
-which virtualenv</p>
-<p>virtualenv venv<br>
-module load python/2.7</p>
-<p>pip install gensim<br>
-156  virtualenv venv<br>
-157  pip install gensim virtualenv venv<br>
-158  virtualenv venv<br>
-159  virtualenv<br>
-160  pwd<br>
-161  pip install virtualenv<br>
-162  free -g<br>
-163  history</p>
-<p>164  virtualenv</p>
-<p>export PATH=/home/gao27/anaconda/bin:$PATH<br>
-或者把这行代码写入~/.bashrc 中，然后 source ~/.bashrc</p>
-<p>install Anaconda in server<br>
-<a href="https://docs.anaconda.com/anaconda/install/linux">https://docs.anaconda.com/anaconda/install/linux</a></p>
-<p>install pip directly:<br>
-<a href="https://pip.pypa.io/en/stable/installing/#id7">https://pip.pypa.io/en/stable/installing/#id7</a></p>
-<h2 id="python-2-7-and-3-5">python 2.7 and 3.5</h2>
-<p><a href="http://conda.pydata.org/docs/py2or3.html">http://conda.pydata.org/docs/py2or3.html</a></p>
-<p>$ conda create -n py35 python=3.5 anaconda</p>
-<h1></h1>
-<h1>To activate this environment, use:</h1>
-<h1>$ source activate py35 (source activate py3)</h1>
-<h1></h1>
-<h1>To deactivate this environment, use:</h1>
-<h1>$ source deactivate</h1>
-<p>##Linux command<br>
-sync local files to remote server:</p>
-<p>rsync -avz ./health_care <a href="mailto:gao27@burrow.soic.indiana.edu">gao27@burrow.soic.indiana.edu</a>😕/nfs/nfs4/home/gao27/health_care</p>
-<p>sync remote server files to local:<br>
-rsync -avz <a href="mailto:gao27@burrow.soic.indiana.edu">gao27@burrow.soic.indiana.edu</a>😕/nfs/nfs4/home/gao27/health_care ./</p>
-<p>/usr/libexec/java_home -verbose can return all javas in your computer</p>
-<p>把一个文件的前十行 存到另外一个文件中</p>
-<p>sed -n -e ‘1,10p’ test.csv &gt; sample.csv</p>
-<p>ps aux 指令详解<br>
-<a href="https://blog.csdn.net/hanner_cheung/article/details/6081440">https://blog.csdn.net/hanner_cheung/article/details/6081440</a></p>
-<p>df -h 查看分区剩余容量</p>
-<p>d -i 查看index的剩余容量</p>
-<p>du -h -d 1 查看当前文件夹大小</p>
-<p>vim 的教程：<br>
-<a href="https://harttle.land/2015/11/07/vim-cursor.html">https://harttle.land/2015/11/07/vim-cursor.html</a></p>
-<p>使用&amp;和wait改造<br>
-在每个进程中使用&amp;符号进行让脚本在后台运行，无需等待当前进程结束。<br>
-为了确保每个进程都执行完成，最后务必使用wait关键字，用来确保每一个子进程都执行完成。<br>
-[root@artisan test]# cat call_parallel.sh<br>
-#!/bin/bash<br>
-#当前目录下执行如下脚本  相对路径<br>
-./1.sh &amp;<br>
-./2.sh &amp;<br>
-wait<br>
-echo “继续执行剩下的逻辑…”<br>
-[root@artisan test]#</p>
-<p>文件重命名：<a href="https://www.cnblogs.com/longdouhzt/archive/2012/04/30/2477282.html">https://www.cnblogs.com/longdouhzt/archive/2012/04/30/2477282.html</a><br>
-推荐书籍：</p>
-<ul>
-<li>Linux命令行与shell脚本编程大全</li>
-<li>Linux+Shell脚本攻略</li>
-<li>Bash Notes For Professionals</li>
-</ul>
 <p>参考文献：</p>
 <ul>
 <li><a href="https://blog.csdn.net/whatday/article/details/78929247">几种常见的Shell</a></li>
@@ -2786,9 +2467,6 @@ echo “继续执行剩下的逻辑…”<br>
 <li><a href="https://blog.csdn.net/qq_41551450/article/details/92803686?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task">各种括号详解</a></li>
 <li><a href="http://c.biancheng.net/cpp/view/2736.html">运算符详解</a></li>
 <li><a href="https://www.runoob.com/linux/linux-comm-awk.html">awk命令详解</a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
-<li><a href=""></a></li>
 </ul>
 ]]></content>
       <categories>
@@ -2998,35 +2676,6 @@ Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的�
 <li><a href="https://blog.heyfe.org/blog/2014-12-06-shadowsocks.html">Shadowsocks 搭建</a></li>
 <li><a href="https://blog.whsir.com/post-559.html">ss windows server配置</a></li>
 <li><a href="https://xfj0.cn/archives/94.html">在windows server上安装Shadowsocks服务端</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>tech</tag>
-        <tag>cloud service</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云使用教程</title>
-    <url>/blog/2022/07/30/%E8%85%BE%E8%AE%AF%E4%BA%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>本文是作者购买了腾讯云账号后，总结的如何使用腾讯云账户的教程。</p>
-<span id="more"></span>
-<h1>简单使用指南tips</h1>
-<ol>
-<li>登录账号后找到购买的<a href="https://console.cloud.tencent.com/lighthouse/instance">轻量应用服务器页面</a>，点击对应的实例即可登录</li>
-<li>购买之后，公网IP和对应的实例基本信息可以在<a href="https://console.cloud.tencent.com/message">站内信</a>中查看</li>
-<li>Mac OS 系统通过远程桌面上传文件到 Windows 轻量应用服务器(<a href="https://cloud.tencent.com/document/product/1207/53218">https://cloud.tencent.com/document/product/1207/53218</a>)</li>
-<li>Mac使用Microsoft Remote Desktop Beta实现远程登录Windows服务器(<a href="https://cloud.tencent.com/document/product/1207/44579">https://cloud.tencent.com/document/product/1207/44579</a>) 需要在腾讯云实例的防火墙添加规则：允许访问端口号3389。此为默认的Windows远程登录的端口号。如果不是，可以在服务器主页点击WebRDP登录，弹出的窗口会显示对应的端口号。</li>
-<li>搭建 CentOS 可视化界面(<a href="https://cloud.tencent.com/document/product/213/59484">https://cloud.tencent.com/document/product/213/59484</a>)</li>
-<li>如何将本地文件拷贝到轻量应用服务器（<a href="https://cloud.tencent.com/document/product/1207/53135%EF%BC%89">https://cloud.tencent.com/document/product/1207/53135）</a></li>
-</ol>
-<h1>构建WordPress网站</h1>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a href="https://cloud.tencent.com/document/product/1207/44579">使用远程桌面连接登录Windows实例</a></li>
-<li><a href="https://cloud.tencent.com/document/product/1207">轻量应用服务器文档中心</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -3455,6 +3104,63 @@ mutual fund分为封闭式基金和开放式基金，封闭式基金就是在认
       <tags>
         <tag>kpop</tag>
         <tag>music</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云使用教程</title>
+    <url>/blog/2025/04/30/%E8%85%BE%E8%AE%AF%E4%BA%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>本文是作者购买了腾讯云账号后，总结的如何使用腾讯云账户的教程。<br><span id="more"></span></p>
+<h1 id="简单使用指南tips"><a href="#简单使用指南tips" class="headerlink" title="简单使用指南tips"></a>简单使用指南tips</h1><ol>
+<li>登录账号后找到购买的<a href="https://console.cloud.tencent.com/lighthouse/instance">轻量应用服务器页面</a>，点击对应的实例即可登录</li>
+<li>购买之后，公网IP和对应的实例基本信息可以在<a href="https://console.cloud.tencent.com/message">站内信</a>中查看</li>
+<li>Mac OS 系统通过远程桌面上传文件到 Windows 轻量应用服务器(<a href="https://cloud.tencent.com/document/product/1207/53218">https://cloud.tencent.com/document/product/1207/53218</a>)</li>
+<li>Mac使用Microsoft Remote Desktop Beta实现远程登录Windows服务器(<a href="https://cloud.tencent.com/document/product/1207/44579">https://cloud.tencent.com/document/product/1207/44579</a>) 需要在腾讯云实例的防火墙添加规则：允许访问端口号3389。此为默认的Windows远程登录的端口号。如果不是，可以在服务器主页点击WebRDP登录，弹出的窗口会显示对应的端口号。</li>
+<li>搭建 CentOS 可视化界面(<a href="https://cloud.tencent.com/document/product/213/59484">https://cloud.tencent.com/document/product/213/59484</a>)</li>
+<li>如何将本地文件拷贝到轻量应用服务器（<a href="https://cloud.tencent.com/document/product/1207/53135）">https://cloud.tencent.com/document/product/1207/53135）</a></li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li><a href="https://cloud.tencent.com/document/product/1207/44579">使用远程桌面连接登录Windows实例</a></li>
+<li><a href="https://cloud.tencent.com/document/product/1207">轻量应用服务器文档中心</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>tech</tag>
+        <tag>cloud service</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025MLE跳槽总结</title>
+    <url>/blog/2025/04/30/2025MLE%E8%B7%B3%E6%A7%BD%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>本文总结一下2025年上半年跳槽的全过程。主要申请的是senior machine learning engineer岗位。<br><span id="more"></span><br><strong>本人背景</strong>：PhD学位 + 5年工作经验<br><strong>专业方向</strong>：NLP，搜广推，LLM（在Amazon干了两年半的NLP和推荐，在蚂蚁做了两年半的LLM post-training和agent）<br><strong>目标岗位</strong>：senior machine learning engineer<br><strong>求职进展</strong>：<br>因为年初被reorg到一个完全陌生的project，所以我从二月中旬的时候下定决心跳槽，到四月底签完offer截止，一共历经两个多月的时间。还好我的manager后期因为他自己也要跳槽的原因，基本不管我们了，因此倒是因祸得福，相当于全职刷了两个月的题。<br>一开始的时候，因为自己很久没有进入市场找工作了，对于行情不是很了解，所以我首先疯狂在LinkedIn上加recruiter和看各种公司的open position。大概看了一两周摸清了下当前都有什么公司之后，我决定基本从三个方面找和自己背景相似的公司：</p>
+<ol>
+<li>大中型上市公司（FAANG，Pinterest, Snap等） </li>
+<li>比较火的startup （主要参考了福布斯最近几年的<a href="https://zhuanlan.zhihu.com/p/693062107">Top50 AI公司名单</a>)</li>
+<li>LinkedIn推荐的小的startup。</li>
+</ol>
+<p>之所以这么选择，一是不太清楚自己的定位如何，二是反正自己时间充足，不如先选一些小的startup面试练练手，同时还能增长点面试自信心。现在看来这种策略还是很有用的，像behavior question以及past project deep dive 这种面试轮次，经过前期面试打磨之后，后期面试我都面得非常得心应手。<br>投简历的时候，除了一部分是我开了LinkedIn会员，并且把状态改成Open to Work之后有recruiter主动联系的之外，90%的公司我都是直接从官网海投的。我个人的感觉是如果你的背景和job description相关并且比较有竞争力的话，还是很快能收到回复的。找人内推的话，如果内推的人背景和自己并不相似，其实也未必能有什么作用。<br>最终大概统计了下，我自己投了80+家公司，其中有30+家有recruiter联系，给面试机会（phone screen）的公司有22家。其中走到onsite轮的有15家（最终面了11家，因为offer定了所以推掉了4个VO），拿了8个offer。不过这些offer的含金量相对一般，因为大部分dream company要么挂在了面试上，要么根本就没给面试机会，要么被强行down level了，而且有两个offer由于后期没有headcount的原因到最后也没正式发下来。</p>
+<ul>
+<li>挂在phone screen/hiring manager面试的公司：OpenAI, Meta, Atlassian, Vanta, Anyscale, Shopify, XAI (offer来了就没继续面)</li>
+<li>挂在on site的公司：Pinterest, Bosch, Abridge</li>
+<li>因为定了offer所以取消on site的公司：Bloomberg，Apple, Capital One, Snap</li>
+<li>offer: Tiktok, Amazon, Coupang, Microsoft, Accenture, Moveworks, Inworld AI, Kai Cyber   </li>
+</ul>
+<p><strong>面试经验</strong>：<br>说实话面试真的是体力活，我最多的时候一天要面3家公司，有一段时间平均每天都要2场面试。前前后后一共面试了得有100+轮。因为重复了太多次，我后期面试做self introduction的时候都感觉完全不过脑子了。每家公司的phone screen会有1-2轮，具体会包括至少一轮coding，此外还会涉及到past project deep dive或者ML fundamental。onsite的话一般都有4-5轮，包括coding, ML system design，ML fundamental，和behavior这四个方面。除了个别公司之外，绝大部分的onsite现在都是virtual onsite。以下是我准备面试时的一些个人经验：</p>
+<ol>
+<li>coding的话大部分公司都还是leetcode style, 需要在coderpad或者hackerrank上做到bug free（测试几个自己写的test case,或者要通过公司提前设置好的test case），然后分析下时间/空间复杂度。面试中一般真正给coding的时间大概是35分钟，考察一道题+follow up的情况比较多，两道题的情况也有。准备coding面试也没什么捷径，只能多刷leetcode了。这些公司的coding体感下来大概都是medium左右的难度，我从来没有被考过DP的问题。我这些年前前后后一共刷了700道题，每周的leetcode contest平均能做2.5题左右。除了有两家公司电面coding没发挥好之外，其他的coding轮次都还是比较顺利的。网上leetcode题目讲解的文档还是挺多的，我参考的比较多的是<a href="https://github.com/doocs/leetcode/tree/main/solution">https://github.com/doocs/leetcode/tree/main/solution</a> 和<a href="https://fuxuemingzhu.cn/leetcode">https://fuxuemingzhu.cn/leetcode</a></li>
+<li>ML system design对于MLE来说也是必考的一轮。虽然说有一些八股的套路，但是考官有时候会问到具体的一些模型（比如推荐系统的经典算法）和数据处理方法（比如处理缺少labeled data的具体算法），所以最好还是得有相关实践经验以及一些ML modeling方面的知识储备。Alex Xu的Machine Learning System Design Interview我觉得写的还是挺好的，一开始列了八股的模版，后面又结合了几个具体的例子，最起码对我还是有一定作用的。ChatGPT其实也很有用，提供的system design答案也挺好的。</li>
+<li>ML fundamental目前我还没有找到什么特别好的参考资料，基本上都是根据个人背景自己一点一点零散的记录起来的。知乎、一亩三分地、甚至小红书都有很多所谓的ML fundamental知识的整理，但是要么写的比较简单，要么就是链接跳转来跳转去最终要付费，所以只能自己慢慢探索了。如果是junior level的MLE的话，西瓜书我觉得是必读书籍之一。但是一般来讲还是得根据自己的research background 以及申请的job description来进行针对性的准备。比如申请搜广推的岗位，那就得准备下推荐系统的算法；申请大模型相关的岗位，transformer以及各种SFT/RL的方法要熟练掌握。</li>
+<li>Behavior question的话，主要考的还是讲故事的能力，这一轮其实非常非常的重要，是bar raiser用来决定给不给offer以及定级别的。我大概准备了十几个故事，面对不同的问题轮着用，目前体感下来也够用了。Amazon的leadership principle <a href="https://www.amazon.jobs/content/en/our-workplace/leadership-principles">https://www.amazon.jobs/content/en/our-workplace/leadership-principles</a> 必须得烂熟于心，此外强推<a href="https://link.1point3acres.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrpMlmnsiMNiA">https://link.1point3acres.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrpMlmnsiMNiA</a> , 熟读此文档我觉得面对各种behavior question都能轻松应对。</li>
+</ol>
+<p><strong>总结</strong>：<br>感觉对于machine learning engineer来说，当前的市场还是很有机会的，很多公司都在招和LLM相关方向的人才。但是从有面试机会到最终给offer还是有很长的路要走的。每家公司基本都是6轮面试打底，最多的一家我一共面了9轮。而且给口头offer和拿到official offer letter之间也有很多事情会发生，比如Moveworks一开始给了我offer，后面因为审批原因又撤回了。Microsoft一开始也给了offer，但是紧接着就因为headcount没了也撤回offer了。此外现在所有的公司发了offer之后都要求最多5个工作日之内给回复，导致competing offer不太能及时有，还导致我签了现在的offer之后来了一个给钱更多一点的offer，我衡量了半天之后还是没敢撕签好的offer。我还感觉到或许是因为行情不好(?)的原因，现在的公司特别喜欢down level, 我有至少3个收到的offer都是明显故意down level了。哪怕在低一级别上为了match我对工资的期望去找VP签字，也不愿意给我正常的level。<br>其实面了这么多公司，还有一个让我很沮丧的点，就是我觉得phd学位对我好像没什么用。对于我这种背景比较普通的phd来说，去不了顶尖的research lab, 只能申请普通的MLE岗位。而这些MLE岗位其实并不需要phd学位。再加上我面试的时候也没有流弊到让所有的面试官都刮目相看，这种情况下公司在定级别的时候，更多的还是会考虑工作年限，所以最多给我senior甚至更低一档的级别。而我master同期的同学因为比我多了5年工作经验，很多人现在都在各大公司里面当上staff了。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>job</tag>
       </tags>
   </entry>
 </search>
