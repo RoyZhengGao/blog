@@ -293,29 +293,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>MongoDB 是一个目前比较流行的NoSQL数据库，用来存储非关系型数据的。这篇博客主要介绍如何安装以及用java driver调用和连接MongoDB数据库。同时也介绍了如果用MongoDB的shell直接在命令行中进行数据处理。</p>
-<span id="more"></span>
-<h2 id="MongoDB和SQL的区别与联系">MongoDB和SQL的区别与联系</h2>
-<p>如下图所示：<br>
-<img src="relationship.png" alt="relationship"/><br>
-一个真实的example对比如下：<br>
-<img src="example.png" alt="example"/></p>
-<h2 id="安装MongoDB">安装MongoDB</h2>
-<h3 id="安装过程">安装过程</h3>
-<ol>
-<li>因为MongoDB宣布不再开源，Homebrew 已经把他移除除了自己的仓库，因此安装MongoDB需要用到tap方法，在github中寻找源代码来安装：</li>
+        <p>MongoDB 是一个目前比较流行的NoSQL数据库，用来存储非关系型数据的。这篇博客主要介绍如何安装以及用java driver调用和连接MongoDB数据库。同时也介绍了如果用MongoDB的shell直接在命令行中进行数据处理。<br><span id="more"></span></p>
+<h2 id="MongoDB和SQL的区别与联系"><a href="#MongoDB和SQL的区别与联系" class="headerlink" title="MongoDB和SQL的区别与联系"></a>MongoDB和SQL的区别与联系</h2><p>如下图所示：<br><img src="relationship.png" alt="relationship"/><br>一个真实的example对比如下：<br><img src="example.png" alt="example"/> </p>
+<h2 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h2><h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><ol>
+<li>因为MongoDB宣布不再开源，Homebrew 已经把他移除除了自己的仓库，因此安装MongoDB需要用到tap方法，在github中寻找源代码来安装：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew tap mongodb/brew</span><br></pre></td></tr></table></figure></li>
+<li>安装MongoDB:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb-community</span><br></pre></td></tr></table></figure></li>
+<li>开启/关闭MongoDB的port:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew services start mongodb-community</span><br><span class="line">brew services stop mongodb-community</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew tap mongodb/brew</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>安装MongoDB:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb-community</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>开启/关闭MongoDB的port:</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew services start mongodb-community</span><br><span class="line">brew services stop mongodb-community</span><br></pre></td></tr></table></figure>
-<h3 id="命令行一些简单操作">命令行一些简单操作</h3>
-<ol>
+<h3 id="命令行一些简单操作"><a href="#命令行一些简单操作" class="headerlink" title="命令行一些简单操作"></a>命令行一些简单操作</h3><ol>
 <li>使用MongoDB shell的话，需要在开启service之后，执行<code>mongo</code>来开启shell。</li>
 <li>显示当前的collection: <code>db</code></li>
 <li>显示所有的collection: <code>show dbs</code></li>
@@ -323,13 +309,11 @@
 <li>查询数据：<code>db.collection_name.find()</code>。 <code>db.collection_name.find().pretty()</code>显示出格式化结果。</li>
 <li>MongoDB的数据库默认是存在<code>/data/db</code>路径下的。</li>
 </ol>
-<h2 id="Java调用MongoDB">Java调用MongoDB</h2>
-<ol>
+<h2 id="Java调用MongoDB"><a href="#Java调用MongoDB" class="headerlink" title="Java调用MongoDB"></a>Java调用MongoDB</h2><ol>
 <li>需要三个jar包，包括：mongodb-driver, bson和mongodb-driver-core</li>
 <li>连接数据库，你需要指定数据库名称，如果指定的数据库不存在，mongo会自动创建数据库。</li>
 <li>使用Java的时候，要保证MongoDB的service 是开启的，即需要提前执行 <code>brew services start mongodb</code>,否则会找不到端口从而连接数据库。</li>
-<li>基本代码请看 博主本人的<a target="_blank" rel="noopener" href="https://github.com/RoyZhengGao/code-repo/blob/master/java/MongoDB.java">git repository</a><br>
-参考文献：</li>
+<li>基本代码请看 博主本人的<a target="_blank" rel="noopener" href="https://github.com/RoyZhengGao/code-repo/blob/master/java/MongoDB.java">git repository</a><br>参考文献：</li>
 </ol>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/mongodb/homebrew-brew">社区版安装MongoDB</a></li>
