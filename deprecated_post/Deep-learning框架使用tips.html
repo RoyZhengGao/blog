@@ -227,39 +227,70 @@
       
       
       <div class="post-body">
-          <p>Deep learning框架使用tips<br><span id="more"></span></p>
-<h2 id="Tensorflow"><a href="#Tensorflow" class="headerlink" title="Tensorflow"></a>Tensorflow</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">tf.add_n(): a list of tensors add</span><br><span class="line">tf.assign(v,10): assign value 10 to a variable</span><br><span class="line">#get variables function</span><br><span class="line">tf.all_vaariables(): get all variables</span><br><span class="line">tf.trainable_variables(): get all trainable variables</span><br><span class="line">tf.concat(concat_dim, values, name=&#x27;concat&#x27;): tf concatenation on the concat_dim dimension.</span><br><span class="line"># get all collection variable keys</span><br><span class="line">graph = tf.get_default_graph()</span><br><span class="line">graph.get_all_collection_keys()</span><br><span class="line">graph.get_tensor_by_name(&#x27;mlp_b1:0&#x27;) </span><br><span class="line"></span><br><span class="line">#get variable name</span><br><span class="line">v.name</span><br></pre></td></tr></table></figure>
-<p>tf.train.batch(): 把数据分成一个一个的batch, 每个batch 中有batch_size 个数据<br>tf.name_scope() and tf.Variable_scope() 差不多，但是name_scope 对于tf.get_variable() 没影响。 这些都是用来方便管理的。可以在tensor board 可视化的时候更有帮助。</p>
-<p>RNN中用的多的：<br>tf.clip_by_global_norm：用于控制梯度下降的参数。把梯度值控制在一个合理的范围内。</p>
-<p>tensorflow GPU on server<br>指定GPU 一开始：<br>CUDA_VISIBLE_DEVICES=1 python test.py</p>
+          <p>Deep learning框架使用tips</p>
+<span id="more"></span>
+<h2 id="Tensorflow">Tensorflow</h2>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">tf.add_n(): a list of tensors add</span><br><span class="line">tf.assign(v,10): assign value 10 to a variable</span><br><span class="line">#get variables function</span><br><span class="line">tf.all_vaariables(): get all variables</span><br><span class="line">tf.trainable_variables(): get all trainable variables</span><br><span class="line">tf.concat(concat_dim, values, name=&#x27;concat&#x27;): tf concatenation on the concat_dim dimension.</span><br><span class="line"># get all collection variable keys</span><br><span class="line">graph = tf.get_default_graph()</span><br><span class="line">graph.get_all_collection_keys()</span><br><span class="line">graph.get_tensor_by_name(&#x27;mlp_b1:0&#x27;) </span><br><span class="line"></span><br><span class="line">#get variable name</span><br><span class="line">v.name</span><br></pre></td></tr></table></figure>
+<p>tf.train.batch(): 把数据分成一个一个的batch, 每个batch 中有batch_size 个数据<br>
+tf.name_scope() and tf.Variable_scope() 差不多，但是name_scope 对于tf.get_variable() 没影响。 这些都是用来方便管理的。可以在tensor board 可视化的时候更有帮助。</p>
+<p>RNN中用的多的：<br>
+tf.clip_by_global_norm：用于控制梯度下降的参数。把梯度值控制在一个合理的范围内。</p>
+<p>tensorflow GPU on server<br>
+指定GPU 一开始：<br>
+CUDA_VISIBLE_DEVICES=1 python <a target="_blank" rel="noopener" href="http://test.py">test.py</a></p>
 <p>安装指南：</p>
-<p>~/.bashrc 里面的东西</p>
-<h1 id="cuda-settings"><a href="#cuda-settings" class="headerlink" title="cuda settings"></a>cuda settings</h1><p>export PATH=$HOME/cuda-8.0/bin:$PATH<br>export CPATH=$HOME/cuda-8.0/include:$CPATH<br>export LIBRARY_PATH=$HOME/cuda-8.0/lib64:$LIBRARY_PATH<br>export LD_LIBRARY_PATH=/$HOME/cuda-8.0/lib64:$LD_LIBRARY_PATH</p>
+<p>~/.bashrc 里面的东西<br>
+#cuda settings<br>
+export PATH=$HOME/cuda-8.0/bin:$PATH<br>
+export CPATH=$HOME/cuda-8.0/include:$CPATH<br>
+export LIBRARY_PATH=$HOME/cuda-8.0/lib64:$LIBRARY_PATH<br>
+export LD_LIBRARY_PATH=/$HOME/cuda-8.0/lib64:$LD_LIBRARY_PATH</p>
 <p>dataset + estimator 以后把所有的输入部分转化成dataset 的模式。 estimator 是一个高层封装，可以调用一些基本方法。</p>
-<h3 id="install-from-server"><a href="#install-from-server" class="headerlink" title="install from server"></a>install from server</h3><p>install tensorflow in Saturn (ILS server)<br>Saturn 的server是Red Hat 的，所以参考<a target="_blank" rel="noopener" href="https://jiafulow.github.io/blog/2018/07/10/install-tensorflow-with-gpu-on-redhat/">https://jiafulow.github.io/blog/2018/07/10/install-tensorflow-with-gpu-on-redhat/</a> 来安装Tensorflow-GPU.</p>
-<p>For Ubuntu server,<br>为了run python 3.6 + tensorflow GPU version in ILS saturn server, 具体步骤：<br>一 准备工作：</p>
+<h3 id="install-from-server">install from server</h3>
+<p>install tensorflow in Saturn (ILS server)<br>
+Saturn 的server是Red Hat 的，所以参考<a target="_blank" rel="noopener" href="https://jiafulow.github.io/blog/2018/07/10/install-tensorflow-with-gpu-on-redhat/">https://jiafulow.github.io/blog/2018/07/10/install-tensorflow-with-gpu-on-redhat/</a> 来安装Tensorflow-GPU.</p>
+<p>For Ubuntu server,<br>
+为了run python 3.6 + tensorflow GPU version in ILS saturn server, 具体步骤：<br>
+一 准备工作：</p>
 <ol>
-<li>安装anaconda 3。在.bashrc 里面加入<br>PATH=/home/gao27/anaconda/bin:$PATH</li>
+<li>安装anaconda 3。在.bashrc 里面加入<br>
+PATH=/home/gao27/anaconda/bin:$PATH</li>
 <li>确定你的Python version 3.6</li>
 </ol>
 <p>二 安装cuda 和 cudnn</p>
 <ol>
 <li>因为我们没有权限在cuda里面直接安装，所以我们首先通过which nvcc 找到cuda 包的所在地，然后把cuda整个包都拷贝到一个我们有权限操作的地方。 cuda版本需要8.0</li>
 <li>下载cudnn 5.1 版本，解压后会有两个文件夹lib64 和 include。 把里面的文件对应加到cuda对应的lib64 和 include里面 （不同版本的tensorflow 对应不同的cudnn. tensorflow 1.4 对应6.0. ）</li>
-<li>在.bashrc 里面加入如下路径<h1 id="cuda-settings-1"><a href="#cuda-settings-1" class="headerlink" title="cuda settings"></a>cuda settings</h1>export PATH=$HOME/cuda/bin:$PATH<br>export CPATH=$HOME/cuda/include:$CPATH<br>export LIBRARY_PATH=$HOME/cuda/lib64:$LIBRARY_PATH<br>export LD_LIBRARY_PATH=/$HOME/cuda/lib64:$LD_LIBRARY_PATH</li>
+<li>在.bashrc 里面加入如下路径<br>
+#cuda settings<br>
+export PATH=$HOME/cuda/bin:$PATH<br>
+export CPATH=$HOME/cuda/include:$CPATH<br>
+export LIBRARY_PATH=$HOME/cuda/lib64:$LIBRARY_PATH<br>
+export LD_LIBRARY_PATH=/$HOME/cuda/lib64:$LD_LIBRARY_PATH</li>
 </ol>
-<p>最后要source ~/.bashrc<br>三 安装tensorflow GPU 版本通过Anaconda<br>如图：</p>
+<p>最后要source ~/.bashrc<br>
+三 安装tensorflow GPU 版本通过Anaconda<br>
+如图：</p>
 <p>网址如下：<a target="_blank" rel="noopener" href="https://www.tensorflow.org/versions/r1.2/install/install_linux#python_36">https://www.tensorflow.org/versions/r1.2/install/install_linux#python_36</a></p>
 <p>然后activate tensorflow之后检验是否安装成功：</p>
-<h1 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h1><p>import tensorflow as tf<br>hello = tf.constant(‘Hello, TensorFlow!’)<br>sess = tf.Session()<br>print(sess.run(hello))</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014797226/article/details/80229887">https://blog.csdn.net/u014797226/article/details/80229887</a><br><a target="_blank" rel="noopener" href="https://blog.ailemon.me/2017/06/06/install-tensorflow-gpu-on-ubuntu-linux/">https://blog.ailemon.me/2017/06/06/install-tensorflow-gpu-on-ubuntu-linux/</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014797226/article/details/80229887">https://blog.csdn.net/u014797226/article/details/80229887</a></p>
-<h3 id="炼丹trick"><a href="#炼丹trick" class="headerlink" title="炼丹trick"></a>炼丹trick</h3><p>为什么loss 或者学习的参数  在summary 中会出现nan？<br>可能是由于梯度爆炸引起的。解决方法：1. gradient clip 2. batch nomalization 3, 降低学习率 4. 加入正则。</p>
-<p>如果你想查看ckpt中的网络结构和参数该怎么弄呢？这里提供2种方法。 一是用tensorflow官方源码中自带的inspect_checkpoint.py 给个例子如下： python /usr/local/lib/python2.7/dist-packages/tensorflow/python/tools/inspect_checkpoint.py —file_name=model.ckpt-158940 —tensor_name=unit_1_1/conv1/Weights 如果你只用了file_name这个参数，那么看到的就是整体网络结构。如果你2个参数都用了，那看到的就是具体那一层的值</p>
+<h1>Python</h1>
+<p>import tensorflow as tf<br>
+hello = tf.constant(‘Hello, TensorFlow!’)<br>
+sess = tf.Session()<br>
+print(sess.run(hello))</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014797226/article/details/80229887">https://blog.csdn.net/u014797226/article/details/80229887</a><br>
+<a target="_blank" rel="noopener" href="https://blog.ailemon.me/2017/06/06/install-tensorflow-gpu-on-ubuntu-linux/">https://blog.ailemon.me/2017/06/06/install-tensorflow-gpu-on-ubuntu-linux/</a><br>
+<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014797226/article/details/80229887">https://blog.csdn.net/u014797226/article/details/80229887</a></p>
+<h3 id="炼丹trick">炼丹trick</h3>
+<p>为什么loss 或者学习的参数  在summary 中会出现nan？<br>
+可能是由于梯度爆炸引起的。解决方法：1. gradient clip 2. batch nomalization 3, 降低学习率 4. 加入正则。</p>
+<p>如果你想查看ckpt中的网络结构和参数该怎么弄呢？这里提供2种方法。 一是用tensorflow官方源码中自带的inspect_checkpoint.py 给个例子如下： python /usr/local/lib/python2.7/dist-packages/tensorflow/python/tools/inspect_checkpoint.py --file_name=model.ckpt-158940 --tensor_name=unit_1_1/conv1/Weights 如果你只用了file_name这个参数，那么看到的就是整体网络结构。如果你2个参数都用了，那看到的就是具体那一层的值</p>
 <p>activate tensorflow:</p>
 <p>source ~/Documents/tensorflow/bin/activate</p>
 <p>deactivate tensorflow:</p>
 <p>deactivate</p>
-<h2 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h2><p>参考文献：</p>
+<h2 id="Pytorch">Pytorch</h2>
+<p>参考文献：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://blog.ailemon.me/2017/06/06/install-tensorflow-gpu-on-ubuntu-linux">安装tensorflow GPU指南</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/37586029">Tensorflow Estimators介绍</a></li>
@@ -316,7 +347,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tensorflow"><span class="nav-number">1.</span> <span class="nav-text">Tensorflow</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cuda-settings"><span class="nav-number"></span> <span class="nav-text">cuda settings</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-from-server"><span class="nav-number">0.1.</span> <span class="nav-text">install from server</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cuda-settings-1"><span class="nav-number"></span> <span class="nav-text">cuda settings</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Python"><span class="nav-number"></span> <span class="nav-text">Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%BC%E4%B8%B9trick"><span class="nav-number">0.1.</span> <span class="nav-text">炼丹trick</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pytorch"><span class="nav-number">1.</span> <span class="nav-text">Pytorch</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Tensorflow"><span class="nav-number">1.</span> <span class="nav-text">Tensorflow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#install-from-server"><span class="nav-number">1.1.</span> <span class="nav-text">install from server</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number"></span> <span class="nav-text">Python</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%82%BC%E4%B8%B9trick"><span class="nav-number">0.1.</span> <span class="nav-text">炼丹trick</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pytorch"><span class="nav-number">1.</span> <span class="nav-text">Pytorch</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

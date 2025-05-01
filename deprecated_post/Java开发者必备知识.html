@@ -227,49 +227,127 @@
       
       
       <div class="post-body">
-          <p>在此列出一些java software engineer 需要掌握的一些知识点：<br><span id="more"></span></p>
+          <p>在此列出一些java software engineer 需要掌握的一些知识点：</p>
+<span id="more"></span>
 <ol>
 <li>Database: Redis, MongoDB, Neo4J</li>
-<li>Big data: Spark, Kafka、RabbitMQ、RocketMQ </li>
+<li>Big data: Spark, Kafka、RabbitMQ、RocketMQ</li>
 <li>Dependency Management: Ant, Maven, Gradle</li>
 <li>Design Pattern: MVC</li>
 <li>Dependency Injection: Spring, Guice, Dagger</li>
 <li>Container: Docker, Kubernetes</li>
 </ol>
-<h2 id="好用的packge"><a href="#好用的packge" class="headerlink" title="好用的packge"></a>好用的packge</h2><h3 id="Guava"><a href="#Guava" class="headerlink" title="Guava"></a>Guava</h3><h3 id="librec"><a href="#librec" class="headerlink" title="librec"></a>librec</h3><p>mellet<br>weka<br>lemur<br>gephi</p>
-<p>learning to rank<br>The default property files are in the jar package. All property files are under the folder rec.  You can’t change the files but you can change the detailed properties in the Java code</p>
-<h2 id="刷题"><a href="#刷题" class="headerlink" title="刷题"></a>刷题</h2><ol>
+<h2 id="好用的packge">好用的packge</h2>
+<h3 id="Guava">Guava</h3>
+<h3 id="librec">librec</h3>
+<p>mellet<br>
+weka<br>
+lemur<br>
+gephi</p>
+<p>learning to rank<br>
+The default property files are in the jar package. All property files are under the folder rec.  You can’t change the files but you can change the detailed properties in the Java code</p>
+<h2 id="刷题">刷题</h2>
+<ol>
 <li>singleton syncryize and voletile 的东西 线程部分的</li>
 </ol>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><p>Maven tips</p>
-<p>build a new maven project:<br>mvn archetype:generate -DgroupId=com.mycompany.helloworld -DartifactId=helloworld -Dpackage=com.mycompany.helloworld -Dversion=1.0-SNAPSHOT</p>
-<p>cd helloworld<br>mvn package</p>
+<h2 id="部署">部署</h2>
+<p>Maven tips</p>
+<p>build a new maven project:<br>
+mvn archetype:generate -DgroupId=com.mycompany.helloworld -DartifactId=helloworld -Dpackage=com.mycompany.helloworld -Dversion=1.0-SNAPSHOT</p>
+<p>cd helloworld<br>
+mvn package</p>
 <p>java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.helloworl</p>
-<p>help to get more information<br>mvn help:effective-pom</p>
-<p>clean the target folder<br>mvn clean </p>
-<p>mvn compile<br>mvn test<br>mvn install</p>
-<h2 id="Elipse-change-shortcut"><a href="#Elipse-change-shortcut" class="headerlink" title="Elipse change shortcut"></a>Elipse change shortcut</h2><ol>
+<p>help to get more information<br>
+mvn help:effective-pom</p>
+<p>clean the target folder<br>
+mvn clean</p>
+<p>mvn compile<br>
+mvn test<br>
+mvn install</p>
+<h2 id="Elipse-change-shortcut">Elipse change shortcut</h2>
+<ol>
 <li>preference -&gt; general -&gt;keys to change the shortcut.</li>
 <li>open declaration (函数定位到源文件) command + 1 牢记！！</li>
 </ol>
-<h2 id="java-tips"><a href="#java-tips" class="headerlink" title="java tips"></a>java tips</h2><ol>
-<li>enumeration:<br>public enum SimilarityEnum {<br>BM25, VSM, LMD, LMJ;<br>}</li>
+<h2 id="java-tips">java tips</h2>
+<ol>
+<li>enumeration:<br>
+public enum SimilarityEnum {<br>
+BM25, VSM, LMD, LMJ;<br>
+}</li>
 </ol>
-<p>Eclipse中设置JVM内存<br><a target="_blank" rel="noopener" href="http://blog.csdn.net/wgw335363240/article/details/6397803">http://blog.csdn.net/wgw335363240/article/details/6397803</a></p>
-<h2 id="pack-an-eclipse-project-to-jar-file"><a href="#pack-an-eclipse-project-to-jar-file" class="headerlink" title="pack an eclipse project to jar file"></a>pack an eclipse project to jar file</h2><p><a target="_blank" rel="noopener" href="https://woshigaozheng.blogspot.com/2015/11/pack-eclipse-project-to-jar-file.html">https://woshigaozheng.blogspot.com/2015/11/pack-eclipse-project-to-jar-file.html</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/youxin/archive/2012/06/03/2532914.html">https://www.cnblogs.com/youxin/archive/2012/06/03/2532914.html</a><br> 一.工程没有引用外部jar包时(J2SE)<br>选中工程——&gt;右键，Export…—-&gt;Java—-&gt;选择JAR file—-&gt;next—&gt;选择jar file的路径及名称—&gt;next—&gt;next—- 选择Main class—-&gt;finish.</p>
-<p>二.工程有引用外部jar包时(J2SE)<br>第一种方案<br>当工程引用了其他的外部jar时，由于eclipse不支持同时导出外部jar包的功能，所以比较麻烦一点；具体步骤如下：<br>1.生成manifest file:<br>选中工程——&gt;右键，Export…—-&gt;Java—-&gt;选择JAR file—-&gt;next—&gt;选择jar file的路径及名称—&gt;next—&gt;next—- 选择Main class—-&gt;finish。此时来到了要选择Main class的窗口，但这里先不选择Main class，选择最上方的Generate the manifest file（生成清单文件）, 勾上Save the manifest in the workspace（将清单保存在工作空间中）,在Manifest file（清单文件）：中输入file的名称，如/testProject/main,（其中testProject为工程名,main为manifest file的名称）点击finish。<br>   生成的jar文件一运行就会产生错误：couldn’t find main class<br>2.回到工程，打开刚刚生成的main，在这里要输入如下信息：<br>Manifest-Version: 1.0<br>Main-Class: com.pacong.convert.auto.propertes.ConvertAutoProperties<br>Class-Path: jxl.jar<br>其中，Manifest-Version: 1.0为刚刚自动生成的manifest版本号；<br>Main-Class: com.pacong.convert.auto.propertes.ConvertAutoProperties为Main class所在类；<br>Class-Path: jxl.jar为外部jar包名称，这里是告诉导出的jar包，所要用到的外部的jar包的路径及名称。<br>上面都做完了就可以导出带外部jar包的jar包了<br>3.选中工程—-&gt;右键，Export—-&gt;Java—-&gt;JAR file—-&gt;选择jar file的路径及名称—-&gt;next—-&gt;next—-&gt;next，这时又来到了选择main class的窗口，但这里也不选择main class，选择Use existing manifest from workspace，在Manifest file:里选择刚刚生成的main,如：/testProject/main，点击finish，到此就大功告成啦；假设生成的jar包的名称为test.jar，那么Class-Path中引入的jxl.jar要和test.jar位于同一个目录下。</p>
-<p>不要选main.mf和manifest文件，在后面的选择existing manifest文件，变写manifest时：<br>Manifest-Version: 1.0<br>Main-Class:com.test.GameFrame  ； class：后面一定要有且只有1个空格<br>Class-Path: nimrodlf-1.2.jar liquidlnf.jar        ;path 后面一定要有且只有1个空格<br>另外，一定要注意Main-Class,Class-Path等后面会有一个直接的空格，不然会提示格式错误<br>最后必须有换行，不能有空格. 这个也是要注意的. 否则依然提示没有mainclass<br>jar creation failed<br>detail：invalid header field<br>用export runnable jar file时，不需要 么Class-Path中引入的jxl.jar要和test.jar位于同一个目录下。比较简单。<br>4.注意点：<br>如果想在命令行中运行刚刚生成的jar，命令如下：<br>C:\Documents and Settings\Administrator\桌面&gt;java -jar test.jar<br>如果在jar中有一些System.out.prinln语句，运行后想看看打印出的内容，可以用一下命令：<br>C:\Documents and Settings\Administrator\桌面&gt;java -jar test.jar &gt;log.txt<br>输出信息会被打印到log.txt中，当然log.txt自动生成，并位于和test.jar一个目录中。<br>这里也可以新建一个start.bat文件，创建后；右键—-编辑，输入:java -jar test.jar &gt;log.txt；以后直接双击start.bat即可运行test.jar啦。<br>E盘，则你需要导入得包也要放在这个目录里。<br>第二种方案<br>将第三方包直接拷贝到jdk得安装目录中的jre/lib/ext/中，这时候我们需要重启一下Eclipse，这样才能将刚才的那个包加载进自动生成的系统库中，这时候按照上面的做法打包出来的jar包</p>
-<p>第三种方案.用Fat jar插件来打包有引用外部jar包的项目（J2SE)<br>  1 如果你在程序开发的时候用到了第三方提供的API或者其它附属资源，在你导出生成jar文件时你必须将第三方的文件一并导出，不然你的程序运行将达不到你想要的结果.<br>   你可以利用Fat jar插件生成jar,Fat jar 的下载地址：<a target="_blank" rel="noopener" href="http://sourceforge.net/projects/fjep/">http://sourceforge.net/projects/fjep/</a> 下载的文件是net.sf.fjep.fatjar_0.0.31.zip，解压缩后你会看到plugins文件夹中的net.sf.fjep.fatjar_0.0.31.jar文件(简称Fat jar).<br>插件安装：把Fat jar文件拷贝到你的eclipse目录下的plugins中..重新启动你的eclipse平台，然后查看Window—-preferences, 弹出的窗口中有Fat jar preferences这一项则说明你已经安装成功了,没有这一项则未安装成功,需要多做如下几步操作：到你的eclipse目录下的 configuration—-org.eclipse.update，并删除platform.xml文件，然后重新启动eclipse.查看 Window—-preferences,你会发现Fat jar preferences这一项.恭喜你安装成功了2.右击你的项目，选项列表中有Build Fat jar这一项,选择它,点击Browser(Main-Class选择你的主类)—-next—- finish(勾选你需要一起打包的资源,默认为全部勾选).瞧,jar文件就生成在你的工程项目中了.运行它,一切顺利.<br>2.用Fat jar打包：右击你的项目，选项列表中有Build Fat jar这一项,选择它,弹出的窗口你会觉得特别亲切,一目了然使用很方便,点击Browser(Main-Class选择你的主类)—-next—- finish(勾选你需要一起打包的资源,默认为全部勾选).瞧,jar文件就生成在你的工程项目中了.运行它,一切顺利.<br>   我的eclipse，把插件复制到plugin下，删除了Platform.xml文件，且启动用eclipse.exe -clean 还是不行，插件安装不了，不知道怎么回事。</p>
+<p>Eclipse中设置JVM内存<br>
+<a target="_blank" rel="noopener" href="http://blog.csdn.net/wgw335363240/article/details/6397803">http://blog.csdn.net/wgw335363240/article/details/6397803</a></p>
+<h2 id="pack-an-eclipse-project-to-jar-file">pack an eclipse project to jar file</h2>
+<p><a target="_blank" rel="noopener" href="https://woshigaozheng.blogspot.com/2015/11/pack-eclipse-project-to-jar-file.html">https://woshigaozheng.blogspot.com/2015/11/pack-eclipse-project-to-jar-file.html</a><br>
+<a target="_blank" rel="noopener" href="https://www.cnblogs.com/youxin/archive/2012/06/03/2532914.html">https://www.cnblogs.com/youxin/archive/2012/06/03/2532914.html</a><br>
+一.工程没有引用外部jar包时(J2SE)<br>
+选中工程----&gt;右键，Export…—&gt;Java—&gt;选择JAR file—&gt;next–&gt;选择jar file的路径及名称–&gt;next–&gt;next— 选择Main class—&gt;finish.</p>
+<p>二.工程有引用外部jar包时(J2SE)<br>
+第一种方案<br>
+当工程引用了其他的外部jar时，由于eclipse不支持同时导出外部jar包的功能，所以比较麻烦一点；具体步骤如下：<br>
+1.生成manifest file:<br>
+选中工程----&gt;右键，Export…—&gt;Java—&gt;选择JAR file—&gt;next–&gt;选择jar file的路径及名称–&gt;next–&gt;next— 选择Main class—&gt;finish。此时来到了要选择Main class的窗口，但这里先不选择Main class，选择最上方的Generate the manifest file（生成清单文件）, 勾上Save the manifest in the workspace（将清单保存在工作空间中）,在Manifest file（清单文件）：中输入file的名称，如/testProject/main,（其中testProject为工程名,main为manifest file的名称）点击finish。<br>
+生成的jar文件一运行就会产生错误：couldn’t find main class<br>
+2.回到工程，打开刚刚生成的main，在这里要输入如下信息：<br>
+Manifest-Version: 1.0<br>
+Main-Class: com.pacong.convert.auto.propertes.ConvertAutoProperties<br>
+Class-Path: jxl.jar<br>
+其中，Manifest-Version: 1.0为刚刚自动生成的manifest版本号；<br>
+Main-Class: com.pacong.convert.auto.propertes.ConvertAutoProperties为Main class所在类；<br>
+Class-Path: jxl.jar为外部jar包名称，这里是告诉导出的jar包，所要用到的外部的jar包的路径及名称。<br>
+上面都做完了就可以导出带外部jar包的jar包了<br>
+3.选中工程—&gt;右键，Export—&gt;Java—&gt;JAR file—&gt;选择jar file的路径及名称—&gt;next—&gt;next—&gt;next，这时又来到了选择main class的窗口，但这里也不选择main class，选择Use existing manifest from workspace，在Manifest file:里选择刚刚生成的main,如：/testProject/main，点击finish，到此就大功告成啦；假设生成的jar包的名称为test.jar，那么Class-Path中引入的jxl.jar要和test.jar位于同一个目录下。</p>
+<p>不要选main.mf和manifest文件，在后面的选择existing manifest文件，变写manifest时：<br>
+Manifest-Version: 1.0<br>
+Main-Class:com.test.GameFrame  ； class：后面一定要有且只有1个空格<br>
+Class-Path: nimrodlf-1.2.jar liquidlnf.jar        ;path 后面一定要有且只有1个空格<br>
+另外，一定要注意Main-Class,Class-Path等后面会有一个直接的空格，不然会提示格式错误<br>
+最后必须有换行，不能有空格. 这个也是要注意的. 否则依然提示没有mainclass<br>
+jar creation failed<br>
+detail：invalid header field<br>
+用export runnable jar file时，不需要 么Class-Path中引入的jxl.jar要和test.jar位于同一个目录下。比较简单。<br>
+4.注意点：<br>
+如果想在命令行中运行刚刚生成的jar，命令如下：<br>
+C:\Documents and Settings\Administrator\桌面&gt;java -jar test.jar<br>
+如果在jar中有一些System.out.prinln语句，运行后想看看打印出的内容，可以用一下命令：<br>
+C:\Documents and Settings\Administrator\桌面&gt;java -jar test.jar &gt;log.txt<br>
+输出信息会被打印到log.txt中，当然log.txt自动生成，并位于和test.jar一个目录中。<br>
+这里也可以新建一个start.bat文件，创建后；右键—编辑，输入:java -jar test.jar &gt;log.txt；以后直接双击start.bat即可运行test.jar啦。<br>
+E盘，则你需要导入得包也要放在这个目录里。<br>
+第二种方案<br>
+将第三方包直接拷贝到jdk得安装目录中的jre/lib/ext/中，这时候我们需要重启一下Eclipse，这样才能将刚才的那个包加载进自动生成的系统库中，这时候按照上面的做法打包出来的jar包</p>
+<p>第三种方案.用Fat jar插件来打包有引用外部jar包的项目（J2SE)<br>
+1 如果你在程序开发的时候用到了第三方提供的API或者其它附属资源，在你导出生成jar文件时你必须将第三方的文件一并导出，不然你的程序运行将达不到你想要的结果.<br>
+你可以利用Fat jar插件生成jar,Fat jar 的下载地址：<a target="_blank" rel="noopener" href="http://sourceforge.net/projects/fjep/">http://sourceforge.net/projects/fjep/</a> 下载的文件是net.sf.fjep.fatjar_0.0.31.zip，解压缩后你会看到plugins文件夹中的net.sf.fjep.fatjar_0.0.31.jar文件(简称Fat jar).<br>
+插件安装：把Fat jar文件拷贝到你的eclipse目录下的plugins中…重新启动你的eclipse平台，然后查看Window—preferences, 弹出的窗口中有Fat jar preferences这一项则说明你已经安装成功了,没有这一项则未安装成功,需要多做如下几步操作：到你的eclipse目录下的 configuration—org.eclipse.update，并删除platform.xml文件，然后重新启动eclipse.查看 Window—preferences,你会发现Fat jar preferences这一项.恭喜你安装成功了2.右击你的项目，选项列表中有Build Fat jar这一项,选择它,点击Browser(Main-Class选择你的主类)—next— finish(勾选你需要一起打包的资源,默认为全部勾选).瞧,jar文件就生成在你的工程项目中了.运行它,一切顺利.<br>
+2.用Fat jar打包：右击你的项目，选项列表中有Build Fat jar这一项,选择它,弹出的窗口你会觉得特别亲切,一目了然使用很方便,点击Browser(Main-Class选择你的主类)—next— finish(勾选你需要一起打包的资源,默认为全部勾选).瞧,jar文件就生成在你的工程项目中了.运行它,一切顺利.<br>
+我的eclipse，把插件复制到plugin下，删除了Platform.xml文件，且启动用eclipse.exe -clean 还是不行，插件安装不了，不知道怎么回事。</p>
 <p>通过eclipse的Export 导出项，导出jar包时，有几点需要注意的事项。</p>
-<p>假如我们导出的jar包名称为 demo.jar，右键解压demo.jar，META-INF 目录下面有 MANIFEST.MF文件，打开看到<br>[java] view plaincopy在CODE上查看代码片派生到我的代码片<br>Manifest-Version: 1.0<br>Main-Class: com.zhangqi.you.main.JdbcTest  </p>
-<p>1  Main-Class事项：<br>    main-class，顾名思义，主函数类，即demo.jar 默认运行时，执行的主方法类。<br>    在eclipse 导出jar的过程中，可以指定main-class属性，也可以不指定main-class，根据实际情况而定。</p>
+<p>假如我们导出的jar包名称为 demo.jar，右键解压demo.jar，META-INF 目录下面有 MANIFEST.MF文件，打开看到<br>
+[java] view plaincopy在CODE上查看代码片派生到我的代码片<br>
+Manifest-Version: 1.0<br>
+Main-Class: com.zhangqi.you.main.JdbcTest</p>
+<p>1  Main-Class事项：<br>
+main-class，顾名思义，主函数类，即demo.jar 默认运行时，执行的主方法类。<br>
+在eclipse 导出jar的过程中，可以指定main-class属性，也可以不指定main-class，根据实际情况而定。</p>
 <pre><code>如果导出的jar包中就只包含了一个main方法，其他的class类都是为这个类服务的，参与计算的，或引用的，那么就可以在导出时，直接指定main-class。
 如果导出的jar包中包含多个main方法，在运行时，需要根据情况而定执行哪一个主函数类，那么导出的过程中就不要指定main-class属性。在运行的时候，指定需要指定的main方法类即可。
-</code></pre><p>  例如 java -jar demo.jar com.test.Demo1  运行 Demo1 类<br>          java -jar demo.jar com.test.Demo2  运行 Demo2 类</p>
-<p>2  Class-Path事项：<br>     class-path，顾名思义，classpath，引用类路径。<br>     如果导出的jar包中引用了外部的jar包，那么直接运行java -jar demo.jar时，会报classnotfound异常的，这时候，需要为导出jar指定classpath<br>     打开MANIFEST.MF文件，在下面添加上 Class-Path: mysql-connector-java-5.0.8-bin.jar 便为demo.jar添加了mysql-connector-java-5.0.8-bin.jar的引用<br>[java] view plaincopy在CODE上查看代码片派生到我的代码片<br>Manifest-Version: 1.0<br>Main-Class: com.zhangqi.you.main.JdbcTest<br>Class-Path: mysql-connector-java-5.0.8-bin.jar  </p>
+</code></pre>
+<p>例如 java -jar demo.jar com.test.Demo1  运行 Demo1 类<br>
+java -jar demo.jar com.test.Demo2  运行 Demo2 类</p>
+<p>2  Class-Path事项：<br>
+class-path，顾名思义，classpath，引用类路径。<br>
+如果导出的jar包中引用了外部的jar包，那么直接运行java -jar demo.jar时，会报classnotfound异常的，这时候，需要为导出jar指定classpath<br>
+打开MANIFEST.MF文件，在下面添加上 Class-Path: mysql-connector-java-5.0.8-bin.jar 便为demo.jar添加了mysql-connector-java-5.0.8-bin.jar的引用<br>
+[java] view plaincopy在CODE上查看代码片派生到我的代码片<br>
+Manifest-Version: 1.0<br>
+Main-Class: com.zhangqi.you.main.JdbcTest<br>
+Class-Path: mysql-connector-java-5.0.8-bin.jar</p>
 <pre><code> 同时将mysql-connector-java-5.0.8-bin.jar  驱动jar包放到跟demo.jar同目录下即可引用到。
  如果有多个jar包引用的话，每个jar包间空格隔开即可。
-</code></pre><p>参考文献：</p>
+</code></pre>
+<p>参考文献：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/peida/p/Guava.html">Guava学习笔记目录</a></li>
 <li><a href=""></a></li>

@@ -304,53 +304,119 @@
       
         <p>本文记录如何在云服务器中（Linux和Window系统）搭建VPN服务端来进行科学上网。</p>
 <span id="more"></span>
-<h2 id="CentOS系统"><a href="#CentOS系统" class="headerlink" title="CentOS系统"></a>CentOS系统</h2><h3 id="Shadowsocks配置服务端"><a href="#Shadowsocks配置服务端" class="headerlink" title="Shadowsocks配置服务端"></a>Shadowsocks配置服务端</h3><ol>
-<li>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装CentOS系统的实例。</li>
-<li>系统默认应该已经装好wget命令，如果没有，运行以下命令安装 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget #CentOS</span><br><span class="line">sudo apt-get install wget #Debian/Ubuntu</span><br></pre></td></tr></table></figure></li>
-<li>运行以下一键脚本： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
- 安装途中如果报错不能下载github中的shadowsocks源代码，可以自行尝试下载 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/shadowsocks/shadowsocks/archive/master.zip </span><br></pre></td></tr></table></figure>
- 如果后续报错无法解压<code>shadowsocks-master.zip</code>,可以改变源代码zip文件名 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv master.zip shadowsocks-master.zip</span><br></pre></td></tr></table></figure></li>
-<li><p>将以上命令粘贴到 Xshell 窗口，回车执行代码，然后会提示有以下4种安装选项，分别是“1) Shadowsocks-Python”、“2) ShadowsocksR”、“3) Shadowsocks-Go”、“4) Shadowsocks-libev”。如果我们选择第2个就是搭建SSR服务器了，我们这里选第1个，搭建Shadowsocks/SS服务器。如下图所示：<br><img src="1.png" alt="1.png"/></p>
-</li>
-<li><p>我这里以安装第1个“Shadowsocks-Python”为例演示，输入数字“1”后回车，然后进入Shadowsocks服务器的参数配置选项，依次为“服务器连接密码”、“服务器端口”、“数据加密方式”（图中红杠和箭头标识的内容仅为演示，请根据你自己的需求输入即可）。其中，我这里建议你选择chacha20相关的加密方式（因为这些新加密方式的抗封锁效果更好）。如下图所示：<br><img src="2.png"  width="30%" alt="2.png"/></p>
-</li>
-<li><p>当以上参数选项都输入完毕后，敲击回车键。然后系统会提示“Press any key to start…or Press Ctrl+C to cancel“，即按任意键继续。当我们按任意键之后，系统会进入安装Shadowsocks服务的过程，稍等片刻即可完成。安装Shadowsocks服务成功完成后，如下图所示：<br><img src="3.png" alt="3.png"/><br> 如上图所示，其中各项参数释义如下：<br> Your Server IP :你的服务器 IP 地址；<br> Your Server Port :你的服务器端口；<br> Your Password :你的连接密码；<br> Your Encryption Method:你的加密方式；<br> Your QR Code:你的SS链接；<br> Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的存放位置。</p>
-</li>
-<li><p>开启防火墙的端口。具体端口号要和之前开的服务器端口相同。修改位置见下：<br> <img src="4.png" alt="4.png"/><br> 至此，你已经成功搭建Shadowsocks/SS服务器，现在就可以使用了。</p>
-</li>
-<li><p>其他命令:</p>
+<h2 id="CentOS系统">CentOS系统</h2>
+<h3 id="Shadowsocks配置服务端">Shadowsocks配置服务端</h3>
 <ol>
-<li><p>卸载方法<br>若已安装多个版本，则卸载时也需多次运行（每次卸载1种），请使用root用户登录，执行以下命令：</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br><span class="line">	</span><br></pre></td></tr></table></figure></li>
-<li>脚本控制命令<br>脚本后面的参数含义：启动，停止，重启，查看状态。 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br><span class="line">	</span><br></pre></td></tr></table></figure></li>
-<li>默认配置文件 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/shadowsocks-python/config.json</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/shadowsocks-r/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/shadowsocks-go/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/shadowsocks-libev/config.json</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+<li>
+<p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装CentOS系统的实例。</p>
+</li>
+<li>
+<p>系统默认应该已经装好wget命令，如果没有，运行以下命令安装</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum -y install wget #CentOS</span><br><span class="line">sudo apt-get install wget #Debian/Ubuntu</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>运行以下一键脚本：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+<p>安装途中如果报错不能下载github中的shadowsocks源代码，可以自行尝试下载</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/shadowsocks/shadowsocks/archive/master.zip </span><br></pre></td></tr></table></figure>
+<p>如果后续报错无法解压<code>shadowsocks-master.zip</code>,可以改变源代码zip文件名</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv master.zip shadowsocks-master.zip</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>将以上命令粘贴到 Xshell 窗口，回车执行代码，然后会提示有以下4种安装选项，分别是“1) Shadowsocks-Python”、“2) ShadowsocksR”、“3) Shadowsocks-Go”、“4) Shadowsocks-libev”。如果我们选择第2个就是搭建SSR服务器了，我们这里选第1个，搭建Shadowsocks/SS服务器。如下图所示：<br>
+<img src="1.png" alt="1.png"/></p>
+</li>
+<li>
+<p>我这里以安装第1个“Shadowsocks-Python”为例演示，输入数字“1”后回车，然后进入Shadowsocks服务器的参数配置选项，依次为“服务器连接密码”、“服务器端口”、“数据加密方式”（图中红杠和箭头标识的内容仅为演示，请根据你自己的需求输入即可）。其中，我这里建议你选择chacha20相关的加密方式（因为这些新加密方式的抗封锁效果更好）。如下图所示：<br>
+<img src="2.png"  width="30%" alt="2.png"/></p>
+</li>
+<li>
+<p>当以上参数选项都输入完毕后，敲击回车键。然后系统会提示“Press any key to start…or Press Ctrl+C to cancel“，即按任意键继续。当我们按任意键之后，系统会进入安装Shadowsocks服务的过程，稍等片刻即可完成。安装Shadowsocks服务成功完成后，如下图所示：<br>
+<img src="3.png" alt="3.png"/><br>
+如上图所示，其中各项参数释义如下：<br>
+Your Server IP :你的服务器 IP 地址；<br>
+Your Server Port :你的服务器端口；<br>
+Your Password :你的连接密码；<br>
+Your Encryption Method:你的加密方式；<br>
+Your QR Code:你的SS链接；<br>
+Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的存放位置。</p>
+</li>
+<li>
+<p>开启防火墙的端口。具体端口号要和之前开的服务器端口相同。修改位置见下：<br>
+<img src="4.png" alt="4.png"/><br>
+至此，你已经成功搭建Shadowsocks/SS服务器，现在就可以使用了。</p>
+</li>
+<li>
+<p>其他命令:</p>
+<ol>
+<li>
+<p>卸载方法<br>
+若已安装多个版本，则卸载时也需多次运行（每次卸载1种），请使用root用户登录，执行以下命令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>脚本控制命令<br>
+脚本后面的参数含义：启动，停止，重启，查看状态。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>默认配置文件</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/shadowsocks-python/config.json</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/shadowsocks-r/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/shadowsocks-go/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/shadowsocks-libev/config.json</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 </li>
 </ol>
-<h3 id="一键安装并开启BBR加速"><a href="#一键安装并开启BBR加速" class="headerlink" title="一键安装并开启BBR加速"></a>一键安装并开启BBR加速</h3><p>一键安装BBR加速脚本，执行如下命令：</p>
+<h3 id="一键安装并开启BBR加速">一键安装并开启BBR加速</h3>
+<p>一键安装BBR加速脚本，执行如下命令：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/src &amp;&amp; wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>执行以上安装命令后，如下图所示：<br><img src="5.png" alt="5.png"/><br>我这里选择“2”，“安装 BBRplus版内核”加速。在安装过程中，可能会出现如下提示，用右方向键选“<No>”，然后回车(实际安装过程中本人并未遇到这个提示)。如下图所示：<br><img src="6.png" alt="6.png"/><br>安装完成后会提示重启服务器，这时候输入字母“y”，回车后，重启服务器。当服务器启动后，我们再次执行安装命令<code>./tcp.sh</code>，选择“7”启用“使用BBRplus版加速”。至此，BBR Plus 加速模块安装并启用完成。<br>理论上安装完加速脚本之后运行速度应该有所提高。实际上楼主在shadowrocket上面测试延迟，安装加速脚本前后并未有明显变化。</p>
-<h2 id="Windows系统"><a href="#Windows系统" class="headerlink" title="Windows系统"></a>Windows系统</h2><h3 id="Shadowsocks配置服务端-1"><a href="#Shadowsocks配置服务端-1" class="headerlink" title="Shadowsocks配置服务端"></a>Shadowsocks配置服务端</h3><ol>
-<li>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装Windows12系统的实例。</li>
-<li>下载安装nodejs。下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a> ,下载LTS长期支持版本，然后安装NodeJS，直接下一步。</li>
-<li>安装shadowsocks。<br> 打开Node.js command prompt，此为nodejs的命令端，直接在Windows里面搜索就可以找到。输入命令<br> <code>npm install -g shadowsocks</code>安装shadowsocks.</li>
-<li><p>因为shadowsocks所在的文件夹是隐藏文件夹，所以要开启显示隐藏文件。点击“这台电脑”-&gt; “查看”，勾选“隐藏的项目”即可。如下图所示：<br> <img src="9.jpeg" alt="9.jpeg"/></p>
+<p>执行以上安装命令后，如下图所示：<br>
+<img src="5.png" alt="5.png"/><br>
+我这里选择“2”，“安装 BBRplus版内核”加速。在安装过程中，可能会出现如下提示，用右方向键选“<No>”，然后回车(实际安装过程中本人并未遇到这个提示)。如下图所示：<br>
+<img src="6.png" alt="6.png"/><br>
+安装完成后会提示重启服务器，这时候输入字母“y”，回车后，重启服务器。当服务器启动后，我们再次执行安装命令<code>./tcp.sh</code>，选择“7”启用“使用BBRplus版加速”。至此，BBR Plus 加速模块安装并启用完成。<br>
+理论上安装完加速脚本之后运行速度应该有所提高。实际上楼主在shadowrocket上面测试延迟，安装加速脚本前后并未有明显变化。</p>
+<h2 id="Windows系统">Windows系统</h2>
+<h3 id="Shadowsocks配置服务端-v2">Shadowsocks配置服务端</h3>
+<ol>
+<li>
+<p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装Windows12系统的实例。</p>
 </li>
-<li><p>进入node.js安装目录<code>C:\Users\Administrator\AppData\Roaming\npm\node_modules\shadowsocks</code>，找到config.json后更改为如下形式保存。如果找不到安装目录的话，可以直接在Node.js command prompt命令段输入<code>ssserver</code>，第一栏就会出现对应的路径。</p>
+<li>
+<p>下载安装nodejs。下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a> ,下载LTS长期支持版本，然后安装NodeJS，直接下一步。</p>
+</li>
+<li>
+<p>安装shadowsocks。<br>
+打开Node.js command prompt，此为nodejs的命令端，直接在Windows里面搜索就可以找到。输入命令<br>
+<code>npm install -g shadowsocks</code>安装shadowsocks.</p>
+</li>
+<li>
+<p>因为shadowsocks所在的文件夹是隐藏文件夹，所以要开启显示隐藏文件。点击“这台电脑”-&gt; “查看”，勾选“隐藏的项目”即可。如下图所示：<br>
+<img src="9.jpeg" alt="9.jpeg"/></p>
+</li>
+<li>
+<p>进入node.js安装目录<code>C:\Users\Administrator\AppData\Roaming\npm\node_modules\shadowsocks</code>，找到config.json后更改为如下形式保存。如果找不到安装目录的话，可以直接在Node.js command prompt命令段输入<code>ssserver</code>，第一栏就会出现对应的路径。</p>
  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,#服务器IP</span><br><span class="line">    &quot;server_port&quot;:13416, #要使用的服务器端口号，事先确认下端口号是否使用过</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;, #本地监听地址 默认不改</span><br><span class="line">    &quot;local_port&quot;:1080, #代理端口号，一般都默认1080</span><br><span class="line">    &quot;password&quot;:&quot;barfoo!&quot;, #更改为你的密码</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot; #建议aes-256-cfb就好</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> 如果将server设成公网IP地址的话会报错，改为<code>0.0.0.0</code>即可解决问题。</p>
+<p>如果将server设成公网IP地址的话会报错，改为<code>0.0.0.0</code>即可解决问题。</p>
 </li>
-<li>启动shadowsocks。通过Node.js command prompt输入<code>ssserver</code>启动。显示如下图的话即为安装成功<br> <img src="10.png" alt="10.png"/></li>
-<li>以防被屏蔽，在服务器的防火墙栏添加ssserver对应的端口。</li>
+<li>
+<p>启动shadowsocks。通过Node.js command prompt输入<code>ssserver</code>启动。显示如下图的话即为安装成功<br>
+<img src="10.png" alt="10.png"/></p>
+</li>
+<li>
+<p>以防被屏蔽，在服务器的防火墙栏添加ssserver对应的端口。</p>
+</li>
 </ol>
-<h2 id="ios手机客户端配置"><a href="#ios手机客户端配置" class="headerlink" title="ios手机客户端配置"></a>ios手机客户端配置</h2><ol>
+<h2 id="ios手机客户端配置">ios手机客户端配置</h2>
+<ol>
 <li>需要下载Shadowrocket app到苹果手机。</li>
-<li>按照服务端的信息输入IP地址，端口，密码，加密方式。具体如下：<br> <img src="7.jpeg"  width="30%" height="30%" alt="7.jpeg"/></li>
+<li>按照服务端的信息输入IP地址，端口，密码，加密方式。具体如下：<br>
+<img src="7.jpeg"  width="30%" height="30%" alt="7.jpeg"/></li>
 <li>global routing 选择proxy，这样上网产生的所有流量都会走服务器流量。</li>
-<li>选择对应的服务器，可以点击Connectivity Test 来测试服务器的延迟。如果开始使用VPN的话，需要点击第一栏的按钮，连接VPN：<br> <img src="8.jpeg"  width="30%" height="30%" alt="8.jpeg"/></li>
+<li>选择对应的服务器，可以点击Connectivity Test 来测试服务器的延迟。如果开始使用VPN的话，需要点击第一栏的按钮，连接VPN：<br>
+<img src="8.jpeg"  width="30%" height="30%" alt="8.jpeg"/></li>
 </ol>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<h2 id="参考文献">参考文献</h2>
+<ul>
 <li><a target="_blank" rel="noopener" href="https://xyzardq.github.io/2017/04/14/Windows%E4%B8%8B%E6%90%AD%E5%BB%BAShadowoscks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/">Windows下搭建Shadowsocks服务器端</a></li>
 <li><a target="_blank" rel="noopener" href="https://xfj0.cn/archives/94.html">在Windows server上安装Shadowsocks服务端</a></li>
 <li><a target="_blank" rel="noopener" href="https://iyideng.net/black-technology/cgfw/best-onekey-build-v2ray-server-script.html#2%E3%80%81multi-v2ray_%E5%A4%9A%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC">multi-v2ray 多用户管理脚本</a></li>
@@ -424,7 +490,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">CentOS系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BC%80%E5%90%AFBBR%E5%8A%A0%E9%80%9F"><span class="nav-number">1.2.</span> <span class="nav-text">一键安装并开启BBR加速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">Windows系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF-1"><span class="nav-number">2.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">ios手机客户端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CentOS%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">CentOS系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="nav-number">1.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E5%AE%89%E8%A3%85%E5%B9%B6%E5%BC%80%E5%90%AFBBR%E5%8A%A0%E9%80%9F"><span class="nav-number">1.2.</span> <span class="nav-text">一键安装并开启BBR加速</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">Windows系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shadowsocks%E9%85%8D%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF-v2"><span class="nav-number">2.1.</span> <span class="nav-text">Shadowsocks配置服务端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ios%E6%89%8B%E6%9C%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">ios手机客户端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
