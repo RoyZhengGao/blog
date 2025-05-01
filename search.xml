@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Apple系统tips</title>
+    <url>/blog/2020/06/03/Apple%E7%B3%BB%E7%BB%9Ftips/</url>
+    <content><![CDATA[<p>本文记录一些自己在使用Mac，iphone时的一些小技巧，以及怎么样管理和同步自己的设备。</p>
+<span id="more"></span>
+<h2 id="icloud">icloud</h2>
+<p>icloud是个很烦人的东西，为了省事，可以turn off 掉电脑端和iphone端的自动同步功能。尤其是对于photos来说。可以仅保留calender等app的同步。</p>
+<h2 id="备份和同步">备份和同步</h2>
+<p>最新的Catalina系统已经没有乐itunes,而是用几个具体的app替代了（tv,podcast,music）。而且手机连接电脑之后所有的同步时可以在finder底下看到的。而不是之前的要打开单独的itunes。这种改进方便了许多</p>
+<h3 id="backup的位置">backup的位置</h3>
+<p>Mac OS X，打开<code>Library\Application Support\MobileSync\Backup</code>里面就是sync的备份。</p>
+<h3 id="照片同步">照片同步</h3>
+<ul>
+<li>直接打开photos这个app，然后就会发现手机会出现在左边栏中。点击自己的手机，进行import，会自动存在photo library 中。</li>
+<li>photo library 的路径一般是在<code>/Users/gaozheng/Pictures/</code> 这个文件夹下的后缀名为.photoslibrary的文件夹中。可以建立多个library。</li>
+<li>最方便的转移照片库其实是直接将photo library 整个文件夹复制到外接硬盘中。这样其实还可以之后用photos这个app打开，更方便进行访问。</li>
+</ul>
+<p>参考文献：</p>
+<ul>
+<li><a href="https://zhidao.baidu.com/question/328701894.html">iphone backup备份地址</a></li>
+<li><a href="https://www.iphonelife.com/tip/how-to-get-photos-off-iphone">iphone照片同步到mac中</a></li>
+<li><a href="https://osxdaily.com/2017/02/23/where-photos-files-located-mac/">photo library的位置</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>ios</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>401K 和IRA基础知识</title>
     <url>/blog/2021/02/06/401K-%E5%92%8CIRA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</url>
     <content><![CDATA[<p>在美国生活，退休金计划必不可少。主要需要关注401K和IRA（Individual Retirement Account）。其可以细分出几个不同的退休金计划。另外，HSA（Health Saving Accout）也可以作为一个投资的账户。</p>
@@ -212,82 +243,6 @@ HSA存的钱也不用交税，而且一般公司也会contribute一部分钱到H
         <tag>401K</tag>
         <tag>HSA</tag>
         <tag>IRA</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Apple系统tips</title>
-    <url>/blog/2020/06/03/Apple%E7%B3%BB%E7%BB%9Ftips/</url>
-    <content><![CDATA[<p>本文记录一些自己在使用Mac，iphone时的一些小技巧，以及怎么样管理和同步自己的设备。</p>
-<span id="more"></span>
-<h2 id="icloud">icloud</h2>
-<p>icloud是个很烦人的东西，为了省事，可以turn off 掉电脑端和iphone端的自动同步功能。尤其是对于photos来说。可以仅保留calender等app的同步。</p>
-<h2 id="备份和同步">备份和同步</h2>
-<p>最新的Catalina系统已经没有乐itunes,而是用几个具体的app替代了（tv,podcast,music）。而且手机连接电脑之后所有的同步时可以在finder底下看到的。而不是之前的要打开单独的itunes。这种改进方便了许多</p>
-<h3 id="backup的位置">backup的位置</h3>
-<p>Mac OS X，打开<code>Library\Application Support\MobileSync\Backup</code>里面就是sync的备份。</p>
-<h3 id="照片同步">照片同步</h3>
-<ul>
-<li>直接打开photos这个app，然后就会发现手机会出现在左边栏中。点击自己的手机，进行import，会自动存在photo library 中。</li>
-<li>photo library 的路径一般是在<code>/Users/gaozheng/Pictures/</code> 这个文件夹下的后缀名为.photoslibrary的文件夹中。可以建立多个library。</li>
-<li>最方便的转移照片库其实是直接将photo library 整个文件夹复制到外接硬盘中。这样其实还可以之后用photos这个app打开，更方便进行访问。</li>
-</ul>
-<p>参考文献：</p>
-<ul>
-<li><a href="https://zhidao.baidu.com/question/328701894.html">iphone backup备份地址</a></li>
-<li><a href="https://www.iphonelife.com/tip/how-to-get-photos-off-iphone">iphone照片同步到mac中</a></li>
-<li><a href="https://osxdaily.com/2017/02/23/where-photos-files-located-mac/">photo library的位置</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>ios</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2025MLE跳槽总结</title>
-    <url>/blog/2025/04/30/2025MLE%E8%B7%B3%E6%A7%BD%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>本文总结一下2025年上半年跳槽的全过程。主要申请的是senior machine learning engineer岗位。</p>
-<span id="more"></span>
-<p><strong>本人背景</strong>：PhD学位 + 5年工作经验<br>
-<strong>专业方向</strong>：NLP，搜广推，LLM（在Amazon干了两年半的NLP和推荐，在蚂蚁做了两年半的LLM post-training和agent）<br>
-<strong>目标岗位</strong>：senior machine learning engineer<br>
-<strong>求职进展</strong>：<br>
-因为年初被reorg到一个完全陌生的project，所以我从二月中旬的时候下定决心跳槽，到四月底签完offer截止，一共历经两个多月的时间。还好我的manager后期因为他自己也要跳槽的原因，基本不管我们了，因此倒是因祸得福，相当于全职刷了两个月的题。<br>
-一开始的时候，因为自己很久没有进入市场找工作了，对于行情不是很了解，所以我首先疯狂在LinkedIn上加recruiter和看各种公司的open position。大概看了一两周摸清了下当前都有什么公司之后，我决定基本从三个方面找和自己背景相似的公司：</p>
-<ol>
-<li>大中型上市公司（FAANG，Pinterest, Snap等）</li>
-<li>比较火的startup （主要参考了福布斯最近几年的<a href="https://zhuanlan.zhihu.com/p/693062107">Top50 AI公司名单</a>)</li>
-<li>LinkedIn推荐的小的startup。</li>
-</ol>
-<p>之所以这么选择，一是不太清楚自己的定位如何，二是反正自己时间充足，不如先选一些小的startup面试练练手，同时还能增长点面试自信心。现在看来这种策略还是很有用的，像behavior question以及past project deep dive 这种面试轮次，经过前期面试打磨之后，后期面试我都面得非常得心应手。<br>
-投简历的时候，除了一部分是我开了LinkedIn会员，并且把状态改成Open to Work之后有recruiter主动联系的之外，90%的公司我都是直接从官网海投的。我个人的感觉是如果你的背景和job description相关并且比较有竞争力的话，还是很快能收到回复的。找人内推的话，如果内推的人背景和自己并不相似，其实也未必能有什么作用。<br>
-最终大概统计了下，我自己投了80+家公司，其中有30+家有recruiter联系，给面试机会（phone screen）的公司有22家。其中走到onsite轮的有15家（最终面了11家，因为offer定了所以推掉了4个VO），拿了8个offer。不过这些offer的含金量相对一般，因为大部分dream company要么挂在了面试上，要么根本就没给面试机会，要么被强行down level了，而且有两个offer由于后期没有headcount的原因到最后也没正式发下来。</p>
-<ul>
-<li>挂在phone screen/hiring manager面试的公司：OpenAI, Meta, Atlassian, Vanta, Anyscale, Shopify, XAI (offer来了就没继续面)</li>
-<li>挂在on site的公司：Pinterest, Bosch, Abridge</li>
-<li>因为定了offer所以取消on site的公司：Bloomberg，Apple, Capital One, Snap</li>
-<li>offer: Tiktok, Amazon, Coupang, Microsoft, Accenture, Moveworks, Inworld AI, Kai Cyber</li>
-</ul>
-<p><strong>面试经验</strong>：<br>
-说实话面试真的是体力活，我最多的时候一天要面3家公司，有一段时间平均每天都要2场面试。前前后后一共面试了得有100+轮。因为重复了太多次，我后期面试做self introduction的时候都感觉完全不过脑子了。每家公司的phone screen会有1-2轮，具体会包括至少一轮coding，此外还会涉及到past project deep dive或者ML fundamental。onsite的话一般都有4-5轮，包括coding, ML system design，ML fundamental，和behavior这四个方面。除了个别公司之外，绝大部分的onsite现在都是virtual onsite。以下是我准备面试时的一些个人经验：</p>
-<ol>
-<li>coding的话大部分公司都还是leetcode style, 需要在coderpad或者hackerrank上做到bug free（测试几个自己写的test case,或者要通过公司提前设置好的test case），然后分析下时间/空间复杂度。面试中一般真正给coding的时间大概是35分钟，考察一道题+follow up的情况比较多，两道题的情况也有。准备coding面试也没什么捷径，只能多刷leetcode了。这些公司的coding体感下来大概都是medium左右的难度，我从来没有被考过DP的问题。我这些年前前后后一共刷了700道题，每周的leetcode contest平均能做2.5题左右。除了有两家公司电面coding没发挥好之外，其他的coding轮次都还是比较顺利的。网上leetcode题目讲解的文档还是挺多的，我参考的比较多的是<a href="https://github.com/doocs/leetcode/tree/main/solution">https://github.com/doocs/leetcode/tree/main/solution</a> 和<a href="https://fuxuemingzhu.cn/leetcode">https://fuxuemingzhu.cn/leetcode</a></li>
-<li>ML system design对于MLE来说也是必考的一轮。虽然说有一些八股的套路，但是考官有时候会问到具体的一些模型（比如推荐系统的经典算法）和数据处理方法（比如处理缺少labeled data的具体算法），所以最好还是得有相关实践经验以及一些ML modeling方面的知识储备。Alex Xu的Machine Learning System Design Interview我觉得写的还是挺好的，一开始列了八股的模版，后面又结合了几个具体的例子，最起码对我还是有一定作用的。ChatGPT其实也很有用，提供的system design答案也挺好的。</li>
-<li>ML fundamental目前我还没有找到什么特别好的参考资料，基本上都是根据个人背景自己一点一点零散的记录起来的。知乎、一亩三分地、甚至小红书都有很多所谓的ML fundamental知识的整理，但是要么写的比较简单，要么就是链接跳转来跳转去最终要付费，所以只能自己慢慢探索了。如果是junior level的MLE的话，西瓜书我觉得是必读书籍之一。但是一般来讲还是得根据自己的research background 以及申请的job description来进行针对性的准备。比如申请搜广推的岗位，那就得准备下推荐系统的算法；申请大模型相关的岗位，transformer以及各种SFT/RL的方法要熟练掌握。</li>
-<li>Behavior question的话，主要考的还是讲故事的能力，这一轮其实非常非常的重要，是bar raiser用来决定给不给offer以及定级别的。我大概准备了十几个故事，面对不同的问题轮着用，目前体感下来也够用了。Amazon的leadership principle <a href="https://www.amazon.jobs/content/en/our-workplace/leadership-principles">https://www.amazon.jobs/content/en/our-workplace/leadership-principles</a> 必须得烂熟于心，此外强推<a href="https://link.1point3acres.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrpMlmnsiMNiA">彻底击碎行为问题<br>
-</a> , 熟读此文档我觉得面对各种behavior question都能轻松应对。</li>
-</ol>
-<p><strong>总结</strong>：<br>
-感觉对于machine learning engineer来说，当前的市场还是很有机会的，很多公司都在招和LLM相关方向的人才。但是从有面试机会到最终给offer还是有很长的路要走的。每家公司基本都是6轮面试打底，最多的一家我一共面了9轮。而且给口头offer和拿到official offer letter之间也有很多事情会发生，比如Moveworks一开始给了我offer，后面因为审批原因又撤回了。Microsoft一开始也给了offer，但是紧接着就因为headcount没了也撤回offer了。此外现在所有的公司发了offer之后都要求最多5个工作日之内给回复，导致competing offer不太能及时有，还导致我签了现在的offer之后来了一个给钱更多一点的offer，我衡量了半天之后还是没敢撕签好的offer。我还感觉到或许是因为行情不好(?)的原因，现在的公司特别喜欢down level, 我有至少3个收到的offer都是明显故意down level了。哪怕在低一级别上为了match我对工资的期望去找VP签字，也不愿意给我正常的level。<br>
-其实面了这么多公司，还有一个让我很沮丧的点，就是我觉得phd学位对我好像没什么用。对于我这种背景比较普通的phd来说，去不了顶尖的research lab, 只能申请普通的MLE岗位。而这些MLE岗位其实并不需要phd学位。再加上我面试的时候也没有流弊到让所有的面试官都刮目相看，这种情况下公司在定级别的时候，更多的还是会考虑工作年限，所以最多给我senior甚至更低一档的级别。而我master同期的同学因为比我多了5年工作经验，很多人现在都在各大公司里面当上staff了。</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>job</tag>
       </tags>
   </entry>
   <entry>
@@ -585,6 +540,110 @@ git所存储的都是一系列的文件快照，然后git来跟踪这些文件�
       </tags>
   </entry>
   <entry>
+    <title>Jekyll 搭建个人网站 - al-folio模板</title>
+    <url>/blog/2022/08/27/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99-al-folio%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[<p>Github Pages al-folio 其<a href="https://github.com/alshedivat/al-folio">源代码</a>和生成的<a href="https://maruan.alshedivat.com/">网页效果</a>比较适用于偏学术风格的个人网站。</p>
+<span id="more"></span>
+<h2 id="安装Ruby-和-Bundler">安装Ruby 和 Bundler</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install ruby // ruby其实应该默认已经安装在Mac系统上了，以防万一可以再用brew 安装下</span><br><span class="line">gem install bundler // gem 是ruby的打包系统</span><br><span class="line">brew install rbenv ruby-build //更好的管理ruby gems</span><br></pre></td></tr></table></figure>
+<p>第一次安装Ruby之后，需要把以下加入路径中：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/usr/local/opt/ruby/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<h2 id="页面内容更改">页面内容更改</h2>
+<h3 id="banner-顺序">banner 顺序</h3>
+<p>在每个pages folder里面的md 文档，可以通过nav_order 来更改顺序, blog页面除外。</p>
+<h3 id="about-md"><a href="http://about.md">about.md</a></h3>
+<ul>
+<li>Modify the major content in this page.</li>
+<li>The news is in under news folder.</li>
+<li>You can modify Social integration section in config.yml, which allows to provide you a list of social media icons.</li>
+<li>contact_note “Free feel to reach out to me via email.” in the bottom can be modified in config.yml as well.</li>
+<li>profile image should be stored at <code>assets/img</code> folder.</li>
+</ul>
+<h3 id="blog-md"><a href="http://blog.md">blog.md</a></h3>
+<p>blog的页面默认是在第二栏的，可以在config.yml里面进行修改或者删除。因为本人的blog页面是托管在另外一个网站，并且想把blog页面放在最后，所以笔者新建了一个blog.md文件，然后把nav_order的值放在最后。</p>
+<h3 id="publication-md"><a href="http://publication.md">publication.md</a></h3>
+<ul>
+<li>config.yml 文件中定义好对应的papers.bib。这样可以自动读取bib文档生成文章信息。具体一些参数（比如filtered_bibtex_keywords）也可以在这里改。</li>
+<li>在pages/publications.md中写好对应的内容。比如years这种变量。</li>
+<li>/bibliography/papers.bib里面填写paper的bib信息.</li>
+<li>如果想改publications里面的button的话，可以首先在config.yml里filtered_bibtex_keywords中填上对应名称，i.e. <code>video</code>，然后再layouts/bib.html里面参考其他button添加对应代码，比如：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if entry.video %&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123; entry.video &#125;&#125;&quot; class=&quot;btn btn-sm z-depth-0&quot; role=&quot;button&quot;&gt;Video&lt;/a&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>button在此文件中的顺序将会影响其在publication页面中的顺序。</p>
+<h3 id="cv-md"><a href="http://cv.md">cv.md</a></h3>
+<p>cv的内容主要存放在data/cv.yml文件中。可以直接在里面进行修改。</p>
+<h2 id="Git-commit">Git commit</h2>
+<p>如果用<code>git clone https://github.com/RoyZhengGao/RoyZhengGao.github.io.git</code> 的方式来下载项目的话，最后git push的时候需要用户名和密码。用户名为<code>RoyZhengGao</code>,而密码是之前设置的一个personal access token。<a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">参考链接</a></p>
+<h2 id="Deployment">Deployment</h2>
+<p>自动deployment（目前不清楚怎么弄）:</p>
+<ol>
+<li>Click on <code>Actions</code> tab and <code>Enable GitHub Actions</code>; do not worry about creating any workflows as everything has already been set for you.</li>
+<li>Make any other changes to your webpage, commit, and push. This will automatically trigger the Deploy action.</li>
+<li>Wait for a few minutes and let the action complete. You can see the progress in the Actions tab. If completed successfully, in addition to the master branch, your repository should now have a newly built gh-pages branch.</li>
+<li>Finally, in the <code>Settings</code> of your repository, in the Pages section, set the branch to <code>gh-pages</code> (NOT to <code>master</code>). For more details, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source">Configuring a publishing source for your GitHub Pages site</a>.</li>
+</ol>
+<p>手动deployment，在master branch运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ./bin/deploy</span><br></pre></td></tr></table></figure>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://github.com/alshedivat/al-folio">al-folio Github Repository</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>jekyll</tag>
+        <tag>front end</tag>
+        <tag>tech tool</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2025MLE跳槽总结</title>
+    <url>/blog/2025/04/30/2025MLE%E8%B7%B3%E6%A7%BD%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>本文总结一下2025年上半年跳槽的全过程。主要申请的是senior machine learning engineer岗位。</p>
+<span id="more"></span>
+<p><strong>本人背景</strong>：PhD学位 + 5年工作经验<br>
+<strong>专业方向</strong>：NLP，搜广推，LLM（在Amazon干了两年半的NLP和推荐，在蚂蚁做了两年半的LLM post-training和agent）<br>
+<strong>目标岗位</strong>：senior machine learning engineer<br>
+<strong>求职进展</strong>：<br>
+因为年初被reorg到一个完全陌生的project，所以我从二月中旬的时候下定决心跳槽，到四月底签完offer截止，一共历经两个多月的时间。还好我的manager后期因为他自己也要跳槽的原因，基本不管我们了，因此倒是因祸得福，相当于全职刷了两个月的题。<br>
+一开始的时候，因为自己很久没有进入市场找工作了，对于行情不是很了解，所以我首先疯狂在LinkedIn上加recruiter和看各种公司的open position。大概看了一两周摸清了下当前都有什么公司之后，我决定基本从三个方面找和自己背景相似的公司：</p>
+<ol>
+<li>大中型上市公司（FAANG，Pinterest, Snap等）</li>
+<li>比较火的startup （主要参考了福布斯最近几年的<a href="https://zhuanlan.zhihu.com/p/693062107">Top50 AI公司名单</a>)</li>
+<li>LinkedIn推荐的小的startup。</li>
+</ol>
+<p>之所以这么选择，一是不太清楚自己的定位如何，二是反正自己时间充足，不如先选一些小的startup面试练练手，同时还能增长点面试自信心。现在看来这种策略还是很有用的，像behavior question以及past project deep dive 这种面试轮次，经过前期面试打磨之后，后期面试我都面得非常得心应手。<br>
+投简历的时候，除了一部分是我开了LinkedIn会员，并且把状态改成Open to Work之后有recruiter主动联系的之外，90%的公司我都是直接从官网海投的。我个人的感觉是如果你的背景和job description相关并且比较有竞争力的话，还是很快能收到回复的。找人内推的话，如果内推的人背景和自己并不相似，其实也未必能有什么作用。<br>
+最终大概统计了下，我自己投了80+家公司，其中有30+家有recruiter联系，给面试机会（phone screen）的公司有22家。其中走到onsite轮的有15家（最终面了11家，因为offer定了所以推掉了4个VO），拿了8个offer。不过这些offer的含金量相对一般，因为大部分dream company要么挂在了面试上，要么根本就没给面试机会，要么被强行down level了，而且有两个offer由于后期没有headcount的原因到最后也没正式发下来。</p>
+<ul>
+<li>挂在phone screen/hiring manager面试的公司：OpenAI, Meta, Atlassian, Vanta, Anyscale, Shopify, XAI (offer来了就没继续面)</li>
+<li>挂在on site的公司：Pinterest, Bosch, Abridge</li>
+<li>因为定了offer所以取消on site的公司：Bloomberg，Apple, Capital One, Snap</li>
+<li>offer: Tiktok, Amazon, Coupang, Microsoft, Accenture, Moveworks, Inworld AI, Kai Cyber</li>
+</ul>
+<p><strong>面试经验</strong>：<br>
+说实话面试真的是体力活，我最多的时候一天要面3家公司，有一段时间平均每天都要2场面试。前前后后一共面试了得有100+轮。因为重复了太多次，我后期面试做self introduction的时候都感觉完全不过脑子了。每家公司的phone screen会有1-2轮，具体会包括至少一轮coding，此外还会涉及到past project deep dive或者ML fundamental。onsite的话一般都有4-5轮，包括coding, ML system design，ML fundamental，和behavior这四个方面。除了个别公司之外，绝大部分的onsite现在都是virtual onsite。以下是我准备面试时的一些个人经验：</p>
+<ol>
+<li>coding的话大部分公司都还是leetcode style, 需要在coderpad或者hackerrank上做到bug free（测试几个自己写的test case,或者要通过公司提前设置好的test case），然后分析下时间/空间复杂度。面试中一般真正给coding的时间大概是35分钟，考察一道题+follow up的情况比较多，两道题的情况也有。准备coding面试也没什么捷径，只能多刷leetcode了。这些公司的coding体感下来大概都是medium左右的难度，我从来没有被考过DP的问题。我这些年前前后后一共刷了700道题，每周的leetcode contest平均能做2.5题左右。除了有两家公司电面coding没发挥好之外，其他的coding轮次都还是比较顺利的。网上leetcode题目讲解的文档还是挺多的，我参考的比较多的是<a href="https://github.com/doocs/leetcode/tree/main/solution">https://github.com/doocs/leetcode/tree/main/solution</a> 和<a href="https://fuxuemingzhu.cn/leetcode">https://fuxuemingzhu.cn/leetcode</a></li>
+<li>ML system design对于MLE来说也是必考的一轮。虽然说有一些八股的套路，但是考官有时候会问到具体的一些模型（比如推荐系统的经典算法）和数据处理方法（比如处理缺少labeled data的具体算法），所以最好还是得有相关实践经验以及一些ML modeling方面的知识储备。Alex Xu的Machine Learning System Design Interview我觉得写的还是挺好的，一开始列了八股的模版，后面又结合了几个具体的例子，最起码对我还是有一定作用的。ChatGPT其实也很有用，提供的system design答案也挺好的。</li>
+<li>ML fundamental目前我还没有找到什么特别好的参考资料，基本上都是根据个人背景自己一点一点零散的记录起来的。知乎、一亩三分地、甚至小红书都有很多所谓的ML fundamental知识的整理，但是要么写的比较简单，要么就是链接跳转来跳转去最终要付费，所以只能自己慢慢探索了。如果是junior level的MLE的话，西瓜书我觉得是必读书籍之一。但是一般来讲还是得根据自己的research background 以及申请的job description来进行针对性的准备。比如申请搜广推的岗位，那就得准备下推荐系统的算法；申请大模型相关的岗位，transformer以及各种SFT/RL的方法要熟练掌握。</li>
+<li>Behavior question的话，主要考的还是讲故事的能力，这一轮其实非常非常的重要，是bar raiser用来决定给不给offer以及定级别的。我大概准备了十几个故事，面对不同的问题轮着用，目前体感下来也够用了。Amazon的leadership principle <a href="https://www.amazon.jobs/content/en/our-workplace/leadership-principles">https://www.amazon.jobs/content/en/our-workplace/leadership-principles</a> 必须得烂熟于心，此外强推《<a href="https://link.1point3acres.com/?url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F112HBiMNvu6TYbDUOfVRe_MS4A-fKaWYrpMlmnsiMNiA">彻底击碎行为问题<br>
+</a> 》这篇文章, 熟读此文档我觉得面对各种behavior question都能轻松应对。</li>
+</ol>
+<p><strong>总结</strong>：<br>
+感觉对于machine learning engineer来说，当前的市场还是很有机会的，很多公司都在招和LLM相关方向的人才。但是从有面试机会到最终给offer还是有很长的路要走的。每家公司基本都是6轮面试打底，最多的一家我一共面了9轮。而且给口头offer和拿到official offer letter之间也有很多事情会发生，比如Moveworks一开始给了我offer，后面因为审批原因又撤回了。Microsoft一开始也给了offer，但是紧接着就因为headcount没了也撤回offer了。此外现在所有的公司发了offer之后都要求最多5个工作日之内给回复，导致competing offer不太能及时有，还导致我签了现在的offer之后来了一个给钱更多一点的offer，我衡量了半天之后还是没敢撕签好的offer。我还感觉到或许是因为行情不好(?)的原因，现在的公司特别喜欢down level, 我有至少3个收到的offer都是明显故意down level了。哪怕在低一级别上为了match我对工资的期望去找VP签字，也不愿意给我正常的level。<br>
+其实面了这么多公司，还有一个让我很沮丧的点，就是我觉得phd学位对我好像没什么用。对于我这种背景比较普通的phd来说，去不了顶尖的research lab, 只能申请普通的MLE岗位。而这些MLE岗位其实并不需要phd学位。再加上我面试的时候也没有流弊到让所有的面试官都刮目相看，这种情况下公司在定级别的时候，更多的还是会考虑工作年限，所以最多给我senior甚至更低一档的级别。而我master同期的同学因为比我多了5年工作经验，很多人现在都在各大公司里面当上staff了。</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>job</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Latex使用指南</title>
     <url>/blog/2020/03/25/Latex%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>Latex使用指南</p>
@@ -632,8 +691,8 @@ MacOS 上可以通过安装 poppler 来安装 pdffonts 。  <figure class="highl
         <category>tech</category>
       </categories>
       <tags>
-        <tag>latex</tag>
         <tag>tech tool</tag>
+        <tag>latex</tag>
       </tags>
   </entry>
   <entry>
@@ -708,9 +767,9 @@ MacOS 上可以通过安装 poppler 来安装 pdffonts 。  <figure class="highl
         <category>tech</category>
       </categories>
       <tags>
-        <tag>tech tool</tag>
         <tag>jekyll</tag>
         <tag>front end</tag>
+        <tag>tech tool</tag>
       </tags>
   </entry>
   <entry>
@@ -834,201 +893,6 @@ MacOS 上可以通过安装 poppler 来安装 pdffonts 。  <figure class="highl
       </tags>
   </entry>
   <entry>
-    <title>Jekyll 搭建个人网站 - al-folio模板</title>
-    <url>/blog/2022/08/27/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99-al-folio%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[<p>Github Pages al-folio 其<a href="https://github.com/alshedivat/al-folio">源代码</a>和生成的<a href="https://maruan.alshedivat.com/">网页效果</a>比较适用于偏学术风格的个人网站。</p>
-<span id="more"></span>
-<h2 id="安装Ruby-和-Bundler">安装Ruby 和 Bundler</h2>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install ruby // ruby其实应该默认已经安装在Mac系统上了，以防万一可以再用brew 安装下</span><br><span class="line">gem install bundler // gem 是ruby的打包系统</span><br><span class="line">brew install rbenv ruby-build //更好的管理ruby gems</span><br></pre></td></tr></table></figure>
-<p>第一次安装Ruby之后，需要把以下加入路径中：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &#x27;export PATH=&quot;/usr/local/opt/ruby/bin:$PATH&quot;&#x27; &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
-<h2 id="页面内容更改">页面内容更改</h2>
-<h3 id="banner-顺序">banner 顺序</h3>
-<p>在每个pages folder里面的md 文档，可以通过nav_order 来更改顺序, blog页面除外。</p>
-<h3 id="about-md"><a href="http://about.md">about.md</a></h3>
-<ul>
-<li>Modify the major content in this page.</li>
-<li>The news is in under news folder.</li>
-<li>You can modify Social integration section in config.yml, which allows to provide you a list of social media icons.</li>
-<li>contact_note “Free feel to reach out to me via email.” in the bottom can be modified in config.yml as well.</li>
-<li>profile image should be stored at <code>assets/img</code> folder.</li>
-</ul>
-<h3 id="blog-md"><a href="http://blog.md">blog.md</a></h3>
-<p>blog的页面默认是在第二栏的，可以在config.yml里面进行修改或者删除。因为本人的blog页面是托管在另外一个网站，并且想把blog页面放在最后，所以笔者新建了一个blog.md文件，然后把nav_order的值放在最后。</p>
-<h3 id="publication-md"><a href="http://publication.md">publication.md</a></h3>
-<ul>
-<li>config.yml 文件中定义好对应的papers.bib。这样可以自动读取bib文档生成文章信息。具体一些参数（比如filtered_bibtex_keywords）也可以在这里改。</li>
-<li>在pages/publications.md中写好对应的内容。比如years这种变量。</li>
-<li>/bibliography/papers.bib里面填写paper的bib信息.</li>
-<li>如果想改publications里面的button的话，可以首先在config.yml里filtered_bibtex_keywords中填上对应名称，i.e. <code>video</code>，然后再layouts/bib.html里面参考其他button添加对应代码，比如：</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if entry.video %&#125;</span><br><span class="line">&lt;a href=&quot;&#123;&#123; entry.video &#125;&#125;&quot; class=&quot;btn btn-sm z-depth-0&quot; role=&quot;button&quot;&gt;Video&lt;/a&gt;</span><br><span class="line">&#123;%- endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>button在此文件中的顺序将会影响其在publication页面中的顺序。</p>
-<h3 id="cv-md"><a href="http://cv.md">cv.md</a></h3>
-<p>cv的内容主要存放在data/cv.yml文件中。可以直接在里面进行修改。</p>
-<h2 id="Git-commit">Git commit</h2>
-<p>如果用<code>git clone https://github.com/RoyZhengGao/RoyZhengGao.github.io.git</code> 的方式来下载项目的话，最后git push的时候需要用户名和密码。用户名为<code>RoyZhengGao</code>,而密码是之前设置的一个personal access token。<a href="https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories">参考链接</a></p>
-<h2 id="Deployment">Deployment</h2>
-<p>自动deployment（目前不清楚怎么弄）:</p>
-<ol>
-<li>Click on <code>Actions</code> tab and <code>Enable GitHub Actions</code>; do not worry about creating any workflows as everything has already been set for you.</li>
-<li>Make any other changes to your webpage, commit, and push. This will automatically trigger the Deploy action.</li>
-<li>Wait for a few minutes and let the action complete. You can see the progress in the Actions tab. If completed successfully, in addition to the master branch, your repository should now have a newly built gh-pages branch.</li>
-<li>Finally, in the <code>Settings</code> of your repository, in the Pages section, set the branch to <code>gh-pages</code> (NOT to <code>master</code>). For more details, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source">Configuring a publishing source for your GitHub Pages site</a>.</li>
-</ol>
-<p>手动deployment，在master branch运行：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ./bin/deploy</span><br></pre></td></tr></table></figure>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a href="https://github.com/alshedivat/al-folio">al-folio Github Repository</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>tech tool</tag>
-        <tag>jekyll</tag>
-        <tag>front end</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown语法说明</title>
-    <url>/blog/2020/01/25/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/</url>
-    <content><![CDATA[<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。简单的来说，Markdown就是用“标记符号”表示“格式”。Markdown语法标签与HTML语法标签是一一对应的。在这里，本文介绍一些Markdown的基本语法以及自己运行Markdown脚本的编译器。</p>
-<span id="more"></span>
-<h2 id="Sublime-Text-编辑器">Sublime Text 编辑器</h2>
-<p>由于Markdown非常好的好用，有很多在线和离线的编辑器。</p>
-<ul>
-<li>在线编译器：dillinger，StackEdit，MaHua，简书，马克飞象。</li>
-<li>Windows 编译器：MarkdownPad，MarkPad，Smark，Miu</li>
-<li>OSX 编译器：Mou，MacDown，Ulysses，iA Writer，MWeb</li>
-<li>跨平台编译器：Cmd Markdown，小书匠编辑器，FarBox，Sublime Text，Atom，ReText</li>
-</ul>
-<p>因为作者本身写代码都在Sublime Text 3里面写，所以虽然要装一些额外的插件，自己还是不想再下载额外的工具了。因此，以下介绍如何在Sublime Text 3 里面编译Markdown:</p>
-<h3 id="安装插件-Package-Control">安装插件 Package Control</h3>
-<p>Sublime Text 3 中默认已经安装好了此插件。在preferences 里面可以查看是否已经安装好。如果没有，可以参考<a href="https://packagecontrol.io/installation">官方文档</a>进行安装。</p>
-<h3 id="安装插件-Markdown-Editing">安装插件 Markdown Editing</h3>
-<p>通过按组合键<code>Ctrl+Shift+P</code>或是点击<code>Preference-&gt;Package Control</code>调出命令面板，然后再输入 <code>install</code>，选择 <code>Package Control: install package</code>。 稍等，在弹出的对话框中搜索 Markdown Editing，找到之后按 enter 键确认安装。如果安装成功，之后会自动弹出纯文本形式显示的插件说明。点击 Preferences，在 Package Settings 里面会显示有 Markdown Editing 的插件设置选项，在里面可以更改该插件的设置。</p>
-<h3 id="安装插件-Markdown-Preview">安装插件 Markdown Preview</h3>
-<p>通过按组合键<code>Ctrl+Shift+P</code>或是点击<code>Preference-&gt;Package Control</code>调出命令面板，然后再输入 <code>install</code>，选择 <code>Package Control: install package</code>。 稍等，在弹出的对话框中搜索 Markdown Preview，找到之后按 enter 键确认安装。如果安装成功，之后会自动弹出纯文本形式显示的插件说明。点击 Preferences，在 Package Settings 里面会显示有 Markdown Preview 的插件设置选项，在里面可以更改该插件的设置。</p>
-<h3 id="更改-Markdown-Editing-插件设置">更改 Markdown Editing 插件设置</h3>
-<p>Markdown Editing 的默认设置在<code>Preferences -&gt; Package Settings -&gt; Markdown Editing -&gt; Markdown GFM Settings - Default</code> 里面，背景主题和layout 分别设定为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;color_scheme&quot;: &quot;Packages/MarkdownEditing/MarkdownEditor.tmTheme&quot;,</span><br><span class="line">// Layout</span><br><span class="line">&quot;draw_centered&quot;: true,</span><br></pre></td></tr></table></figure>
-<p>这样会导致背景颜色和其他类型文件在Sublime Text 中的背景颜色不一致。同时layout的设定会导致Markdown 页面左侧会有大量留白。由于Default的设定是不能改的，我们只能从其对应的<code>Markdown GFM Settings - User</code> 里面改。加入以下内容来替换掉default的设定：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">// Default color scheme</span><br><span class="line">&quot;color_scheme&quot;: &quot;Monokai.sublime-color-scheme&quot;,</span><br><span class="line">// Layout</span><br><span class="line">&quot;draw_centered&quot;: false,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="更改-Markdown-Preview-插件设置">更改 Markdown Preview 插件设置</h3>
-<p>进入<code>Preferences</code>，点击<code>Key Bindings</code>，在弹出的界面右侧用户设置中添加如下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[ &#123; &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview&quot;, &quot;args&quot;: &#123;&quot;target&quot;: &quot;browser&quot;, &quot;parser&quot;:&quot;markdown&quot;&#125; &#125;, ]</span><br></pre></td></tr></table></figure>
-<p>则可以设置 <code>alt + m</code> 组合为预览排版好的 HTML 样式的热键，预览工具是本机上设置的默认浏览器。在对应的Markdown文件中按下快捷键即可在浏览器上预览。此快捷键还可以把鼠标勾选的部分区域内容渲染到浏览器网页上。</p>
-<h3 id="开启-Mathjax-数学环境支持">开启 Mathjax 数学环境支持</h3>
-<p>如果想要在 Markdown 中插入数学公式，可以使用 LaTeX 的语法来书写，但是直接使用 LaTeX 语法来书写一段数学公式，使用 Markdown Preview 插件预览时的效果是不成功的，我们需要开启 Mathjax 数学环境支持。进入到<code>Preferences -&gt; Package Settings -&gt; Markdown Preview -&gt; Settings</code>里面加入以下内容。 与上面的插件不同，这个插件是 pymdownx 提供的，因此添加到字典中, 同时还需要需要提供 js 文件的 URL ：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;js&quot;: [</span><br><span class="line">        &quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js&quot;,</span><br><span class="line">        &quot;res://MarkdownPreview/js/math_config.js&quot;</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Markdown extension configuration.</span><br><span class="line"></span><br><span class="line">        To specify a function in this JSON configuration, create an object with the key &quot;!!python/name&quot;</span><br><span class="line">        and set it to the import path to the function &quot;module.submodule.etc.function&quot;.</span><br><span class="line">    */</span><br><span class="line">    &quot;markdown_extensions&quot;: [</span><br><span class="line">        // Python Markdown Extra with SuperFences.</span><br><span class="line">        // You can&#x27;t include &quot;extra&quot; and &quot;superfences&quot;</span><br><span class="line">        // as &quot;fenced_code&quot; can not be included with &quot;superfences&quot;,</span><br><span class="line">        // so we include the pieces separately.</span><br><span class="line">        &quot;markdown.extensions.smart_strong&quot;,</span><br><span class="line">        &quot;markdown.extensions.footnotes&quot;,</span><br><span class="line">        &quot;markdown.extensions.attr_list&quot;,</span><br><span class="line">        &quot;markdown.extensions.def_list&quot;,</span><br><span class="line">        &quot;markdown.extensions.tables&quot;,</span><br><span class="line">        &quot;markdown.extensions.abbr&quot;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;markdown.extensions.codehilite&quot;: &#123;</span><br><span class="line">                &quot;guess_lang&quot;: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        // Extra&#x27;s Markdown parsing in raw HTML cannot be</span><br><span class="line">        // included by itself, but &quot;pymdownx&quot; exposes it so we can.</span><br><span class="line">        &quot;pymdownx.extrarawhtml&quot;,</span><br><span class="line"></span><br><span class="line">        // More default Python Markdown extensions</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;markdown.extensions.toc&quot;:</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;permalink&quot;: &quot;\ue157&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;markdown.extensions.meta&quot;,</span><br><span class="line">        &quot;markdown.extensions.sane_lists&quot;,</span><br><span class="line">        &quot;markdown.extensions.smarty&quot;,</span><br><span class="line">        &quot;markdown.extensions.wikilinks&quot;,</span><br><span class="line">        &quot;markdown.extensions.admonition&quot;,</span><br><span class="line"></span><br><span class="line">        // PyMdown extensions that help give a GitHub-ish feel</span><br><span class="line">        &quot;pymdownx.superfences&quot;,  // Nested fences and UML support</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.magiclink&quot;: &#123;   // Auto linkify URLs and email addresses</span><br><span class="line">                &quot;repo_url_shortener&quot;: true,</span><br><span class="line">                &quot;repo_url_shorthand&quot;: true</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;pymdownx.tasklist&quot;,     // Task lists</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.tilde&quot;: &#123;  // Provide ~~delete~~</span><br><span class="line">                &quot;subscript&quot;: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.emoji&quot;: &#123;  // Provide GitHub&#x27;s emojis</span><br><span class="line">                &quot;emoji_index&quot;: &#123;&quot;!!python/name&quot;: &quot;pymdownx.emoji.gemoji&quot;&#125;,</span><br><span class="line">                &quot;emoji_generator&quot;: &#123;&quot;!!python/name&quot;: &quot;pymdownx.emoji.to_png&quot;&#125;,</span><br><span class="line">                &quot;alt&quot;: &quot;short&quot;,</span><br><span class="line">                &quot;options&quot;: &#123;</span><br><span class="line">                    &quot;attributes&quot;: &#123;</span><br><span class="line">                        &quot;align&quot;: &quot;absmiddle&quot;,</span><br><span class="line">                        &quot;height&quot;: &quot;20px&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;20px&quot;</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;image_path&quot;: &quot;https://assets-cdn.github.com/images/icons/emoji/unicode/&quot;,</span><br><span class="line">                    &quot;non_standard_image_path&quot;: &quot;https://assets-cdn.github.com/images/icons/emoji/&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.arithmatex&quot;:</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;generic&quot;: true,</span><br><span class="line">                &quot;smart_dollar&quot;: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>由于上面用到了math_config.js文件，而Sublime 本身是没有这个文件的，所以需要在对应的 js 目录下新建该文件。<br>
-首先，在Sublime工具栏<code>Preferences &gt; Browser Packages…</code> 打开Packages目录，该目录所在的路径就是Sublime中包的保存路径。<br>
-然后，由于上面配置文件中设置的 js 路径是<code>res://MarkdownPreview/js/math_config.js</code>，该路径是相对于sublime包的保存路径而言的，因此我们需要在该目录下新建路径“MarkdownPreview/js/math_config.js”，同时添加math_config.js文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MathJax.Hub.Config(&#123;</span><br><span class="line">  config: [&quot;MMLorHTML.js&quot;],</span><br><span class="line">  extensions: [&quot;tex2jax.js&quot;],</span><br><span class="line">  jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;, &quot;output/NativeMML&quot;],</span><br><span class="line">  tex2jax: &#123;</span><br><span class="line">    inlineMath: [ [&#x27;$&#x27;,&#x27;$&#x27;], [&quot;\\(&quot;,&quot;\\)&quot;] ],</span><br><span class="line">    displayMath: [ [&#x27;$$&#x27;,&#x27;$$&#x27;], [&quot;\\[&quot;,&quot;\\]&quot;] ],</span><br><span class="line">    processEscapes: true</span><br><span class="line">  &#125;,</span><br><span class="line">  TeX: &#123;</span><br><span class="line">    extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;],</span><br><span class="line">    TagSide: &quot;right&quot;,</span><br><span class="line">    TagIndent: &quot;.8em&quot;,</span><br><span class="line">    MultLineWidth: &quot;85%&quot;,</span><br><span class="line">    equationNumbers: &#123;</span><br><span class="line">      autoNumber: &quot;AMS&quot;,</span><br><span class="line">    &#125;,</span><br><span class="line">    unicode: &#123;</span><br><span class="line">      fonts: &quot;STIXGeneral,&#x27;Arial Unicode MS&#x27;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  displayAlign: &quot;center&quot;,</span><br><span class="line">  showProcessingMessages: false,</span><br><span class="line">  messageStyle: &#x27;none&#x27;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>配置完成后，结果如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">    \sum\limits_&#123;0&#125;^&#123;+\infty&#125; \dfrac&#123;n^2&#125;&#123;2&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
-<img src="formula.png" alt="formula" width="500"/> 
-<h2 id="基本语法">基本语法</h2>
-<h3 id="段落">段落</h3>
-<p>非常自然，一行文字就是一个段落。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个段落。</span><br></pre></td></tr></table></figure>
-<p>会被解释成</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<p>如果你需要另起一段，请在两个段落之间隔一个空行。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个段落。</span><br><span class="line"></span><br><span class="line">这是另一个段落。</span><br></pre></td></tr></table></figure>
-<p>会解释成</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落&lt;p&gt;</span><br><span class="line">&lt;p&gt;这是另一个段落&lt;/p&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="粗体斜体："><strong>粗体</strong><em>斜体</em>：</h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*这是斜体*</span><br><span class="line">_这也是斜体_</span><br><span class="line">**这是粗体**</span><br><span class="line">***这是粗体+斜体***</span><br></pre></td></tr></table></figure>
-<p>会被解释成</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;em&gt;这是斜体&lt;/em&gt;</span><br><span class="line">&lt;em&gt;这也是斜体&lt;/em&gt;</span><br><span class="line">&lt;strong&gt;这是粗体&lt;/strong&gt;</span><br><span class="line">&lt;strong&gt;&lt;em&gt;这是粗体+斜体&lt;/strong&gt;&lt;/em&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="删除线"><s>删除线</s></h3>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
-<p>会被解释成</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;strike&gt;删除线&lt;/strike&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="标题">标题</h3>
-<p>markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。行尾可以加上任意数量的井号字符，这些字符不会算作标题内容。通常会加上相等数量的字符以保持对称。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 这是 H1 #</span><br><span class="line">## 这是 H2 ##</span><br><span class="line">### 这是 H3 ###</span><br><span class="line">...</span><br><span class="line">###### 这是 H6 ######</span><br></pre></td></tr></table></figure>
-<h3 id="H1和H2">H1和H2</h3>
-<p>在文本下方添加底线来实现。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是 H1</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">这是 H2</span><br><span class="line">-------</span><br></pre></td></tr></table></figure>
-<h3 id="引用">引用</h3>
-<blockquote>
-<p>通过在行首加上大于号&gt;来添加引用格式。引用可以嵌套，也可以嵌套其他格式。(此行是一个引用的格式)</p>
-</blockquote>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure>
-<h3 id="列表">列表</h3>
-<p>无序列表使用星号、加号或是减号作为列表标记(都是等价的)：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Red</span><br><span class="line">- Green</span><br><span class="line">+ Blue</span><br></pre></td></tr></table></figure>
-<p>有序列表则使用数字接着一个英文句点，数字并不会影响输出的 HTML 结果：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Red</span><br><span class="line">1. Green</span><br><span class="line">2. Blue</span><br></pre></td></tr></table></figure>
-<h3 id="内联代码">内联代码</h3>
-<p>用反引号来标记内联代码，它们会解释成<code>&lt;code&gt;</code>标签。如果代码的内容中有反引号，请用两个反引号包裹。代码中的&amp;、&lt;、&gt;符号都会自动转义。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`a=2`</span><br></pre></td></tr></table></figure>
-<h3 id="代码区域">代码区域</h3>
-<p>可以首行首缩进4个空格。也可以用三个反引号独占一行来标记。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    这是一个代码区块。</span><br><span class="line">`` ` </span><br><span class="line">这是一个代码区块。 </span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
-<p>会被解释成：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre&gt;&lt;code&gt;这是一个代码区块。</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="换行">换行</h3>
-<ul>
-<li>换行单倍行距：按键 space, space, enter</li>
-<li>换行双倍行距：按键 enter, enter</li>
-</ul>
-<h3 id="分隔线">分隔线</h3>
-<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
-<h3 id="链接">链接</h3>
-<p>链接的书写格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[an example](http://example.com/)</span><br><span class="line">[an example](http://example.com/ &quot;Optional Title&quot;)</span><br></pre></td></tr></table></figure>
-<p>会被解释为</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&#x27;http://example.com/&#x27;&gt;an example&lt;/a&gt;</span><br><span class="line">&lt;a href=&#x27;http://example.com/&#x27; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p>如果链接的地址和名字重复，可以用尖括号语法将其简化。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;http://example.com/&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="表格">表格</h3>
-<p>表格是github风格独有的语法，但近年来渐渐被大多数编辑器支持。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Item     | Value | Qty   |</span><br><span class="line">| :------- | ----: | :---: |</span><br><span class="line">| Computer | $1600 |  5    |</span><br><span class="line">| Phone    | $12   |  12   |</span><br><span class="line">| Pipe     | $1    |  234  |</span><br></pre></td></tr></table></figure>
-<p>会被解释成：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;thead&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;th align=&quot;left&quot;&gt;Item&lt;/th&gt;</span><br><span class="line">  &lt;th align=&quot;right&quot;&gt;Value&lt;/th&gt;</span><br><span class="line">  &lt;th align=&quot;center&quot;&gt;Qty&lt;/th&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/thead&gt;</span><br><span class="line">&lt;tbody&gt;&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Computer&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$1600&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;5&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Phone&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$12&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;12&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Pipe&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$1&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;234&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/tbody&gt;&lt;/table&gt;</span><br></pre></td></tr></table></figure>
-<p>对于一些复杂表格来说，尤其是需要合并单元格的表格，还是推荐用html 的格式来进行书写。</p>
-<h3 id="图片">图片</h3>
-<p>Markdown有自己表示图片的方法如下。然而有些时候我们需要修改图片大小之类的一些参数，而此自带的方法不如html 中&lt;img&gt;标签灵活：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![Alt text](/path/to/img.jpg)</span><br><span class="line">![Alt text](/path/to/img.jpg &quot;Optional Title&quot;)</span><br></pre></td></tr></table></figure>
-<p>会被解释为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&#x27;/path/to/img.jpg&#x27; alt=&#x27;Alt text&#x27; /&gt;</span><br><span class="line">&lt;img src=&#x27;/path/to/img.jpg&#x27; alt=&#x27;Alt text&#x27; title=&#x27;Optional Title&#x27; /&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="转义">转义</h3>
-<p>markdown支持在以下字符前面插入反斜杠：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
-<p>插入之后，将不再解析这些字符，而是原样输出。</p>
-<h2 id="高级语法">高级语法</h2>
-<p>只有少数编辑器支持，使用前请先确认。</p>
-<h3 id="数学公式">数学公式</h3>
-<p>内联的TeX公式使用一个美元符号标记：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</span><br></pre></td></tr></table></figure>
-<p>TeX公式块用独占一行的两个美元符号来标记：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">a^2 = 2</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p>也可以用equation的标签表示：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">\begin&#123;eqnarray&#125;</span><br><span class="line">f(x) = a_nx^n \\</span><br><span class="line">g(x) = x^2</span><br><span class="line">\end&#123;eqnarray&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">\begin&#123;gather&#125;</span><br><span class="line">(a+b) \times c = a\times c + b \times c \notag \\</span><br><span class="line">ac= a\times c \\</span><br><span class="line">\end&#123;gather&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p>比较推荐用第二种写法，但是需要确认自己的编辑器是否支持第二种写法。因为其生成的公式会有序号。而且如果在里面嵌套标签的话，看起来更加和谐。</p>
-<p>参考文献:</p>
-<ul>
-<li><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/">非常好的Markdown教程</a></li>
-<li><a href="http://iliutong.cn/2018/02/21/build-md-environ-with-sublime/">Sublime Text搭建Markdown编译环境</a></li>
-<li><a href="https://blog.csdn.net/SkullSky/article/details/83036547">在Sublime Markdown Preview 插件中开启Mathjax</a></li>
-<li><a href="https://www.cnblogs.com/nowgood/p/latexstart.html">Markdown 中使用Latex公式</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Medibang Paint Pro 笔记</title>
     <url>/blog/2021/12/30/Medibang-Paint-Pro-%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>本文记录自己学习Medibang Paint Pro画图时的一些笔记。</p>
@@ -1136,66 +1000,6 @@ MacOS 上可以通过安装 poppler 来安装 pdffonts 。  <figure class="highl
       </categories>
       <tags>
         <tag>mongodb</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>O1签证</title>
-    <url>/blog/2022/04/14/O1%E7%AD%BE%E8%AF%81/</url>
-    <content><![CDATA[<p>作为一种工作签证，在抽不到H1b的情况下，O1可以作为保留在美国合法工作身份的替代品。本文详细介绍O1和H1b的不同，以及O1签证的好处与局限性。</p>
-<span id="more"></span>
-<h2 id="O1签证简介">O1签证简介</h2>
-<ul>
-<li>O-1特殊技能人才签证属于非移民工作签证的一种，技能范围涉及到科学、艺术、教育、商业或体育行业，木偶演员、花样滑冰运动员、科研人员等都可以申请。尤其在H-1B当年名额用尽或H-1B签证到期的情况下，很多科技人员转而申请O-1签证。O-2签证是对O-1签证持有人（艺术家、运动员）助理的签证。O-3签证是对O-1签证持有人配偶和未成年子女的签证，<strong>O-3签证不可在美工作</strong>，但可以在美上学。</li>
-<li>O签证没有明确的有效期限制。O签证的有效期等同于完成项目所需的时间，初次申请不得超过三年。如果需要更多的时间进行同一项目，可以申请延期，每次延期不得超过一年。如果一个新的项目需要O-1持有人继续为原雇主工作，该雇主可以为该雇员申请一个新的O-1，初次有效期仍然可以长达三年，随后仍可以一年为限申请延期。因此，O-1的有效期是由项目/活动所需的时间决定的。</li>
-<li>J签证持有者有两年回国服务期限制，不办理豁免不能转成H、L等签证、不能调整身份等，但可以转成O签证（需要使馆签证手续）。</li>
-<li>允许双重倾向：申请人可以有移民倾向，申请人的O签证申请不会因为其已递交的移民申请而被拒签。</li>
-<li>O1签证的分类 O1签证分为O-1A和O-1B： O1A签证供科学、教育、商业或竞技有杰出能力的人士申请； O1B签证供在艺术、电影、电视行业有杰出能力的人士申请。</li>
-</ul>
-<h2 id="O1签证优缺点">O1签证优缺点</h2>
-<ul>
-<li>配偶为O3签证，不能工作。</li>
-<li>每次换雇主都要重新办理O1签证。</li>
-<li>签证3个月有效，single entry。基本上每次入境都要重新签证。</li>
-<li>O1一开始可以申请三年，之后每次续签都要collect一次推荐信，而且续一次只有一年。</li>
-<li>绿卡485阶段O1不可以出境，H1B就没有这个问题。</li>
-<li>O1的很多申请资料可以在以后申请EB-1b的时候重复用。</li>
-<li>O1买房的问题：
-<ul>
-<li><a href="https://www.jjhgroup.net/blog/mortgage-for-non-us-resident">相关链接1</a></li>
-<li><a href="http://msfangzi.com/?p=7223">相关链接2</a></li>
-<li>最常用的Conventional loan 主要是针对有美国身份的客户。包括美国公民，绿卡, 工作签证。O1,H1, L1签证目前都可以做到贷款。J1以及H1是根据不同的Case来定的。F1如果有EAD卡有一些贷款机构也是可以贷款的。但需要两年的报税记录。</li>
-</ul>
-</li>
-</ul>
-<h2 id="O1签证和H1b签证的区别">O1签证和H1b签证的区别</h2>
-<ul>
-<li>这两类签证都属于允许移民倾向的“双重倾向”签证，都需要雇主支持，并且持有人的眷属都可以持附属签证随同赴美。</li>
-<li>O-1签证每年没有数额限制；没有最低学位要求；没有执业证要求，O-1签证不会因为缺少执业证而被拒；不涉及劳动部门，没有满足行业现行工资问题。</li>
-<li>H-1B签证持有人入境时移民官准许的初始逗留时间为3年，之后还可以申请延期3年，但是总的逗留时间不的超过6年。6年之后，H-1B持有人需要离开美国或者获得其他身份，否则将失去在美国的合法身份。当然，极少数情况下H-1B持有人可以申请延期超过6年。一般说来，O-1签证持有人首次入美时移民官准许的逗留时间以能够完成某项活动、工作或者演出为限，一般最长不超过3年。身份到期后可以申请延期，以便继续进行尚未完成的活动、工作或者演出，每次可以申请延期最多1年。因此，从理论上来说，只要移民局认为O-1持有人需要更多时间来完成自己的工作，O-1签证的合法逗留期可以被无限期延长。这一点使得O-1签证比H-1B更有吸引力。</li>
-<li>绿卡485阶段O1不可以出境，H1B就没有这个问题</li>
-<li>O1是single entry。H1b是multi entry。</li>
-<li>O1配偶为O3不能工作，H1b配偶为H4可以工作。</li>
-</ul>
-<h2 id="境内激活or境外激活">境内激活or境外激活</h2>
-<p>目前移民局官方公布的O-1申请处理时间在2周到2个半月之间。O-1申请可以选择加急服务，移民局会在收到材料后的15个自然日内给出审理结果。<br>
-美国境内激活：O-1获批之后，你的身份会从你现有的签证身份自动转为O-1。<br>
-美国境外激活：O-1获批之后不会自动生效，你需要去境外的美国领事馆面签才能拿到O-1签证。<br>
-但是无论如何，出境之后都要重新申请visa stamp。</p>
-<h2 id="问题">问题</h2>
-<ul>
-<li>Q: O1签证的起始时间可以在F1 STEM OPT过期前么？比如6月份F1到期，但是提前在4月份能换成O1么？
-<ul>
-<li>A：开始时间最早为申请时间的后180天。</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>O1</tag>
-        <tag>green card</tag>
       </tags>
   </entry>
   <entry>
@@ -1327,97 +1131,184 @@ pip 可以利用 requirments.txt 来实现在依赖的安装。在 <a href="http
       </tags>
   </entry>
   <entry>
-    <title>Vim使用技巧</title>
-    <url>/blog/2020/03/19/Vim%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<p>vim作为在terminal端处理文本的最有名的编辑器，我们总结一下它的一些基本使用方法。</p>
+    <title>tmux 使用指南</title>
+    <url>/blog/2019/12/16/tmux-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>tmux 是一款非常好用的终端管理软件。尤其是在服务器上面运行代码的时候尤为推荐。tmux支持多个窗口，每个窗口又可以分屏操作。这样不需要每开一个窗口都要重新登录下服务器了。同时，即使退出窗口（不是关闭），tmux上跑的代码仍然可以后台运行，这样不需要再用nohup这种命令来离线跑代码了。tmux本身支持很多快捷键操作，本文只介绍一些作者自己常用的命令，其余的可以参考reference里面的链接。</p>
 <span id="more"></span>
-<h2 id="vi-和-vim的区别">vi 和 vim的区别</h2>
-<p>它们都是多模式编辑器，不同的是vim 是vi的升级版本，它不仅兼容vi的所有指令，而且还有一些新的特性在里面。总的来说，vim比vi更具优势的地方在于：</p>
+<h2 id="tmux结构">tmux结构</h2>
+<p>tmux采用C/S模型构建，主要包括三层结构：会话、窗口、面板。一个tmux session（会话）可以包含多个window（窗口），一个window又可以包含多个pane（面板），窗口下的面板，都处于同一界面下，这些面板适合运行相关性高的任务，以便同时观察到它们的运行情况。<br>
+<img src="screen.png" alt="screen"/></p>
+<h2 id="安装tmux">安装tmux</h2>
+<p>在Mac中安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 先安装Homebrew，有则跳过</span><br><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br><span class="line"># 安装tmux</span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure>
+<p>在Linux中安装：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
+<h2 id="会话">会话</h2>
+<p>1.新建会话：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux # 新建一个无名称的会话</span><br><span class="line">tmux new -s demo # 新建一个名称为demo的会话</span><br></pre></td></tr></table></figure>
+<p>2.断开当前对话：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux detach # 断开当前会话，会话在后台运行</span><br></pre></td></tr></table></figure>
+<p>3.进入之前会话：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux a # 默认进入第一个会话</span><br><span class="line">tmux a -t demo # 进入到名称为demo的会话</span><br><span class="line">tmux attach-session -t session-name</span><br></pre></td></tr></table></figure>
+<p>4.关闭会话:<br>
+我们可以使用tmux的kill命令，kill命令有kill-pane、kill-server、kill-session 和 kill-window共四种，其中kill-session的语法为tmux kill-session -t session-name。如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux kill-session -t demo # 关闭demo会话</span><br><span class="line">tmux kill-server # 关闭服务器，所有的会话都将关闭</span><br></pre></td></tr></table></figure>
+<p>5.查看会话：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux list-session # 查看所有会话</span><br><span class="line">tmux ls # 查看所有会话，提倡使用简写形式</span><br></pre></td></tr></table></figure>
+<p>如果已经在会话之中，可以用快捷键<code>ctrl+b+s</code>列出所有会话，移动上下键进行选择。</p>
+<h2 id="开启鼠标">开启鼠标</h2>
+<p>在 <code>~/.tmux.conf</code> 中加入下列设置（tmux 2.1 之前的版本）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -g mode-mouse on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></table></figure>
+<p>在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure>
+<p>这样在 macOS 中随意滚动进入选择模式后，按住 option 键就用直接用鼠标选择文字，然后再按鼠标中键就能直接复制内容到系统剪切板中了。<br>
+这几行配置加到 <code>~/.tmux.conf</code> 中，然后在tmux里面按 <code>C-b :</code> 执行 <code>source ~/.tmux.conf</code> 即可生效.</p>
+<h2 id="常用命令">常用命令</h2>
+<p>自己平时会用到的一些tmux命令。更多的命令可见参考文献。</p>
+<table>
+    <tr>
+        <td colspan="2">Ctrl+b</td>
+        <td >快捷键</td>
+    </tr>
+    <tr>
+    	<td rowspan="7">系统操作</td>
+        <td >?</td>
+        <td >列出所有快捷键；按q返回</td>
+    </tr>
+    <tr>
+        <td >d</td>
+        <td >脱离当前会话</td>
+    </tr>
+    <tr>
+        <td >D</td>
+        <td >选择要断开的会话</td>
+    </tr>
+    <tr>
+        <td >s</td>
+        <td >显示会话列表用于选择并切换</td>
+    </tr>
+    <tr>
+        <td >:</td>
+        <td >进入命令行模式，此时可直接输入ls等命令</td>
+    </tr>
+    <tr>
+        <td >[</td>
+        <td >进入复制模式，按q退出</td>
+    </tr>
+    <tr>
+        <td >]</td>
+        <td >粘贴复制模式中复制的文本</td>
+    </tr>
+    <tr>
+        <td rowspan="10">窗口操作</td>
+        <td >c</td>
+        <td >创建新窗口</td>
+    </tr>
+    <tr>
+        <td >&</td>
+        <td >关闭当前窗口</td>
+    </tr>
+    <tr>
+        <td >数字键</td>
+        <td >切换至指定窗口</td>
+    </tr>
+    <tr>
+        <td >p</td>
+        <td >切换至上一窗口</td>
+    </tr>
+    <tr>
+        <td >n</td>
+        <td >切换至下一窗口</td>
+    </tr>
+    <tr>
+        <td >l</td>
+        <td >在前后两个窗口间互相切换</td>
+    </tr>
+    <tr>
+        <td >w</td>
+        <td >通过窗口列表切换窗口</td>
+    </tr>
+    <tr>
+        <td >,</td>
+        <td >重命名当前窗口；这样便于识别</td>
+    </tr>
+    <tr>
+        <td >.</td>
+        <td >修改当前窗口编号；相当于窗口重新排序</td>
+    </tr>
+    <tr>
+        <td >f</td>
+        <td >快速定位到窗口（输入关键字匹配窗口名称）</td>
+    </tr>
+    <tr>
+        <td rowspan="14">面板操作</td>
+        <td >”</td>
+        <td >将当前面板平分为上下两块</td>
+    </tr>
+    <tr>
+        <td >%</td>
+        <td >将当前面板平分为左右两块</td>
+    </tr>
+    <tr>
+        <td >x</td>
+        <td >关闭当前面板（关闭前需输入y or n确认）</td>
+    </tr>
+    <tr>
+        <td >z</td>
+        <td >最大化当前面板，再重复一次按键后恢复正常（v1.8版本新增）</td>
+    </tr>
+    <tr>
+        <td >!</td>
+        <td >将当前面板移动到新的窗口打开（原窗口中存在两个及以上面板有效）</td>
+    </tr>
+    <tr>
+        <td >;</td>
+        <td >切换到最后一次使用的面板</td>
+    </tr>
+    <tr>
+        <td >q</td>
+        <td >显示面板编号，在编号消失前输入对应的数字可切换到相应的面板</td>
+    </tr>
+    <tr>
+        <td >{</td>
+        <td >向前置换当前面板</td>
+    </tr>
+    <tr>
+        <td >}</td>
+        <td >向后置换当前面板</td>
+    </tr>
+    <tr>
+        <td >o</td>
+        <td >在当前窗口中选择下一面板</td>
+    </tr>
+    <tr>
+        <td >方向键</td>
+        <td >移动光标切换面板</td>
+    </tr>
+    <tr>
+        <td >空格键</td>
+        <td >在预置的面板布局中循环切换；依次包括even-horizontal、even-vertical、main-horizontal、main-vertical、tiled</td>
+    </tr>
+    <tr>
+        <td >Alt+方向键</td>
+        <td >以5个单元格为单位调整当前面板边缘</td>
+    </tr>
+    <tr>
+        <td >Ctrl+方向键</td>
+        <td >以1个单元格为单位调整当前面板边缘（Mac下被系统快捷键覆盖）</td>
+    </tr>
+</table>
+<h2 id="Tricks">Tricks</h2>
 <ul>
-<li>多级撤消：在vi的命令模式里，按 u只能撤消上次命令，而在vim里可以无限制的撤消，几乎等同于windows下的ctrl+z了 。</li>
-<li>多操作系统支持：vi只能运行于unix中，而vim不仅可以运行于unix,还有windows ,mac等操作系统上。</li>
-<li>语法加亮：作为一名程序员，我觉得这个效果用处最大了- vim可以对代码进行多颜色的语法加亮。</li>
-<li>可视化操作：因为vim不仅可以在终端运行，也可以运行于x window、 mac os、 windows， 所以说他“可视化”。</li>
-<li>对vi的完全兼容：某些情况下，vim可以完全被当成vi来使用。</li>
+<li>为了让服务器一直跑进程，可以新建一个tmux页面，然后run <code>yes</code>.</li>
 </ul>
-<h2 id="vim使用">vim使用</h2>
-<p>基本上 vi/vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。简单的说，我们可以将这三个模式想成底下的图标来表示：<br>
-<img src="workflow.png" alt="workflow" width="500"/></p>
-<h3 id="命令模式">命令模式</h3>
-<p>用户刚刚启动 vi/vim，便进入了命令模式。<br>
-此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。<br>
-以下是常用的几个命令：</p>
+<p>参考文献:</p>
 <ul>
-<li><code>i</code> 切换到输入模式，以输入字符。</li>
-<li><code>:</code> 切换到底线命令模式，以在最底一行输入命令。<br>
-若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</li>
-</ul>
-<p><strong>在当前行里面有效的移动光标:</strong></p>
-<ul>
-<li><code>fx</code>：移动光标到当前行的下一个 x 处。很明显，x 可以是任意一个字母，而且你可以使用 ; 来重复你的上一个 f 命令。</li>
-<li><code>tx</code>：和上面的命令类似，但是是移动到 x 的左边一个位置。（这真的很有用）</li>
-<li><code>Fx</code>：和 fx 类似，不过是往回找。</li>
-<li><code>w</code>：光标往前移动一个词。</li>
-<li><code>b</code>：光标往后移动一个词。</li>
-<li><code>0</code>：移动光标到当前行首。</li>
-<li><code>^</code>：移动光标到当前行的第一个字母位置。</li>
-<li><code>$</code>：移动光标到行尾。</li>
-<li><code>)</code>：移动光标到下一个句子。</li>
-<li><code>(</code>：移动光标到上一个句子</li>
-</ul>
-<p><strong>在整个文件里面有效移动光标:</strong></p>
-<ul>
-<li><code>Ctrl-F</code>：向下移动一屏。</li>
-<li><code>Ctrl-B</code>：向上移动一屏。</li>
-<li><code>G</code>：到文件尾</li>
-<li><code>numG</code>：移动光标到指定的行（num）。（比如 10G 就是到第 10 行）</li>
-<li><code>gg</code>：到文件首</li>
-<li><code>H</code>：移动光标到屏幕上面</li>
-<li><code>M</code>：移动光标到屏幕中间</li>
-<li><code>L</code>：移动光标到屏幕下面</li>
-<li><code>*</code>：读取光标处的字符串，并且移动光标到它再次出现的地方。</li>
-<li><code>#</code>：和上面的类似，但是是往反方向寻找。</li>
-<li><code>/text</code>：从当前光标处开始搜索字符串 text，并且到达 text 出现的地方。必须使用回车来开始这个搜索命令。如果想重复上次的搜索的话，按 n。</li>
-<li><code>？text</code>：和上面类似，但是是反方向。</li>
-<li><code>.</code>：重复前一个动作。</li>
-</ul>
-<p><strong>剪切和拷贝:</strong></p>
-<ul>
-<li><code>dd</code>：删除游标所在的那一整行。</li>
-<li><code>ndd</code>： n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行。</li>
-<li><code>yy</code>：复制游标所在的那一行。</li>
-<li><code>nyy</code>：n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行。</li>
-<li><code>p, P</code>：p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。</li>
-<li><code>u</code>：复原前一个动作。</li>
-<li><code>Ctrl+r</code>：重做上一个动作。</li>
-</ul>
-<h3 id="输入模式">输入模式</h3>
-<ul>
-<li><code>i, I</code>: 进入输入模式(Insert mode)：i 为从目前光标所在处输入， I 为在目前所在行的第一个非空格符处开始输入。</li>
-<li><code>a, A</code>: 进入输入模式(Insert mode)：a 为『从目前光标所在的下一个字符处开始输入』， A 为从光标所在行的最后一个字符处开始输入。</li>
-<li><code>o, O</code>: 进入输入模式(Insert mode)：这是英文字母 o 的大小写。o 为在目前光标所在的下一行处输入新的一行； O 为在目前光标所在处的上一行输入新的一行。</li>
-<li><code>r, R</code>: 进入取代模式(Replace mode)：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止。</li>
-<li><code>Esc</code>: 退出编辑模式，回到一般模式中。</li>
-</ul>
-<h3 id="底线命令模式">底线命令模式</h3>
-<p>在命令模式下按下<code>:</code>就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有：</p>
-<ul>
-<li><code>:w</code>:  将编辑的数据写入硬盘档案中。</li>
-<li><code>:w!</code>: 若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关。</li>
-<li><code>:q</code>: 离开 vi。</li>
-<li><code>:q!</code>: 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。惊叹号 (!) 在 vi 当中，常常具有强制的意思～</li>
-<li><code>:wq</code>: 储存后离开，若为 <code>:wq!</code> 则为强制储存后离开。</li>
-<li><code>:! command</code>: 暂时离开 vi 到指令行模式下执行 command 的显示结果！例如<br>
-<code>:! ls /home</code>即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</li>
-<li>按ESC键可随时退出底线命令模式。<br>
-以下为非常全面的vim命令的键盘图：<br>
-<img src="summary.png" alt="summary"/><br>
-Reference:</li>
-<li><a href="https://blog.csdn.net/allenlinrui/article/details/7269481">vi和vim的区别</a></li>
-<li><a href="https://www.runoob.com/linux/linux-vim.html">vim/vi简易教程</a></li>
-<li><a href="https://www.runoob.com/w3cnote/all-vim-cheatsheat.html">vim快捷键位图</a></li>
-<li><a href="https://linuxtoy.org/archives/efficient-editing-with-vim.html">vim的基本操作</a></li>
-<li><a href="https://www.cnblogs.com/hyddd/archive/2010/04/08/1706865.html">vim命令大全</a></li>
+<li><a href="https://blog.csdn.net/hcx25909/article/details/7602935">tmux快捷键</a></li>
+<li><a href="http://louiszhai.github.io/2017/09/30/tmux/#%E6%96%B0%E5%BB%BA%E4%BC%9A%E8%AF%9D">非常详细的tmux使用手册</a></li>
+<li><a href="https://www.jianshu.com/p/f7f24b4b2625">非root用户源码安装Tmux</a></li>
+<li><a href="https://www.cnblogs.com/bamanzi/p/tmux-mouse-tips.html">tmux启用鼠标</a></li>
+<li><a href="http://lightcss.com/select-and-copy-with-mouse-in-tmux/">tmux启用鼠标选择复制功能</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -1425,7 +1316,67 @@ Reference:</li>
       </categories>
       <tags>
         <tag>tech tool</tag>
-        <tag>vim</tag>
+        <tag>tmux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>O1签证</title>
+    <url>/blog/2022/04/14/O1%E7%AD%BE%E8%AF%81/</url>
+    <content><![CDATA[<p>作为一种工作签证，在抽不到H1b的情况下，O1可以作为保留在美国合法工作身份的替代品。本文详细介绍O1和H1b的不同，以及O1签证的好处与局限性。</p>
+<span id="more"></span>
+<h2 id="O1签证简介">O1签证简介</h2>
+<ul>
+<li>O-1特殊技能人才签证属于非移民工作签证的一种，技能范围涉及到科学、艺术、教育、商业或体育行业，木偶演员、花样滑冰运动员、科研人员等都可以申请。尤其在H-1B当年名额用尽或H-1B签证到期的情况下，很多科技人员转而申请O-1签证。O-2签证是对O-1签证持有人（艺术家、运动员）助理的签证。O-3签证是对O-1签证持有人配偶和未成年子女的签证，<strong>O-3签证不可在美工作</strong>，但可以在美上学。</li>
+<li>O签证没有明确的有效期限制。O签证的有效期等同于完成项目所需的时间，初次申请不得超过三年。如果需要更多的时间进行同一项目，可以申请延期，每次延期不得超过一年。如果一个新的项目需要O-1持有人继续为原雇主工作，该雇主可以为该雇员申请一个新的O-1，初次有效期仍然可以长达三年，随后仍可以一年为限申请延期。因此，O-1的有效期是由项目/活动所需的时间决定的。</li>
+<li>J签证持有者有两年回国服务期限制，不办理豁免不能转成H、L等签证、不能调整身份等，但可以转成O签证（需要使馆签证手续）。</li>
+<li>允许双重倾向：申请人可以有移民倾向，申请人的O签证申请不会因为其已递交的移民申请而被拒签。</li>
+<li>O1签证的分类 O1签证分为O-1A和O-1B： O1A签证供科学、教育、商业或竞技有杰出能力的人士申请； O1B签证供在艺术、电影、电视行业有杰出能力的人士申请。</li>
+</ul>
+<h2 id="O1签证优缺点">O1签证优缺点</h2>
+<ul>
+<li>配偶为O3签证，不能工作。</li>
+<li>每次换雇主都要重新办理O1签证。</li>
+<li>签证3个月有效，single entry。基本上每次入境都要重新签证。</li>
+<li>O1一开始可以申请三年，之后每次续签都要collect一次推荐信，而且续一次只有一年。</li>
+<li>绿卡485阶段O1不可以出境，H1B就没有这个问题。</li>
+<li>O1的很多申请资料可以在以后申请EB-1b的时候重复用。</li>
+<li>O1买房的问题：
+<ul>
+<li><a href="https://www.jjhgroup.net/blog/mortgage-for-non-us-resident">相关链接1</a></li>
+<li><a href="http://msfangzi.com/?p=7223">相关链接2</a></li>
+<li>最常用的Conventional loan 主要是针对有美国身份的客户。包括美国公民，绿卡, 工作签证。O1,H1, L1签证目前都可以做到贷款。J1以及H1是根据不同的Case来定的。F1如果有EAD卡有一些贷款机构也是可以贷款的。但需要两年的报税记录。</li>
+</ul>
+</li>
+</ul>
+<h2 id="O1签证和H1b签证的区别">O1签证和H1b签证的区别</h2>
+<ul>
+<li>这两类签证都属于允许移民倾向的“双重倾向”签证，都需要雇主支持，并且持有人的眷属都可以持附属签证随同赴美。</li>
+<li>O-1签证每年没有数额限制；没有最低学位要求；没有执业证要求，O-1签证不会因为缺少执业证而被拒；不涉及劳动部门，没有满足行业现行工资问题。</li>
+<li>H-1B签证持有人入境时移民官准许的初始逗留时间为3年，之后还可以申请延期3年，但是总的逗留时间不的超过6年。6年之后，H-1B持有人需要离开美国或者获得其他身份，否则将失去在美国的合法身份。当然，极少数情况下H-1B持有人可以申请延期超过6年。一般说来，O-1签证持有人首次入美时移民官准许的逗留时间以能够完成某项活动、工作或者演出为限，一般最长不超过3年。身份到期后可以申请延期，以便继续进行尚未完成的活动、工作或者演出，每次可以申请延期最多1年。因此，从理论上来说，只要移民局认为O-1持有人需要更多时间来完成自己的工作，O-1签证的合法逗留期可以被无限期延长。这一点使得O-1签证比H-1B更有吸引力。</li>
+<li>绿卡485阶段O1不可以出境，H1B就没有这个问题</li>
+<li>O1是single entry。H1b是multi entry。</li>
+<li>O1配偶为O3不能工作，H1b配偶为H4可以工作。</li>
+</ul>
+<h2 id="境内激活or境外激活">境内激活or境外激活</h2>
+<p>目前移民局官方公布的O-1申请处理时间在2周到2个半月之间。O-1申请可以选择加急服务，移民局会在收到材料后的15个自然日内给出审理结果。<br>
+美国境内激活：O-1获批之后，你的身份会从你现有的签证身份自动转为O-1。<br>
+美国境外激活：O-1获批之后不会自动生效，你需要去境外的美国领事馆面签才能拿到O-1签证。<br>
+但是无论如何，出境之后都要重新申请visa stamp。</p>
+<h2 id="问题">问题</h2>
+<ul>
+<li>Q: O1签证的起始时间可以在F1 STEM OPT过期前么？比如6月份F1到期，但是提前在4月份能换成O1么？
+<ul>
+<li>A：开始时间最早为申请时间的后180天。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>O1</tag>
+        <tag>green card</tag>
       </tags>
   </entry>
   <entry>
@@ -1925,195 +1876,6 @@ options 有<code>-F</code>，<code>-v</code>等等一系列。以下介绍几个
       </tags>
   </entry>
   <entry>
-    <title>tmux 使用指南</title>
-    <url>/blog/2019/12/16/tmux-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>tmux 是一款非常好用的终端管理软件。尤其是在服务器上面运行代码的时候尤为推荐。tmux支持多个窗口，每个窗口又可以分屏操作。这样不需要每开一个窗口都要重新登录下服务器了。同时，即使退出窗口（不是关闭），tmux上跑的代码仍然可以后台运行，这样不需要再用nohup这种命令来离线跑代码了。tmux本身支持很多快捷键操作，本文只介绍一些作者自己常用的命令，其余的可以参考reference里面的链接。</p>
-<span id="more"></span>
-<h2 id="tmux结构">tmux结构</h2>
-<p>tmux采用C/S模型构建，主要包括三层结构：会话、窗口、面板。一个tmux session（会话）可以包含多个window（窗口），一个window又可以包含多个pane（面板），窗口下的面板，都处于同一界面下，这些面板适合运行相关性高的任务，以便同时观察到它们的运行情况。<br>
-<img src="screen.png" alt="screen"/></p>
-<h2 id="安装tmux">安装tmux</h2>
-<p>在Mac中安装：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 先安装Homebrew，有则跳过</span><br><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br><span class="line"># 安装tmux</span><br><span class="line">brew install tmux</span><br></pre></td></tr></table></figure>
-<p>在Linux中安装：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo apt-get install tmux</span><br></pre></td></tr></table></figure>
-<h2 id="会话">会话</h2>
-<p>1.新建会话：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux # 新建一个无名称的会话</span><br><span class="line">tmux new -s demo # 新建一个名称为demo的会话</span><br></pre></td></tr></table></figure>
-<p>2.断开当前对话：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux detach # 断开当前会话，会话在后台运行</span><br></pre></td></tr></table></figure>
-<p>3.进入之前会话：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux a # 默认进入第一个会话</span><br><span class="line">tmux a -t demo # 进入到名称为demo的会话</span><br><span class="line">tmux attach-session -t session-name</span><br></pre></td></tr></table></figure>
-<p>4.关闭会话:<br>
-我们可以使用tmux的kill命令，kill命令有kill-pane、kill-server、kill-session 和 kill-window共四种，其中kill-session的语法为tmux kill-session -t session-name。如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux kill-session -t demo # 关闭demo会话</span><br><span class="line">tmux kill-server # 关闭服务器，所有的会话都将关闭</span><br></pre></td></tr></table></figure>
-<p>5.查看会话：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tmux list-session # 查看所有会话</span><br><span class="line">tmux ls # 查看所有会话，提倡使用简写形式</span><br></pre></td></tr></table></figure>
-<p>如果已经在会话之中，可以用快捷键<code>ctrl+b+s</code>列出所有会话，移动上下键进行选择。</p>
-<h2 id="开启鼠标">开启鼠标</h2>
-<p>在 <code>~/.tmux.conf</code> 中加入下列设置（tmux 2.1 之前的版本）：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -g mode-mouse on</span><br><span class="line">set -g mouse-resize-pane on</span><br><span class="line">set -g mouse-select-pane on</span><br><span class="line">set -g mouse-select-window on</span><br></pre></td></tr></table></figure>
-<p>在 tmux 2.1 中，对鼠标模式进行了重写，因此新版只需要增加一段设置即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -g mouse on</span><br></pre></td></tr></table></figure>
-<p>这样在 macOS 中随意滚动进入选择模式后，按住 option 键就用直接用鼠标选择文字，然后再按鼠标中键就能直接复制内容到系统剪切板中了。<br>
-这几行配置加到 <code>~/.tmux.conf</code> 中，然后在tmux里面按 <code>C-b :</code> 执行 <code>source ~/.tmux.conf</code> 即可生效.</p>
-<h2 id="常用命令">常用命令</h2>
-<p>自己平时会用到的一些tmux命令。更多的命令可见参考文献。</p>
-<table>
-    <tr>
-        <td colspan="2">Ctrl+b</td>
-        <td >快捷键</td>
-    </tr>
-    <tr>
-    	<td rowspan="7">系统操作</td>
-        <td >?</td>
-        <td >列出所有快捷键；按q返回</td>
-    </tr>
-    <tr>
-        <td >d</td>
-        <td >脱离当前会话</td>
-    </tr>
-    <tr>
-        <td >D</td>
-        <td >选择要断开的会话</td>
-    </tr>
-    <tr>
-        <td >s</td>
-        <td >显示会话列表用于选择并切换</td>
-    </tr>
-    <tr>
-        <td >:</td>
-        <td >进入命令行模式，此时可直接输入ls等命令</td>
-    </tr>
-    <tr>
-        <td >[</td>
-        <td >进入复制模式，按q退出</td>
-    </tr>
-    <tr>
-        <td >]</td>
-        <td >粘贴复制模式中复制的文本</td>
-    </tr>
-    <tr>
-        <td rowspan="10">窗口操作</td>
-        <td >c</td>
-        <td >创建新窗口</td>
-    </tr>
-    <tr>
-        <td >&</td>
-        <td >关闭当前窗口</td>
-    </tr>
-    <tr>
-        <td >数字键</td>
-        <td >切换至指定窗口</td>
-    </tr>
-    <tr>
-        <td >p</td>
-        <td >切换至上一窗口</td>
-    </tr>
-    <tr>
-        <td >n</td>
-        <td >切换至下一窗口</td>
-    </tr>
-    <tr>
-        <td >l</td>
-        <td >在前后两个窗口间互相切换</td>
-    </tr>
-    <tr>
-        <td >w</td>
-        <td >通过窗口列表切换窗口</td>
-    </tr>
-    <tr>
-        <td >,</td>
-        <td >重命名当前窗口；这样便于识别</td>
-    </tr>
-    <tr>
-        <td >.</td>
-        <td >修改当前窗口编号；相当于窗口重新排序</td>
-    </tr>
-    <tr>
-        <td >f</td>
-        <td >快速定位到窗口（输入关键字匹配窗口名称）</td>
-    </tr>
-    <tr>
-        <td rowspan="14">面板操作</td>
-        <td >”</td>
-        <td >将当前面板平分为上下两块</td>
-    </tr>
-    <tr>
-        <td >%</td>
-        <td >将当前面板平分为左右两块</td>
-    </tr>
-    <tr>
-        <td >x</td>
-        <td >关闭当前面板（关闭前需输入y or n确认）</td>
-    </tr>
-    <tr>
-        <td >z</td>
-        <td >最大化当前面板，再重复一次按键后恢复正常（v1.8版本新增）</td>
-    </tr>
-    <tr>
-        <td >!</td>
-        <td >将当前面板移动到新的窗口打开（原窗口中存在两个及以上面板有效）</td>
-    </tr>
-    <tr>
-        <td >;</td>
-        <td >切换到最后一次使用的面板</td>
-    </tr>
-    <tr>
-        <td >q</td>
-        <td >显示面板编号，在编号消失前输入对应的数字可切换到相应的面板</td>
-    </tr>
-    <tr>
-        <td >{</td>
-        <td >向前置换当前面板</td>
-    </tr>
-    <tr>
-        <td >}</td>
-        <td >向后置换当前面板</td>
-    </tr>
-    <tr>
-        <td >o</td>
-        <td >在当前窗口中选择下一面板</td>
-    </tr>
-    <tr>
-        <td >方向键</td>
-        <td >移动光标切换面板</td>
-    </tr>
-    <tr>
-        <td >空格键</td>
-        <td >在预置的面板布局中循环切换；依次包括even-horizontal、even-vertical、main-horizontal、main-vertical、tiled</td>
-    </tr>
-    <tr>
-        <td >Alt+方向键</td>
-        <td >以5个单元格为单位调整当前面板边缘</td>
-    </tr>
-    <tr>
-        <td >Ctrl+方向键</td>
-        <td >以1个单元格为单位调整当前面板边缘（Mac下被系统快捷键覆盖）</td>
-    </tr>
-</table>
-<h2 id="Tricks">Tricks</h2>
-<ul>
-<li>为了让服务器一直跑进程，可以新建一个tmux页面，然后run <code>yes</code>.</li>
-</ul>
-<p>参考文献:</p>
-<ul>
-<li><a href="https://blog.csdn.net/hcx25909/article/details/7602935">tmux快捷键</a></li>
-<li><a href="http://louiszhai.github.io/2017/09/30/tmux/#%E6%96%B0%E5%BB%BA%E4%BC%9A%E8%AF%9D">非常详细的tmux使用手册</a></li>
-<li><a href="https://www.jianshu.com/p/f7f24b4b2625">非root用户源码安装Tmux</a></li>
-<li><a href="https://www.cnblogs.com/bamanzi/p/tmux-mouse-tips.html">tmux启用鼠标</a></li>
-<li><a href="http://lightcss.com/select-and-copy-with-mouse-in-tmux/">tmux启用鼠标选择复制功能</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>tech tool</tag>
-        <tag>tmux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大开的脑洞brain storming</title>
     <url>/blog/2019/12/25/%E5%A4%A7%E5%BC%80%E7%9A%84%E8%84%91%E6%B4%9Ebrain-storming/</url>
     <content><![CDATA[<p>本文记录偶尔异想天开的想法、半夜梦到的情景、灵光乍现的瞬间、胡思乱想的一切、以及可能很冷的冷笑话。所以，请叫这篇blog，高氏论语，或者正言正语😃😃😃</p>
@@ -2168,6 +1930,142 @@ options 有<code>-F</code>，<code>-v</code>等等一系列。以下介绍几个
       </tags>
   </entry>
   <entry>
+    <title>Markdown语法说明</title>
+    <url>/blog/2020/01/25/Markdown%E8%AF%AD%E6%B3%95%E8%AF%B4%E6%98%8E/</url>
+    <content><![CDATA[<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。简单的来说，Markdown就是用“标记符号”表示“格式”。Markdown语法标签与HTML语法标签是一一对应的。在这里，本文介绍一些Markdown的基本语法以及自己运行Markdown脚本的编译器。</p>
+<span id="more"></span>
+<h2 id="Sublime-Text-编辑器">Sublime Text 编辑器</h2>
+<p>由于Markdown非常好的好用，有很多在线和离线的编辑器。</p>
+<ul>
+<li>在线编译器：dillinger，StackEdit，MaHua，简书，马克飞象。</li>
+<li>Windows 编译器：MarkdownPad，MarkPad，Smark，Miu</li>
+<li>OSX 编译器：Mou，MacDown，Ulysses，iA Writer，MWeb</li>
+<li>跨平台编译器：Cmd Markdown，小书匠编辑器，FarBox，Sublime Text，Atom，ReText</li>
+</ul>
+<p>因为作者本身写代码都在Sublime Text 3里面写，所以虽然要装一些额外的插件，自己还是不想再下载额外的工具了。因此，以下介绍如何在Sublime Text 3 里面编译Markdown:</p>
+<h3 id="安装插件-Package-Control">安装插件 Package Control</h3>
+<p>Sublime Text 3 中默认已经安装好了此插件。在preferences 里面可以查看是否已经安装好。如果没有，可以参考<a href="https://packagecontrol.io/installation">官方文档</a>进行安装。</p>
+<h3 id="安装插件-Markdown-Editing">安装插件 Markdown Editing</h3>
+<p>通过按组合键<code>Ctrl+Shift+P</code>或是点击<code>Preference-&gt;Package Control</code>调出命令面板，然后再输入 <code>install</code>，选择 <code>Package Control: install package</code>。 稍等，在弹出的对话框中搜索 Markdown Editing，找到之后按 enter 键确认安装。如果安装成功，之后会自动弹出纯文本形式显示的插件说明。点击 Preferences，在 Package Settings 里面会显示有 Markdown Editing 的插件设置选项，在里面可以更改该插件的设置。</p>
+<h3 id="安装插件-Markdown-Preview">安装插件 Markdown Preview</h3>
+<p>通过按组合键<code>Ctrl+Shift+P</code>或是点击<code>Preference-&gt;Package Control</code>调出命令面板，然后再输入 <code>install</code>，选择 <code>Package Control: install package</code>。 稍等，在弹出的对话框中搜索 Markdown Preview，找到之后按 enter 键确认安装。如果安装成功，之后会自动弹出纯文本形式显示的插件说明。点击 Preferences，在 Package Settings 里面会显示有 Markdown Preview 的插件设置选项，在里面可以更改该插件的设置。</p>
+<h3 id="更改-Markdown-Editing-插件设置">更改 Markdown Editing 插件设置</h3>
+<p>Markdown Editing 的默认设置在<code>Preferences -&gt; Package Settings -&gt; Markdown Editing -&gt; Markdown GFM Settings - Default</code> 里面，背景主题和layout 分别设定为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;color_scheme&quot;: &quot;Packages/MarkdownEditing/MarkdownEditor.tmTheme&quot;,</span><br><span class="line">// Layout</span><br><span class="line">&quot;draw_centered&quot;: true,</span><br></pre></td></tr></table></figure>
+<p>这样会导致背景颜色和其他类型文件在Sublime Text 中的背景颜色不一致。同时layout的设定会导致Markdown 页面左侧会有大量留白。由于Default的设定是不能改的，我们只能从其对应的<code>Markdown GFM Settings - User</code> 里面改。加入以下内容来替换掉default的设定：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">// Default color scheme</span><br><span class="line">&quot;color_scheme&quot;: &quot;Monokai.sublime-color-scheme&quot;,</span><br><span class="line">// Layout</span><br><span class="line">&quot;draw_centered&quot;: false,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="更改-Markdown-Preview-插件设置">更改 Markdown Preview 插件设置</h3>
+<p>进入<code>Preferences</code>，点击<code>Key Bindings</code>，在弹出的界面右侧用户设置中添加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[ &#123; &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview&quot;, &quot;args&quot;: &#123;&quot;target&quot;: &quot;browser&quot;, &quot;parser&quot;:&quot;markdown&quot;&#125; &#125;, ]</span><br></pre></td></tr></table></figure>
+<p>则可以设置 <code>alt + m</code> 组合为预览排版好的 HTML 样式的热键，预览工具是本机上设置的默认浏览器。在对应的Markdown文件中按下快捷键即可在浏览器上预览。此快捷键还可以把鼠标勾选的部分区域内容渲染到浏览器网页上。</p>
+<h3 id="开启-Mathjax-数学环境支持">开启 Mathjax 数学环境支持</h3>
+<p>如果想要在 Markdown 中插入数学公式，可以使用 LaTeX 的语法来书写，但是直接使用 LaTeX 语法来书写一段数学公式，使用 Markdown Preview 插件预览时的效果是不成功的，我们需要开启 Mathjax 数学环境支持。进入到<code>Preferences -&gt; Package Settings -&gt; Markdown Preview -&gt; Settings</code>里面加入以下内容。 与上面的插件不同，这个插件是 pymdownx 提供的，因此添加到字典中, 同时还需要需要提供 js 文件的 URL ：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;js&quot;: [</span><br><span class="line">        &quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js&quot;,</span><br><span class="line">        &quot;res://MarkdownPreview/js/math_config.js&quot;</span><br><span class="line">    ],</span><br><span class="line"></span><br><span class="line">    /*</span><br><span class="line">        Markdown extension configuration.</span><br><span class="line"></span><br><span class="line">        To specify a function in this JSON configuration, create an object with the key &quot;!!python/name&quot;</span><br><span class="line">        and set it to the import path to the function &quot;module.submodule.etc.function&quot;.</span><br><span class="line">    */</span><br><span class="line">    &quot;markdown_extensions&quot;: [</span><br><span class="line">        // Python Markdown Extra with SuperFences.</span><br><span class="line">        // You can&#x27;t include &quot;extra&quot; and &quot;superfences&quot;</span><br><span class="line">        // as &quot;fenced_code&quot; can not be included with &quot;superfences&quot;,</span><br><span class="line">        // so we include the pieces separately.</span><br><span class="line">        &quot;markdown.extensions.smart_strong&quot;,</span><br><span class="line">        &quot;markdown.extensions.footnotes&quot;,</span><br><span class="line">        &quot;markdown.extensions.attr_list&quot;,</span><br><span class="line">        &quot;markdown.extensions.def_list&quot;,</span><br><span class="line">        &quot;markdown.extensions.tables&quot;,</span><br><span class="line">        &quot;markdown.extensions.abbr&quot;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;markdown.extensions.codehilite&quot;: &#123;</span><br><span class="line">                &quot;guess_lang&quot;: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        // Extra&#x27;s Markdown parsing in raw HTML cannot be</span><br><span class="line">        // included by itself, but &quot;pymdownx&quot; exposes it so we can.</span><br><span class="line">        &quot;pymdownx.extrarawhtml&quot;,</span><br><span class="line"></span><br><span class="line">        // More default Python Markdown extensions</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;markdown.extensions.toc&quot;:</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;permalink&quot;: &quot;\ue157&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;markdown.extensions.meta&quot;,</span><br><span class="line">        &quot;markdown.extensions.sane_lists&quot;,</span><br><span class="line">        &quot;markdown.extensions.smarty&quot;,</span><br><span class="line">        &quot;markdown.extensions.wikilinks&quot;,</span><br><span class="line">        &quot;markdown.extensions.admonition&quot;,</span><br><span class="line"></span><br><span class="line">        // PyMdown extensions that help give a GitHub-ish feel</span><br><span class="line">        &quot;pymdownx.superfences&quot;,  // Nested fences and UML support</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.magiclink&quot;: &#123;   // Auto linkify URLs and email addresses</span><br><span class="line">                &quot;repo_url_shortener&quot;: true,</span><br><span class="line">                &quot;repo_url_shorthand&quot;: true</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;pymdownx.tasklist&quot;,     // Task lists</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.tilde&quot;: &#123;  // Provide ~~delete~~</span><br><span class="line">                &quot;subscript&quot;: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.emoji&quot;: &#123;  // Provide GitHub&#x27;s emojis</span><br><span class="line">                &quot;emoji_index&quot;: &#123;&quot;!!python/name&quot;: &quot;pymdownx.emoji.gemoji&quot;&#125;,</span><br><span class="line">                &quot;emoji_generator&quot;: &#123;&quot;!!python/name&quot;: &quot;pymdownx.emoji.to_png&quot;&#125;,</span><br><span class="line">                &quot;alt&quot;: &quot;short&quot;,</span><br><span class="line">                &quot;options&quot;: &#123;</span><br><span class="line">                    &quot;attributes&quot;: &#123;</span><br><span class="line">                        &quot;align&quot;: &quot;absmiddle&quot;,</span><br><span class="line">                        &quot;height&quot;: &quot;20px&quot;,</span><br><span class="line">                        &quot;width&quot;: &quot;20px&quot;</span><br><span class="line">                    &#125;,</span><br><span class="line">                    &quot;image_path&quot;: &quot;https://assets-cdn.github.com/images/icons/emoji/unicode/&quot;,</span><br><span class="line">                    &quot;non_standard_image_path&quot;: &quot;https://assets-cdn.github.com/images/icons/emoji/&quot;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;pymdownx.arithmatex&quot;:</span><br><span class="line">            &#123;</span><br><span class="line">                &quot;generic&quot;: true,</span><br><span class="line">                &quot;smart_dollar&quot;: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>由于上面用到了math_config.js文件，而Sublime 本身是没有这个文件的，所以需要在对应的 js 目录下新建该文件。<br>
+首先，在Sublime工具栏<code>Preferences &gt; Browser Packages…</code> 打开Packages目录，该目录所在的路径就是Sublime中包的保存路径。<br>
+然后，由于上面配置文件中设置的 js 路径是<code>res://MarkdownPreview/js/math_config.js</code>，该路径是相对于sublime包的保存路径而言的，因此我们需要在该目录下新建路径“MarkdownPreview/js/math_config.js”，同时添加math_config.js文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">MathJax.Hub.Config(&#123;</span><br><span class="line">  config: [&quot;MMLorHTML.js&quot;],</span><br><span class="line">  extensions: [&quot;tex2jax.js&quot;],</span><br><span class="line">  jax: [&quot;input/TeX&quot;, &quot;output/HTML-CSS&quot;, &quot;output/NativeMML&quot;],</span><br><span class="line">  tex2jax: &#123;</span><br><span class="line">    inlineMath: [ [&#x27;$&#x27;,&#x27;$&#x27;], [&quot;\\(&quot;,&quot;\\)&quot;] ],</span><br><span class="line">    displayMath: [ [&#x27;$$&#x27;,&#x27;$$&#x27;], [&quot;\\[&quot;,&quot;\\]&quot;] ],</span><br><span class="line">    processEscapes: true</span><br><span class="line">  &#125;,</span><br><span class="line">  TeX: &#123;</span><br><span class="line">    extensions: [&quot;AMSmath.js&quot;, &quot;AMSsymbols.js&quot;],</span><br><span class="line">    TagSide: &quot;right&quot;,</span><br><span class="line">    TagIndent: &quot;.8em&quot;,</span><br><span class="line">    MultLineWidth: &quot;85%&quot;,</span><br><span class="line">    equationNumbers: &#123;</span><br><span class="line">      autoNumber: &quot;AMS&quot;,</span><br><span class="line">    &#125;,</span><br><span class="line">    unicode: &#123;</span><br><span class="line">      fonts: &quot;STIXGeneral,&#x27;Arial Unicode MS&#x27;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  displayAlign: &quot;center&quot;,</span><br><span class="line">  showProcessingMessages: false,</span><br><span class="line">  messageStyle: &#x27;none&#x27;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>配置完成后，结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">    \sum\limits_&#123;0&#125;^&#123;+\infty&#125; \dfrac&#123;n^2&#125;&#123;2&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+<img src="formula.png" alt="formula" width="500"/> 
+<h2 id="基本语法">基本语法</h2>
+<h3 id="段落">段落</h3>
+<p>非常自然，一行文字就是一个段落。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个段落。</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落。&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>如果你需要另起一段，请在两个段落之间隔一个空行。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一个段落。</span><br><span class="line"></span><br><span class="line">这是另一个段落。</span><br></pre></td></tr></table></figure>
+<p>会解释成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;p&gt;这是一个段落&lt;p&gt;</span><br><span class="line">&lt;p&gt;这是另一个段落&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="粗体斜体："><strong>粗体</strong><em>斜体</em>：</h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*这是斜体*</span><br><span class="line">_这也是斜体_</span><br><span class="line">**这是粗体**</span><br><span class="line">***这是粗体+斜体***</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;em&gt;这是斜体&lt;/em&gt;</span><br><span class="line">&lt;em&gt;这也是斜体&lt;/em&gt;</span><br><span class="line">&lt;strong&gt;这是粗体&lt;/strong&gt;</span><br><span class="line">&lt;strong&gt;&lt;em&gt;这是粗体+斜体&lt;/strong&gt;&lt;/em&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="删除线"><s>删除线</s></h3>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure>
+<p>会被解释成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;strike&gt;删除线&lt;/strike&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="标题">标题</h3>
+<p>markdown总支持1~6六级标题，通过在一行之前加上不同数量的井号来表示。行尾可以加上任意数量的井号字符，这些字符不会算作标题内容。通常会加上相等数量的字符以保持对称。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 这是 H1 #</span><br><span class="line">## 这是 H2 ##</span><br><span class="line">### 这是 H3 ###</span><br><span class="line">...</span><br><span class="line">###### 这是 H6 ######</span><br></pre></td></tr></table></figure>
+<h3 id="H1和H2">H1和H2</h3>
+<p>在文本下方添加底线来实现。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是 H1</span><br><span class="line">=======</span><br><span class="line"></span><br><span class="line">这是 H2</span><br><span class="line">-------</span><br></pre></td></tr></table></figure>
+<h3 id="引用">引用</h3>
+<blockquote>
+<p>通过在行首加上大于号&gt;来添加引用格式。引用可以嵌套，也可以嵌套其他格式。(此行是一个引用的格式)</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure>
+<h3 id="列表">列表</h3>
+<p>无序列表使用星号、加号或是减号作为列表标记(都是等价的)：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* Red</span><br><span class="line">- Green</span><br><span class="line">+ Blue</span><br></pre></td></tr></table></figure>
+<p>有序列表则使用数字接着一个英文句点，数字并不会影响输出的 HTML 结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. Red</span><br><span class="line">1. Green</span><br><span class="line">2. Blue</span><br></pre></td></tr></table></figure>
+<h3 id="内联代码">内联代码</h3>
+<p>用反引号来标记内联代码，它们会解释成<code>&lt;code&gt;</code>标签。如果代码的内容中有反引号，请用两个反引号包裹。代码中的&amp;、&lt;、&gt;符号都会自动转义。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`a=2`</span><br></pre></td></tr></table></figure>
+<h3 id="代码区域">代码区域</h3>
+<p>可以首行首缩进4个空格。也可以用三个反引号独占一行来标记。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">    这是一个代码区块。</span><br><span class="line">`` ` </span><br><span class="line">这是一个代码区块。 </span><br><span class="line">`` `</span><br></pre></td></tr></table></figure>
+<p>会被解释成：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;pre&gt;&lt;code&gt;这是一个代码区块。</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="换行">换行</h3>
+<ul>
+<li>换行单倍行距：按键 space, space, enter</li>
+<li>换行双倍行距：按键 enter, enter</li>
+</ul>
+<h3 id="分隔线">分隔线</h3>
+<p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">* * *</span><br><span class="line">***</span><br><span class="line">*****</span><br><span class="line">- - -</span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure>
+<h3 id="链接">链接</h3>
+<p>链接的书写格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[an example](http://example.com/)</span><br><span class="line">[an example](http://example.com/ &quot;Optional Title&quot;)</span><br></pre></td></tr></table></figure>
+<p>会被解释为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;a href=&#x27;http://example.com/&#x27;&gt;an example&lt;/a&gt;</span><br><span class="line">&lt;a href=&#x27;http://example.com/&#x27; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<p>如果链接的地址和名字重复，可以用尖括号语法将其简化。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;http://example.com/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="表格">表格</h3>
+<p>表格是github风格独有的语法，但近年来渐渐被大多数编辑器支持。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">| Item     | Value | Qty   |</span><br><span class="line">| :------- | ----: | :---: |</span><br><span class="line">| Computer | $1600 |  5    |</span><br><span class="line">| Phone    | $12   |  12   |</span><br><span class="line">| Pipe     | $1    |  234  |</span><br></pre></td></tr></table></figure>
+<p>会被解释成：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;thead&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;th align=&quot;left&quot;&gt;Item&lt;/th&gt;</span><br><span class="line">  &lt;th align=&quot;right&quot;&gt;Value&lt;/th&gt;</span><br><span class="line">  &lt;th align=&quot;center&quot;&gt;Qty&lt;/th&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/thead&gt;</span><br><span class="line">&lt;tbody&gt;&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Computer&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$1600&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;5&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Phone&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$12&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;12&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;tr&gt;</span><br><span class="line">  &lt;td align=&quot;left&quot;&gt;Pipe&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;right&quot;&gt;$1&lt;/td&gt;</span><br><span class="line">  &lt;td align=&quot;center&quot;&gt;234&lt;/td&gt;</span><br><span class="line">&lt;/tr&gt;</span><br><span class="line">&lt;/tbody&gt;&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+<p>对于一些复杂表格来说，尤其是需要合并单元格的表格，还是推荐用html 的格式来进行书写。</p>
+<h3 id="图片">图片</h3>
+<p>Markdown有自己表示图片的方法如下。然而有些时候我们需要修改图片大小之类的一些参数，而此自带的方法不如html 中&lt;img&gt;标签灵活：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![Alt text](/path/to/img.jpg)</span><br><span class="line">![Alt text](/path/to/img.jpg &quot;Optional Title&quot;)</span><br></pre></td></tr></table></figure>
+<p>会被解释为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;img src=&#x27;/path/to/img.jpg&#x27; alt=&#x27;Alt text&#x27; /&gt;</span><br><span class="line">&lt;img src=&#x27;/path/to/img.jpg&#x27; alt=&#x27;Alt text&#x27; title=&#x27;Optional Title&#x27; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="转义">转义</h3>
+<p>markdown支持在以下字符前面插入反斜杠：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure>
+<p>插入之后，将不再解析这些字符，而是原样输出。</p>
+<h2 id="高级语法">高级语法</h2>
+<p>只有少数编辑器支持，使用前请先确认。</p>
+<h3 id="数学公式">数学公式</h3>
+<p>内联的TeX公式使用一个美元符号标记：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$</span><br></pre></td></tr></table></figure>
+<p>TeX公式块用独占一行的两个美元符号来标记：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">a^2 = 2</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>也可以用equation的标签表示：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">\begin&#123;eqnarray&#125;</span><br><span class="line">f(x) = a_nx^n \\</span><br><span class="line">g(x) = x^2</span><br><span class="line">\end&#123;eqnarray&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">\begin&#123;gather&#125;</span><br><span class="line">(a+b) \times c = a\times c + b \times c \notag \\</span><br><span class="line">ac= a\times c \\</span><br><span class="line">\end&#123;gather&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<p>比较推荐用第二种写法，但是需要确认自己的编辑器是否支持第二种写法。因为其生成的公式会有序号。而且如果在里面嵌套标签的话，看起来更加和谐。</p>
+<p>参考文献:</p>
+<ul>
+<li><a href="https://wizardforcel.gitbooks.io/markdown-simple-world/content/">非常好的Markdown教程</a></li>
+<li><a href="http://iliutong.cn/2018/02/21/build-md-environ-with-sublime/">Sublime Text搭建Markdown编译环境</a></li>
+<li><a href="https://blog.csdn.net/SkullSky/article/details/83036547">在Sublime Markdown Preview 插件中开启Mathjax</a></li>
+<li><a href="https://www.cnblogs.com/nowgood/p/latexstart.html">Markdown 中使用Latex公式</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>录音修音</title>
     <url>/blog/2022/01/03/%E5%BD%95%E9%9F%B3%E4%BF%AE%E9%9F%B3/</url>
     <content><![CDATA[<p>本文记录自己学习Adobe Audition来录音修音时的一些笔记。</p>
@@ -2200,142 +2098,6 @@ options 有<code>-F</code>，<code>-v</code>等等一系列。以下介绍几个
       </categories>
       <tags>
         <tag>录音</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建VPN</title>
-    <url>/blog/2022/08/06/%E6%90%AD%E5%BB%BAVPN/</url>
-    <content><![CDATA[<p>本文记录如何在云服务器中（Linux和Window系统）搭建VPN服务端来进行科学上网。</p>
-<span id="more"></span>
-<h2 id="CentOS系统">CentOS系统</h2>
-<h3 id="Shadowsocks配置服务端">Shadowsocks配置服务端</h3>
-<ol>
-<li>
-<p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装CentOS系统的实例。</p>
-</li>
-<li>
-<p>系统默认应该已经装好wget命令，如果没有，运行以下命令安装</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum -y install wget #CentOS</span><br><span class="line">sudo apt-get install wget #Debian/Ubuntu</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>运行以下一键脚本：</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
-<p>安装途中如果报错不能下载github中的shadowsocks源代码，可以自行尝试下载</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://github.com/shadowsocks/shadowsocks/archive/master.zip </span><br></pre></td></tr></table></figure>
-<p>如果后续报错无法解压<code>shadowsocks-master.zip</code>,可以改变源代码zip文件名</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv master.zip shadowsocks-master.zip</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>将以上命令粘贴到 Xshell 窗口，回车执行代码，然后会提示有以下4种安装选项，分别是“1) Shadowsocks-Python”、“2) ShadowsocksR”、“3) Shadowsocks-Go”、“4) Shadowsocks-libev”。如果我们选择第2个就是搭建SSR服务器了，我们这里选第1个，搭建Shadowsocks/SS服务器。如下图所示：<br>
-<img src="1.png" alt="1.png"/></p>
-</li>
-<li>
-<p>我这里以安装第1个“Shadowsocks-Python”为例演示，输入数字“1”后回车，然后进入Shadowsocks服务器的参数配置选项，依次为“服务器连接密码”、“服务器端口”、“数据加密方式”（图中红杠和箭头标识的内容仅为演示，请根据你自己的需求输入即可）。其中，我这里建议你选择chacha20相关的加密方式（因为这些新加密方式的抗封锁效果更好）。如下图所示：<br>
-<img src="2.png"  width="30%" alt="2.png"/></p>
-</li>
-<li>
-<p>当以上参数选项都输入完毕后，敲击回车键。然后系统会提示“Press any key to start…or Press Ctrl+C to cancel“，即按任意键继续。当我们按任意键之后，系统会进入安装Shadowsocks服务的过程，稍等片刻即可完成。安装Shadowsocks服务成功完成后，如下图所示：<br>
-<img src="3.png" alt="3.png"/><br>
-如上图所示，其中各项参数释义如下：<br>
-Your Server IP :你的服务器 IP 地址；<br>
-Your Server Port :你的服务器端口；<br>
-Your Password :你的连接密码；<br>
-Your Encryption Method:你的加密方式；<br>
-Your QR Code:你的SS链接；<br>
-Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的存放位置。</p>
-</li>
-<li>
-<p>开启防火墙的端口。具体端口号要和之前开的服务器端口相同。修改位置见下：<br>
-<img src="4.png" alt="4.png"/><br>
-至此，你已经成功搭建Shadowsocks/SS服务器，现在就可以使用了。</p>
-</li>
-<li>
-<p>其他命令:</p>
-<ol>
-<li>
-<p>卸载方法<br>
-若已安装多个版本，则卸载时也需多次运行（每次卸载1种），请使用root用户登录，执行以下命令：</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>脚本控制命令<br>
-脚本后面的参数含义：启动，停止，重启，查看状态。</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>默认配置文件</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/shadowsocks-python/config.json</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/shadowsocks-r/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/shadowsocks-go/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/shadowsocks-libev/config.json</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="一键安装并开启BBR加速">一键安装并开启BBR加速</h3>
-<p>一键安装BBR加速脚本，执行如下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/src &amp;&amp; wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>执行以上安装命令后，如下图所示：<br>
-<img src="5.png" alt="5.png"/><br>
-我这里选择“2”，“安装 BBRplus版内核”加速。在安装过程中，可能会出现如下提示，用右方向键选“<No>”，然后回车(实际安装过程中本人并未遇到这个提示)。如下图所示：<br>
-<img src="6.png" alt="6.png"/><br>
-安装完成后会提示重启服务器，这时候输入字母“y”，回车后，重启服务器。当服务器启动后，我们再次执行安装命令<code>./tcp.sh</code>，选择“7”启用“使用BBRplus版加速”。至此，BBR Plus 加速模块安装并启用完成。<br>
-理论上安装完加速脚本之后运行速度应该有所提高。实际上楼主在shadowrocket上面测试延迟，安装加速脚本前后并未有明显变化。</p>
-<h2 id="Windows系统">Windows系统</h2>
-<h3 id="Shadowsocks配置服务端-v2">Shadowsocks配置服务端</h3>
-<ol>
-<li>
-<p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装Windows12系统的实例。</p>
-</li>
-<li>
-<p>下载安装nodejs。下载地址：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a> ,下载LTS长期支持版本，然后安装NodeJS，直接下一步。</p>
-</li>
-<li>
-<p>安装shadowsocks。<br>
-打开Node.js command prompt，此为nodejs的命令端，直接在Windows里面搜索就可以找到。输入命令<br>
-<code>npm install -g shadowsocks</code>安装shadowsocks.</p>
-</li>
-<li>
-<p>因为shadowsocks所在的文件夹是隐藏文件夹，所以要开启显示隐藏文件。点击“这台电脑”-&gt; “查看”，勾选“隐藏的项目”即可。如下图所示：<br>
-<img src="9.jpeg" alt="9.jpeg"/></p>
-</li>
-<li>
-<p>进入node.js安装目录<code>C:\Users\Administrator\AppData\Roaming\npm\node_modules\shadowsocks</code>，找到config.json后更改为如下形式保存。如果找不到安装目录的话，可以直接在Node.js command prompt命令段输入<code>ssserver</code>，第一栏就会出现对应的路径。</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">	&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,#服务器IP</span><br><span class="line">    &quot;server_port&quot;:13416, #要使用的服务器端口号，事先确认下端口号是否使用过</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;, #本地监听地址 默认不改</span><br><span class="line">    &quot;local_port&quot;:1080, #代理端口号，一般都默认1080</span><br><span class="line">    &quot;password&quot;:&quot;barfoo!&quot;, #更改为你的密码</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot; #建议aes-256-cfb就好</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>如果将server设成公网IP地址的话会报错，改为<code>0.0.0.0</code>即可解决问题。</p>
-</li>
-<li>
-<p>启动shadowsocks。通过Node.js command prompt输入<code>ssserver</code>启动。显示如下图的话即为安装成功<br>
-<img src="10.png" alt="10.png"/></p>
-</li>
-<li>
-<p>以防被屏蔽，在服务器的防火墙栏添加ssserver对应的端口。</p>
-</li>
-</ol>
-<h2 id="ios手机客户端配置">ios手机客户端配置</h2>
-<ol>
-<li>需要下载Shadowrocket app到苹果手机。</li>
-<li>按照服务端的信息输入IP地址，端口，密码，加密方式。具体如下：<br>
-<img src="7.jpeg"  width="30%" height="30%" alt="7.jpeg"/></li>
-<li>global routing 选择proxy，这样上网产生的所有流量都会走服务器流量。</li>
-<li>选择对应的服务器，可以点击Connectivity Test 来测试服务器的延迟。如果开始使用VPN的话，需要点击第一栏的按钮，连接VPN：<br>
-<img src="8.jpeg"  width="30%" height="30%" alt="8.jpeg"/></li>
-</ol>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a href="https://xyzardq.github.io/2017/04/14/Windows%E4%B8%8B%E6%90%AD%E5%BB%BAShadowoscks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/">Windows下搭建Shadowsocks服务器端</a></li>
-<li><a href="https://xfj0.cn/archives/94.html">在Windows server上安装Shadowsocks服务端</a></li>
-<li><a href="https://iyideng.net/black-technology/cgfw/best-onekey-build-v2ray-server-script.html#2%E3%80%81multi-v2ray_%E5%A4%9A%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC">multi-v2ray 多用户管理脚本</a></li>
-<li><a href="https://iyideng.net/black-technology/cgfw/shadowsocks-ss-server-building-and-using-tutorial.html">使用Shadowsocks配置服务端</a></li>
-<li><a href="https://www.skyfinder.cc/2018/11/13/windowsinstallnodejsshadowsocks/">在Windows上安装nodejs版shadowsocks服务端</a></li>
-<li><a href="https://blog.heyfe.org/blog/2014-12-06-shadowsocks.html">Shadowsocks 搭建</a></li>
-<li><a href="https://blog.whsir.com/post-559.html">ss windows server配置</a></li>
-<li><a href="https://xfj0.cn/archives/94.html">在windows server上安装Shadowsocks服务端</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>tech</tag>
-        <tag>cloud service</tag>
       </tags>
   </entry>
   <entry>
@@ -2535,9 +2297,407 @@ A: 在NexT.Pisces v7.6.0的版本中，目前没有找到正确的方法来只�
         <category>tech</category>
       </categories>
       <tags>
-        <tag>tech tool</tag>
         <tag>front end</tag>
+        <tag>tech tool</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vim使用技巧</title>
+    <url>/blog/2020/03/19/Vim%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
+    <content><![CDATA[<p>vim作为在terminal端处理文本的最有名的编辑器，我们总结一下它的一些基本使用方法。</p>
+<span id="more"></span>
+<h2 id="vi-和-vim的区别">vi 和 vim的区别</h2>
+<p>它们都是多模式编辑器，不同的是vim 是vi的升级版本，它不仅兼容vi的所有指令，而且还有一些新的特性在里面。总的来说，vim比vi更具优势的地方在于：</p>
+<ul>
+<li>多级撤消：在vi的命令模式里，按 u只能撤消上次命令，而在vim里可以无限制的撤消，几乎等同于windows下的ctrl+z了 。</li>
+<li>多操作系统支持：vi只能运行于unix中，而vim不仅可以运行于unix,还有windows ,mac等操作系统上。</li>
+<li>语法加亮：作为一名程序员，我觉得这个效果用处最大了- vim可以对代码进行多颜色的语法加亮。</li>
+<li>可视化操作：因为vim不仅可以在终端运行，也可以运行于x window、 mac os、 windows， 所以说他“可视化”。</li>
+<li>对vi的完全兼容：某些情况下，vim可以完全被当成vi来使用。</li>
+</ul>
+<h2 id="vim使用">vim使用</h2>
+<p>基本上 vi/vim 共分为三种模式，分别是命令模式（Command mode），输入模式（Insert mode）和底线命令模式（Last line mode）。简单的说，我们可以将这三个模式想成底下的图标来表示：<br>
+<img src="workflow.png" alt="workflow" width="500"/></p>
+<h3 id="命令模式">命令模式</h3>
+<p>用户刚刚启动 vi/vim，便进入了命令模式。<br>
+此状态下敲击键盘动作会被Vim识别为命令，而非输入字符。比如我们此时按下i，并不会输入一个字符，i被当作了一个命令。<br>
+以下是常用的几个命令：</p>
+<ul>
+<li><code>i</code> 切换到输入模式，以输入字符。</li>
+<li><code>:</code> 切换到底线命令模式，以在最底一行输入命令。<br>
+若想要编辑文本：启动Vim，进入了命令模式，按下i，切换到输入模式。</li>
+</ul>
+<p><strong>在当前行里面有效的移动光标:</strong></p>
+<ul>
+<li><code>fx</code>：移动光标到当前行的下一个 x 处。很明显，x 可以是任意一个字母，而且你可以使用 ; 来重复你的上一个 f 命令。</li>
+<li><code>tx</code>：和上面的命令类似，但是是移动到 x 的左边一个位置。（这真的很有用）</li>
+<li><code>Fx</code>：和 fx 类似，不过是往回找。</li>
+<li><code>w</code>：光标往前移动一个词。</li>
+<li><code>b</code>：光标往后移动一个词。</li>
+<li><code>0</code>：移动光标到当前行首。</li>
+<li><code>^</code>：移动光标到当前行的第一个字母位置。</li>
+<li><code>$</code>：移动光标到行尾。</li>
+<li><code>)</code>：移动光标到下一个句子。</li>
+<li><code>(</code>：移动光标到上一个句子</li>
+</ul>
+<p><strong>在整个文件里面有效移动光标:</strong></p>
+<ul>
+<li><code>Ctrl-F</code>：向下移动一屏。</li>
+<li><code>Ctrl-B</code>：向上移动一屏。</li>
+<li><code>G</code>：到文件尾</li>
+<li><code>numG</code>：移动光标到指定的行（num）。（比如 10G 就是到第 10 行）</li>
+<li><code>gg</code>：到文件首</li>
+<li><code>H</code>：移动光标到屏幕上面</li>
+<li><code>M</code>：移动光标到屏幕中间</li>
+<li><code>L</code>：移动光标到屏幕下面</li>
+<li><code>*</code>：读取光标处的字符串，并且移动光标到它再次出现的地方。</li>
+<li><code>#</code>：和上面的类似，但是是往反方向寻找。</li>
+<li><code>/text</code>：从当前光标处开始搜索字符串 text，并且到达 text 出现的地方。必须使用回车来开始这个搜索命令。如果想重复上次的搜索的话，按 n。</li>
+<li><code>？text</code>：和上面类似，但是是反方向。</li>
+<li><code>.</code>：重复前一个动作。</li>
+</ul>
+<p><strong>剪切和拷贝:</strong></p>
+<ul>
+<li><code>dd</code>：删除游标所在的那一整行。</li>
+<li><code>ndd</code>： n 为数字。删除光标所在的向下 n 行，例如 20dd 则是删除 20 行。</li>
+<li><code>yy</code>：复制游标所在的那一行。</li>
+<li><code>nyy</code>：n 为数字。复制光标所在的向下 n 行，例如 20yy 则是复制 20 行。</li>
+<li><code>p, P</code>：p 为将已复制的数据在光标下一行贴上，P 则为贴在游标上一行！ 举例来说，我目前光标在第 20 行，且已经复制了 10 行数据。则按下 p 后， 那 10 行数据会贴在原本的 20 行之后，亦即由 21 行开始贴。但如果是按下 P 呢？ 那么原本的第 20 行会被推到变成 30 行。</li>
+<li><code>u</code>：复原前一个动作。</li>
+<li><code>Ctrl+r</code>：重做上一个动作。</li>
+</ul>
+<h3 id="输入模式">输入模式</h3>
+<ul>
+<li><code>i, I</code>: 进入输入模式(Insert mode)：i 为从目前光标所在处输入， I 为在目前所在行的第一个非空格符处开始输入。</li>
+<li><code>a, A</code>: 进入输入模式(Insert mode)：a 为『从目前光标所在的下一个字符处开始输入』， A 为从光标所在行的最后一个字符处开始输入。</li>
+<li><code>o, O</code>: 进入输入模式(Insert mode)：这是英文字母 o 的大小写。o 为在目前光标所在的下一行处输入新的一行； O 为在目前光标所在处的上一行输入新的一行。</li>
+<li><code>r, R</code>: 进入取代模式(Replace mode)：r 只会取代光标所在的那一个字符一次；R会一直取代光标所在的文字，直到按下 ESC 为止。</li>
+<li><code>Esc</code>: 退出编辑模式，回到一般模式中。</li>
+</ul>
+<h3 id="底线命令模式">底线命令模式</h3>
+<p>在命令模式下按下<code>:</code>就进入了底线命令模式。底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。在底线命令模式中，基本的命令有：</p>
+<ul>
+<li><code>:w</code>:  将编辑的数据写入硬盘档案中。</li>
+<li><code>:w!</code>: 若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入， 还是跟你对该档案的档案权限有关。</li>
+<li><code>:q</code>: 离开 vi。</li>
+<li><code>:q!</code>: 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。惊叹号 (!) 在 vi 当中，常常具有强制的意思～</li>
+<li><code>:wq</code>: 储存后离开，若为 <code>:wq!</code> 则为强制储存后离开。</li>
+<li><code>:! command</code>: 暂时离开 vi 到指令行模式下执行 command 的显示结果！例如<br>
+<code>:! ls /home</code>即可在 vi 当中察看 /home 底下以 ls 输出的档案信息！</li>
+<li>按ESC键可随时退出底线命令模式。<br>
+以下为非常全面的vim命令的键盘图：<br>
+<img src="summary.png" alt="summary"/><br>
+Reference:</li>
+<li><a href="https://blog.csdn.net/allenlinrui/article/details/7269481">vi和vim的区别</a></li>
+<li><a href="https://www.runoob.com/linux/linux-vim.html">vim/vi简易教程</a></li>
+<li><a href="https://www.runoob.com/w3cnote/all-vim-cheatsheat.html">vim快捷键位图</a></li>
+<li><a href="https://linuxtoy.org/archives/efficient-editing-with-vim.html">vim的基本操作</a></li>
+<li><a href="https://www.cnblogs.com/hyddd/archive/2010/04/08/1706865.html">vim命令大全</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>tech tool</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>搭建VPN</title>
+    <url>/blog/2022/08/06/%E6%90%AD%E5%BB%BAVPN/</url>
+    <content><![CDATA[<p>本文记录如何在云服务器中（Linux和Window系统）搭建VPN服务端来进行科学上网。</p>
+<span id="more"></span>
+<h2 id="CentOS系统">CentOS系统</h2>
+<h3 id="Shadowsocks配置服务端">Shadowsocks配置服务端</h3>
+<ol>
+<li>
+<p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装CentOS系统的实例。</p>
+</li>
+<li>
+<p>系统默认应该已经装好wget命令，如果没有，运行以下命令安装</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">yum -y install wget #CentOS</span><br><span class="line">sudo apt-get install wget #Debian/Ubuntu</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>运行以下一键脚本：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span><br><span class="line">chmod +x shadowsocks-all.sh</span><br><span class="line">./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span><br></pre></td></tr></table></figure>
+<p>安装途中如果报错不能下载github中的shadowsocks源代码，可以自行尝试下载</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget https://github.com/shadowsocks/shadowsocks/archive/master.zip </span><br></pre></td></tr></table></figure>
+<p>如果后续报错无法解压<code>shadowsocks-master.zip</code>,可以改变源代码zip文件名</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mv master.zip shadowsocks-master.zip</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>将以上命令粘贴到 Xshell 窗口，回车执行代码，然后会提示有以下4种安装选项，分别是“1) Shadowsocks-Python”、“2) ShadowsocksR”、“3) Shadowsocks-Go”、“4) Shadowsocks-libev”。如果我们选择第2个就是搭建SSR服务器了，我们这里选第1个，搭建Shadowsocks/SS服务器。如下图所示：<br>
+<img src="1.png" alt="1.png"/></p>
+</li>
+<li>
+<p>我这里以安装第1个“Shadowsocks-Python”为例演示，输入数字“1”后回车，然后进入Shadowsocks服务器的参数配置选项，依次为“服务器连接密码”、“服务器端口”、“数据加密方式”（图中红杠和箭头标识的内容仅为演示，请根据你自己的需求输入即可）。其中，我这里建议你选择chacha20相关的加密方式（因为这些新加密方式的抗封锁效果更好）。如下图所示：<br>
+<img src="2.png"  width="30%" alt="2.png"/></p>
+</li>
+<li>
+<p>当以上参数选项都输入完毕后，敲击回车键。然后系统会提示“Press any key to start…or Press Ctrl+C to cancel“，即按任意键继续。当我们按任意键之后，系统会进入安装Shadowsocks服务的过程，稍等片刻即可完成。安装Shadowsocks服务成功完成后，如下图所示：<br>
+<img src="3.png" alt="3.png"/><br>
+如上图所示，其中各项参数释义如下：<br>
+Your Server IP :你的服务器 IP 地址；<br>
+Your Server Port :你的服务器端口；<br>
+Your Password :你的连接密码；<br>
+Your Encryption Method:你的加密方式；<br>
+Your QR Code:你的SS链接；<br>
+Your QR Code has been saved as a PNG file path:你的SS链接二维码图片的存放位置。</p>
+</li>
+<li>
+<p>开启防火墙的端口。具体端口号要和之前开的服务器端口相同。修改位置见下：<br>
+<img src="4.png" alt="4.png"/><br>
+至此，你已经成功搭建Shadowsocks/SS服务器，现在就可以使用了。</p>
+</li>
+<li>
+<p>其他命令:</p>
+<ol>
+<li>
+<p>卸载方法<br>
+若已安装多个版本，则卸载时也需多次运行（每次卸载1种），请使用root用户登录，执行以下命令：</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./shadowsocks-all.sh uninstall</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>脚本控制命令<br>
+脚本后面的参数含义：启动，停止，重启，查看状态。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/init.d/shadowsocks-python start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/init.d/shadowsocks-r start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/init.d/shadowsocks-go start | stop | restart | status</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/init.d/shadowsocks-libev start | stop | restart | status</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>默认配置文件</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Shadowsocks-Python 版：</span><br><span class="line">/etc/shadowsocks-python/config.json</span><br><span class="line">	</span><br><span class="line">ShadowsocksR 版：</span><br><span class="line">/etc/shadowsocks-r/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-Go 版：</span><br><span class="line">/etc/shadowsocks-go/config.json</span><br><span class="line">	</span><br><span class="line">Shadowsocks-libev 版：</span><br><span class="line">/etc/shadowsocks-libev/config.json</span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="一键安装并开启BBR加速">一键安装并开启BBR加速</h3>
+<p>一键安装BBR加速脚本，执行如下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd /usr/src &amp;&amp; wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>执行以上安装命令后，如下图所示：<br>
+<img src="5.png" alt="5.png"/><br>
+我这里选择“2”，“安装 BBRplus版内核”加速。在安装过程中，可能会出现如下提示，用右方向键选“<No>”，然后回车(实际安装过程中本人并未遇到这个提示)。如下图所示：<br>
+<img src="6.png" alt="6.png"/><br>
+安装完成后会提示重启服务器，这时候输入字母“y”，回车后，重启服务器。当服务器启动后，我们再次执行安装命令<code>./tcp.sh</code>，选择“7”启用“使用BBRplus版加速”。至此，BBR Plus 加速模块安装并启用完成。<br>
+理论上安装完加速脚本之后运行速度应该有所提高。实际上楼主在shadowrocket上面测试延迟，安装加速脚本前后并未有明显变化。</p>
+<h2 id="Windows系统">Windows系统</h2>
+<h3 id="Shadowsocks配置服务端-v2">Shadowsocks配置服务端</h3>
+<ol>
+<li>
+<p>首选购买一个云服务器，推荐使用腾讯云的轻量级服务器，并且安装Windows12系统的实例。</p>
+</li>
+<li>
+<p>下载安装nodejs。下载地址：<a href="https://nodejs.org/en/">https://nodejs.org/en/</a> ,下载LTS长期支持版本，然后安装NodeJS，直接下一步。</p>
+</li>
+<li>
+<p>安装shadowsocks。<br>
+打开Node.js command prompt，此为nodejs的命令端，直接在Windows里面搜索就可以找到。输入命令<br>
+<code>npm install -g shadowsocks</code>安装shadowsocks.</p>
+</li>
+<li>
+<p>因为shadowsocks所在的文件夹是隐藏文件夹，所以要开启显示隐藏文件。点击“这台电脑”-&gt; “查看”，勾选“隐藏的项目”即可。如下图所示：<br>
+<img src="9.jpeg" alt="9.jpeg"/></p>
+</li>
+<li>
+<p>进入node.js安装目录<code>C:\Users\Administrator\AppData\Roaming\npm\node_modules\shadowsocks</code>，找到config.json后更改为如下形式保存。如果找不到安装目录的话，可以直接在Node.js command prompt命令段输入<code>ssserver</code>，第一栏就会出现对应的路径。</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">	&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,#服务器IP</span><br><span class="line">    &quot;server_port&quot;:13416, #要使用的服务器端口号，事先确认下端口号是否使用过</span><br><span class="line">    &quot;local_address&quot;:&quot;127.0.0.1&quot;, #本地监听地址 默认不改</span><br><span class="line">    &quot;local_port&quot;:1080, #代理端口号，一般都默认1080</span><br><span class="line">    &quot;password&quot;:&quot;barfoo!&quot;, #更改为你的密码</span><br><span class="line">    &quot;timeout&quot;:600,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot; #建议aes-256-cfb就好</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如果将server设成公网IP地址的话会报错，改为<code>0.0.0.0</code>即可解决问题。</p>
+</li>
+<li>
+<p>启动shadowsocks。通过Node.js command prompt输入<code>ssserver</code>启动。显示如下图的话即为安装成功<br>
+<img src="10.png" alt="10.png"/></p>
+</li>
+<li>
+<p>以防被屏蔽，在服务器的防火墙栏添加ssserver对应的端口。</p>
+</li>
+</ol>
+<h2 id="ios手机客户端配置">ios手机客户端配置</h2>
+<ol>
+<li>需要下载Shadowrocket app到苹果手机。</li>
+<li>按照服务端的信息输入IP地址，端口，密码，加密方式。具体如下：<br>
+<img src="7.jpeg"  width="30%" height="30%" alt="7.jpeg"/></li>
+<li>global routing 选择proxy，这样上网产生的所有流量都会走服务器流量。</li>
+<li>选择对应的服务器，可以点击Connectivity Test 来测试服务器的延迟。如果开始使用VPN的话，需要点击第一栏的按钮，连接VPN：<br>
+<img src="8.jpeg"  width="30%" height="30%" alt="8.jpeg"/></li>
+</ol>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://xyzardq.github.io/2017/04/14/Windows%E4%B8%8B%E6%90%AD%E5%BB%BAShadowoscks%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF/">Windows下搭建Shadowsocks服务器端</a></li>
+<li><a href="https://xfj0.cn/archives/94.html">在Windows server上安装Shadowsocks服务端</a></li>
+<li><a href="https://iyideng.net/black-technology/cgfw/best-onekey-build-v2ray-server-script.html#2%E3%80%81multi-v2ray_%E5%A4%9A%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86%E8%84%9A%E6%9C%AC">multi-v2ray 多用户管理脚本</a></li>
+<li><a href="https://iyideng.net/black-technology/cgfw/shadowsocks-ss-server-building-and-using-tutorial.html">使用Shadowsocks配置服务端</a></li>
+<li><a href="https://www.skyfinder.cc/2018/11/13/windowsinstallnodejsshadowsocks/">在Windows上安装nodejs版shadowsocks服务端</a></li>
+<li><a href="https://blog.heyfe.org/blog/2014-12-06-shadowsocks.html">Shadowsocks 搭建</a></li>
+<li><a href="https://blog.whsir.com/post-559.html">ss windows server配置</a></li>
+<li><a href="https://xfj0.cn/archives/94.html">在windows server上安装Shadowsocks服务端</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>tech</tag>
+        <tag>cloud service</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>美国PhD毕业生OPT申请tips</title>
+    <url>/blog/2020/02/01/%E7%BE%8E%E5%9B%BDPhD%E6%AF%95%E4%B8%9A%E7%94%9FOPT%E7%94%B3%E8%AF%B7tips/</url>
+    <content><![CDATA[<p>博主最近在忙毕业申请OPT的事情，发现真的是好多坑，好多细节要注意。这里列一下自己OPT申请的timeline 以及注意的一些细节问题。之后如果有H1B和绿卡申请相关的信息，也会同步更新到此篇博客中。出门打工不易，且行且珍惜吧😆</p>
+<span id="more"></span>
+<h2 id="毕业申请">毕业申请</h2>
+<h2 id="OPT申请">OPT申请</h2>
+<p>博主由于是刚准备博士毕业，所以申请的是post-completion OPT。</p>
+<h3 id="关于CPT-pre-completion-OPT-post-completion-OPT-和-stem-OPT的区别">关于CPT, pre-completion OPT,  post-completion OPT 和 stem OPT的区别</h3>
+<ul>
+<li>CPT：暂时地允许持有美国 F-1 签证的国际学生通过就业、带薪或无薪实习或合作教育获得与其专业直接相关的实践经验。它必须是某个既定课程的一部分。CPT 必须在毕业前完成。此外，CPT 可以是兼职（每周至多 20 小时）或全职（每周至少 20 小时）的。但是，如果你在 CPT 计划中全职工作了 12 个月，你将失去 OPT 的资格。</li>
+<li>Pre-completion OPT：毕业前OPT。工作时长要求：上学期间每周工作时间不能超过20小时；但是在假期里可以做full time工作，也就是一周工作40小时。申请时间：申请Pre-completion OPT之前必须在一所美国大学内完成至少一学年的学习。Pre-completion OPT最早的申请日期是你第一学年结束前的90天。</li>
+<li>Post-completion OPT：毕业后12个月的OPT。工作时长要求：每周必须工作至少20小时。而且Post-completion OPT期间失业天数累积不可超过90天。申请时间：根据移民局的规定，Post-completion OPT的申请材料必须在学业结束前的90天到结束后的60天之内寄到移民局。</li>
+<li>stem OPT：Stem专业的学生在第一个post-completion OPT结束之后能够延长24个月的OPT，需要从新申请。和post-completion OPT走几乎一样的流程。每六个月需要提交一次针对于为期六个月的数据验证报告<br>
+在起初的十二个月需要提交一次针对于为期十二个月的自我评估；在二十四个月将要结束的时候提交一份总结二十四个月的自我评估。</li>
+</ul>
+<h3 id="Ph-D申请OPT注意事项">Ph.D申请OPT注意事项</h3>
+<ul>
+<li>申请的越早越好，以防不能及时拿到EAD工卡（但还是要和你的job start date时间上衡量下，以防超过60天的grace period）。由于Ph.D的program completion date 的选择非常的flexible, 所以建议能越早申请越好。</li>
+<li>program completion date 到EAD卡下来且OPT start date 开始之前，不能有任何校内校外的工作。</li>
+<li>只要Ph.D所需的学分修完，即可申请OPT。但是最终答辩和论文的提交最晚需要在第一次OPT结束前都搞定。即OPT开始后一年内完成答辩都可以。</li>
+<li>千万论文最终稿的提交不能在program completion date 之前完成。否则OPT会失效。</li>
+<li>有些学校如果毕业后不能保存学生邮箱的话，需要和学校IT部门清求extend一下时间，以防重要信息接收不到。在博主所在的indiana university bloomington, 在program complete date 之后，email就不能用了。</li>
+<li>stem opt extension 是和post-completion OPT相似的流程，还是需要从新申请。在当前OPT结束前90天申请。</li>
+<li>地址更换之后的10天内一定要在OIS自己的portal里面更改信息。</li>
+<li>OPT开始后要在第一时间把雇主信息填到OIS相关的页面上面。</li>
+<li>OPT的开始和结束之前都有60天的grace period时间，是可以允许没有工作的。</li>
+</ul>
+<h3 id="申请准备时间线">申请准备时间线</h3>
+<ul>
+<li>最后一个学期一开始就要参加OPT的information session,听一下学校OIS工作人员的讲解特别必要。</li>
+<li>和advisor 商量好毕业的时间点，比如program completion date.</li>
+<li>在学校的OIS官网上面提交申请，预约OPT intake appointment,同时着手准备材料。</li>
+<li>OPT申请可以在program completion date 前90天直到后60天内都可以完成。但是因为一般OPT需要2-4个月处理，所以还是越早越好。将申请材料邮寄至你所在地区的USCIS。</li>
+<li>和OIS的intake appointment 结束之后，OIS会提供新的OPT I20。此时后的30天内，需要让USCIS收到自己的OPT申请。记住不是提交时间，而是USCIS确认的收到时间。</li>
+<li>确认移民局收到了你的申请材料，查询申请状态。一般，在3-5周内会收到移民局寄来的I-797纸质收据，即可获得“申请收据号（Receipt Number）”，根据该收据号可以再移民局官网查询你的申请进度：<a href="https://egov.uscis.gov/casestatus/landing.do">https://egov.uscis.gov/casestatus/landing.do</a>。</li>
+<li>及时向学校和政府上报你的OPT雇主。OPT开始后，必须在90天内上报工作信息，如果90天内未上报或者没有找到工作，OPT将被终止，需要离开美国。<a href="https://www.1point3acres.com/bbs/thread-514984-1-1.html">参考链接1</a>. <a href="https://internationalservices.ncsu.edu/student-employment/optional-practical-training/update-your-employment-information-in-the-sevp-portal/">参考链接2</a></li>
+</ul>
+<img src="timeline.png" alt="timeline"/> 
+<h3 id="递交材料的内容">递交材料的内容</h3>
+<ul>
+<li>G1145表格，放在申请首页，用来告诉USCIS自己的联系方式。</li>
+<li>两张US护照格式的照片，把姓名，生日，SEVIS ID和I94 ID都用铅笔写在照片背后。</li>
+<li>I-765表格，严格按照要求填写，具体怎么填OIS会在OPT info session 上面介绍，参考文献中博主也列了一些参考的网页。记住，最后签名的部分，一定要用黑色水笔！Part 2 #27: 如果是post-completion OPT的话，记得选择 (c-3-B)。</li>
+<li>支付EAD工卡申请费$410，收款人为U.S. Department of Homeland Security，不可使用现金，需开具个人支票（ 需要同时提交Form G-1450 Authorization for Credit Card Transactions (<a href="http://www.uscis.gov">www.uscis.gov</a>））、或Money Order。</li>
+<li>OPT I20 的复印件（OPT intake appointment 之后OIS会直接给）。</li>
+<li>I94的最近记录。</li>
+<li>以前的EAD卡（如果有的话）。</li>
+<li>护照的信息页，签证页和盖章页（信息页必须提供，后两者最好还是提供）。</li>
+</ul>
+<p>参考文献：</p>
+<ul>
+<li><a href="https://posts.careerengine.us/p/5509f6b57eb79bd46d000047">CPT， Pre completion OPT和OPT的区别</a></li>
+<li><a href="https://opttimeline.com">跟踪OPT的申请是否被接受的网站</a></li>
+<li><a href="https://egov.uscis.gov/casestatus/landing.do">track自己case进度的网站</a></li>
+<li><a href="https://familycfo101.com/from-i-765/">I-765填写指南1</a></li>
+<li><a href="https://posts.careerengine.us/p/5bf866fcf87f1f2ed54130a4">I-765填写指南2</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/65258309">2019OPT申请攻略1</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/94930781">申请OPT攻略2</a></li>
+<li><a href="https://dreamgo.com/opt%E7%94%B3%E8%AF%B7/">申请OPT攻略3</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/220119597">STEM OPT汇报义务1</a></li>
+<li><a href="https://sevissavvy.com/stem-opt-reporting-cn/">STEM OPT汇报义务2</a></li>
+</ul>
+<h2 id="H1B申请">H1B申请</h2>
+<h2 id="绿卡申请">绿卡申请</h2>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>opt</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>股市基础知识整理</title>
+    <url>/blog/2021/02/06/%E8%82%A1%E5%B8%82%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<p>本文简要整理一些股市的基础概念，以便自己日后查找。对于理财，除了买定期和国债外，还可以考虑一下股市。不过股市有风险，入市需谨慎~</p>
+<span id="more"></span>
+<h2 id="基础概念">基础概念</h2>
+<h3 id="一级市场和二级市场">一级市场和二级市场</h3>
+<p>对于一级市场，是公司本身将证券卖给投资者，这个买卖价款是会给到公司的。而对于二级市场，是投资者之间互相买卖，理论上，无论怎么买卖，公司都收不到一分钱。<br>
+一二级市场的联系：首先一级市场是二级市场的基础，如果不在一级市场卖出去，公司的证券就不会流到二级市场。而二级市场又是一级市场存在的条件，因为二级市场为公司证券提供了流动性。</p>
+<h3 id="空头和多头">空头和多头</h3>
+<ul>
+<li>做多：是一种金融市场如股票、外汇或期货等术语：就是看好股票、外汇或期货等未来的上涨前景而进行买入持有等待上涨获利。 做多就是做多头，多头对市场判断是上涨，就会立即进行股票买入，所以做多就是买入股票、外汇或期货等。</li>
+<li>做空：做空，是一个投资术语，是金融资产的一种操作模式。与做多相对，做空是先借入标的资产，然后卖出获得现金，过一段时间之后，再支出现金买入标的资产归还。做空的常见作用有投机、融资和对冲。其中用做空投机是指预期未来行情下跌，则卖高买低，将手中借入的股票按目前价格卖出，待行情跌后买进再归还，获取差价利润。其交易行为特点为先卖后买。实际上有点像商业中的赊货交易模式。这种模式在价格下跌的波段中能够获利，就是先在高位借货进来卖出，等跌了之后再买进归还。在外汇交易和股票交易市场中，常见有做多做空字眼。</li>
+</ul>
+<h3 id="期权Options">期权Options</h3>
+<p>简单来说，期权就是一个特定时间内的一种交易选择权，由A和B两个交易方就某个资产以未来某日的某个交易价格形成的契约。Options作为投资或投机的方法，首先你要了解它的风险性。Options从交易方法来看，可以有4种方法：</p>
+<ul>
+<li>买入看涨期权（Long Calls）：看涨股票时，一般可以买入看涨期权</li>
+<li>买入看跌期权（Long Puts）：看跌股票时，一般可以买入看跌期权</li>
+<li>卖出看涨期权（Short Calls）：看跌股票时，可以卖出看涨期权。（裸卖Call，潜在最大损失无限大。）</li>
+<li>卖出看跌期权（Short Puts）：看涨股票时，可以卖出看跌期权。（高风险，潜在最大损失有上限）</li>
+</ul>
+<h3 id="ETF-mutual-fund-index-fund">ETF, mutual fund, index fund</h3>
+<ul>
+<li>共同基金（mutual fund）：共同基金一般为主动管理型。基金经理和投资团队会每天进行仓位的调整和买卖。因此，投资仓位方面共同基金更加灵活。</li>
+<li>ETF (Exchange－Traded Funds)：多数ETF是被动型基金，追踪某一指数(比如S&amp;P500)或某一市场。因此ETF的异质性风险（idiosyncratic risk）较低。每个季度基金经理会调整并公布仓位，调整后一个季度内一般不进行主动调仓。</li>
+<li>指数基金（index fund）：指数基金就是以特定指数(如S&amp;P500)为标的指数，并以该指数的成份股为投资对象，以追踪标的指数表现的基金产品。</li>
+</ul>
+<p>ETF和mutual fund 都是选很多的股票，通常几百几千支都有，组成一个portfolio。ETF 通常是track一个指数，mutual fund可以跟指数或者基金经理自己选择股票。<br>
+mutual fund分为封闭式基金和开放式基金，封闭式基金就是在认购之后，投资人在规定时间内不能进行申购和赎回，需要等到下一轮开放。题主关心的应该是开放式基金，和ETF 更相似。开放式基金是不在交易所交易的，而是在每一天闭市之后进行交易，交易的价格是根据基金里包含的所有股票的当天的闭市价格来计算的。</p>
+<h3 id="杠杆">杠杆</h3>
+<p>杠杆，也称为风险水平，是经纪人为交易者提供的临时贷款。杠杆可让交易者以较少的本金进行高额交易。杠杆以倍数的形式表示，显示持仓金额是已投入金额的多少倍。<br>
+让我们来举一个例子说明杠杆如何影响潜在收益或亏损。如果您本金有1,000美元，不加杠杆，则您投资的资产价格每上涨1%，您就可以获利10美元，反之，您将亏损10美元，这均相当于本金1,000美元的1%。相反，如果您同样投入1,000美元，但使用10倍杠杆，则您的持仓价值将等于10,000美元。10,000美元的1%相当于100美元，所以市场若上涨1%，您就可以获利100美元，反之，您将亏掉100美元。</p>
+<h2 id="基本券商">基本券商</h2>
+<ul>
+<li>新型券商，适用于新手，可以部分买卖股票，0佣金：Robinhood，webull（微牛证券），MooMoo（富途证券），TradeUP（老虎证券）</li>
+<li>智能顾投(robo-advisor)：Betterment，Wealthfront。即根据调查问卷评估所得到的你的个人情况，加上你对于投资激进vs保守的倾向，通过程序自动生成你的portfolio。</li>
+<li>老牌券商：Fidelity, Charles Schwab, Vanguard，TD Ameritrade，ETRADE，Merrill Edge<br>
+<img src="broker.png" alt="broker" width="500"/></li>
+</ul>
+<p>参考文献：</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/59059660">美股期权</a></li>
+<li><a href="https://xueqiu.com/5974914861/24635776">美股期权交易详解</a></li>
+<li><a href="https://www.youtube.com/watch?v=vGcOGYkttI4">Index Funds vs Mutual Funds vs ETF</a></li>
+<li><a href="https://www.etoro.com/zh/customer-service/help/52811819/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9D%A0%E6%9D%86/#:~:text=%E6%9D%A0%E6%9D%86%EF%BC%8C%E4%B9%9F%E7%A7%B0%E4%B8%BA%E9%A3%8E%E9%99%A9,%E6%8A%95%E5%85%A5%E9%87%91%E9%A2%9D%E7%9A%84%E5%A4%9A%E5%B0%91%E5%80%8D%E3%80%82&amp;text=%E5%A6%82%E6%9E%9C%E6%82%A8%E6%9C%AC%E9%87%91%E6%9C%89,%E9%87%911%2C000%E7%BE%8E%E5%85%83%E7%9A%841%25%E3%80%82">什么是杠杆</a></li>
+<li><a href="https://www.facebook.com/PappaCollege/posts/2122872681325313/">杠杆投资</a></li>
+<li><a href="https://www.stockbrokers.com/compare/robinhood-vs-webull">券商比较</a></li>
+<li><a href="https://www.dealmoon.com/guide/950327">券商比较2</a></li>
+<li><a href="https://www.guruin.com/articles/4955">Robo Advisors推荐</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>finance</category>
+      </categories>
+      <tags>
+        <tag>stock</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云使用教程</title>
+    <url>/blog/2025/04/30/%E8%85%BE%E8%AE%AF%E4%BA%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<p>本文是作者购买了腾讯云账号后，总结的如何使用腾讯云账户的教程。</p>
+<span id="more"></span>
+<h1>简单使用指南tips</h1>
+<ol>
+<li>登录账号后找到购买的<a href="https://console.cloud.tencent.com/lighthouse/instance">轻量应用服务器页面</a>，点击对应的实例即可登录</li>
+<li>购买之后，公网IP和对应的实例基本信息可以在<a href="https://console.cloud.tencent.com/message">站内信</a>中查看</li>
+<li>Mac OS 系统通过远程桌面上传文件到 Windows 轻量应用服务器(<a href="https://cloud.tencent.com/document/product/1207/53218">https://cloud.tencent.com/document/product/1207/53218</a>)</li>
+<li>Mac使用Microsoft Remote Desktop Beta实现远程登录Windows服务器(<a href="https://cloud.tencent.com/document/product/1207/44579">https://cloud.tencent.com/document/product/1207/44579</a>) 需要在腾讯云实例的防火墙添加规则：允许访问端口号3389。此为默认的Windows远程登录的端口号。如果不是，可以在服务器主页点击WebRDP登录，弹出的窗口会显示对应的端口号。</li>
+<li>搭建 CentOS 可视化界面(<a href="https://cloud.tencent.com/document/product/213/59484">https://cloud.tencent.com/document/product/213/59484</a>)</li>
+<li>如何将本地文件拷贝到轻量应用服务器（<a href="https://cloud.tencent.com/document/product/1207/53135%EF%BC%89">https://cloud.tencent.com/document/product/1207/53135）</a></li>
+</ol>
+<h2 id="参考文献">参考文献</h2>
+<ul>
+<li><a href="https://cloud.tencent.com/document/product/1207/44579">使用远程桌面连接登录Windows实例</a></li>
+<li><a href="https://cloud.tencent.com/document/product/1207">轻量应用服务器文档中心</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
+      <tags>
+        <tag>tech</tag>
+        <tag>cloud service</tag>
       </tags>
   </entry>
   <entry>
@@ -2659,79 +2819,6 @@ A: 在NexT.Pisces v7.6.0的版本中，目前没有找到正确的方法来只�
       </tags>
   </entry>
   <entry>
-    <title>美国PhD毕业生OPT申请tips</title>
-    <url>/blog/2020/02/01/%E7%BE%8E%E5%9B%BDPhD%E6%AF%95%E4%B8%9A%E7%94%9FOPT%E7%94%B3%E8%AF%B7tips/</url>
-    <content><![CDATA[<p>博主最近在忙毕业申请OPT的事情，发现真的是好多坑，好多细节要注意。这里列一下自己OPT申请的timeline 以及注意的一些细节问题。之后如果有H1B和绿卡申请相关的信息，也会同步更新到此篇博客中。出门打工不易，且行且珍惜吧😆</p>
-<span id="more"></span>
-<h2 id="毕业申请">毕业申请</h2>
-<h2 id="OPT申请">OPT申请</h2>
-<p>博主由于是刚准备博士毕业，所以申请的是post-completion OPT。</p>
-<h3 id="关于CPT-pre-completion-OPT-post-completion-OPT-和-stem-OPT的区别">关于CPT, pre-completion OPT,  post-completion OPT 和 stem OPT的区别</h3>
-<ul>
-<li>CPT：暂时地允许持有美国 F-1 签证的国际学生通过就业、带薪或无薪实习或合作教育获得与其专业直接相关的实践经验。它必须是某个既定课程的一部分。CPT 必须在毕业前完成。此外，CPT 可以是兼职（每周至多 20 小时）或全职（每周至少 20 小时）的。但是，如果你在 CPT 计划中全职工作了 12 个月，你将失去 OPT 的资格。</li>
-<li>Pre-completion OPT：毕业前OPT。工作时长要求：上学期间每周工作时间不能超过20小时；但是在假期里可以做full time工作，也就是一周工作40小时。申请时间：申请Pre-completion OPT之前必须在一所美国大学内完成至少一学年的学习。Pre-completion OPT最早的申请日期是你第一学年结束前的90天。</li>
-<li>Post-completion OPT：毕业后12个月的OPT。工作时长要求：每周必须工作至少20小时。而且Post-completion OPT期间失业天数累积不可超过90天。申请时间：根据移民局的规定，Post-completion OPT的申请材料必须在学业结束前的90天到结束后的60天之内寄到移民局。</li>
-<li>stem OPT：Stem专业的学生在第一个post-completion OPT结束之后能够延长24个月的OPT，需要从新申请。和post-completion OPT走几乎一样的流程。每六个月需要提交一次针对于为期六个月的数据验证报告<br>
-在起初的十二个月需要提交一次针对于为期十二个月的自我评估；在二十四个月将要结束的时候提交一份总结二十四个月的自我评估。</li>
-</ul>
-<h3 id="Ph-D申请OPT注意事项">Ph.D申请OPT注意事项</h3>
-<ul>
-<li>申请的越早越好，以防不能及时拿到EAD工卡（但还是要和你的job start date时间上衡量下，以防超过60天的grace period）。由于Ph.D的program completion date 的选择非常的flexible, 所以建议能越早申请越好。</li>
-<li>program completion date 到EAD卡下来且OPT start date 开始之前，不能有任何校内校外的工作。</li>
-<li>只要Ph.D所需的学分修完，即可申请OPT。但是最终答辩和论文的提交最晚需要在第一次OPT结束前都搞定。即OPT开始后一年内完成答辩都可以。</li>
-<li>千万论文最终稿的提交不能在program completion date 之前完成。否则OPT会失效。</li>
-<li>有些学校如果毕业后不能保存学生邮箱的话，需要和学校IT部门清求extend一下时间，以防重要信息接收不到。在博主所在的indiana university bloomington, 在program complete date 之后，email就不能用了。</li>
-<li>stem opt extension 是和post-completion OPT相似的流程，还是需要从新申请。在当前OPT结束前90天申请。</li>
-<li>地址更换之后的10天内一定要在OIS自己的portal里面更改信息。</li>
-<li>OPT开始后要在第一时间把雇主信息填到OIS相关的页面上面。</li>
-<li>OPT的开始和结束之前都有60天的grace period时间，是可以允许没有工作的。</li>
-</ul>
-<h3 id="申请准备时间线">申请准备时间线</h3>
-<ul>
-<li>最后一个学期一开始就要参加OPT的information session,听一下学校OIS工作人员的讲解特别必要。</li>
-<li>和advisor 商量好毕业的时间点，比如program completion date.</li>
-<li>在学校的OIS官网上面提交申请，预约OPT intake appointment,同时着手准备材料。</li>
-<li>OPT申请可以在program completion date 前90天直到后60天内都可以完成。但是因为一般OPT需要2-4个月处理，所以还是越早越好。将申请材料邮寄至你所在地区的USCIS。</li>
-<li>和OIS的intake appointment 结束之后，OIS会提供新的OPT I20。此时后的30天内，需要让USCIS收到自己的OPT申请。记住不是提交时间，而是USCIS确认的收到时间。</li>
-<li>确认移民局收到了你的申请材料，查询申请状态。一般，在3-5周内会收到移民局寄来的I-797纸质收据，即可获得“申请收据号（Receipt Number）”，根据该收据号可以再移民局官网查询你的申请进度：<a href="https://egov.uscis.gov/casestatus/landing.do">https://egov.uscis.gov/casestatus/landing.do</a>。</li>
-<li>及时向学校和政府上报你的OPT雇主。OPT开始后，必须在90天内上报工作信息，如果90天内未上报或者没有找到工作，OPT将被终止，需要离开美国。<a href="https://www.1point3acres.com/bbs/thread-514984-1-1.html">参考链接1</a>. <a href="https://internationalservices.ncsu.edu/student-employment/optional-practical-training/update-your-employment-information-in-the-sevp-portal/">参考链接2</a></li>
-</ul>
-<img src="timeline.png" alt="timeline"/> 
-<h3 id="递交材料的内容">递交材料的内容</h3>
-<ul>
-<li>G1145表格，放在申请首页，用来告诉USCIS自己的联系方式。</li>
-<li>两张US护照格式的照片，把姓名，生日，SEVIS ID和I94 ID都用铅笔写在照片背后。</li>
-<li>I-765表格，严格按照要求填写，具体怎么填OIS会在OPT info session 上面介绍，参考文献中博主也列了一些参考的网页。记住，最后签名的部分，一定要用黑色水笔！Part 2 #27: 如果是post-completion OPT的话，记得选择 (c-3-B)。</li>
-<li>支付EAD工卡申请费$410，收款人为U.S. Department of Homeland Security，不可使用现金，需开具个人支票（ 需要同时提交Form G-1450 Authorization for Credit Card Transactions (<a href="http://www.uscis.gov">www.uscis.gov</a>））、或Money Order。</li>
-<li>OPT I20 的复印件（OPT intake appointment 之后OIS会直接给）。</li>
-<li>I94的最近记录。</li>
-<li>以前的EAD卡（如果有的话）。</li>
-<li>护照的信息页，签证页和盖章页（信息页必须提供，后两者最好还是提供）。</li>
-</ul>
-<p>参考文献：</p>
-<ul>
-<li><a href="https://posts.careerengine.us/p/5509f6b57eb79bd46d000047">CPT， Pre completion OPT和OPT的区别</a></li>
-<li><a href="https://opttimeline.com">跟踪OPT的申请是否被接受的网站</a></li>
-<li><a href="https://egov.uscis.gov/casestatus/landing.do">track自己case进度的网站</a></li>
-<li><a href="https://familycfo101.com/from-i-765/">I-765填写指南1</a></li>
-<li><a href="https://posts.careerengine.us/p/5bf866fcf87f1f2ed54130a4">I-765填写指南2</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/65258309">2019OPT申请攻略1</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/94930781">申请OPT攻略2</a></li>
-<li><a href="https://dreamgo.com/opt%E7%94%B3%E8%AF%B7/">申请OPT攻略3</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/220119597">STEM OPT汇报义务1</a></li>
-<li><a href="https://sevissavvy.com/stem-opt-reporting-cn/">STEM OPT汇报义务2</a></li>
-</ul>
-<h2 id="H1B申请">H1B申请</h2>
-<h2 id="绿卡申请">绿卡申请</h2>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>opt</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>腾讯云安装WordPress的Tips</title>
     <url>/blog/2022/08/15/%E8%85%BE%E8%AE%AF%E4%BA%91%E5%AE%89%E8%A3%85WordPress%E7%9A%84Tips/</url>
     <content><![CDATA[<p>本文介绍一些在腾讯云轻量服务器上手动安装WordPress时需要注意的一些方面。笔者是在Windows 12系统上进行操作的。</p>
@@ -2750,34 +2837,6 @@ A: 在NexT.Pisces v7.6.0的版本中，目前没有找到正确的方法来只�
 <li><a href="https://blog.csdn.net/weixin_35888497/article/details/119665467?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_title~default-0-119665467-blog-75408629.pc_relevant_multi_platform_whitelistv4eslandingrelevant2&amp;spm=1001.2101.3001.4242.1&amp;utm_relevant_index=3">wp网站更换服务器后打不开,WordPress站点更换公网IP后不能正常访问的解决过程</a></li>
 <li><a href="https://blog.csdn.net/soar92/article/details/75408629">云服务器中安装wordpress，却不能使用公网IP进行访问</a></li>
 <li><a href="https://wordpress.org/support/article/resetting-your-password/">Resetting Your Password</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
-      <tags>
-        <tag>tech</tag>
-        <tag>cloud service</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云使用教程</title>
-    <url>/blog/2025/04/30/%E8%85%BE%E8%AE%AF%E4%BA%91%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<p>本文是作者购买了腾讯云账号后，总结的如何使用腾讯云账户的教程。</p>
-<span id="more"></span>
-<h1>简单使用指南tips</h1>
-<ol>
-<li>登录账号后找到购买的<a href="https://console.cloud.tencent.com/lighthouse/instance">轻量应用服务器页面</a>，点击对应的实例即可登录</li>
-<li>购买之后，公网IP和对应的实例基本信息可以在<a href="https://console.cloud.tencent.com/message">站内信</a>中查看</li>
-<li>Mac OS 系统通过远程桌面上传文件到 Windows 轻量应用服务器(<a href="https://cloud.tencent.com/document/product/1207/53218">https://cloud.tencent.com/document/product/1207/53218</a>)</li>
-<li>Mac使用Microsoft Remote Desktop Beta实现远程登录Windows服务器(<a href="https://cloud.tencent.com/document/product/1207/44579">https://cloud.tencent.com/document/product/1207/44579</a>) 需要在腾讯云实例的防火墙添加规则：允许访问端口号3389。此为默认的Windows远程登录的端口号。如果不是，可以在服务器主页点击WebRDP登录，弹出的窗口会显示对应的端口号。</li>
-<li>搭建 CentOS 可视化界面(<a href="https://cloud.tencent.com/document/product/213/59484">https://cloud.tencent.com/document/product/213/59484</a>)</li>
-<li>如何将本地文件拷贝到轻量应用服务器（<a href="https://cloud.tencent.com/document/product/1207/53135%EF%BC%89">https://cloud.tencent.com/document/product/1207/53135）</a></li>
-</ol>
-<h2 id="参考文献">参考文献</h2>
-<ul>
-<li><a href="https://cloud.tencent.com/document/product/1207/44579">使用远程桌面连接登录Windows实例</a></li>
-<li><a href="https://cloud.tencent.com/document/product/1207">轻量应用服务器文档中心</a></li>
 </ul>
 ]]></content>
       <categories>
@@ -3118,65 +3177,6 @@ A: 在NexT.Pisces v7.6.0的版本中，目前没有找到正确的方法来只�
       <tags>
         <tag>kpop</tag>
         <tag>music</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>股市基础知识整理</title>
-    <url>/blog/2021/02/06/%E8%82%A1%E5%B8%82%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/</url>
-    <content><![CDATA[<p>本文简要整理一些股市的基础概念，以便自己日后查找。对于理财，除了买定期和国债外，还可以考虑一下股市。不过股市有风险，入市需谨慎~</p>
-<span id="more"></span>
-<h2 id="基础概念">基础概念</h2>
-<h3 id="一级市场和二级市场">一级市场和二级市场</h3>
-<p>对于一级市场，是公司本身将证券卖给投资者，这个买卖价款是会给到公司的。而对于二级市场，是投资者之间互相买卖，理论上，无论怎么买卖，公司都收不到一分钱。<br>
-一二级市场的联系：首先一级市场是二级市场的基础，如果不在一级市场卖出去，公司的证券就不会流到二级市场。而二级市场又是一级市场存在的条件，因为二级市场为公司证券提供了流动性。</p>
-<h3 id="空头和多头">空头和多头</h3>
-<ul>
-<li>做多：是一种金融市场如股票、外汇或期货等术语：就是看好股票、外汇或期货等未来的上涨前景而进行买入持有等待上涨获利。 做多就是做多头，多头对市场判断是上涨，就会立即进行股票买入，所以做多就是买入股票、外汇或期货等。</li>
-<li>做空：做空，是一个投资术语，是金融资产的一种操作模式。与做多相对，做空是先借入标的资产，然后卖出获得现金，过一段时间之后，再支出现金买入标的资产归还。做空的常见作用有投机、融资和对冲。其中用做空投机是指预期未来行情下跌，则卖高买低，将手中借入的股票按目前价格卖出，待行情跌后买进再归还，获取差价利润。其交易行为特点为先卖后买。实际上有点像商业中的赊货交易模式。这种模式在价格下跌的波段中能够获利，就是先在高位借货进来卖出，等跌了之后再买进归还。在外汇交易和股票交易市场中，常见有做多做空字眼。</li>
-</ul>
-<h3 id="期权Options">期权Options</h3>
-<p>简单来说，期权就是一个特定时间内的一种交易选择权，由A和B两个交易方就某个资产以未来某日的某个交易价格形成的契约。Options作为投资或投机的方法，首先你要了解它的风险性。Options从交易方法来看，可以有4种方法：</p>
-<ul>
-<li>买入看涨期权（Long Calls）：看涨股票时，一般可以买入看涨期权</li>
-<li>买入看跌期权（Long Puts）：看跌股票时，一般可以买入看跌期权</li>
-<li>卖出看涨期权（Short Calls）：看跌股票时，可以卖出看涨期权。（裸卖Call，潜在最大损失无限大。）</li>
-<li>卖出看跌期权（Short Puts）：看涨股票时，可以卖出看跌期权。（高风险，潜在最大损失有上限）</li>
-</ul>
-<h3 id="ETF-mutual-fund-index-fund">ETF, mutual fund, index fund</h3>
-<ul>
-<li>共同基金（mutual fund）：共同基金一般为主动管理型。基金经理和投资团队会每天进行仓位的调整和买卖。因此，投资仓位方面共同基金更加灵活。</li>
-<li>ETF (Exchange－Traded Funds)：多数ETF是被动型基金，追踪某一指数(比如S&amp;P500)或某一市场。因此ETF的异质性风险（idiosyncratic risk）较低。每个季度基金经理会调整并公布仓位，调整后一个季度内一般不进行主动调仓。</li>
-<li>指数基金（index fund）：指数基金就是以特定指数(如S&amp;P500)为标的指数，并以该指数的成份股为投资对象，以追踪标的指数表现的基金产品。</li>
-</ul>
-<p>ETF和mutual fund 都是选很多的股票，通常几百几千支都有，组成一个portfolio。ETF 通常是track一个指数，mutual fund可以跟指数或者基金经理自己选择股票。<br>
-mutual fund分为封闭式基金和开放式基金，封闭式基金就是在认购之后，投资人在规定时间内不能进行申购和赎回，需要等到下一轮开放。题主关心的应该是开放式基金，和ETF 更相似。开放式基金是不在交易所交易的，而是在每一天闭市之后进行交易，交易的价格是根据基金里包含的所有股票的当天的闭市价格来计算的。</p>
-<h3 id="杠杆">杠杆</h3>
-<p>杠杆，也称为风险水平，是经纪人为交易者提供的临时贷款。杠杆可让交易者以较少的本金进行高额交易。杠杆以倍数的形式表示，显示持仓金额是已投入金额的多少倍。<br>
-让我们来举一个例子说明杠杆如何影响潜在收益或亏损。如果您本金有1,000美元，不加杠杆，则您投资的资产价格每上涨1%，您就可以获利10美元，反之，您将亏损10美元，这均相当于本金1,000美元的1%。相反，如果您同样投入1,000美元，但使用10倍杠杆，则您的持仓价值将等于10,000美元。10,000美元的1%相当于100美元，所以市场若上涨1%，您就可以获利100美元，反之，您将亏掉100美元。</p>
-<h2 id="基本券商">基本券商</h2>
-<ul>
-<li>新型券商，适用于新手，可以部分买卖股票，0佣金：Robinhood，webull（微牛证券），MooMoo（富途证券），TradeUP（老虎证券）</li>
-<li>智能顾投(robo-advisor)：Betterment，Wealthfront。即根据调查问卷评估所得到的你的个人情况，加上你对于投资激进vs保守的倾向，通过程序自动生成你的portfolio。</li>
-<li>老牌券商：Fidelity, Charles Schwab, Vanguard，TD Ameritrade，ETRADE，Merrill Edge<br>
-<img src="broker.png" alt="broker" width="500"/></li>
-</ul>
-<p>参考文献：</p>
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/p/59059660">美股期权</a></li>
-<li><a href="https://xueqiu.com/5974914861/24635776">美股期权交易详解</a></li>
-<li><a href="https://www.youtube.com/watch?v=vGcOGYkttI4">Index Funds vs Mutual Funds vs ETF</a></li>
-<li><a href="https://www.etoro.com/zh/customer-service/help/52811819/%E4%BB%80%E4%B9%88%E6%98%AF%E6%9D%A0%E6%9D%86/#:~:text=%E6%9D%A0%E6%9D%86%EF%BC%8C%E4%B9%9F%E7%A7%B0%E4%B8%BA%E9%A3%8E%E9%99%A9,%E6%8A%95%E5%85%A5%E9%87%91%E9%A2%9D%E7%9A%84%E5%A4%9A%E5%B0%91%E5%80%8D%E3%80%82&amp;text=%E5%A6%82%E6%9E%9C%E6%82%A8%E6%9C%AC%E9%87%91%E6%9C%89,%E9%87%911%2C000%E7%BE%8E%E5%85%83%E7%9A%841%25%E3%80%82">什么是杠杆</a></li>
-<li><a href="https://www.facebook.com/PappaCollege/posts/2122872681325313/">杠杆投资</a></li>
-<li><a href="https://www.stockbrokers.com/compare/robinhood-vs-webull">券商比较</a></li>
-<li><a href="https://www.dealmoon.com/guide/950327">券商比较2</a></li>
-<li><a href="https://www.guruin.com/articles/4955">Robo Advisors推荐</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>finance</category>
-      </categories>
-      <tags>
-        <tag>stock</tag>
       </tags>
   </entry>
 </search>
